@@ -96,7 +96,7 @@ $coming_soon_pages = [
 Chỉnh sửa file `css/coming-soon-popup.css`:
 ```css
 .coming-soon-popup-header {
-    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    background: linear-gradient(135deg, #0C7A07 0%, #cc0000 100%);
 }
 ```
 

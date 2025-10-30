@@ -1,5 +1,42 @@
 <?php include __DIR__ . '/header.php'; ?>
 
+  <style>
+    .elementor-16 .elementor-element.elementor-element-e8aa8f0 .elementor-heading-title {
+      color: #FFFFFF !important;
+      font-size: 28px !important;
+      font-weight: 700 !important;
+    }
+    
+    .elementor-16 .elementor-element.elementor-element-8871174 .elementor-heading-title {
+      color: #FFFFFF !important;
+      font-size: 18px !important;
+      font-weight: 600 !important;
+    }
+
+    .elementor-16 .elementor-element.elementor-element-1b8e090 .elementor-heading-title {
+      color: #FFFFFF !important;
+      font-size: 28px !important;
+      font-weight: 700 !important;
+    }
+
+    .elementor-16 .elementor-element.elementor-element-d3978a4 .elementor-heading-title {
+        color: #FFFFFF !important;
+        font-size: 18px !important;
+        font-weight: 600 !important;
+    }
+
+    .elementor-16 .elementor-element.elementor-element-11fe818 .elementor-heading-title {
+        color: #FFFFFF !important;
+        font-size: 28px !important;
+        font-weight: 700 !important;
+    }
+
+    .elementor-16 .elementor-element.elementor-element-e21de88 .elementor-heading-title {
+        color: #FFFFFF !important;
+        font-size: 18px !important;
+        font-weight: 600 !important;
+    }
+  </style>
    <main class="site-main clr" id="main" role="main">
     <div class="elementor elementor-16" data-elementor-id="16" data-elementor-type="wp-page">
      <section class="elementor-section elementor-top-section elementor-element elementor-element-1ebb935 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="1ebb935">

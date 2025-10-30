@@ -81,7 +81,7 @@
 ## 🎨 Tính năng Popup
 
 ### Thiết kế
-- ✨ Gradient màu đỏ (#ff0000 → #cc0000) theo brand Ba Huân
+- ✨ Gradient màu đỏ (#0C7A07 → #cc0000) theo brand Ba Huân
 - 🎯 Icon emoji 🚀 "Sắp Ra Mắt"
 - 📱 Responsive - hoạt động tốt trên mobile
 - ⚡ Animation mượt mà

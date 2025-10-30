@@ -87,7 +87,7 @@ table th, table td{
 	border-bottom: 1px solid #D9D9D9;
 }
 .menu-hoat-dong-co-dong  .elementor-tab-title.elementor-active{
-	border-bottom: 2px solid #FF0000 !important;
+	border-bottom: 2px solid #0C7A07 !important;
 }
 .w-featured-left,
 .w-video-item-thumbnail{
@@ -183,10 +183,10 @@ table th, table td{
 	padding-left: 24px;
 }
 .photo-nav-item-parent.active .w-photo-nav-item-label{
-	color: #FF0000
+	color: #0C7A07
 }
 .photo-nav-item-parent.active .photo-nav-item-child.active{
-	color: #FF0000
+	color: #0C7A07
 }
 .photo-nav-item-parent .w-photo-sub-cat{
 	display: none;
@@ -206,7 +206,7 @@ table th, table td{
   border-radius: 10px;
 }
 .photo-nav-item-parent .w-photo-sub-cat::-webkit-scrollbar-thumb:hover {
-  background: #ff0000; 
+  background: #0C7A07; 
 }
 
 .photo-nav-item-parent.active .w-photo-sub-cat{

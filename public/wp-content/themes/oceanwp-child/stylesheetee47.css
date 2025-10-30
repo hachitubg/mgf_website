@@ -102,7 +102,7 @@ textarea
     font-size: 16px;
     font-weight: 700;
 	line-height: 1em;
-    background: #FF0000;
+    background: #0C7A07;
 	margin-top: 15px;
     padding: 12px 25px;
     border: none;
@@ -275,7 +275,7 @@ textarea
 	padding: 12px 25px !important;
 }
 .w-phat-trien-tab .elementor-tabs-wrapper .elementor-active span {
-	border-bottom: 2px solid #ff0000 !important;
+	border-bottom: 2px solid #0C7A07 !important;
 	padding-bottom: 15px;
 }
 
@@ -424,8 +424,8 @@ textarea
 
 .w-other-products  .slick-prev, .w-other-products  .slick-next {
 	font-size: 15px !important;
-	color: #ff0000;
-	border: 1px solid #ff0000;
+	color: #0C7A07;
+	border: 1px solid #0C7A07;
 	height: 40px;
 	width: 40px;
 	border-radius: 4px;
@@ -448,8 +448,8 @@ textarea
 /* COMMENTED OUT - Slick slider for related products (not needed for grid layout)
 .w-related-products  .slick-prev, .w-related-products  .slick-next {
 	font-size: 15px !important;
-	color: #ff0000;
-	border: 1px solid #ff0000;
+	color: #0C7A07;
+	border: 1px solid #0C7A07;
 	height: 40px;
 	width: 40px;
 	border-radius: 4px;
@@ -488,7 +488,7 @@ END OF COMMENT */
 	border-radius: 0px;
 }
 .elementor-widget-woocommerce-product-content::-webkit-scrollbar-thumb:hover {
-	background: #ff0000; 
+	background: #0C7A07; 
 }
 .woocommerce-product-gallery .flex-control-nav {
 	display: block;
@@ -517,7 +517,7 @@ END OF COMMENT */
 	border-radius: 0px;
 }
 .woocommerce-product-gallery .flex-control-nav::-webkit-scrollbar-thumb:hover {
-	background: #ff0000; 
+	background: #0C7A07; 
 }
 
 nav.woocommerce-breadcrumb {
@@ -542,7 +542,7 @@ nav.woocommerce-breadcrumb {
 
 /* Page sản phẩm và phân phối */
 .woocommerce-pagination .page-numbers .current {
-	background: #FF0000;
+	background: #0C7A07;
 	color: #ffffff;
 	min-width: 40px;
 	min-height: 40px;
@@ -559,7 +559,7 @@ nav.woocommerce-breadcrumb {
 .woocommerce-pagination .page-numbers {
 	min-width: 40px;
     min-height: 40px;
-    color: #FF0000;
+    color: #0C7A07;
     border-radius: 8px;
     display: inline-flex;
     justify-content: center;
@@ -584,7 +584,7 @@ nav.woocommerce-breadcrumb {
 	border-radius: 8px 0px 0px 8px;
 }
 .menu-product-cat .elementor-item-active {
-	color: #FF0000 !important;
+	color: #0C7A07 !important;
 }
 .product-inner .title {
 	text-align: left;
@@ -669,7 +669,7 @@ nav.woocommerce-breadcrumb {
   border-radius: 10px;
 }
 .w-documents-wrap ::-webkit-scrollbar-thumb:hover {
-  background: #ff0000; 
+  background: #0C7A07; 
 }
 .w-documents-wrap .show .icon-arrow-down:before {
 	content: "\e607" !important;
@@ -739,7 +739,7 @@ nav.woocommerce-breadcrumb {
 	position: relative;
 }
 .w-video-child-category {
-	color: #FF0000;
+	color: #0C7A07;
 	font-size: 22px;
 	font-weight: 700;
 	line-height: 28px;
@@ -848,11 +848,11 @@ nav.woocommerce-breadcrumb {
 	margin-top: 6px;
 }
 .photo-nav-item-parent.active .w-photo-nav-item-label{
-	color: #FF0000;
+	color: #0C7A07;
 	font-weight: 700;
 }
 .photo-nav-item-parent.active .photo-nav-item-child.active{
-	color: #FF0000;
+	color: #0C7A07;
 	font-weight: 700;
 }
 .w-photo-breadcrumb {
@@ -891,12 +891,12 @@ nav.woocommerce-breadcrumb {
 }
 .w-photo-content .slick-dots li.slick-active button {
 	color: #ffffff;
-	background-color: #ff0000;
+	background-color: #0C7A07;
 	border-radius: 8px;
 }
 .w-photo-content .slick-dots li button {
 	font-size: 14px;
-	color: #ff0000;
+	color: #0C7A07;
 	height: 40px;
 	width: 40px;
 }
@@ -908,8 +908,8 @@ nav.woocommerce-breadcrumb {
 	border-radius: 8px;
 }
 .w-photo-content .w-slick-controls .w-arrow:hover {
-	color: #ff0000;
-	border: 1px solid #ff0000;
+	color: #0C7A07;
+	border: 1px solid #0C7A07;
 }
 
 
@@ -946,16 +946,16 @@ nav.woocommerce-breadcrumb {
 	margin-top: 24px;
 }
 .w-sub-gallery-button button {
-	border: 1px solid #ff0000;
+	border: 1px solid #0C7A07;
 	border-radius: 8px;
-	color: #ff0000;
+	color: #0C7A07;
 	background-color: #ffffff;
 	padding: 12px 30px;
 	width: 170px;
 	height: 50px;
 }
 .w-sub-gallery-button button span {
-	color: #ff0000;
+	color: #0C7A07;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 25.6px;
@@ -1251,7 +1251,7 @@ nav.woocommerce-breadcrumb {
 	margin-bottom: 30px;
 }
 .w-truyen-thong-nav .menu-item a.elementor-item-active {
-	border-bottom: 2px solid #ff0000;
+	border-bottom: 2px solid #0C7A07;
 }
 .w-thu-vien-tab .elementor-tabs-wrapper {
 	border-bottom: 1px solid #D9D9D9;
@@ -1260,7 +1260,7 @@ nav.woocommerce-breadcrumb {
 	padding: 12px 25px !important;
 }
 .w-thu-vien-tab .elementor-tabs-wrapper .elementor-active span {
-	border-bottom: 2px solid #ff0000;
+	border-bottom: 2px solid #0C7A07;
 	padding-bottom: 14px;
 }
 @media (max-width: 767px) {
@@ -1276,11 +1276,11 @@ nav.woocommerce-breadcrumb {
 
 /* về chúng tôi */
 .w-about-us-nav-active a {
-	border-bottom: 2px solid #ff0000;
+	border-bottom: 2px solid #0C7A07;
 	padding-bottom: 15px;
 }
 .w-doi-tac-active .elementor-item-active {
-	border-bottom: 2px solid #ff0000;
+	border-bottom: 2px solid #0C7A07;
 	padding-bottom: 10px;
 }
 .single-product .slick-track {
@@ -1288,7 +1288,7 @@ nav.woocommerce-breadcrumb {
 }
 @media (max-width: 767px) {
 	.w-about-us-nav-active a {
-		border-bottom: 2px solid #ff0000;
+		border-bottom: 2px solid #0C7A07;
 		padding-bottom: 12px;
 	}
 }
@@ -1406,7 +1406,7 @@ nav.woocommerce-breadcrumb {
 	border-radius: 8px;
 }
 .w-home-photo-process img {
-	border-top: 8px solid #ff0000;
+	border-top: 8px solid #0C7A07;
 }
 .wpcf7 form.sent .wpcf7-response-output {
 	border: none;
@@ -1766,7 +1766,7 @@ nav.woocommerce-breadcrumb {
 }
 .w-home-nha-may:before {
 	content: "";
-	background: linear-gradient(180deg, rgba(243, 173, 63, 0) 0%, #F3AD3F 23.64%);	
+	background: linear-gradient(180deg, rgba(243, 173, 63, 0) 0%, #0c7a07c2 23.64%);	
 	height: 55%;
 	width: calc(100% - 20px);
 	position: absolute;
@@ -1780,7 +1780,7 @@ nav.woocommerce-breadcrumb {
 }
 .w-home-san-xuat:before {
 	content: "";
-	background: linear-gradient(180deg, rgba(238, 124, 49, 0) 0%, #ED7C30 23.64%);	
+	background: linear-gradient(180deg, rgba(238, 124, 49, 0) 0%, #0c7a07cf 23.64%);	
 	height: 55%;
 	width: calc(100% - 20px);
 	position: absolute;
@@ -1794,7 +1794,7 @@ w-home-che-bien {
 }
 .w-home-che-bien:before {
 	content: "";
-	background: linear-gradient(180deg, rgba(234, 54, 40, 0) 0%, #EA3728 23.64%);
+	background: linear-gradient(180deg, rgba(234, 54, 40, 0) 0%, #0c7a07 23.64%);
 	height: 55%;
 	width: calc(100% - 20px);
 	position: absolute;

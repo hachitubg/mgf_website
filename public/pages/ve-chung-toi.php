@@ -184,7 +184,7 @@
          <div class="elementor-element elementor-element-61674e8 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="61674e8" data-widget_type="heading.default">
           <div class="elementor-widget-container">
            <h2 class="elementor-heading-title elementor-size-default">
-            <span style="color: #ff0000;">
+            <span style="color: #0C7A07;">
              Vươn mình
             </span>
             ra thế giới
@@ -234,7 +234,7 @@
          <div class="elementor-element elementor-element-789afe3 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="789afe3" data-widget_type="heading.default">
           <div class="elementor-widget-container">
            <h2 class="elementor-heading-title elementor-size-default">
-            <span style="color: #ff0000;">
+            <span style="color: #0C7A07;">
              Sự chuyển mình
             </span>
             của thương hiệu Ba Huân trong thời kỳ số hóa
