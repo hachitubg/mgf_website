@@ -99,22 +99,22 @@ foreach ($products as $product) {
                 <meta content="2" name="numberOfItems">
                  <meta content="Ascending" name="itemListOrder">
                   <li class="trail-item trail-begin" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                   <a aria-label="Trang chủ" href="../index.html" itemprop="item" itemtype="https://schema.org/Thing" rel="home">
+                   <a aria-label="Trang chủ" href="trang-chu.php" itemprop="item" itemtype="https://schema.org/Thing" rel="home">
                     <span itemprop="name">
-                     <span class="breadcrumb-home">
+                     <span class="breadcrumb-home-a">
                       Trang chủ
                      </span>
                     </span>
                    </a>
-                   <span class="breadcrumb-sep">
+                   <span class="breadcrumb-sep-a">
                     /
                    </span>
                    <meta content="1" itemprop="position"/>
                   </li>
                   <li class="trail-item trail-end" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                   <a href="index.html" itemprop="item" itemtype="https://schema.org/Thing">
+                   <a href="danh-sach-san-pham.php" itemprop="item" itemtype="https://schema.org/Thing">
                     <span itemprop="name">
-                     Sản phẩm và phân phối
+                     Sản phẩm 
                     </span>
                    </a>
                    <meta content="2" itemprop="position"/>

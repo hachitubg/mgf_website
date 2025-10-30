@@ -21,7 +21,7 @@
                    <meta content="2" name="numberOfItems"/>
                    <meta content="Ascending" name="itemListOrder"/>
                    <li class="trail-item trail-begin" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem.html">
-                    <a aria-label="Trang chủ" href="../index.html" itemprop="item" itemtype="https://schema.org/Thing" rel="home">
+                    <a aria-label="Trang chủ" href="trang-chu.php" itemprop="item" itemtype="https://schema.org/Thing" rel="home">
                      <span itemprop="name">
                       <span class="breadcrumb-home">
                        Trang chủ
@@ -34,7 +34,7 @@
                     <meta content="1" itemprop="position"/>
                    </li>
                    <li class="trail-item trail-end" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem.html">
-                    <a href="index.html" itemprop="item" itemtype="https://schema.org/Thing">
+                    <a href="ve-chung-toi.php" itemprop="item" itemtype="https://schema.org/Thing">
                      <span itemprop="name" style="color: #ffffffff;">
                       Về chúng tôi
                      </span>
