@@ -59,7 +59,7 @@
 <script src="../wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
 <script src="../wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
 
-<link rel="icon" href="../wp-content/uploads/2023/08/cropped-faviconbh-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="../images/logo-GMF.png" sizes="32x32" />
 <!-- OceanWP CSS -->
 <link rel='stylesheet' id='oceanwp-custom-css' href='css/oceanwp-custom.css' media='all' />
 <script src="js/coming-soon-popup.js" defer></script>
@@ -95,24 +95,6 @@
             Liên hệ
            </a>
           </li>
-          <li class="menu-item wpml-ls-slot-13 wpml-ls-item wpml-ls-item-vi wpml-ls-current-language wpml-ls-menu-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-has-children dropdown menu-item-wpml-ls-13-vi" id="menu-item-wpml-ls-13-vi">
-           <a class="menu-link" href="index.html" title="VI">
-            <img alt="" class="wpml-ls-flag" src="../wp-content/uploads/flags/icon-viet.svg"/>
-            <span class="wpml-ls-display">
-             VI
-            </span>
-            <i aria-hidden="true" class="nav-arrow fa fa-angle-down" role="img">
-            </i>
-           </a>
-           <ul class="sub-menu">
-            <li class="menu-item wpml-ls-slot-13 wpml-ls-item wpml-ls-item-en wpml-ls-menu-item wpml-ls-first-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-13-en" id="menu-item-wpml-ls-13-en">
-             <a class="menu-link" href="en/index.html" title="EN">
-              <img alt="" class="wpml-ls-flag" src="../wp-content/uploads/flags/icon-eng-new.svg"/>
-              <span class="wpml-ls-display">
-               EN
-              </span>
-             </a>
-            </li>
            </ul>
           </li>
          </ul>
@@ -147,7 +129,7 @@
       <div class="clr" id="site-logo" itemscope="" itemtype="https://schema.org/Brand">
        <div class="clr" id="site-logo-inner">
         <a class="custom-logo-link" href="trang-chu.php" id="vi" itemprop="url" rel="home">
-         <img alt="" class="custom-logo" decoding="async" height="946" sizes="(max-width: 3738px) 100vw, 3738px" src="../wp-content/uploads/2023/11/Logo-Ba-Huan-Ngang_Chuan.png" srcset="../wp-content/uploads/2023/11/Logo-Ba-Huan-Ngang_Chuan.png 3738w, ../wp-content/uploads/2023/11/Logo-Ba-Huan-Ngang_Chuan-300x76.png 300w, ../wp-content/uploads/2023/11/Logo-Ba-Huan-Ngang_Chuan-1024x259.png 1024w, ../wp-content/uploads/2023/11/Logo-Ba-Huan-Ngang_Chuan-768x194.png 768w, ../wp-content/uploads/2023/11/Logo-Ba-Huan-Ngang_Chuan-1536x389.png 1536w, ../wp-content/uploads/2023/11/Logo-Ba-Huan-Ngang_Chuan-2048x518.png 2048w, ../wp-content/uploads/2023/11/Logo-Ba-Huan-Ngang_Chuan-600x152.png 600w" width="3738"/>
+         <img alt="MGF Logo" class="custom-logo" decoding="async" src="../images/logo-GMF.png" style="height: 60px; width: auto;"/>
         </a>
        </div>
        <!-- #site-logo-inner -->

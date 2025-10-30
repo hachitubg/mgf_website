@@ -79,62 +79,7 @@
        </div>
       </div>
      </section>
-     <section class="elementor-section elementor-top-section elementor-element elementor-element-4df9067 elementor-section-content-middle w-about-us-nav elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="4df9067">
-      <div class="elementor-container elementor-column-gap-default">
-       <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-ac412d0" data-element_type="column" data-id="ac412d0">
-        <div class="elementor-widget-wrap elementor-element-populated">
-         <div class="elementor-element elementor-element-1070c9e w-about-us-nav-active elementor-widget elementor-widget-heading" data-element_type="widget" data-id="1070c9e" data-widget_type="heading.default">
-          <div class="elementor-widget-container">
-           <h2 class="elementor-heading-title elementor-size-default">
-            <a href="nguoi-sang-lap/index.html">
-             Người sáng lập
-            </a>
-           </h2>
-          </div>
-         </div>
-        </div>
-       </div>
-       <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-8c3a9a6" data-element_type="column" data-id="8c3a9a6">
-        <div class="elementor-widget-wrap elementor-element-populated">
-         <div class="elementor-element elementor-element-3226dd5 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="3226dd5" data-widget_type="heading.default">
-          <div class="elementor-widget-container">
-           <h2 class="elementor-heading-title elementor-size-default">
-            <a href="gia-tri-doanh-nghiep/index.html">
-             Giá trị doanh nghiệp
-            </a>
-           </h2>
-          </div>
-         </div>
-        </div>
-       </div>
-       <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-99d0ec4" data-element_type="column" data-id="99d0ec4">
-        <div class="elementor-widget-wrap elementor-element-populated">
-         <div class="elementor-element elementor-element-9c8cfe6 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="9c8cfe6" data-widget_type="heading.default">
-          <div class="elementor-widget-container">
-           <h2 class="elementor-heading-title elementor-size-default">
-            <a href="quy-mo-san-xuat/index.html">
-             Quy mô sản xuất
-            </a>
-           </h2>
-          </div>
-         </div>
-        </div>
-       </div>
-       <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-d7f60ba" data-element_type="column" data-id="d7f60ba">
-        <div class="elementor-widget-wrap elementor-element-populated">
-         <div class="elementor-element elementor-element-60d1805 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="60d1805" data-widget_type="heading.default">
-          <div class="elementor-widget-container">
-           <h2 class="elementor-heading-title elementor-size-default">
-            <a href="giai-thuong-doi-tac/index.html">
-             Giải thưởng &amp; đối tác
-            </a>
-           </h2>
-          </div>
-         </div>
-        </div>
-       </div>
-      </div>
-     </section>
+     
      <section class="elementor-section elementor-top-section elementor-element elementor-element-16a8929 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="16a8929">
       <div class="elementor-container elementor-column-gap-default">
        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a967c30" data-element_type="column" data-id="a967c30">
