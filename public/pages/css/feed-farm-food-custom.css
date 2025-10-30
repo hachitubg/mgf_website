@@ -1,0 +1,62 @@
+/* Feed, Farm, Food Section Custom Styles - MGF Brand Colors */
+
+/* Feed Section - Growth Green gradient */
+.elementor-element-aed79d6 > .elementor-element-populated {
+    background: linear-gradient(135deg, #0C7A07 0%, #095505 100%) !important;
+    padding: 40px 20px !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(12, 122, 7, 0.15);
+}
+
+/* Farm Section - Rising Green gradient */
+.elementor-element-7428f4c > .elementor-element-populated {
+    background: linear-gradient(135deg, #06B841 0%, #0C7A07 100%) !important;
+    padding: 40px 20px !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(6, 184, 65, 0.15);
+}
+
+/* Food Section - Mixed Green gradient */
+.elementor-element-608b946 > .elementor-element-populated {
+    background: linear-gradient(135deg, #0C7A07 0%, #06B841 100%) !important;
+    padding: 40px 20px !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(12, 122, 7, 0.15);
+}
+
+/* Ensure white text is visible on green background */
+.w-home-nha-may .elementor-heading-title,
+.w-home-san-xuat .elementor-heading-title,
+.w-home-che-bien .elementor-heading-title,
+.w-home-nha-may .elementor-widget-text-editor,
+.w-home-san-xuat .elementor-widget-text-editor,
+.w-home-che-bien .elementor-widget-text-editor {
+    color: #FFFFFF !important;
+}
+
+/* Add hover effect */
+.elementor-element-aed79d6 > .elementor-element-populated:hover,
+.elementor-element-7428f4c > .elementor-element-populated:hover,
+.elementor-element-608b946 > .elementor-element-populated:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(12, 122, 7, 0.25);
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .elementor-element-aed79d6 > .elementor-element-populated,
+    .elementor-element-7428f4c > .elementor-element-populated,
+    .elementor-element-608b946 > .elementor-element-populated {
+        padding: 30px 15px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .elementor-element-aed79d6 > .elementor-element-populated,
+    .elementor-element-7428f4c > .elementor-element-populated,
+    .elementor-element-608b946 > .elementor-element-populated {
+        padding: 20px 10px !important;
+        margin-bottom: 20px;
+    }
+}
