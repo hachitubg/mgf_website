@@ -1,0 +1,331 @@
+/* Thành tựu nổi bật - Awards Section Styling */
+
+/* Main container */
+.wehomo-awards {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.w-awards-inner {
+    position: relative;
+}
+
+/* Individual award item - Only show first one by default */
+.w-awards-item {
+    width: 100%;
+}
+
+/* Slick will handle display */
+.w-awards-inner.slick-initialized .w-awards-item {
+    display: block;
+}
+
+.w-awards-outer {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    background: transparent !important;
+    padding: 0;
+}
+
+/* Left side - Descriptions */
+.w-awards-descriptions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 40px;
+    background: transparent !important;
+}
+
+/* Year styling with underline */
+.w-awards-year {
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.w-awards-year span {
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    color: #FF0000 !important;
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #333;
+    width: fit-content;
+}
+
+/* Heading/Title styling */
+.w-awards-heading {
+    margin-bottom: 15px;
+}
+
+.w-awards-heading span {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    color: #333 !important;
+    display: block;
+}
+
+/* Caption/Description styling */
+.w-awards-caption {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.w-awards-caption span {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    color: #555 !important;
+    display: block;
+}
+
+/* Right side - Photo */
+.w-awards-photo {
+    flex: 0 0 550px;
+    max-width: 550px;
+}
+
+.w-awards-photo a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.w-awards-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.w-awards-photo a:hover img {
+    transform: scale(1.02);
+}
+
+/* Slick controls - Pagination numbers */
+.w-slick-wrap {
+    display: block !important;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.w-slick-controls {
+    display: block !important;
+    text-align: left;
+    padding-left: 0;
+}
+
+/* Slick dots styling */
+.w-dots,
+.dots-container,
+.slick-dots {
+    display: flex !important;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    width: fit-content;
+}
+
+.w-dots li,
+.dots-container li,
+.slick-dots li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.w-dots button,
+.dots-container button,
+.slick-dots button {
+    background: transparent;
+    border: none;
+    font-size: 0;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    width: auto;
+    height: auto;
+    line-height: 1;
+}
+
+/* Show numbers using counter */
+.slick-dots {
+    counter-reset: slick-counter;
+}
+
+.slick-dots li {
+    counter-increment: slick-counter;
+}
+
+.slick-dots li button:before {
+    content: counter(slick-counter) !important;
+    font-size: 18px !important;
+    color: #999 !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #333 !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+
+.slick-dots button:hover:before {
+    color: #333 !important;
+}
+
+.w-slick-space {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .w-awards-outer {
+        gap: 30px;
+    }
+    
+    .w-awards-descriptions {
+        padding-right: 20px;
+    }
+    
+    .w-awards-photo {
+        flex: 0 0 400px;
+        max-width: 400px;
+    }
+    
+    .w-awards-year span {
+        font-size: 40px !important;
+    }
+    
+    .w-awards-heading span {
+        font-size: 20px !important;
+    }
+    
+    .w-awards-caption span {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .wehomo-awards {
+        padding: 0 15px;
+    }
+    
+    .w-awards-inner {
+        gap: 40px;
+    }
+    
+    .w-awards-outer {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .w-awards-descriptions {
+        padding-right: 0;
+    }
+    
+    .w-awards-photo {
+        flex: 0 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .w-awards-year span {
+        font-size: 36px !important;
+        padding-bottom: 8px;
+        border-bottom-width: 2px;
+    }
+    
+    .w-awards-heading span {
+        font-size: 18px !important;
+    }
+    
+    .w-awards-caption span {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+    
+    .w-slick-controls {
+        text-align: center;
+    }
+    
+    .w-dots,
+    .dots-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .wehomo-awards {
+        padding: 0 12px;
+    }
+    
+    .w-awards-inner {
+        gap: 30px;
+    }
+    
+    .w-awards-year span {
+        font-size: 32px !important;
+    }
+    
+    .w-awards-heading span {
+        font-size: 16px !important;
+    }
+    
+    .w-awards-caption span {
+        font-size: 13px !important;
+    }
+    
+    .w-dots button,
+    .dots-container button {
+        font-size: 16px;
+        padding: 3px 8px;
+    }
+    
+    .w-dots .slick-active button,
+    .dots-container .slick-active button,
+    .w-dots li.active button,
+    .dots-container li.active button {
+        font-size: 18px;
+    }
+}
+
+/* Override any existing styles */
+.home .w-awards-outer {
+    background: transparent !important;
+}
+
+.home .w-awards-outer .w-awards-caption {
+    background: transparent !important;
+}
+
+.home .w-awards-outer .w-awards-descriptions {
+    background: transparent !important;
+}
+
+/* Section title styling */
+.elementor-element-0f20d15 .elementor-heading-title {
+    margin-bottom: 40px;
+}
+
+/* Ensure proper spacing in the section */
+.elementor-element-5d746e6 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+

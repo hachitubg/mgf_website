@@ -1,0 +1,410 @@
+/* ==========================================
+   MODERN PRODUCTS LIST - CLEAN & PROFESSIONAL
+   Màu chủ đạo: Growth Green #0C7A07, Rising Green #06B841
+   ========================================== */
+
+/* Reset & Override để hiển thị hình ảnh */
+.woo-entry-image-swap,
+.woo-entry-image,
+.woo-entry-image img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Category Sidebar Menu */
+.menu-product-cat .elementor-nav-menu--main {
+  background: #ffffff !important;
+  padding: 18px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+.menu-product-cat .elementor-nav-menu li {
+  margin-bottom: 3px !important;
+}
+
+.menu-product-cat .elementor-item {
+  color: #444444 !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  padding: 9px 14px !important;
+  border-radius: 5px !important;
+  transition: all 0.2s ease !important;
+  display: block !important;
+  text-decoration: none !important;
+  border-left: 3px solid transparent !important;
+}
+
+.menu-product-cat .elementor-item:hover {
+  background: #f7f7f7 !important;
+  color: #0C7A07 !important;
+  border-left-color: #06B841 !important;
+  padding-left: 16px !important;
+}
+
+.menu-product-cat .current-menu-item .elementor-item,
+.menu-product-cat .elementor-item-active {
+  background: linear-gradient(135deg, #0C7A07, #06B841) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  border-left-color: transparent !important;
+}
+
+/* Section Heading */
+.w-heading-url {
+  color: #1a1a1a !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin-bottom: 22px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 2px solid #06B841 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.w-title-readmore {
+  color: #0C7A07 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  transition: all 0.2s ease !important;
+}
+
+.w-title-readmore:hover {
+  color: #06B841 !important;
+  gap: 7px !important;
+}
+
+/* Products Grid - Better spacing */
+.elementor-products-grid .products {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+/* Product Card - Clean & Professional */
+.product.type-product {
+  background: #ffffff !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid #f5f5f5 !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.product.type-product:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 8px 20px rgba(12, 122, 7, 0.15) !important;
+  border-color: #06B841 !important;
+}
+
+/* Product Inner Container */
+.product-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  padding: 0 !important;
+}
+
+/* Product Image - Better aspect ratio */
+.woo-entry-image {
+  position: relative !important;
+  width: 100% !important;
+  padding-top: 100% !important;
+  overflow: hidden !important;
+  background: #fafafa !important;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.woo-entry-image a {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px !important;
+}
+
+.woo-entry-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  transition: transform 0.4s ease !important;
+}
+
+.product.type-product:hover .woo-entry-image img {
+  transform: scale(1.08) !important;
+}
+
+/* Multiple Product Images (Slider) */
+.product-images {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.product-image-item {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0 !important;
+  transition: opacity 0.5s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px !important;
+}
+
+.product-image-item.active {
+  opacity: 1 !important;
+  z-index: 1 !important;
+}
+
+.product-image-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Sale Badge - Màu xanh chủ đạo, nhỏ gọn ở góc */
+.product-images[data-sale="true"]::after {
+  content: "KM" !important;
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  background: linear-gradient(135deg, #0C7A07, #06B841) !important;
+  color: #ffffff !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  z-index: 2 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 2px 6px rgba(12, 122, 7, 0.3) !important;
+}
+
+/* Sale badge for products without image slider */
+.woo-entry-image[data-sale="true"]::after {
+  content: "KM" !important;
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  background: linear-gradient(135deg, #0C7A07, #06B841) !important;
+  color: #ffffff !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  z-index: 2 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 2px 6px rgba(12, 122, 7, 0.3) !important;
+}
+
+/* Product Content - Better spacing & typography */
+.woo-entry-inner {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.woo-entry-inner .image-wrap {
+  display: none !important;
+}
+
+.woo-entry-inner .title {
+  background: #ffffff !important;
+  margin: 0 !important;
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  min-height: 80px !important;
+}
+
+.woo-entry-inner .title h2 {
+  margin: 0 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  color: #2c2c2c !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  width: 100% !important;
+}
+
+.woo-entry-inner .title h2 a {
+  color: #2c2c2c !important;
+  text-decoration: none !important;
+  transition: color 0.25s ease !important;
+}
+
+.product.type-product:hover .woo-entry-inner .title h2 a {
+  color: #0C7A07 !important;
+}
+
+/* Page Heading */
+.elementor-heading-title.elementor-size-default {
+  color: #1a1a1a !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  margin-bottom: 22px !important;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Desktop Large (1400px+) */
+@media (min-width: 1400px) {
+  .elementor-products-grid .products {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+}
+
+/* Desktop (1200px - 1399px) */
+@media (max-width: 1399px) {
+  .elementor-products-grid .products {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 18px !important;
+  }
+}
+
+/* Tablet Landscape (1024px and below) */
+@media (max-width: 1024px) {
+  .elementor-products-grid .products {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+  
+  .w-heading-url {
+    font-size: 20px !important;
+  }
+  
+  .menu-product-cat .elementor-nav-menu--main {
+    padding: 16px !important;
+  }
+  
+  .woo-entry-inner .title h2 {
+    font-size: 14px !important;
+  }
+  
+  .woo-entry-inner .title {
+    min-height: 75px !important;
+  }
+}
+
+/* Tablet Portrait (768px and below) */
+@media (max-width: 768px) {
+  .elementor-products-grid .products {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+  
+  .w-heading-url {
+    font-size: 18px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  
+  .w-title-readmore {
+    align-self: flex-end !important;
+  }
+  
+  .woo-entry-inner .title {
+    padding: 16px 14px 18px !important;
+    min-height: 70px !important;
+  }
+  
+  .woo-entry-inner .title h2 {
+    font-size: 14px !important;
+  }
+  
+  .menu-product-cat .elementor-nav-menu--main {
+    padding: 14px !important;
+  }
+  
+  .menu-product-cat .elementor-item {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .elementor-products-grid .products {
+    gap: 12px !important;
+  }
+  
+  .product.type-product {
+    border-radius: 8px !important;
+  }
+  
+  .woo-entry-image {
+    border-radius: 8px 8px 0 0 !important;
+  }
+  
+  .woo-entry-inner .title {
+    padding: 14px 12px 16px !important;
+    min-height: 65px !important;
+  }
+  
+  .woo-entry-inner .title h2 {
+    font-size: 13px !important;
+  }
+  
+  .w-heading-url {
+    font-size: 16px !important;
+    margin-bottom: 18px !important;
+    padding-bottom: 8px !important;
+  }
+  
+  .elementor-heading-title.elementor-size-default {
+    font-size: 22px !important;
+    margin-bottom: 18px !important;
+  }
+}
+
+/* Grid Override for Mobile/Tablet */
+@media (max-width: 767px) {
+  .elementor-grid-mobile-2 .products {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elementor-grid-tablet-3 .products {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth !important;
+}

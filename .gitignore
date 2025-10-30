@@ -1,0 +1,38 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# PHP
+*.log
+
+# Uploads (nếu có file upload lớn)
+# uploads/*
+# !uploads/.gitkeep
+
+# Database exports
+*.sql.gz
+*.sql.zip
+
+# Environment files
+.env
+.env.local
+
+# Temporary files
+tmp/
+temp/
+cache/
+
+# Node modules (nếu có)
+node_modules/
+
+# Composer
+vendor/
+composer.lock
