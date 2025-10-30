@@ -201,8 +201,11 @@ unset($_SESSION['form_errors'], $_SESSION['form_data']);
 
     <div class="form-row">
       <label>Link URL</label>
-      <input type="url" name="link_url" placeholder="https://example.com" 
-             value="<?= htmlspecialchars($formData['link_url'] ?? $banner['link_url'] ?? '') ?>">
+      <div class="input-with-icon">
+        <i class="fas fa-link input-icon"></i>
+        <input type="url" name="link_url" class="form-input-icon" placeholder="https://example.com" 
+               value="<?= htmlspecialchars($formData['link_url'] ?? $banner['link_url'] ?? '') ?>">
+      </div>
       <p class="muted">URL sẽ mở khi click vào banner (để trống nếu không cần)</p>
     </div>
 

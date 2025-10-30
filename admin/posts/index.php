@@ -70,47 +70,64 @@ $totalPages = ceil($totalPosts / $perPage);
 <html>
 <head>
   <?php include __DIR__ . '/../_head.php'; ?>
-  <title>Quản Lý Bài Viết - Admin</title>
+  <title>Quản Lý Bài Viết - MGF Admin</title>
 </head>
 <body>
   <div class="admin-container">
-  <h1>Quản Lý Bài Viết</h1>
   <?php include __DIR__ . '/../_nav.php'; ?>
+  
+  <h1><i class="fas fa-newspaper"></i> Quản Lý Bài Viết</h1>
 
   <?php if (isset($_SESSION['success'])): ?>
-    <p style="color:#34c759;background:#d9f7e5;padding:12px;border-radius:8px;border:1px solid #a3e9c4"><?= htmlspecialchars($_SESSION['success']) ?></p>
+    <div class="alert alert-success">
+      <i class="fas fa-check-circle"></i>
+      <?= htmlspecialchars($_SESSION['success']) ?>
+    </div>
     <?php unset($_SESSION['success']); ?>
   <?php endif; ?>
 
   <?php if (isset($_SESSION['error'])): ?>
-    <p style="color:#ff3b30;background:#fee;padding:12px;border-radius:8px;border:1px solid #fcc"><?= htmlspecialchars($_SESSION['error']) ?></p>
+    <div class="alert alert-danger">
+      <i class="fas fa-exclamation-circle"></i>
+      <?= htmlspecialchars($_SESSION['error']) ?>
+    </div>
     <?php unset($_SESSION['error']); ?>
   <?php endif; ?>
   
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;gap:16px;flex-wrap:wrap">
-    <a href="form.php" class="btn">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/></svg>
-      Thêm Bài Viết
-    </a>
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <a href="form.php" class="btn">
+        <i class="fas fa-plus-circle"></i>
+        Thêm Bài Viết
+      </a>
+    </div>
     
-    <form method="get" style="display:flex;gap:8px;flex:1;max-width:600px;flex-wrap:wrap">
-      <select name="category" style="padding:8px 12px;border:1px solid #d2d2d7;border-radius:8px;font-size:14px">
-        <option value="">Tất cả danh mục</option>
-        <?php foreach ($categories as $cat): ?>
-          <option value="<?= $cat['id'] ?>" <?= $categoryFilter == $cat['id'] ? 'selected' : '' ?>>
-            <?= htmlspecialchars($cat['name']) ?>
-          </option>
-        <?php endforeach; ?>
-      </select>
-      <input type="text" name="search" placeholder="Tìm kiếm bài viết..." value="<?= htmlspecialchars($search) ?>" style="flex:1;min-width:200px;padding:8px 12px;border:1px solid #d2d2d7;border-radius:8px;font-size:14px">
-      <button type="submit" class="btn">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
-        Tìm
-      </button>
-      <?php if ($search || $categoryFilter): ?>
-        <a href="index.php" class="btn">Xóa</a>
-      <?php endif; ?>
-    </form>
+    <div class="toolbar-right">
+      <form method="get" class="search-form-compact">
+        <div class="search-group">
+          <select name="category" class="form-select">
+            <option value="">Tất cả danh mục</option>
+            <?php foreach ($categories as $cat): ?>
+              <option value="<?= $cat['id'] ?>" <?= $categoryFilter == $cat['id'] ? 'selected' : '' ?>>
+                <?= htmlspecialchars($cat['name']) ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+          <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" name="search" placeholder="Tìm kiếm bài viết..." value="<?= htmlspecialchars($search) ?>" class="form-input">
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Tìm
+          </button>
+          <?php if ($search || $categoryFilter): ?>
+            <a href="index.php" class="btn btn-secondary">
+              <i class="fas fa-times"></i>
+            </a>
+          <?php endif; ?>
+        </div>
+      </form>
+    </div>
   </div>
 
   <table>
@@ -120,7 +137,15 @@ $totalPages = ceil($totalPosts / $perPage);
     <tbody>
     <?php if (empty($posts)): ?>
       <tr>
-        <td colspan="7" style="text-align:center;padding:40px;color:#86868b">Không tìm thấy bài viết nào.</td>
+        <td colspan="7">
+          <div class="empty-state" style="padding: 40px 20px;">
+            <svg width="64" height="64" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+            </svg>
+            <h2>Không tìm thấy bài viết nào</h2>
+            <p>Hãy thử tìm kiếm với từ khóa khác hoặc thêm bài viết mới</p>
+          </div>
+        </td>
       </tr>
     <?php else: ?>
       <?php foreach ($posts as $post): ?>
@@ -146,15 +171,21 @@ $totalPages = ceil($totalPosts / $perPage);
         <td><code style="font-size:12px;color:#06c"><?= htmlspecialchars($post['slug']) ?></code></td>
         <td>
           <?php if ($post['is_active']): ?>
-            <span style="background:#d9f7e5;color:#34c759;padding:4px 8px;border-radius:4px;font-size:12px;font-weight:500">Hiển thị</span>
+            <span class="badge badge-success">Hiển thị</span>
           <?php else: ?>
-            <span style="background:#f5f5f7;color:#86868b;padding:4px 8px;border-radius:4px;font-size:12px;font-weight:500">Ẩn</span>
+            <span class="badge">Ẩn</span>
           <?php endif; ?>
         </td>
         <td class="muted"><?= date('d/m/Y H:i', strtotime($post['created_at'])) ?></td>
         <td>
-          <a href="form.php?id=<?= $post['id'] ?>">Sửa</a> |
-          <a href="delete.php?id=<?= $post['id'] ?>" onclick="return confirm('Bạn có chắc muốn xóa bài viết này?')" style="color:#ff3b30">Xóa</a>
+          <a href="form.php?id=<?= $post['id'] ?>" class="btn-link">
+            <i class="fas fa-edit"></i>
+            Sửa
+          </a>
+          <a href="delete.php?id=<?= $post['id'] ?>" onclick="return confirm('Bạn có chắc muốn xóa bài viết này?')" class="btn-link danger">
+            <i class="fas fa-trash"></i>
+            Xóa
+          </a>
         </td>
       </tr>
       <?php endforeach; ?>
@@ -163,15 +194,21 @@ $totalPages = ceil($totalPosts / $perPage);
   </table>  </table>
 
   <?php if ($totalPages > 1): ?>
-    <div style="display:flex;justify-content:center;align-items:center;gap:16px;margin-top:24px">
+    <div class="pagination">
       <?php if ($page > 1): ?>
-        <a href="?page=<?= $page - 1 ?><?= $search ? '&search=' . urlencode($search) : '' ?>" class="btn">← Trước</a>
+        <a href="?page=<?= $page - 1 ?><?= $search ? '&search=' . urlencode($search) : '' ?><?= $categoryFilter ? '&category=' . $categoryFilter : '' ?>" class="btn btn-secondary">
+          <i class="fas fa-chevron-left"></i>
+          Trước
+        </a>
       <?php endif; ?>
       
-      <span class="muted">Trang <?= $page ?> / <?= $totalPages ?></span>
+      <span class="pagination-info">Trang <?= $page ?> / <?= $totalPages ?></span>
       
       <?php if ($page < $totalPages): ?>
-        <a href="?page=<?= $page + 1 ?><?= $search ? '&search=' . urlencode($search) : '' ?>" class="btn">Sau →</a>
+        <a href="?page=<?= $page + 1 ?><?= $search ? '&search=' . urlencode($search) : '' ?><?= $categoryFilter ? '&category=' . $categoryFilter : '' ?>" class="btn btn-secondary">
+          Sau
+          <i class="fas fa-chevron-right"></i>
+        </a>
       <?php endif; ?>
     </div>
   <?php endif; ?>

@@ -139,9 +139,11 @@ $categories = $stmt->fetchAll();
     
     <div class="type-tabs">
       <a href="?type=product" class="type-tab <?php echo $type === 'product' ? 'active' : ''; ?>">
+        <i class="fas fa-box"></i>
         Danh Mục Sản Phẩm
       </a>
       <a href="?type=post" class="type-tab <?php echo $type === 'post' ? 'active' : ''; ?>">
+        <i class="fas fa-newspaper"></i>
         Danh Mục Bài Viết
       </a>
     </div>
@@ -149,18 +151,27 @@ $categories = $stmt->fetchAll();
     <div class="toolbar">
       <div class="toolbar-left">
         <a href="form.php?type=<?php echo $type; ?>" class="btn">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/></svg>
+          <i class="fas fa-plus-circle"></i>
           Thêm Danh Mục
         </a>
       </div>
       <div class="toolbar-right">
-        <form method="get" class="search-form" style="display:flex;gap:8px;align-items:center">
+        <form method="get" class="search-form-compact">
           <input type="hidden" name="type" value="<?php echo $type; ?>">
-          <input type="search" name="search" placeholder="Tìm kiếm danh mục..." value="<?php echo htmlspecialchars($search); ?>" style="min-width:250px">
-          <button type="submit" class="btn">Tìm</button>
-          <?php if ($search): ?>
-            <a href="?type=<?php echo $type; ?>" class="btn">Xóa</a>
-          <?php endif; ?>
+          <div class="search-group">
+            <div class="search-box">
+              <i class="fas fa-search search-icon"></i>
+              <input type="search" name="search" placeholder="Tìm kiếm danh mục..." value="<?php echo htmlspecialchars($search); ?>" class="form-input">
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Tìm
+            </button>
+            <?php if ($search): ?>
+              <a href="?type=<?php echo $type; ?>" class="btn btn-secondary">
+                <i class="fas fa-times"></i>
+              </a>
+            <?php endif; ?>
+          </div>
         </form>
       </div>
     </div>
@@ -214,10 +225,12 @@ $categories = $stmt->fetchAll();
             <td>
               <div class="action-buttons">
                 <a href="form.php?id=<?php echo $cat['id']; ?>" class="btn-small" title="Sửa">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/></svg>
+                  <i class="fas fa-edit"></i>
+                  Sửa
                 </a>
                 <a href="delete.php?id=<?php echo $cat['id']; ?>" class="btn-small btn-danger" onclick="return confirm('Xóa danh mục này? Các sản phẩm/bài viết trong danh mục sẽ không bị xóa.')" title="Xóa">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/><path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/></svg>
+                  <i class="fas fa-trash"></i>
+                  Xóa
                 </a>
               </div>
             </td>

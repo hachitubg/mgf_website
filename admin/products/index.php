@@ -45,7 +45,7 @@ $products = $stmt->fetchAll();
 <html>
 <head>
   <?php include __DIR__ . '/../_head.php'; ?>
-  <title>Quản Lý Sản Phẩm - Admin</title>
+  <title>Quản Lý Sản Phẩm - MGF Admin</title>
   <style>
     .product-row {
       cursor: move;
@@ -104,38 +104,49 @@ $products = $stmt->fetchAll();
 </head>
 <body>
   <div class="admin-container">
-  <h1>Quản Lý Sản Phẩm</h1>
   <?php include __DIR__ . '/../_nav.php'; ?>
   
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;gap:16px;flex-wrap:wrap">
-    <a href="form.php" class="btn">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/></svg>
-      Thêm Sản Phẩm
-    </a>
+  <h1><i class="fas fa-box"></i> Quản Lý Sản Phẩm</h1>
+  
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <a href="form.php" class="btn">
+        <i class="fas fa-plus-circle"></i>
+        Thêm Sản Phẩm
+      </a>
+    </div>
     
-    <form method="get" style="display:flex;gap:8px;flex:1;max-width:600px;flex-wrap:wrap">
-      <select name="category" style="padding:8px 12px;border:1px solid #d2d2d7;border-radius:8px;font-size:14px">
-        <option value="">Tất cả danh mục</option>
-        <?php foreach ($categories as $cat): ?>
-          <option value="<?= $cat['id'] ?>" <?= $categoryFilter == $cat['id'] ? 'selected' : '' ?>>
-            <?= htmlspecialchars($cat['name']) ?>
-          </option>
-        <?php endforeach; ?>
-      </select>
-      <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." value="<?php echo htmlspecialchars($search); ?>" style="flex:1;min-width:200px;padding:8px 12px;border:1px solid #d2d2d7;border-radius:8px;font-size:14px">
-      <button type="submit" class="btn">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
-        Tìm
-      </button>
-      <?php if ($search || $categoryFilter): ?>
-        <a href="index.php" class="btn">Xóa</a>
-      <?php endif; ?>
-    </form>
+    <div class="toolbar-right">
+      <form method="get" class="search-form-compact">
+        <div class="search-group">
+          <select name="category" class="form-select">
+            <option value="">Tất cả danh mục</option>
+            <?php foreach ($categories as $cat): ?>
+              <option value="<?= $cat['id'] ?>" <?= $categoryFilter == $cat['id'] ? 'selected' : '' ?>>
+                <?= htmlspecialchars($cat['name']) ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+          <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." value="<?php echo htmlspecialchars($search); ?>" class="form-input">
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Tìm
+          </button>
+          <?php if ($search || $categoryFilter): ?>
+            <a href="index.php" class="btn btn-secondary">
+              <i class="fas fa-times"></i>
+            </a>
+          <?php endif; ?>
+        </div>
+      </form>
+    </div>
   </div>
 
   <table>
     <thead>
-      <tr><th style="width:40px">Sắp xếp</th><th>Tên Sản Phẩm</th><th>Danh Mục</th><th>Giá</th><th>Khuyến Mãi</th><th>Hình</th><th>Ngày Tạo</th><th>Hành Động</th></tr>
+      <tr><th style="width:40px">Sắp xếp</th><th></th><th>Tên Sản Phẩm</th><th>Danh Mục</th><th>Giá</th><th>Khuyến Mãi</th><th>Hình</th><th>Ngày Tạo</th><th>Hành Động</th></tr>
     </thead>
     <tbody id="products-tbody">
     <?php foreach ($products as $index => $p): ?>
@@ -155,8 +166,14 @@ $products = $stmt->fetchAll();
         <td><?php echo $p['images_count']; ?></td>
         <td><?php echo date('d/m/Y H:i', strtotime($p['created_at'])); ?></td>
         <td>
-          <a href="form.php?id=<?php echo $p['id']; ?>">Sửa</a>
-          <a href="delete.php?id=<?php echo $p['id']; ?>" class="danger" onclick="return confirm('Xóa sản phẩm này?');">Xóa</a>
+          <a href="form.php?id=<?php echo $p['id']; ?>" class="btn-link">
+            <i class="fas fa-edit"></i>
+            Sửa
+          </a>
+          <a href="delete.php?id=<?php echo $p['id']; ?>" class="btn-link danger" onclick="return confirm('Xóa sản phẩm này?');">
+            <i class="fas fa-trash"></i>
+            Xóa
+          </a>
         </td>
       </tr>
     <?php endforeach; ?>
@@ -164,13 +181,21 @@ $products = $stmt->fetchAll();
   </table>
   
   <?php if (count($products) === 0): ?>
-    <div style="text-align:center;padding:48px;color:#86868b">
+    <div class="empty-state">
+      <svg width="64" height="64" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+      </svg>
       <?php if ($search): ?>
+        <h2>Không tìm thấy sản phẩm</h2>
         <p>Không tìm thấy sản phẩm với từ khóa "<?php echo htmlspecialchars($search); ?>"</p>
-        <a href="index.php" class="btn" style="margin-top:16px">Xem tất cả</a>
+        <a href="index.php" class="btn">Xem tất cả</a>
       <?php else: ?>
-        <p>Chưa có sản phẩm nào. Hãy tạo sản phẩm đầu tiên!</p>
-        <a href="form.php" class="btn" style="margin-top:16px">Thêm Sản Phẩm</a>
+        <h2>Chưa có sản phẩm nào</h2>
+        <p>Hãy tạo sản phẩm đầu tiên!</p>
+        <a href="form.php" class="btn">
+          <i class="fas fa-plus-circle"></i>
+          Thêm Sản Phẩm
+        </a>
       <?php endif; ?>
     </div>
   <?php endif; ?>
