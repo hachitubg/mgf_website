@@ -44,12 +44,6 @@ foreach ($products as $product) {
 }
 ?>
 
-<style>
-  .home #main {
-    margin-top: 130px !important;
-  }
-</style>
-
 <main class="site-main clr" id="main" role="main">
      <div class="elementor elementor-22" data-elementor-id="22" data-elementor-type="wp-page">
       <?php if (!empty($banners)): ?>

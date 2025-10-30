@@ -1,42 +1,9 @@
 <?php include __DIR__ . '/header.php'; ?>
-
-  <style>
-    .elementor-16 .elementor-element.elementor-element-e8aa8f0 .elementor-heading-title {
-      color: #FFFFFF !important;
-      font-size: 28px !important;
-      font-weight: 700 !important;
-    }
-    
-    .elementor-16 .elementor-element.elementor-element-8871174 .elementor-heading-title {
-      color: #FFFFFF !important;
-      font-size: 18px !important;
-      font-weight: 600 !important;
-    }
-
-    .elementor-16 .elementor-element.elementor-element-1b8e090 .elementor-heading-title {
-      color: #FFFFFF !important;
-      font-size: 28px !important;
-      font-weight: 700 !important;
-    }
-
-    .elementor-16 .elementor-element.elementor-element-d3978a4 .elementor-heading-title {
-        color: #FFFFFF !important;
-        font-size: 18px !important;
-        font-weight: 600 !important;
-    }
-
-    .elementor-16 .elementor-element.elementor-element-11fe818 .elementor-heading-title {
-        color: #FFFFFF !important;
-        font-size: 28px !important;
-        font-weight: 700 !important;
-    }
-
-    .elementor-16 .elementor-element.elementor-element-e21de88 .elementor-heading-title {
-        color: #FFFFFF !important;
-        font-size: 18px !important;
-        font-weight: 600 !important;
-    }
-  </style>
+<style>
+  .home #main {
+    margin-top: 200px;
+}
+</style>
    <main class="site-main clr" id="main" role="main">
     <div class="elementor elementor-16" data-elementor-id="16" data-elementor-type="wp-page">
      <section class="elementor-section elementor-top-section elementor-element elementor-element-1ebb935 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="1ebb935">
@@ -46,7 +13,7 @@
          <div class="elementor-element elementor-element-2857b6d home-quote elementor-widget elementor-widget-heading" data-element_type="widget" data-id="2857b6d" data-widget_type="heading.default">
           <div class="elementor-widget-container">
            <h1 class="elementor-heading-title elementor-size-default">
-            Hơn 50 năm phát triển, thương hiệu Ba Huân nỗ lực không ngừng mang lại những giá trị kinh tế – xã hội tích cực cho đất nước, tạo những bước phát triển vượt bậc cho nền nông nghiệp sạch Việt Nam.
+            Khởi nguồn từ nền tảng nông nghiệp công nghệ cao, MGF không ngừng đổi mới để mang lại giá trị bền vững cho ngành chăn nuôi Việt Nam, đồng hành cùng người nông dân xây dựng một nền nông nghiệp xanh – sạch – thịnh vượng.
            </h1>
           </div>
          </div>
@@ -61,7 +28,7 @@
          <div class="elementor-element elementor-element-e94055f elementor-widget elementor-widget-heading" data-element_type="widget" data-id="e94055f" data-widget_type="heading.default">
           <div class="elementor-widget-container">
            <span class="elementor-heading-title elementor-size-default">
-            Chủ tịch HĐQT - Phạm Thị Huân
+            Chủ tịch HĐQT
            </span>
           </div>
          </div>
@@ -93,7 +60,7 @@
          <div class="elementor-element elementor-element-0e678f9 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="0e678f9" data-widget_type="text-editor.default">
           <div class="elementor-widget-container">
            <p>
-            Mô hình khép kín tại Ba Huân đạt chuẩn chất lượng quốc tế từ sản xuất thức ăn chăn nuôi đến nuôi gia cầm và cho ra sản phẩm cuối cùng là sản phẩm trứng, thịt gà và các sản phẩm chế biến liên quan.
+            Mô hình khép kín tại MGF được vận hành theo chuẩn quốc tế, bắt đầu từ sản xuất thức ăn chăn nuôi chất lượng cao, triển khai tại hệ thống trang trại quy mô lớn, và cho ra đời các sản phẩm an toàn, thân thiện với môi trường, góp phần kiến tạo nền nông nghiệp xanh – sạch – bền vững cho cộng đồng.
            </p>
           </div>
          </div>
@@ -230,10 +197,10 @@
              <div class="elementor-element elementor-element-fe92e23 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="fe92e23" data-widget_type="text-editor.default">
               <div class="elementor-widget-container">
                <p>
-                Hơn 50 năm nỗ lực vun đắp, từ một gánh trứng nhỏ, thương hiệu Ba Huân đã phát triển lớn mạnh và ghi dấu ấn bằng những con số ấn tượng. Sản phẩm của Ba Huân đã có mặt tại 3000 siêu thị lớn nhỏ trải khắp 63 tỉnh thành trên toàn quốc. Đến nay 05 quốc gia đã có sản phẩm của Ba Huân bao gồm: Mỹ, Hong Kong, Singapore, Nhật Bản, Malaysia.
+                Khởi nguồn từ nền tảng nông nghiệp công nghệ cao, MGF không ngừng đổi mới để mang lại giá trị bền vững cho ngành chăn nuôi Việt Nam, đồng hành cùng người nông dân xây dựng một nền nông nghiệp xanh – sạch – thịnh vượng.
                </p>
                <p>
-                Với giấc mơ đưa uy tín sản phẩm nông nghiệp thương hiệu Việt vươn xa thế giới, Ba Huân đã và đang viết tiếp câu chuyện của mình với sự tự hào và những đam mê chinh phục mới.
+                Với giấc mơ đưa uy tín sản phẩm nông nghiệp thương hiệu Việt vươn xa thế giới, MGF đã và đang viết tiếp câu chuyện của mình với sự tự hào và những đam mê chinh phục mới.
                </p>
               </div>
              </div>
@@ -396,7 +363,7 @@
                 <div class="elementor-counter-title">
                  Quốc gia/Vùng lãnh thổ
                  <span>
-                  Đã có sản phẩm Ba Huân: Mỹ, Singapore, Maylaysia, Hong Kong, Nhật Bản
+                  Đã có sản phẩm MGF: Mỹ, Singapore, Maylaysia, Hong Kong, Nhật Bản
                  </span>
                 </div>
                </div>
@@ -421,7 +388,7 @@
                 <div class="elementor-counter-title">
                  tỉnh thành
                  <span>
-                  Số lượng tỉnh thành tiêu thụ Ba Huân
+                  Số lượng tỉnh thành tiêu thụ MGF
                   <br>
                    tại Việt Nam
                   </br>
@@ -494,7 +461,7 @@
                 </div>
                 <div class="w-awards-caption">
                  <span>
-                  Cục Chăn nuôi, Bộ Nông nghiệp và Phát triển Nông thôn, Hội Chăn nuôi Việt Nam, Hiệp hội Gia súc lớn Việt Nam, Hiệp hội Gia cầm Việt Nam, Viện Chăn nuôi, Khoa Chăn nuôi, Học viện Nông nghiệp Việt Nam đã tổ chức trao Giải thưởng Vietstock Awards năm 2022 dành cho Công ty Cổ phần Ba Huân.
+                  Cục Chăn nuôi, Bộ Nông nghiệp và Phát triển Nông thôn, Hội Chăn nuôi Việt Nam, Hiệp hội Gia súc lớn Việt Nam, Hiệp hội Gia cầm Việt Nam, Viện Chăn nuôi, Khoa Chăn nuôi, Học viện Nông nghiệp Việt Nam đã tổ chức trao Giải thưởng Vietstock Awards năm 2022 dành cho Công ty Cổ phần MGF.
                  </span>
                 </div>
                </div>

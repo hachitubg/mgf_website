@@ -58,12 +58,6 @@ $otherProducts = getProducts($pdo, [
 
 <link rel="stylesheet" href="css/chi-tiet-san-pham.css">
 
-<style>
-  .home #main {
-    margin-top: 150px !important;
-  }
-</style>
-
 <main class="site-main clr" id="main" role="main">
      <div class="woocommerce-notices-wrapper">
      </div>

@@ -14,14 +14,14 @@
        <div class="elementor-element elementor-element-192fab3 w-before-footer-title-desciption elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="192fab3" data-widget_type="text-editor.default">
         <div class="elementor-widget-container">
          <p>
-          Tải ngay tài liệu giới thiệu doanh nghiệp Ba Huân
+          Tải ngay tài liệu giới thiệu MGF – Feed • Farm • Food
          </p>
         </div>
        </div>
        <div class="elementor-element elementor-element-a86b562 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="a86b562" data-widget_type="text-editor.default">
         <div class="elementor-widget-container">
          <p>
-          Vui lòng liên hệ để được kết nối hoặc biết thêm thông tin về Ba Huân
+          Vui lòng liên hệ để được kết nối hoặc biết thêm thông tin về MGF
          </p>
         </div>
        </div>
@@ -89,30 +89,42 @@
        <div class="footer-box span_1_of_4 col col-1">
         <div class="widget_text footer-widget widget_custom_html clr" id="custom_html-5">
          <h4 class="widget-title">
-          Công ty cổ phần Ba Huân
+          CÔNG TY CỔ PHẦN NÔNG NGHIỆP CÔNG NGHỆ CAO MGF
          </h4>
          <div class="textwidget custom-html-widget">
           <div class="w-info-footer-wrap">
            <div class="w-footer-phone">
-            <a href="tel:18006002">
+            <a href="tel:0968989255">
              <span>
-              Hotline: 1800 6002
+              Hotline: 0968 989 255
              </span>
             </a>
            </div>
            <div class="w-footer-email">
-            <a href="mailto:info@bahuan.vn">
+            <a href="mailto:info@mgf.com.vn">
              <span>
-              Email: info@bahuan.vn
+              Email: info@mgf.com.vn
              </span>
             </a>
            </div>
            <div class="w-footer-address">
-            <a href="https://www.google.com/maps/place/C%c3%b4ng%2bTy%2bC%e1%bb%95%2bPh%e1%ba%a7n%2bBa%2bHu%c3%a2n/%4010.7553411%2c106.4150502%2c10z/data%3d%214m7%213m6%211s0x31752e88713aa90d_0xae3cee9d74/g/11dyxttbtde8ac.html" target="_blank">
+            <a href="https://www.google.com/maps/search/TT19-09,+khu+đấu+giá+31ha,+Xã+Gia+Lâm,+TP.+Hà+Nội" target="_blank">
              <span>
-              Tòa nhà Cantavil Premier, Song Hành, Phường An Phú, Tp. Thủ Đức, Tp. Hồ Chí Minh.
+              TT19-09, khu đấu giá 31ha, Xã Gia Lâm, TP. Hà Nội
              </span>
             </a>
+           </div>
+           <div class="w-footer-website">
+            <a href="https://mgf.com.vn" target="_blank">
+             <span>
+              Website: mgf.com.vn
+             </span>
+            </a>
+           </div>
+           <div class="w-footer-msdn">
+            <span>
+             Mã số DN: 0110181052
+            </span>
            </div>
           </div>
           <img alt="bo-cong-thuong" class="bo-cong-thuong" src="../wp-content/uploads/2022/12/bo-cong-thuong.svg"/>
@@ -135,11 +147,6 @@
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110" id="menu-item-110">
             <a class="menu-link" href="danh-sach-san-pham.php">
              Sản phẩm và phân phối
-            </a>
-           </li>
-           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107" id="menu-item-107">
-            <a class="menu-link coming-soon-link" href="#" data-page-title="Con người Ba Huân">
-             Con người Ba Huân
             </a>
            </li>
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108" id="menu-item-108">
@@ -198,7 +205,7 @@
             <ul>
             </ul>
            </div>
-           <form action="https://bahuan.vn/#wpcf7-f327-o1" aria-label="Contact form" class="wpcf7-form init" data-status="init" method="post" novalidate="novalidate">
+           <form action="/" aria-label="Contact form" class="wpcf7-form init" data-status="init" method="post" novalidate="novalidate">
             <div style="display: none;">
              <input name="_wpcf7" type="hidden" value="327"/>
              <input name="_wpcf7_version" type="hidden" value="5.7.1"/>
@@ -248,7 +255,7 @@
          <div class="elementor-element elementor-element-66f55b5 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="66f55b5" data-widget_type="heading.default">
           <div class="elementor-widget-container">
            <h2 class="elementor-heading-title elementor-size-default">
-            Nhà máy và trang trại
+            Hệ sinh thái nhà máy và trang trại MGF
            </h2>
           </div>
          </div>
@@ -264,12 +271,10 @@
           <div class="elementor-widget-container">
            <p>
             <strong>
-             Nhà máy Thực phẩm Đức Hòa, Long An
+             Nhà máy thức ăn chăn nuôi Hải Dương
              <br/>
             </strong>
-            <a href="https://www.google.co.in/maps/place/C%c3%b4ng%2bTy%2bTNHH%2bBa%2bHu%c3%a2n/%4010.7905018%2c106.4986736%2c17z/data%3d%214m5%213m4%211s0x310ad38ff6df5065_0x95c945867d18a1eb%218m2%213d10.7904059%214d106e8ac.html">
-             39A, ĐT825, Ấp Bình Tiền 2, Đức Hòa
-            </a>
+            Khu Công nghiệp Hải Dương, Tỉnh Hải Dương
            </p>
           </div>
          </div>
@@ -277,16 +282,10 @@
           <div class="elementor-widget-container">
            <p>
             <strong>
-             Trang trại chăn nuôi gà Công nghệ cao
+             Trang trại chăn nuôi Bắc Giang
              <br/>
             </strong>
-            <strong>
-             Ba Huân – Bình Dương
-            </strong>
-            <br/>
-            <a href="https://www.google.co.in/maps/place/c%c3%b4ng%2bTy%2bBa%2bHu%c3%a2n%2bB%c3%acnh%2bD%c6%b0%c6%a1ng/%4011.1296301%2c106.7093182%2c17z/data%3d%213m1%214b1%214m5%213m4%211s0x3174cf16dbc3001d_0x8314ae6d4632e6cb%218m2%213d11.1296266%214d106e8ac.html">
-             Ấp 4, Xã Vĩnh Tân, Thị xã Tân Uyên, Tỉnh Bình Dương
-            </a>
+            Xã Tân Mỹ, Huyện Lục Nam, Tỉnh Bắc Giang
            </p>
           </div>
          </div>
@@ -298,12 +297,10 @@
           <div class="elementor-widget-container">
            <p>
             <strong>
-             Nhà máy xử lý trứng Ba Huân Hà Nội
+             Trang trại chăn nuôi Hải Dương
             </strong>
             <br/>
-            <a href="https://www.google.co.in/maps/place/Cty%2bTNHH%2bBa%2bHu%c3%a2n%2bH%c3%a0%2bN%e1%bb%99i/%4021.1010247%2c105.5539108%2c17z/data%3d%213m1%214b1%214m5%213m4%211s0x3134585cf7c8ee13_0x215e15145989e6f6%218m2%213d21.1010246%214d105e8ac.html">
-             Thị trấn Phúc Thọ, huyện Phúc Thọ
-            </a>
+            Xã Thanh Bình, Huyện Tứ Kỳ, Tỉnh Hải Dương
            </p>
           </div>
          </div>
@@ -311,14 +308,10 @@
           <div class="elementor-widget-container">
            <p>
             <strong>
-             Trang trại chăn nuôi gà Công nghệ cao
-             <br/>
-             Ba Huân – Bến Lức
+             Văn phòng Hà Nội
              <br/>
             </strong>
-            <a href="https://www.google.com/maps/place/Tr%e1%ba%a1i%2bGia%2bc%c3%a2m%2bc%c3%b4ng%2bngh%e1%bb%87%2bcao%2bBa%2bHu%c3%a2n%2bLong%2bAn/%4010.7496061%2c106.3655074%2c15z/data%3d%214m6%213m5%211s0x310ad069229d9157_0x9830d4dd8c/g/11hcfpsv27408b.html">
-             Ấp 4, Xã Thạnh Lợi, Huyện Bến Lức, Tỉnh Long An
-            </a>
+            TT19-09, khu đấu giá 31ha, Xã Gia Lâm, TP. Hà Nội
            </p>
           </div>
          </div>
@@ -330,26 +323,20 @@
           <div class="elementor-widget-container">
            <p>
             <strong>
-             Nhà máy xử lý trứng Bình Chánh
+             Trung tâm R&D và Kiểm soát Chất lượng
             </strong>
             <br/>
-            <a href="https://www.google.co.in/maps/place/C%c3%b4ng%2bty%2bTNHH%2bBa%2bHu%c3%a2n%2b-%2bNh%c3%a0%2bm%c3%a1y%2bx%e1%bb%ad%2bl%c3%bd%2btr%e1%bb%a9ng/%4010.7041036%2c106.5620401%2c17z/data%3d%213m1%214b1%214m5%213m4%211s0x3175329c6b2ccb1b_0x8bd3fa87f60e3fcb%218m2%213d10.7041102%214d106.51e8ac">
-             E9/199E, Thế Lữ, ấp 6, Xã Tân Nhựt, Huyện Bình Chánh
-            </a>
+            Hệ sinh thái MGF – Phục vụ nghiên cứu và đảm bảo chất lượng sản phẩm
            </p>
           </div>
          </div>
          <div class="elementor-element elementor-element-48096b7 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="48096b7" data-widget_type="text-editor.default">
           <div class="elementor-widget-container">
-           <strong>
-            Trang trại Ba Huân – Thạnh Hóa – Long An
-           </strong>
-           <a href="https://www.google.co.in/maps/place/Trang%2bTr%e1%ba%a1i%2bCh%c4%83n%2bNu%c3%b4i%2bGia%2bC%e1%ba%a7m%2bC%c3%b4ng%2bNgh%e1%bb%87%2bCao%2bBa%2bH/%4010.7002972%2c106.0997044%2c11z/data%3d%214m6%213m5%211s0x310ac1c15d4651f7_0x7f7dad43eeba3622%218m2%213d10.6298703%214d106.53e8ac.de">
-            132, Ấp 1, Xã Thạnh An , Huyện Thạnh Hóa, Tỉnh Long An
-           </a>
-           <a href="https://vinhomescangioz.com/index.html" style="color:#ffffff;" target="_blank" title="Vinhomes Green Paradise Cần Giờ">
-            vinhomes green paradise cần giờ
-           </a>
+           <p>
+            <em style="color: #0C7A07; font-size: 0.9em;">
+             Hệ thống đang tiếp tục mở rộng – Hướng tới IPO 2028
+            </em>
+           </p>
           </div>
          </div>
          <div class="elementor-element elementor-element-9f47c6a elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="9f47c6a" data-widget_type="text-editor.default">
@@ -397,7 +384,7 @@
       </div>
       <!-- #footer-bottom-menu -->
       <div class="clr" id="copyright" role="contentinfo">
-       Bản quyền thuộc về © 2025 Công ty Cổ phần Ba Huân
+       Bản quyền thuộc về © 2025 CÔNG TY CỔ PHẦN NÔNG NGHIỆP CÔNG NGHỆ CAO MGF | MSDN: 0110181052
       </div>
       <!-- #copyright -->
      </div>
@@ -456,7 +443,7 @@
      <div class="elementor-widget-wrap elementor-element-populated">
       <div class="elementor-element elementor-element-8fd530f elementor-widget elementor-widget-image" data-element_type="widget" data-id="8fd530f" data-widget_type="image.default">
        <div class="elementor-widget-container">
-        <img alt="" class="attachment-large size-large wp-image-82" height="40" loading="lazy" src="../wp-content/uploads/2022/12/logo-bahuan-1.svg" width="151">
+        <img alt="MGF Logo" class="attachment-large size-large wp-image-82" height="40" loading="lazy" src="../images/logo-GMF.png" style="height: 40px; width: auto;">
         </img>
        </div>
       </div>
@@ -472,7 +459,7 @@
         <form class="elementor-form" method="post" name="Submit CV">
          <input name="post_id" type="hidden" value="4924"/>
          <input name="form_id" type="hidden" value="2e50a4a"/>
-         <input name="referer_title" type="hidden" value="Trang chủ - Công ty Cổ phần Ba Huân"/>
+         <input name="referer_title" type="hidden" value="Trang chủ - Công ty Cổ phần MGF"/>
          <input name="queried_id" type="hidden" value="16"/>
          <div class="elementor-form-fields-wrapper elementor-labels-above">
           <div class="elementor-field-type-hidden elementor-field-group elementor-column elementor-field-group-job_name elementor-col-100">

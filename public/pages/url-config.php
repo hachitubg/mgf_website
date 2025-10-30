@@ -38,8 +38,8 @@ $coming_soon_pages = [
     // Main menu - Phát triển bền vững
     'phat-trien-ben-vung' => 'Phát triển bền vững',
     
-    // Main menu - Con người Ba Huân
-    'con-nguoi-ba-huan' => 'Con người Ba Huân',
+    // Main menu - Con người MGF
+    'con-nguoi-mgf' => 'Con người MGF',
     'co-cau-doanh-nghiep' => 'Cơ cấu doanh nghiệp',
     'van-hoa-to-chuc' => 'Văn hóa tổ chức',
     

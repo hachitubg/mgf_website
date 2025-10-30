@@ -1,10 +1,25 @@
+<?php
+// Load database và helpers để lấy danh mục sản phẩm và tin tức
+if (!isset($pdo)) {
+    require_once __DIR__ . '/../../includes/db.php';
+}
+if (!function_exists('getCategories')) {
+    require_once __DIR__ . '/../../includes/helpers.php';
+}
+
+// Lấy danh sách danh mục sản phẩm cho menu
+$productCategories = getCategories($pdo, 'product', true);
+
+// Lấy danh sách danh mục tin tức cho menu
+$postCategories = getCategories($pdo, 'post', true);
+?>
 <!DOCTYPE html>
 <html lang="vi-VN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>
-	Trang chủ - Công ty Cổ phần Ba Huân
+	Công ty cổ phần nông nghiệp công nghệ cao MGF
 </title>
 
 <!-- START: HEADER -->
@@ -19,7 +34,6 @@
 <link rel='stylesheet' id='elementor-frontend-inline-css' href='css/chitiet-tin-tuc.css' media='all' />
 <link rel='stylesheet' id='thanh-tuu-noi-bat-css' href='css/thanh-tuu-noi-bat.css' media='all' />
 
-<link rel='stylesheet' id='other-style-css' href='css/other-style.css' media='all' />
 <link rel='stylesheet' id='coming-soon-popup-css' href='css/coming-soon-popup.css' media='all' />
 <link rel='stylesheet' id='wp-emoji-styles-css' href='css/wp-emoji-styles.css' media='all' />
 <link rel='stylesheet' id='wp-block-library-css' href='../wp-includes/css/dist/block-library/style.minee47.css?ver=235ca6ed4a0be392e848a5d17facc1ca' media='all' />
@@ -66,6 +80,8 @@
 </head>
 <!-- END: HEAD -->
 
+<link rel='stylesheet' id='other-style-css' href='css/other-style.css' media='all' />
+
 <!-- START: BODY -->
 <body class="home wp-singular page-template page-template-elementor_header_footer page page-id-16 wp-custom-logo wp-embed-responsive wp-theme-oceanwp wp-child-theme-oceanwp-child theme-oceanwp woocommerce-no-js oceanwp-theme dropdown-mobile content-full-width content-max-width has-topbar page-header-disabled has-breadcrumbs has-woo-single-conditional account-original-style e-lazyload elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-16" itemscope="itemscope" itemtype="https://schema.org/WebPage">
  <div class="site clr" id="outer-wrap">
@@ -76,23 +92,30 @@
    <div class="w-full-header clr" id="w-full-header">
     <div class="clr hide-tablet-mobile" id="top-bar-wrap">
      <div class="clr container has-no-content" id="top-bar">
-      <div class="clr" id="top-bar-inner">
+       <div class="clr" id="top-bar-inner">
        <div class="clr top-bar-right" id="top-bar-content">
         <div class="navigation clr" id="top-bar-nav">
          <ul class="top-bar-menu dropdown-menu sf-menu" id="menu-topbar">
+          <!-- COMMENTED: Cộng đồng - Phát triển sau
           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5067" id="menu-item-5067">
            <a class="menu-link coming-soon-link" href="#" data-page-title="Cộng đồng">
             Cộng đồng
            </a>
           </li>
+          -->
+          
+          <!-- COMMENTED: Cơ hội việc làm - Phát triển sau
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5068" id="menu-item-5068">
            <a class="menu-link coming-soon-link" href="#" data-page-title="Cơ hội việc làm">
             Cơ hội việc làm
            </a>
           </li>
+          -->
+          
+          <!-- Liên hệ - Cập nhật hotline MGF -->
           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5831" id="menu-item-5831">
-           <a class="menu-link" href="tel:18006002">
-            Liên hệ
+           <a class="menu-link" href="tel:0968989255">
+            Hotline: 0968 989 255
            </a>
           </li>
            </ul>
@@ -103,16 +126,27 @@
        <!-- #top-bar-content -->
        <div class="clr top-bar-left" id="top-bar-social">
         <ul aria-label="Social links" class="clr">
+         <!-- Social Media Icons - Cập nhật links MGF sau -->
          <li class="oceanwp-facebook">
-          <a aria-label="Facebook (opens in a new tab)" href="https://www.facebook.com/bahuangroup.html" rel="noopener noreferrer" target="_blank">
-           <i aria-hidden="true" class="fab fa-facebook" role="img">
-           </i>
+          <a aria-label="Facebook (opens in a new tab)" href="#" rel="noopener noreferrer" target="_blank" title="Facebook MGF">
+           <i aria-hidden="true" class="fab fa-facebook" role="img"></i>
           </a>
          </li>
-         <li class="oceanwp-youtube">
-          <a aria-label="Youtube (opens in a new tab)" href="https://www.youtube.com/%40bahuangroup.html" rel="noopener noreferrer" target="_blank">
-           <i aria-hidden="true" class="fab fa-youtube" role="img">
-           </i>
+         <li class="oceanwp-youtube" style="padding-right: 10px;">
+          <a aria-label="Youtube (opens in a new tab)" href="#" rel="noopener noreferrer" target="_blank" title="YouTube MGF">
+           <i aria-hidden="true" class="fab fa-youtube" role="img"></i>
+          </a>
+         </li>
+         <li class="oceanwp-tiktok" style="padding-right: 10px;">
+          <a aria-label="TikTok (opens in a new tab)" href="#" rel="noopener noreferrer" target="_blank" title="TikTok MGF">
+           <i aria-hidden="true" class="fab fa-tiktok" role="img"></i>
+          </a>
+         </li>
+         <li class="oceanwp-zalo">
+          <a aria-label="Zalo (opens in a new tab)" href="#" rel="noopener noreferrer" target="_blank" title="Zalo MGF">
+           <svg aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;">
+            <path d="M12 0C5.373 0 0 4.975 0 11.111c0 3.497 1.745 6.616 4.472 8.652V24l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111C24 4.975 18.627 0 12 0zm.5 14.969l-3.076-3.273-6.004 3.273L9.5 8.031l3.151 3.273 5.929-3.273-6.08 6.938z"/>
+           </svg>
           </a>
          </li>
         </ul>
@@ -138,14 +172,23 @@
       <div class="clr" id="site-navigation-wrap">
        <nav class="navigation main-navigation clr" id="site-navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" role="navigation">
         <ul class="main-menu dropdown-menu sf-menu" id="menu-menu-chinh">
-         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5141" id="menu-item-5141">
+         <!-- Trang chủ -->
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home" id="menu-item-home">
+          <a class="menu-link" href="trang-chu.php">
+           <span class="text-wrap">
+            Trang chủ
+           </span>
+          </a>
+         </li>
+         
+         <!-- Về chúng tôi - Đơn giản hóa -->
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5141" id="menu-item-5141">
           <a class="menu-link" href="ve-chung-toi.php">
            <span class="text-wrap">
             Về chúng tôi
-            <i aria-hidden="true" class="nav-arrow fa fa-angle-down" role="img">
-            </i>
            </span>
           </a>
+          <!-- COMMENTED: Sub-menu cũ cho phát triển sau
           <ul class="sub-menu">
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1995" id="menu-item-1995">
             <a class="menu-link coming-soon-link" href="#" data-page-title="Người sáng lập">
@@ -176,23 +219,43 @@
             </a>
            </li>
           </ul>
+          -->
          </li>
+         
+         <!-- Sản phẩm - Menu động từ database -->
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-43" id="menu-item-43">
-          <a class="menu-link coming-soon-link" href="#" data-page-title="Sản phẩm & phân phối">
+          <a class="menu-link" href="danh-sach-san-pham.php">
            <span class="text-wrap">
-            Sản phẩm &amp; phân phối
+            Sản phẩm
             <i aria-hidden="true" class="nav-arrow fa fa-angle-down" role="img">
             </i>
            </span>
           </a>
           <ul class="sub-menu">
+           <!-- Tất cả sản phẩm -->
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7946" id="menu-item-7946">
             <a class="menu-link" href="danh-sach-san-pham.php">
              <span class="text-wrap">
-              Sản phẩm
+              Tất cả sản phẩm
              </span>
             </a>
            </li>
+           
+           <!-- Danh mục sản phẩm động -->
+           <?php if (!empty($productCategories)): ?>
+             <?php foreach ($productCategories as $index => $category): ?>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-cat-<?php echo $category['id']; ?>" id="menu-item-cat-<?php echo $category['id']; ?>">
+                <a class="menu-link" href="danh-sach-san-pham.php?category=<?php echo urlencode($category['slug']); ?>">
+                 <span class="text-wrap">
+                  <?php echo htmlspecialchars($category['name']); ?>
+                 </span>
+                </a>
+               </li>
+             <?php endforeach; ?>
+           <?php endif; ?>
+          </ul>
+          <!-- COMMENTED: Phân phối cho phát triển sau
+          <ul class="sub-menu">
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7947" id="menu-item-7947">
             <a class="menu-link coming-soon-link" href="#" data-page-title="Phân phối">
              <span class="text-wrap">
@@ -201,7 +264,10 @@
             </a>
            </li>
           </ul>
+          -->
          </li>
+         
+         <!-- COMMENTED: Phát triển bền vững - Phát triển sau
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-403" id="menu-item-403">
           <a class="menu-link coming-soon-link" href="#" data-page-title="Phát triển bền vững">
            <span class="text-wrap">
@@ -209,10 +275,13 @@
            </span>
           </a>
          </li>
+         -->
+         
+         <!-- COMMENTED: Con người MGF - Phát triển sau
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-402" id="menu-item-402">
-          <a class="menu-link coming-soon-link" href="#" data-page-title="Con người Ba Huân">
+          <a class="menu-link coming-soon-link" href="#" data-page-title="Con người MGF">
            <span class="text-wrap">
-            Con người Ba Huân
+            Con người MGF
             <i aria-hidden="true" class="nav-arrow fa fa-angle-down" role="img">
             </i>
            </span>
@@ -241,13 +310,53 @@
            </li>
           </ul>
          </li>
-         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5829" id="menu-item-5829">
+         -->
+         
+         <!-- Tin tức & Sự kiện (đổi tên từ Truyền thông) -->
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-5829" id="menu-item-5829">
           <a class="menu-link" href="danh-sach-tin-tuc.php">
            <span class="text-wrap">
-            Truyền thông
+            Tin tức &amp; Sự kiện
+            <?php if (!empty($postCategories)): ?>
+            <i aria-hidden="true" class="nav-arrow fa fa-angle-down" role="img">
+            </i>
+            <?php endif; ?>
+           </span>
+          </a>
+          <?php if (!empty($postCategories)): ?>
+          <ul class="sub-menu">
+           <!-- Tất cả tin tức -->
+           <li class="menu-item menu-item-type-custom menu-item-object-custom">
+            <a class="menu-link" href="danh-sach-tin-tuc.php">
+             <span class="text-wrap">
+              Tất cả tin tức
+             </span>
+            </a>
+           </li>
+           
+           <!-- Danh mục tin tức động -->
+           <?php foreach ($postCategories as $index => $category): ?>
+             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-post-cat-<?php echo $category['id']; ?>" id="menu-item-post-cat-<?php echo $category['id']; ?>">
+              <a class="menu-link" href="danh-sach-tin-tuc.php?category=<?php echo urlencode($category['slug']); ?>">
+               <span class="text-wrap">
+                <?php echo htmlspecialchars($category['name']); ?>
+               </span>
+              </a>
+             </li>
+           <?php endforeach; ?>
+          </ul>
+          <?php endif; ?>
+         </li>
+         
+         <!-- Liên hệ -->
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-contact" id="menu-item-contact">
+          <a class="menu-link" href="lien-he.php">
+           <span class="text-wrap">
+            Liên hệ
            </span>
           </a>
          </li>
+         
          <li class="woo-menu-icon wcmenucart-toggle-drop_down toggle-cart-widget">
           <a class="wcmenucart wcmenucart-hide" href="index.html">
            <span class="wcmenucart-count">
@@ -312,10 +421,19 @@
       <nav class="clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement.html">
        <div class="navigation clr" id="mobile-nav">
         <ul class="menu" id="menu-main-mobile">
-         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5584" id="menu-item-5584">
+         <!-- Trang chủ -->
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-mobile-home" id="menu-item-mobile-home">
+          <a href="trang-chu.php">
+           Trang chủ
+          </a>
+         </li>
+         
+         <!-- Về chúng tôi - Đơn giản hóa -->
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5584" id="menu-item-5584">
           <a href="ve-chung-toi.php">
            Về chúng tôi
           </a>
+          <!-- COMMENTED: Sub-menu cũ cho phát triển sau
           <ul class="sub-menu">
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5587" id="menu-item-5587">
             <a href="#" class="coming-soon-link" data-page-title="Người sáng lập">
@@ -338,20 +456,47 @@
             </a>
            </li>
           </ul>
+          -->
          </li>
-         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5581" id="menu-item-5581">
+         
+         <!-- Sản phẩm - Menu động từ database -->
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5581" id="menu-item-5581">
           <a href="danh-sach-san-pham.php">
-           Sản phẩm &amp; phân phối
+           Sản phẩm
           </a>
+          <ul class="sub-menu">
+           <!-- Tất cả sản phẩm -->
+           <li class="menu-item">
+            <a href="danh-sach-san-pham.php">
+             Tất cả sản phẩm
+            </a>
+           </li>
+           
+           <!-- Danh mục sản phẩm động -->
+           <?php if (!empty($productCategories)): ?>
+             <?php foreach ($productCategories as $index => $category): ?>
+               <li class="menu-item menu-item-cat-mobile-<?php echo $category['id']; ?>">
+                <a href="danh-sach-san-pham.php?category=<?php echo urlencode($category['slug']); ?>">
+                 <?php echo htmlspecialchars($category['name']); ?>
+                </a>
+               </li>
+             <?php endforeach; ?>
+           <?php endif; ?>
+          </ul>
          </li>
+         
+         <!-- COMMENTED: Phát triển bền vững - Phát triển sau
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5580" id="menu-item-5580">
           <a href="#" class="coming-soon-link" data-page-title="Phát triển bền vững">
            Phát triển bền vững
           </a>
          </li>
+         -->
+         
+         <!-- COMMENTED: Con người MGF - Phát triển sau
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5577" id="menu-item-5577">
-          <a href="#" class="coming-soon-link" data-page-title="Con người Ba Huân">
-           Con người Ba Huân
+          <a href="#" class="coming-soon-link" data-page-title="Con người MGF">
+           Con người MGF
           </a>
           <ul class="sub-menu">
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5578" id="menu-item-5578">
@@ -361,11 +506,41 @@
            </li>
           </ul>
          </li>
-         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5589" id="menu-item-5589">
+         -->
+         
+         <!-- Tin tức & Sự kiện (đổi tên từ Truyền thông) -->
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category <?php echo !empty($postCategories) ? 'menu-item-has-children' : ''; ?> menu-item-5589" id="menu-item-5589">
           <a href="danh-sach-tin-tuc.php">
-           Truyền thông
+           Tin tức &amp; Sự kiện
+          </a>
+          <?php if (!empty($postCategories)): ?>
+          <ul class="sub-menu">
+           <!-- Tất cả tin tức -->
+           <li class="menu-item">
+            <a href="danh-sach-tin-tuc.php">
+             Tất cả tin tức
+            </a>
+           </li>
+           
+           <!-- Danh mục tin tức động -->
+           <?php foreach ($postCategories as $index => $category): ?>
+             <li class="menu-item menu-item-post-cat-mobile-<?php echo $category['id']; ?>">
+              <a href="danh-sach-tin-tuc.php?category=<?php echo urlencode($category['slug']); ?>">
+               <?php echo htmlspecialchars($category['name']); ?>
+              </a>
+             </li>
+           <?php endforeach; ?>
+          </ul>
+          <?php endif; ?>
+         </li>
+         
+         <!-- Liên hệ -->
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-mobile-contact" id="menu-item-mobile-contact">
+          <a href="lien-he.php">
+           Liên hệ
           </a>
          </li>
+         
          <li class="menu-item wpml-ls-slot-147 wpml-ls-item wpml-ls-item-vi wpml-ls-current-language wpml-ls-menu-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-has-children menu-item-wpml-ls-147-vi" id="menu-item-wpml-ls-147-vi">
           <a href="index.html" title="VI">
            <img alt="" class="wpml-ls-flag" src="../wp-content/uploads/flags/icon-viet.svg"/>

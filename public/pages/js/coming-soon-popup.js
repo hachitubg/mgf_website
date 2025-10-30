@@ -21,7 +21,7 @@
                         <span class="coming-soon-page-title" id="comingSoonPageTitle"></span>
                         <p>đang được phát triển và sẽ ra mắt trong tương lai gần.</p>
                         <p style="margin-top: 20px; font-size: 14px; color: #888;">
-                            Cảm ơn bạn đã quan tâm đến Ba Huân!
+                            Cảm ơn bạn đã quan tâm đến MGF!
                         </p>
                         <button class="coming-soon-action-btn" id="comingSoonOkBtn">
                             Đã hiểu
