@@ -29,14 +29,14 @@
 }
 
 .modern-tabs .menu-item a:hover {
-  color: #FF0000 !important;
+  color: #0C7A07 !important;
   background: rgba(255, 0, 0, 0.05);
 }
 
 .modern-tabs .menu-item.current-menu-item a,
 .modern-tabs .menu-item a.elementor-item-active {
   color: #fff !important;
-  background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);
+  background: linear-gradient(135deg, #0C7A07 0%, #095505 100%);
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
 }
 
@@ -140,7 +140,7 @@
   padding: 6px 14px;
   font-size: 12px;
   font-weight: 700;
-  color: #FF0000 !important;
+  color: #0C7A07 !important;
   background: rgba(255, 0, 0, 0.08);
   border-radius: 20px;
   margin-bottom: 12px;
@@ -163,7 +163,7 @@
 }
 
 .modern-post-card:hover .modern-post-title {
-  color: #FF0000 !important;
+  color: #0C7A07 !important;
 }
 
 .modern-post-excerpt {
@@ -196,7 +196,7 @@
 }
 
 .modern-post-date svg {
-  color: #FF0000;
+  color: #0C7A07;
 }
 
 /* ==== NO POSTS ==== */
@@ -261,16 +261,16 @@
 }
 
 .pagination-number:hover {
-  color: #FF0000 !important;
-  border-color: #FF0000;
+  color: #0C7A07 !important;
+  border-color: #0C7A07;
   background: rgba(255, 0, 0, 0.05);
   transform: translateY(-2px);
 }
 
 .pagination-number.active {
   color: #fff !important;
-  background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);
-  border-color: #FF0000;
+  background: linear-gradient(135deg, #0C7A07 0%, #095505 100%);
+  border-color: #0C7A07;
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
   cursor: default;
   transform: none;
@@ -298,8 +298,8 @@
 }
 
 .pagination-btn:hover {
-  color: #FF0000 !important;
-  border-color: #FF0000;
+  color: #0C7A07 !important;
+  border-color: #0C7A07;
   background: rgba(255, 0, 0, 0.05);
   transform: translateY(-2px);
 }
