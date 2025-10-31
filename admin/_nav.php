@@ -29,6 +29,10 @@ require_once __DIR__ . '/../includes/config.php';
     <i class="fas fa-images"></i>
     <span>Banner</span>
   </a>
+  <a href="/mgf-website/admin/messages/index.php" class="nav-link">
+    <i class="fas fa-envelope"></i>
+    <span>Tin Nhắn</span>
+  </a>
   <a href="/mgf-website/admin/logout.php" class="nav-link logout">
     <i class="fas fa-sign-out-alt"></i>
     <span>Đăng Xuất</span>

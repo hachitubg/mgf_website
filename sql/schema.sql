@@ -84,6 +84,20 @@ CREATE TABLE IF NOT EXISTS banners (
   INDEX idx_location (location_code, is_active, sort_order)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- contact_messages
+CREATE TABLE IF NOT EXISTS contact_messages (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(50) NOT NULL,
+  subject VARCHAR(500),
+  message TEXT NOT NULL,
+  is_read TINYINT(1) DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_is_read (is_read),
+  INDEX idx_created_at (created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 -- Insert sample categories
 INSERT INTO categories (name, slug, type, description, sort_order) VALUES
 ('Sản Phẩm Mới', 'san-pham-moi', 'product', 'Các sản phẩm mới nhất', 1),

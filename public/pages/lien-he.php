@@ -315,15 +315,43 @@ include __DIR__ . '/header.php';
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
   
+  const submitBtn = this.querySelector('.submit-btn');
+  const originalText = submitBtn.textContent;
+  
+  // Disable button and show loading
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Đang gửi...';
+  
   // Get form data
   const formData = new FormData(this);
   
-  // Here you can add AJAX call to send data to server
-  // For now, just show a success message
-  alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong thời gian sớm nhất.');
-  
-  // Reset form
-  this.reset();
+  // Send AJAX request
+  fetch('../../api/contact.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      alert(data.message);
+      this.reset();
+    } else {
+      if (data.errors) {
+        alert(data.errors.join('\n'));
+      } else {
+        alert(data.message);
+      }
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('Có lỗi xảy ra. Vui lòng thử lại sau.');
+  })
+  .finally(() => {
+    // Re-enable button
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  });
 });
 </script>
 

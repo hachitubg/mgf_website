@@ -205,36 +205,16 @@
             <ul>
             </ul>
            </div>
-           <form action="/" aria-label="Contact form" class="wpcf7-form init" data-status="init" method="post" novalidate="novalidate">
-            <div style="display: none;">
-             <input name="_wpcf7" type="hidden" value="327"/>
-             <input name="_wpcf7_version" type="hidden" value="5.7.1"/>
-             <input name="_wpcf7_locale" type="hidden" value="en_US"/>
-             <input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f327-o1"/>
-             <input name="_wpcf7_container_post" type="hidden" value="0"/>
-             <input name="_wpcf7_posted_data_hash" type="hidden" value=""/>
-            </div>
+           <form action="#" aria-label="Newsletter subscription form" class="wpcf7-form init coming-soon-form" data-status="init" method="post" novalidate="novalidate" id="newsletter-form">
             <div>
              <p>
-              <span class="wpcf7-form-control-wrap" data-name="ho-ten">
-               <input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" name="ho-ten" placeholder="Họ tên" size="40" type="text" value=""/>
+              <span class="wpcf7-form-control-wrap" data-name="email-khach">
+               <input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" name="email" placeholder="Email" size="40" type="email" value=""/>
               </span>
               <br>
-               <span class="wpcf7-form-control-wrap" data-name="dien-thoai">
-                <input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" maxlength="10" minlength="10" name="dien-thoai" placeholder="Số điện thoại" size="40" type="tel" value=""/>
-               </span>
-               <br>
-                <span class="wpcf7-form-control-wrap" data-name="email-khach">
-                 <input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" name="email-khach" placeholder="Email" size="40" type="email" value=""/>
-                </span>
-                <br>
-                 <input class="wpcf7-form-control has-spinner wpcf7-submit" type="submit" value="Gửi"/>
-                </br>
-               </br>
+               <input class="wpcf7-form-control has-spinner wpcf7-submit coming-soon-link" type="button" value="Đăng ký" data-page-title="Đăng ký nhận tin"/>
               </br>
              </p>
-            </div>
-            <div aria-hidden="true" class="wpcf7-response-output">
             </div>
            </form>
           </div>

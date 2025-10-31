@@ -3,8 +3,9 @@
 // Mỗi vị trí có code và tên hiển thị
 
 define('BANNER_LOCATIONS', [
+    'trang_chu' => 'Trang Chủ - Slider',
     'danh_sach_san_pham' => 'Sidebar - Danh Sách Sản Phẩm',
-    'home_slider' => 'Trang Chủ - Slider',
+    'danh_sach_tin_tuc' => 'Danh Sách Tin Tức - Banner',
     'home_promo' => 'Trang Chủ - Khuyến Mãi',
     'about_banner' => 'Giới Thiệu - Banner',
     'products_top' => 'Sản Phẩm - Banner Trên',

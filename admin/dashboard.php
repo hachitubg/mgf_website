@@ -5,7 +5,7 @@ require_once __DIR__ . '/../includes/db.php';
 
 // Get some simple stats
 $counts = [];
-$tables = ['products','posts','banners','users'];
+$tables = ['products','posts','banners'];
 foreach ($tables as $t) {
     try {
         $stmt = $pdo->query("SELECT COUNT(*) as c FROM `" . $t . "`");
@@ -14,6 +14,15 @@ foreach ($tables as $t) {
     } catch (Exception $e) {
         $counts[$t] = 0;
     }
+}
+
+// Get messages count (unread)
+try {
+    $stmt = $pdo->query("SELECT COUNT(*) as c FROM contact_messages WHERE is_read = 0");
+    $row = $stmt->fetch();
+    $counts['messages'] = $row ? (int)$row['c'] : 0;
+} catch (Exception $e) {
+    $counts['messages'] = 0;
 }
 ?>
 <!doctype html>
@@ -57,14 +66,20 @@ foreach ($tables as $t) {
         <div class="stat-number"><?php echo $counts['banners']; ?></div>
       </div>
     </div>
-    <div class="stat-card stat-users">
+    <div class="stat-card stat-messages <?php echo $counts['messages'] > 0 ? 'has-notification' : ''; ?>">
       <div class="stat-icon">
-        <i class="fas fa-users"></i>
+        <i class="fas fa-envelope"></i>
+        <?php if ($counts['messages'] > 0): ?>
+        <span class="notification-badge"><?php echo $counts['messages']; ?></span>
+        <?php endif; ?>
       </div>
       <div class="stat-content">
-        <strong>Người Dùng</strong>
-        <div class="stat-number"><?php echo $counts['users']; ?></div>
+        <strong>Tin Nhắn <?php echo $counts['messages'] > 0 ? 'Mới' : ''; ?></strong>
+        <div class="stat-number"><?php echo $counts['messages']; ?></div>
       </div>
+      <?php if ($counts['messages'] > 0): ?>
+      <a href="/mgf-website/admin/messages/" class="stat-link">Xem ngay →</a>
+      <?php endif; ?>
     </div>
   </div>
 

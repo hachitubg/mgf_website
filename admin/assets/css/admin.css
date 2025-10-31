@@ -154,6 +154,9 @@ h3 { font-size: 18px; margin-bottom: 16px; }
 .stat-card.stat-users {
   background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
+.stat-card.stat-messages {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
 .stat-icon {
   width: 64px;
   height: 64px;
@@ -167,6 +170,56 @@ h3 { font-size: 18px; margin-bottom: 16px; }
   backdrop-filter: blur(10px);
   position: relative;
   z-index: 1;
+}
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff3b30;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 12px;
+  min-width: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(255, 59, 48, 0.4);
+  animation: pulse-notification 2s infinite;
+  border: 2px solid white;
+}
+@keyframes pulse-notification {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+.stat-card.has-notification {
+  animation: glow-card 2s infinite;
+}
+@keyframes glow-card {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  50% {
+    box-shadow: 0 8px 24px rgba(255, 59, 48, 0.2), 0 4px 16px rgba(0,0,0,0.08);
+  }
+}
+.stat-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 1;
+}
+.stat-link:hover {
+  color: white;
+  transform: translateX(4px);
 }
 .stat-content {
   flex: 1;
