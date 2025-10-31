@@ -7,12 +7,20 @@ RUN docker-php-ext-install pdo pdo_mysql mysqli
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
+# Cấu hình Apache để cho phép truy cập
+RUN echo '<Directory /var/www/html/>\n\
+    Options Indexes FollowSymLinks\n\
+    AllowOverride All\n\
+    Require all granted\n\
+</Directory>' > /etc/apache2/conf-available/docker-php.conf \
+    && a2enconf docker-php
+
 # Copy toàn bộ code vào container
 COPY . /var/www/html/
 
-# Set quyền cho thư mục uploads
-RUN chown -R www-data:www-data /var/www/html/uploads && \
-    chmod -R 755 /var/www/html/uploads
+# Set quyền cho toàn bộ thư mục
+RUN chown -R www-data:www-data /var/www/html && \
+    chmod -R 755 /var/www/html
 
 # Expose port 80
 EXPOSE 80
