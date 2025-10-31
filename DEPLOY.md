@@ -53,6 +53,26 @@ sudo docker-compose logs -f
 - Website: `http://IP_VPS:9527`
 - Admin: `http://IP_VPS:9527/admin/login.php` (admin/admin123)
 
+### Bước 5: Import dữ liệu mẫu (Tùy chọn)
+
+```bash
+cd /home/mgf-website
+
+# Cách 1: Dùng script tự động
+chmod +x import-demo-data.sh
+sudo ./import-demo-data.sh
+
+# Cách 2: Import thủ công
+sudo docker exec -i mgf_mysql mysql -u mgf_user -pmgf_password_2024 --default-character-set=utf8mb4 mgf_website < sql/demo_data_mgf.sql
+```
+
+**Dữ liệu mẫu bao gồm:**
+- 6 danh mục sản phẩm
+- 15 sản phẩm thức ăn chăn nuôi
+- 5 danh mục tin tức
+- 8 bài viết
+- 4 banners
+
 ---
 
 ## 2️⃣ Cập Nhật Source Code
