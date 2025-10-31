@@ -58,7 +58,7 @@ foreach ($products as $product) {
              <div class="elementor-main-swiper swiper-container">
               <div class="swiper-wrapper">
                <?php foreach ($banners as $banner): 
-                  $imagePath = '/mgf-website/' . htmlspecialchars($banner['image_path']);
+                  $imagePath = '/' . htmlspecialchars($banner['image_path']);
                   $title = htmlspecialchars($banner['title'] ?? 'Banner');
                   $linkUrl = $banner['link_url'] ?? '';
                ?>
@@ -211,7 +211,7 @@ foreach ($products as $product) {
             <div class="woocommerce columns-5">
              <ul class="products elementor-grid oceanwp-row clr grid">
               <?php foreach ($products as $product): 
-                $imageUrl = !empty($product['first_image']) ? getProductImageUrl($product['first_image']) : '/mgf-website/uploads/no-image.png';
+                $imageUrl = !empty($product['first_image']) ? getProductImageUrl($product['first_image']) : '/uploads/no-image.png';
                 $productUrl = 'chi-tiet-san-pham.php?slug=' . urlencode($product['slug']);
                 $allImages = !empty($product['images']) ? $product['images'] : [];
                 $isOnSale = hasDiscount($product); // Kiểm tra có giảm giá không
@@ -308,7 +308,7 @@ foreach ($products as $product) {
             <div class="woocommerce columns-5">
              <ul class="products elementor-grid oceanwp-row clr grid">
               <?php foreach ($displayProducts as $product): 
-                $imageUrl = !empty($product['first_image']) ? getProductImageUrl($product['first_image']) : '/mgf-website/uploads/no-image.png';
+                $imageUrl = !empty($product['first_image']) ? getProductImageUrl($product['first_image']) : '/uploads/no-image.png';
                 $productUrl = 'chi-tiet-san-pham.php?slug=' . urlencode($product['slug']);
                 $allImages = !empty($product['images']) ? $product['images'] : [];
                 $isOnSale = hasDiscount($product); // Kiểm tra có giảm giá không
