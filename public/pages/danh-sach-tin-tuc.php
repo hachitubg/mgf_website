@@ -62,7 +62,7 @@ include __DIR__ . '/header.php';
                 <meta content="2" name="numberOfItems"/>
                 <meta content="Ascending" name="itemListOrder"/>
                 <li class="trail-item trail-begin" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                 <a aria-label="Trang chủ" href="trang-chu.php" itemprop="item" itemtype="https://schema.org/Thing" rel="home">
+                 <a aria-label="Trang chủ" href="trang-chu" itemprop="item" itemtype="https://schema.org/Thing" rel="home">
                   <span itemprop="name">
                    <span class="breadcrumb-home-a">
                     Trang chủ
@@ -75,7 +75,7 @@ include __DIR__ . '/header.php';
                  <meta content="1" itemprop="position"/>
                 </li>
                 <li class="trail-item trail-end" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                 <a href="danh-sach-tin-tuc.php" itemprop="item" itemtype="https://schema.org/Thing">
+                 <a href="danh-sach-tin-tuc?" itemprop="item" itemtype="https://schema.org/Thing">
                   <span itemprop="name">
                    Tin tức &amp; Sự kiện
                   </span>
@@ -96,7 +96,7 @@ include __DIR__ . '/header.php';
               <!-- Tab "Tất cả" -->
               <li class="menu-item menu-item-type-taxonomy menu-item-object-category <?php echo empty($currentCategorySlug) ? 'current-menu-item' : ''; ?>">
                 <a class="elementor-item <?php echo empty($currentCategorySlug) ? 'elementor-item-active' : ''; ?>" 
-                   href="danh-sach-tin-tuc.php"
+                   href="danh-sach-tin-tuc?"
                    <?php echo empty($currentCategorySlug) ? 'aria-current="page"' : ''; ?>>
                   <span>Tất cả</span>
                 </a>

@@ -58,12 +58,12 @@ include __DIR__ . '/header.php';
       <div class="container-modern">
         <!-- Breadcrumb -->
         <nav class="modern-breadcrumb">
-          <a href="trang-chu.php">Trang chủ</a>
+          <a href="trang-chu">Trang chủ</a>
           <span class="separator">/</span>
-          <a href="danh-sach-tin-tuc.php">Tin tức & Sự kiện</a>
+          <a href="danh-sach-tin-tuc?">Tin tức & Sự kiện</a>
           <?php if (!empty($post['category_name'])): ?>
             <span class="separator">/</span>
-            <a href="danh-sach-tin-tuc.php?category=<?php echo urlencode($post['category_slug']); ?>">
+            <a href="danh-sach-tin-tuc??category=<?php echo urlencode($post['category_slug']); ?>">
               <?php echo htmlspecialchars($post['category_name']); ?>
             </a>
           <?php endif; ?>

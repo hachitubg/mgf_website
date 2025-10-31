@@ -162,7 +162,7 @@ $postCategories = getCategories($pdo, 'post', true);
      <div class="clr container" id="site-header-inner">
       <div class="clr" id="site-logo" itemscope="" itemtype="https://schema.org/Brand">
        <div class="clr" id="site-logo-inner">
-        <a class="custom-logo-link" href="trang-chu.php" id="vi" itemprop="url" rel="home">
+        <a class="custom-logo-link" href="trang-chu" id="vi" itemprop="url" rel="home">
          <img alt="MGF Logo" class="custom-logo" decoding="async" src="../images/logo-GMF.png" style="height: 60px; width: auto;"/>
         </a>
        </div>
@@ -174,7 +174,7 @@ $postCategories = getCategories($pdo, 'post', true);
         <ul class="main-menu dropdown-menu sf-menu" id="menu-menu-chinh">
          <!-- Trang chủ -->
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home" id="menu-item-home">
-          <a class="menu-link" href="trang-chu.php">
+          <a class="menu-link" href="trang-chu">
            <span class="text-wrap">
             Trang chủ
            </span>
@@ -183,7 +183,7 @@ $postCategories = getCategories($pdo, 'post', true);
          
          <!-- Về chúng tôi - Đơn giản hóa -->
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5141" id="menu-item-5141">
-          <a class="menu-link" href="ve-chung-toi.php">
+          <a class="menu-link" href="ve-chung-toi">
            <span class="text-wrap">
             Về chúng tôi
            </span>
@@ -224,7 +224,7 @@ $postCategories = getCategories($pdo, 'post', true);
          
          <!-- Sản phẩm - Menu động từ database -->
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-43" id="menu-item-43">
-          <a class="menu-link" href="danh-sach-san-pham.php">
+          <a class="menu-link" href="danh-sach-san-pham">
            <span class="text-wrap">
             Sản phẩm
             <i aria-hidden="true" class="nav-arrow fa fa-angle-down" role="img">
@@ -234,7 +234,7 @@ $postCategories = getCategories($pdo, 'post', true);
           <ul class="sub-menu">
            <!-- Tất cả sản phẩm -->
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7946" id="menu-item-7946">
-            <a class="menu-link" href="danh-sach-san-pham.php">
+            <a class="menu-link" href="danh-sach-san-pham">
              <span class="text-wrap">
               Tất cả sản phẩm
              </span>
@@ -245,7 +245,7 @@ $postCategories = getCategories($pdo, 'post', true);
            <?php if (!empty($productCategories)): ?>
              <?php foreach ($productCategories as $index => $category): ?>
                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-cat-<?php echo $category['id']; ?>" id="menu-item-cat-<?php echo $category['id']; ?>">
-                <a class="menu-link" href="danh-sach-san-pham.php?category=<?php echo urlencode($category['slug']); ?>">
+                <a class="menu-link" href="danh-sach-san-pham?category=<?php echo urlencode($category['slug']); ?>">
                  <span class="text-wrap">
                   <?php echo htmlspecialchars($category['name']); ?>
                  </span>
@@ -314,7 +314,7 @@ $postCategories = getCategories($pdo, 'post', true);
          
          <!-- Tin tức & Sự kiện (đổi tên từ Truyền thông) -->
          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-5829" id="menu-item-5829">
-          <a class="menu-link" href="danh-sach-tin-tuc.php">
+          <a class="menu-link" href="danh-sach-tin-tuc">
            <span class="text-wrap">
             Tin tức &amp; Sự kiện
             <?php if (!empty($postCategories)): ?>
@@ -327,7 +327,7 @@ $postCategories = getCategories($pdo, 'post', true);
           <ul class="sub-menu">
            <!-- Tất cả tin tức -->
            <li class="menu-item menu-item-type-custom menu-item-object-custom">
-            <a class="menu-link" href="danh-sach-tin-tuc.php">
+            <a class="menu-link" href="danh-sach-tin-tuc">
              <span class="text-wrap">
               Tất cả tin tức
              </span>
@@ -337,7 +337,7 @@ $postCategories = getCategories($pdo, 'post', true);
            <!-- Danh mục tin tức động -->
            <?php foreach ($postCategories as $index => $category): ?>
              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-post-cat-<?php echo $category['id']; ?>" id="menu-item-post-cat-<?php echo $category['id']; ?>">
-              <a class="menu-link" href="danh-sach-tin-tuc.php?category=<?php echo urlencode($category['slug']); ?>">
+              <a class="menu-link" href="danh-sach-tin-tuc?category=<?php echo urlencode($category['slug']); ?>">
                <span class="text-wrap">
                 <?php echo htmlspecialchars($category['name']); ?>
                </span>
@@ -350,7 +350,7 @@ $postCategories = getCategories($pdo, 'post', true);
          
          <!-- Liên hệ -->
          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-contact" id="menu-item-contact">
-          <a class="menu-link" href="lien-he.php">
+          <a class="menu-link" href="lien-he">
            <span class="text-wrap">
             Liên hệ
            </span>
@@ -423,14 +423,14 @@ $postCategories = getCategories($pdo, 'post', true);
         <ul class="menu" id="menu-main-mobile">
          <!-- Trang chủ -->
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-mobile-home" id="menu-item-mobile-home">
-          <a href="trang-chu.php">
+          <a href="trang-chu">
            Trang chủ
           </a>
          </li>
          
          <!-- Về chúng tôi - Đơn giản hóa -->
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5584" id="menu-item-5584">
-          <a href="ve-chung-toi.php">
+          <a href="ve-chung-toi">
            Về chúng tôi
           </a>
           <!-- COMMENTED: Sub-menu cũ cho phát triển sau
@@ -461,13 +461,13 @@ $postCategories = getCategories($pdo, 'post', true);
          
          <!-- Sản phẩm - Menu động từ database -->
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5581" id="menu-item-5581">
-          <a href="danh-sach-san-pham.php">
+          <a href="danh-sach-san-pham">
            Sản phẩm
           </a>
           <ul class="sub-menu">
            <!-- Tất cả sản phẩm -->
            <li class="menu-item">
-            <a href="danh-sach-san-pham.php">
+            <a href="danh-sach-san-pham">
              Tất cả sản phẩm
             </a>
            </li>
@@ -476,7 +476,7 @@ $postCategories = getCategories($pdo, 'post', true);
            <?php if (!empty($productCategories)): ?>
              <?php foreach ($productCategories as $index => $category): ?>
                <li class="menu-item menu-item-cat-mobile-<?php echo $category['id']; ?>">
-                <a href="danh-sach-san-pham.php?category=<?php echo urlencode($category['slug']); ?>">
+                <a href="danh-sach-san-pham?category=<?php echo urlencode($category['slug']); ?>">
                  <?php echo htmlspecialchars($category['name']); ?>
                 </a>
                </li>
@@ -510,14 +510,14 @@ $postCategories = getCategories($pdo, 'post', true);
          
          <!-- Tin tức & Sự kiện (đổi tên từ Truyền thông) -->
          <li class="menu-item menu-item-type-taxonomy menu-item-object-category <?php echo !empty($postCategories) ? 'menu-item-has-children' : ''; ?> menu-item-5589" id="menu-item-5589">
-          <a href="danh-sach-tin-tuc.php">
+          <a href="danh-sach-tin-tuc">
            Tin tức &amp; Sự kiện
           </a>
           <?php if (!empty($postCategories)): ?>
           <ul class="sub-menu">
            <!-- Tất cả tin tức -->
            <li class="menu-item">
-            <a href="danh-sach-tin-tuc.php">
+            <a href="danh-sach-tin-tuc">
              Tất cả tin tức
             </a>
            </li>
@@ -525,7 +525,7 @@ $postCategories = getCategories($pdo, 'post', true);
            <!-- Danh mục tin tức động -->
            <?php foreach ($postCategories as $index => $category): ?>
              <li class="menu-item menu-item-post-cat-mobile-<?php echo $category['id']; ?>">
-              <a href="danh-sach-tin-tuc.php?category=<?php echo urlencode($category['slug']); ?>">
+              <a href="danh-sach-tin-tuc?category=<?php echo urlencode($category['slug']); ?>">
                <?php echo htmlspecialchars($category['name']); ?>
               </a>
              </li>
@@ -536,7 +536,7 @@ $postCategories = getCategories($pdo, 'post', true);
          
          <!-- Liên hệ -->
          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-mobile-contact" id="menu-item-mobile-contact">
-          <a href="lien-he.php">
+          <a href="lien-he">
            Liên hệ
           </a>
          </li>

@@ -73,12 +73,12 @@ $otherProducts = getProducts($pdo, [
            <div class="elementor-widget-container">
             <div class="elementor-shortcode">
              <div class="w-custom-breadcrum">
-              <a href="trang-chu.php">Trang chủ</a>
+              <a href="trang-chu">Trang chủ</a>
               /
-              <a href="danh-sach-san-pham.php">Sản phẩm và phân phối</a>
+              <a href="danh-sach-san-pham?">Sản phẩm và phân phối</a>
               /
               <?php if (!empty($categorySlug)): ?>
-              <a href="danh-sach-san-pham.php?category=<?= urlencode($categorySlug) ?>">
+              <a href="danh-sach-san-pham??category=<?= urlencode($categorySlug) ?>">
                <?= htmlspecialchars($categoryName) ?>
               </a>
               /
@@ -175,7 +175,7 @@ $otherProducts = getProducts($pdo, [
             <span class="elementor-heading-title elementor-size-default">
              Dòng sản phẩm:
              <?php if (!empty($categorySlug)): ?>
-             <a href="danh-sach-san-pham.php?category=<?= urlencode($categorySlug) ?>" rel="tag">
+             <a href="danh-sach-san-pham??category=<?= urlencode($categorySlug) ?>" rel="tag">
               <?= htmlspecialchars($categoryName) ?>
              </a>
              <?php else: ?>

@@ -5,6 +5,15 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
+# Remove .php extension from URL
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+# Redirect .php URLs to non-.php URLs
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^(.+)\.php$ /$1 [R=301,L]
+
 # Allow access to specific directories
 RewriteCond %{REQUEST_URI} ^/(admin|public|api|includes|uploads)/ [NC]
 RewriteRule ^ - [L]

@@ -99,7 +99,7 @@ foreach ($products as $product) {
                 <meta content="2" name="numberOfItems">
                  <meta content="Ascending" name="itemListOrder">
                   <li class="trail-item trail-begin" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                   <a aria-label="Trang chủ" href="trang-chu.php" itemprop="item" itemtype="https://schema.org/Thing" rel="home">
+                   <a aria-label="Trang chủ" href="trang-chu" itemprop="item" itemtype="https://schema.org/Thing" rel="home">
                     <span itemprop="name">
                      <span class="breadcrumb-home-a">
                       Trang chủ
@@ -112,7 +112,7 @@ foreach ($products as $product) {
                    <meta content="1" itemprop="position"/>
                   </li>
                   <li class="trail-item trail-end" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                   <a href="danh-sach-san-pham.php" itemprop="item" itemtype="https://schema.org/Thing">
+                   <a href="danh-sach-san-pham?" itemprop="item" itemtype="https://schema.org/Thing">
                     <span itemprop="name">
                      Sản phẩm 
                     </span>
@@ -148,13 +148,13 @@ foreach ($products as $product) {
             <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
              <ul class="elementor-nav-menu sm-vertical" id="menu-1-0e8ec52">
               <li class="menu-item <?= empty($selectedCategory) ? 'current-menu-item elementor-item-active' : '' ?>">
-               <a aria-current="page" class="elementor-item <?= empty($selectedCategory) ? 'elementor-item-active' : '' ?>" href="danh-sach-san-pham.php">
+               <a aria-current="page" class="elementor-item <?= empty($selectedCategory) ? 'elementor-item-active' : '' ?>" href="danh-sach-san-pham?">
                 TẤT CẢ
                </a>
               </li>
               <?php foreach ($categories as $cat): ?>
               <li class="menu-item <?= $selectedCategory === $cat['slug'] ? 'current-menu-item' : '' ?>">
-               <a class="elementor-item <?= $selectedCategory === $cat['slug'] ? 'elementor-item-active' : '' ?>" href="danh-sach-san-pham.php?category=<?= urlencode($cat['slug']) ?>">
+               <a class="elementor-item <?= $selectedCategory === $cat['slug'] ? 'elementor-item-active' : '' ?>" href="danh-sach-san-pham??category=<?= urlencode($cat['slug']) ?>">
                 <?= htmlspecialchars($cat['name']) ?>
                </a>
               </li>
@@ -164,13 +164,13 @@ foreach ($products as $product) {
             <nav aria-hidden="true" class="elementor-nav-menu--dropdown elementor-nav-menu__container">
              <ul class="elementor-nav-menu sm-vertical" id="menu-2-0e8ec52">
               <li class="menu-item <?= empty($selectedCategory) ? 'current-menu-item elementor-item-active' : '' ?>">
-               <a aria-current="page" class="elementor-item <?= empty($selectedCategory) ? 'elementor-item-active' : '' ?>" href="danh-sach-san-pham.php" tabindex="-1">
+               <a aria-current="page" class="elementor-item <?= empty($selectedCategory) ? 'elementor-item-active' : '' ?>" href="danh-sach-san-pham?" tabindex="-1">
                 TẤT CẢ
                </a>
               </li>
               <?php foreach ($categories as $cat): ?>
               <li class="menu-item <?= $selectedCategory === $cat['slug'] ? 'current-menu-item' : '' ?>">
-               <a class="elementor-item <?= $selectedCategory === $cat['slug'] ? 'elementor-item-active' : '' ?>" href="danh-sach-san-pham.php?category=<?= urlencode($cat['slug']) ?>" tabindex="-1">
+               <a class="elementor-item <?= $selectedCategory === $cat['slug'] ? 'elementor-item-active' : '' ?>" href="danh-sach-san-pham??category=<?= urlencode($cat['slug']) ?>" tabindex="-1">
                 <?= htmlspecialchars($cat['name']) ?>
                </a>
               </li>
@@ -291,7 +291,7 @@ foreach ($products as $product) {
              <span class="w-separator">
              </span>
              <?php if (!empty($categoryData['slug'])): ?>
-             <a href="danh-sach-san-pham.php?category=<?= urlencode($categoryData['slug']) ?>">
+             <a href="danh-sach-san-pham??category=<?= urlencode($categoryData['slug']) ?>">
               <span class="w-title-readmore">
                Xem thêm
                <i class="eicon-angle-right">

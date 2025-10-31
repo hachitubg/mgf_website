@@ -140,12 +140,12 @@
          <div class="oceanwp-custom-menu clr ocean_custom_menu-2 left dropdown-hover">
           <ul class="dropdown-menu sf-menu" id="menu-footer-tieng-viet">
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113" id="menu-item-113">
-            <a class="menu-link" href="ve-chung-toi.php">
+            <a class="menu-link" href="ve-chung-toi">
              Về chúng tôi
             </a>
            </li>
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110" id="menu-item-110">
-            <a class="menu-link" href="danh-sach-san-pham.php">
+            <a class="menu-link" href="danh-sach-san-pham">
              Sản phẩm và phân phối
             </a>
            </li>
