@@ -493,7 +493,7 @@ function displayBannerSlider($banners, $cssClass = 'banner-slider', $showLinks =
     $html = '<div class="' . htmlspecialchars($cssClass) . '">';
     
     foreach ($banners as $banner) {
-        $imagePath = '/mgf-website/uploads/banners/' . htmlspecialchars($banner['image_path']);
+        $imagePath = getBannerImageUrl($banner['image_path']);
         
         if ($showLinks && !empty($banner['link_url'])) {
             $html .= '<a href="' . htmlspecialchars($banner['link_url']) . '" class="banner-item">';
@@ -520,7 +520,7 @@ function displayBanner($pdo, $locationCode, $index = 0) {
     if (empty($banners) || !isset($banners[$index])) return '';
     
     $banner = $banners[$index];
-    $imagePath = '/mgf-website/uploads/banners/' . htmlspecialchars($banner['image_path']);
+    $imagePath = getBannerImageUrl($banner['image_path']);
     
     $html = '<div class="banner">';
     
@@ -638,18 +638,18 @@ function getPaginationData($page, $perPage, $totalItems) {
  * Get product image URL
  */
 function getProductImageUrl($imagePath) {
-    if (empty($imagePath)) return '/mgf-website/uploads/no-image.png';
-    return '/mgf-website/uploads/products/' . htmlspecialchars($imagePath);
+    if (empty($imagePath)) return UPLOAD_URL . '/no-image.png';
+    return UPLOAD_URL . '/products/' . htmlspecialchars($imagePath);
 }
 
 /**
  * Get post image URL
  */
 function getPostImageUrl($imagePath) {
-    if (empty($imagePath)) return '/mgf-website/uploads/no-image.png';
+    if (empty($imagePath)) return UPLOAD_URL . '/no-image.png';
     // Remove leading path if it's already included
     $imagePath = str_replace('uploads/posts/', '', $imagePath);
-    return '/mgf-website/uploads/posts/' . htmlspecialchars($imagePath);
+    return UPLOAD_URL . '/posts/' . htmlspecialchars($imagePath);
 }
 
 /**
@@ -657,7 +657,7 @@ function getPostImageUrl($imagePath) {
  */
 function getBannerImageUrl($imagePath) {
     if (empty($imagePath)) return '';
-    return '/mgf-website/uploads/banners/' . htmlspecialchars($imagePath);
+    return UPLOAD_URL . '/banners/' . htmlspecialchars($imagePath);
 }
 
 // ============================================================================

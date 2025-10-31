@@ -26,7 +26,8 @@ if (empty($products)) {
 
 $product = $products[0];
 $productImages = !empty($product['images']) ? $product['images'] : [];
-$firstImage = !empty($product['first_image']) ? getProductImageUrl($product['first_image']) : '/mgf-website/uploads/no-image.png';
+// Fallback image if no images available
+$firstImage = !empty($product['first_image']) ? getProductImageUrl($product['first_image']) : UPLOAD_URL . '/no-image.png';
 $categoryName = $product['category_name'] ?? 'Chưa phân loại';
 $categorySlug = $product['category_slug'] ?? '';
 
@@ -245,7 +246,8 @@ $otherProducts = getProducts($pdo, [
               <h2 class="mgf-product-grid-title">Sản phẩm cùng danh mục</h2>
               <div class="mgf-product-grid">
                <?php foreach ($relatedProducts as $rp): 
-                 $rpImg = !empty($rp['first_image']) ? getProductImageUrl($rp['first_image']) : '/mgf-website/uploads/no-image.png';
+                                 // Fallback nếu không có ảnh
+                 $rpImg = !empty($rp['first_image']) ? getProductImageUrl($rp['first_image']) : UPLOAD_URL . '/no-image.png';
                  $rpUrl = 'chi-tiet-san-pham.php?slug=' . urlencode($rp['slug']);
                  $rpAllImages = !empty($rp['images']) ? $rp['images'] : [];
                  $rpIsOnSale = hasDiscount($rp);
@@ -293,7 +295,7 @@ $otherProducts = getProducts($pdo, [
               <h2 class="mgf-product-grid-title">Sản phẩm khác</h2>
               <div class="mgf-product-grid">
                <?php foreach ($otherProducts as $op): 
-                 $opImg = !empty($op['first_image']) ? getProductImageUrl($op['first_image']) : '/mgf-website/uploads/no-image.png';
+                 $opImg = !empty($op['first_image']) ? getProductImageUrl($op['first_image']) : UPLOAD_URL . '/no-image.png';
                  $opUrl = 'chi-tiet-san-pham.php?slug=' . urlencode($op['slug']);
                  $opAllImages = !empty($op['images']) ? $op['images'] : [];
                  $opIsOnSale = hasDiscount($op);

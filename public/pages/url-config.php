@@ -4,8 +4,9 @@
  * Định nghĩa các trang có sẵn và các trang sẽ ra mắt
  */
 
-// Base URL của website
-define('BASE_URL', '/mgf-website/public/pages/');
+// Base URL của website - Sử dụng từ config chính
+require_once __DIR__ . '/../../includes/config.php';
+define('PAGES_BASE_URL', BASE_URL . '/public/pages/');
 
 // Các trang đã có sẵn
 $available_pages = [
@@ -62,7 +63,7 @@ function get_page_url($page_slug) {
     global $available_pages;
     
     if (isset($available_pages[$page_slug])) {
-        return BASE_URL . $available_pages[$page_slug];
+        return PAGES_BASE_URL . $available_pages[$page_slug];
     }
     
     return '#';

@@ -1,0 +1,17 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Remove www if present
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Allow access to specific directories
+RewriteCond %{REQUEST_URI} ^/(admin|public|api|includes|uploads)/ [NC]
+RewriteRule ^ - [L]
+
+# Block direct access to includes directory
+RewriteCond %{REQUEST_URI} ^/includes/ [NC]
+RewriteRule ^ - [F,L]
+
+# Default charset
+AddDefaultCharset UTF-8

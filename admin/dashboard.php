@@ -78,7 +78,9 @@ try {
         <div class="stat-number"><?php echo $counts['messages']; ?></div>
       </div>
       <?php if ($counts['messages'] > 0): ?>
-      <a href="/mgf-website/admin/messages/" class="stat-link">Xem ngay →</a>
+          <div class="stat-actions">
+      <a href="<?= BASE_URL ?>/admin/messages/" class="stat-link">Xem ngay →</a>
+    </div>
       <?php endif; ?>
     </div>
   </div>

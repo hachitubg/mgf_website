@@ -29,7 +29,8 @@ if (isset($_FILES['upload']) && $_FILES['upload']['error'] == UPLOAD_ERR_OK) {
         $destination = $uploadDir . $newFileName;
         
         if (move_uploaded_file($tmpName, $destination)) {
-            $url = '/mgf-website/uploads/content/' . $newFileName;
+            require_once __DIR__ . '/../includes/config.php';
+            $url = UPLOAD_URL . '/content/' . $newFileName;
             $message = 'Upload thành công';
         } else {
             $message = 'Lỗi khi lưu file';
