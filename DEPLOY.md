@@ -1,12 +1,8 @@
-# Hướng Dẫn Deploy MGF Website Lên VPS
+# 🚀 Hướng Dẫn Deploy & Quản Lý MGF Website
 
-## Bước 1: Chuẩn Bị VPS
+## 1️⃣ Deploy Lần Đầu
 
-Đảm bảo VPS đã cài đặt:
-- Docker
-- Docker Compose
-
-Nếu chưa cài, chạy lệnh:
+### Bước 1: Chuẩn bị VPS
 ```bash
 # Cài Docker
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -17,189 +13,237 @@ sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-## Bước 2: Upload Code Lên VPS
-
-### Cách 1: Dùng Git (Khuyến nghị)
+### Bước 2: Clone code từ GitHub
 ```bash
-# Trên VPS, tạo thư mục project
 cd /home
-sudo mkdir -p mgf-website
+sudo git clone https://github.com/hachitubg/mgf_website.git mgf-website
 cd mgf-website
-
-# Clone hoặc pull code từ Git
-git clone https://github.com/hachitubg/mgf_website.git .
 ```
 
-### Cách 2: Dùng FTP/SFTP
-- Dùng FileZilla hoặc WinSCP
-- Upload toàn bộ thư mục mgf-website lên VPS
-- Đường dẫn khuyến nghị: `/home/mgf-website`
-
-## Bước 3: Cấu Hình
-
-### 3.1. Đổi tên file config
+### Bước 3: Deploy tự động
 ```bash
-cd /home/mgf-website
+chmod +x deploy.sh
+sudo ./deploy.sh
+```
+
+**Hoặc deploy thủ công:**
+```bash
+# Chuyển config
 mv includes/config.php includes/config.local.php
 mv includes/config.docker.php includes/config.php
-```
 
-### 3.2. Tạo thư mục uploads và set quyền
-```bash
-mkdir -p uploads/products uploads/posts uploads/banners
+# Tạo thư mục uploads
+mkdir -p uploads/{products,posts,banners,content}
 chmod -R 755 uploads
-```
 
-### 3.3. Đổi port nếu cần (nếu port 8080 đã bị sử dụng)
-Mở file `docker-compose.yml`, tìm dòng:
-```yaml
-ports:
-  - "8080:80"
-```
-
-Đổi thành port khác, ví dụ:
-```yaml
-ports:
-  - "9528:80"  # hoặc 9529, 9530...
-```
-
-### 3.4. Đổi mật khẩu database (Khuyến nghị cho production)
-Trong `docker-compose.yml`, đổi các giá trị:
-- `MYSQL_ROOT_PASSWORD`
-- `MYSQL_PASSWORD`
-
-Và cập nhật lại trong phần `environment` của service `web`.
-
-## Bước 4: Chạy Docker
-
-```bash
-cd /home/mgf-website
-
-# Build và chạy containers
+# Chạy Docker
 sudo docker-compose up -d
+```
 
-# Xem logs để kiểm tra
+### Bước 4: Kiểm tra
+```bash
+# Xem containers
+sudo docker-compose ps
+
+# Xem logs
 sudo docker-compose logs -f
 ```
 
-## Bước 5: Kiểm Tra
+**Truy cập:**
+- Website: `http://IP_VPS:9527`
+- Admin: `http://IP_VPS:9527/admin/login.php` (admin/admin123)
 
-Truy cập: `http://IP_VPS:9527`
+---
 
-- Trang chủ: `http://IP_VPS:9527/public/pages/`
-- Admin: `http://IP_VPS:9527/admin/login.php`
-  - Username: `admin`
-  - Password: `admin123`
+## 2️⃣ Cập Nhật Source Code
 
-## Bước 6: Cấu Hình Tên Miền (Domain từ inet.vn)
-
-### 6.1. Trỏ domain về VPS
-Vào quản lý domain tại inet.vn:
-- Tạo bản ghi A: `@` hoặc `www` -> IP VPS của bạn
-- Hoặc subdomain: `mgf` -> IP VPS
-
-### 6.2. Cài Nginx Reverse Proxy (Khuyến nghị)
-
-Tạo file cấu hình Nginx:
+### Cách 1: Pull từ GitHub (Khuyến nghị)
 ```bash
-sudo nano /etc/nginx/sites-available/mgf.yourdomain.com
-```
+cd /home/mgf-website
 
-Nội dung:
-```nginx
-server {
-    listen 80;
-    server_name mgf.yourdomain.com;  # Đổi thành domain của bạn
+# Pull code mới nhất
+sudo git pull origin main
 
-    location / {
-        proxy_pass http://localhost:9527;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-}
-```
-
-Enable site và reload Nginx:
-```bash
-sudo ln -s /etc/nginx/sites-available/mgf.yourdomain.com /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo systemctl reload nginx
-```
-
-### 6.3. Cài SSL (HTTPS) miễn phí với Let's Encrypt
-```bash
-sudo apt install certbot python3-certbot-nginx -y
-sudo certbot --nginx -d mgf.yourdomain.com
-```
-
-## Các Lệnh Quản Lý
-
-```bash
-# Xem trạng thái containers
-sudo docker-compose ps
-
-# Dừng containers
-sudo docker-compose stop
-
-# Khởi động lại
+# Restart containers để apply thay đổi
 sudo docker-compose restart
+```
 
-# Xem logs
-sudo docker-compose logs -f web
-sudo docker-compose logs -f db
+### Cách 2: Rebuild hoàn toàn (Nếu có thay đổi Dockerfile)
+```bash
+cd /home/mgf-website
 
-# Xóa và build lại (khi có thay đổi code)
+# Pull code
+sudo git pull origin main
+
+# Rebuild và restart
 sudo docker-compose down
 sudo docker-compose up -d --build
+```
 
-# Backup database
+### Cách 3: Upload file qua FTP/SFTP
+```bash
+# Sau khi upload file, restart containers
+cd /home/mgf-website
+sudo docker-compose restart
+```
+
+**Lưu ý:** 
+- Nếu chỉ sửa PHP/CSS/JS → Chỉ cần `restart`
+- Nếu sửa Dockerfile/docker-compose.yml → Cần `down` và `up --build`
+
+---
+
+## 3️⃣ Backup Database
+
+### Backup thủ công
+```bash
+cd /home/mgf-website
+
+# Backup với tên file có ngày giờ
+sudo docker exec mgf_mysql mysqldump -u mgf_user -pmgf_password_2024 mgf_website > backup_$(date +%Y%m%d_%H%M%S).sql
+
+# Hoặc backup đơn giản
 sudo docker exec mgf_mysql mysqldump -u mgf_user -pmgf_password_2024 mgf_website > backup.sql
+```
 
-# Restore database
+### Backup tự động hàng ngày
+```bash
+# Tạo thư mục backup
+sudo mkdir -p /home/backups
+
+# Tạo script backup
+sudo nano /home/backup-db.sh
+```
+
+**Nội dung file backup-db.sh:**
+```bash
+#!/bin/bash
+DATE=$(date +%Y%m%d_%H%M%S)
+docker exec mgf_mysql mysqldump -u mgf_user -pmgf_password_2024 mgf_website > /home/backups/db_$DATE.sql
+# Xóa backup cũ hơn 7 ngày
+find /home/backups/ -name "db_*.sql" -mtime +7 -delete
+echo "Backup completed: db_$DATE.sql"
+```
+
+**Setup cron job:**
+```bash
+# Cho phép thực thi
+sudo chmod +x /home/backup-db.sh
+
+# Thêm vào crontab
+sudo crontab -e
+
+# Thêm dòng này (backup mỗi ngày lúc 2h sáng):
+0 2 * * * /home/backup-db.sh >> /var/log/backup.log 2>&1
+```
+
+### Restore database từ backup
+```bash
+cd /home/mgf-website
+
+# Restore từ file backup
+sudo docker exec -i mgf_mysql mysql -u mgf_user -pmgf_password_2024 mgf_website < backup_20241031_140000.sql
+
+# Hoặc
 sudo docker exec -i mgf_mysql mysql -u mgf_user -pmgf_password_2024 mgf_website < backup.sql
 ```
 
-## Lưu Ý Bảo Mật
-
-1. **Đổi mật khẩu admin** ngay sau khi deploy
-2. **Đổi mật khẩu database** trong docker-compose.yml
-3. **Cài SSL certificate** cho domain
-4. **Giới hạn truy cập admin** bằng IP nếu cần
-5. **Backup database** thường xuyên
-
-## Troubleshooting
-
-### Container không start
+### Backup files uploads
 ```bash
-sudo docker-compose logs
+# Backup thư mục uploads
+cd /home/mgf-website
+sudo tar -czf uploads_backup_$(date +%Y%m%d).tar.gz uploads/
+
+# Restore uploads
+sudo tar -xzf uploads_backup_20241031.tar.gz
 ```
 
-### Port bị chiếm
+---
+
+## 📝 Lệnh Thường Dùng
+
 ```bash
-# Kiểm tra port nào đang dùng
+# Xem trạng thái
+sudo docker-compose ps
+
+# Xem logs realtime
+sudo docker-compose logs -f
+
+# Restart website
+sudo docker-compose restart
+
+# Dừng website
+sudo docker-compose stop
+
+# Khởi động lại
+sudo docker-compose start
+
+# Xóa containers (dữ liệu DB vẫn giữ)
+sudo docker-compose down
+
+# Xem logs của web server
+sudo docker-compose logs web
+
+# Xem logs của database
+sudo docker-compose logs db
+
+# Vào container để debug
+sudo docker exec -it mgf_web bash
+sudo docker exec -it mgf_mysql bash
+```
+
+---
+
+## 🔒 Bảo Mật Sau Deploy
+
+```bash
+# 1. Đổi mật khẩu database trong docker-compose.yml
+sudo nano docker-compose.yml
+# Sửa: MYSQL_ROOT_PASSWORD và MYSQL_PASSWORD
+sudo docker-compose up -d --force-recreate
+
+# 2. Đổi mật khẩu admin website
+# Truy cập: http://IP:9527/admin/ và đổi password
+
+# 3. Setup firewall
+sudo ufw allow 22    # SSH
+sudo ufw allow 80    # HTTP
+sudo ufw allow 443   # HTTPS
+sudo ufw deny 9527   # Đóng port Docker (chỉ cho Nginx)
+sudo ufw enable
+```
+
+---
+
+## 🐛 Xử Lý Lỗi
+
+```bash
+# Container không start
+sudo docker-compose logs
+
+# Port bị chiếm
 sudo netstat -tulpn | grep 9527
 
-# Đổi port trong docker-compose.yml
-```
-
-### Permission denied cho uploads
-```bash
+# Permission denied cho uploads
 sudo chmod -R 755 uploads
 sudo chown -R www-data:www-data uploads
+
+# Reset hoàn toàn
+sudo docker-compose down
+sudo docker-compose up -d --build
+
+# Xóa toàn bộ (bao gồm database - NGUY HIỂM!)
+sudo docker-compose down -v
 ```
 
-### Database không kết nối được
-```bash
-# Vào container web và test
-sudo docker exec -it mgf_web bash
-ping db
-```
+---
 
-## Hỗ Trợ
+## 📞 Hỗ Trợ
 
-Nếu gặp vấn đề, kiểm tra logs:
+**Kiểm tra logs khi có lỗi:**
 ```bash
 sudo docker-compose logs -f
 ```
+
+**Website:** http://IP_VPS:9527  
+**Admin:** http://IP_VPS:9527/admin/login.php
