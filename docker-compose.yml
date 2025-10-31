@@ -36,6 +36,7 @@ services:
       - DB_PASS=mgf_password_2024
     networks:
       - mgf_network
+      - halife_network
 
 volumes:
   mgf_db_data:
@@ -44,3 +45,6 @@ volumes:
 networks:
   mgf_network:
     driver: bridge
+  halife_network:
+    external: true
+    name: halife_network
