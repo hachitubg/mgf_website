@@ -1,0 +1,673 @@
+@-webkit-keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2rem, 0);
+            transform: translate3d(0, 2rem, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2rem, 0);
+            transform: translate3d(0, 2rem, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale3d(0, 0, 0);
+            transform: scale3d(0, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale3d(0, 0, 0);
+            transform: scale3d(0, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+.page-title-box {
+  padding: 2.25rem 0 2.5rem;
+}
+
+section .container {
+  max-width: 68.875rem;
+  margin: auto;
+  position: relative;
+}
+
+.container > * {
+  position: relative;
+}
+
+.container > *:after {
+  content: '';
+  position: absolute;
+  width: .125rem;
+  height: 100%;
+  background-image: url(https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/trusted-line-ver.svg);
+  top: 0;
+  right: 0;
+}
+
+.certification-inner:before {
+  content: '';
+  position: absolute;
+  height: .125rem;
+  width: calc(100% - .175rem);
+  background-image: url(https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/trusted-line-hoz.svg);
+  top: 0;
+  right: 0.175rem;
+}
+
+#award .certification-inner:before {
+  width: calc(100% - 4rem);
+}
+
+#certification .container:before {
+  content: '';
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  top: -.75rem;
+  left: 0;
+  border-radius: 50%;
+  border: thin solid #418F49;
+  background: #fff;
+  z-index: 2;
+}
+
+#award .container:before {
+  content: '';
+  position: absolute;
+  height: 2.8rem;
+  width: 2.8rem;
+  top: -1.4rem;
+  left: 3rem;
+  border-radius: 50%;
+  border: thin solid #418F49;
+  background-image: url(https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/trusted-arrow.svg);
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#award .container:after {
+  content: '';
+  position: absolute;
+  width: .125rem;
+  height: 100%;
+  background-image: url(https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/trusted-line-ver.svg);
+  top: 0;
+  left: 4.4rem;
+}
+
+.section-title-wrapper {
+  max-width: 28.875rem;
+}
+
+.trusted-title {
+  color: #449350;
+  font-size: 2.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+}
+
+.trusted-title:before {
+  content: '';
+  position: absolute;
+  width: .125rem;
+  height: 1.75rem;
+  background-image: url(https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/trusted-line-short.svg);
+  top: -2rem;
+  left: 4.25rem;
+}
+
+.certification-inner {
+  padding: 1.5rem 2rem 1.5rem 5.875rem;
+  overflow: hidden;
+}
+
+#award .certification-inner {
+  padding-bottom: 5rem;
+}
+
+.circle-dots.abs-icon {
+  position: absolute;
+  height: 40rem;
+  width: 40rem;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: left;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  bottom: -26rem;
+  right: -12rem;
+  z-index: -1;
+}
+
+.circle-dots.abs-icon img {
+  -webkit-animation: slide-up 1.5s ease-in-out;
+          animation: slide-up 1.5s ease-in-out;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0 0 1rem;
+}
+
+.section-subtitle {
+  font-size: .875rem;
+}
+
+.certification-list {
+  margin: 2rem 0 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.certification-item {
+  -ms-flex-preferred-size: calc((100% - 6.5rem)/4);
+      flex-basis: calc((100% - 6.5rem)/4);
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.certification__title {
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+.certification__image {
+  height: 16.25rem;
+  padding: 1rem 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.certification__image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.certification__image:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+.certification__image:after {
+  content: '';
+  position: absolute;
+  width: 1.75rem;
+  height: 1.85rem;
+  background-image: url(https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/trusted-zoom.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.certification-item:hover .certification__image:before,
+.certification-item:hover .certification__image:after {
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/*--------------------------------------------------------------
+>>> popup
+--------------------------------------------------------------*/
+.popup-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.popup-wrapper.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1002;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.popup-wrapper.show .popup {
+  -webkit-animation: zoomIn .5s ease-out;
+          animation: zoomIn .5s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.popup {
+  width: 52.375rem;
+  max-width: 92%;
+  background: #fff;
+  padding: 1.875rem 2.375rem;
+  background: #fff;
+  -webkit-box-shadow: 0.125rem 0.625rem 0.4375rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0.125rem 0.625rem 0.4375rem rgba(0, 0, 0, 0.2);
+  max-height: 85%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.popup-header {
+  position: relative;
+}
+
+.popup__subtitle {
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+.popup__title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: .5rem 0 .75rem;
+}
+
+.close-btn {
+  position: absolute;
+  cursor: pointer;
+  right: -1.35rem;
+  top: -1rem;
+  background: #E4E6EB;
+  border-radius: 50%;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .35rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.close-btn:hover {
+  background: #d0d1d3;
+}
+
+.popup__image {
+  -ms-flex-preferred-size: 52%;
+      flex-basis: 52%;
+  max-width: 52%;
+}
+
+.popup__content {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  max-width: 45%;
+  padding-left: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.popup-contents {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* Share post */
+.share-post {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 1rem 0;
+}
+
+.share-post__item {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+  cursor: pointer;
+  border: thin solid rgba(0, 0, 0, 0.58);
+  position: relative;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+
+.share-post__item:hover img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.share-post__item img {
+  max-width: 1.45rem;
+  max-height: 1rem;
+  -webkit-transform: translateX(0.035rem);
+          transform: translateX(0.035rem);
+}
+
+.copied-link {
+  opacity: 0;
+  position: absolute;
+  background: #4b4a4a;
+  border-radius: .25em;
+  font-size: .75rem;
+  padding: .0625rem .5rem .25rem;
+  color: #fff;
+  text-align: center;
+  min-width: 3rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: -1.75rem;
+  left: -1rem;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.copied-link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: .4rem solid transparent;
+  border-top-color: #4b4a4a;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -.2rem;
+  margin-bottom: -.4rem;
+}
+
+.copied-link.show {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+.zalo-share-button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.journey-item__title,
+.journey-item__subtitle {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .trusted-title {
+    font-size: 1.714rem;
+  }
+  .page-title-box {
+    padding: 1rem 0 2rem;
+  }
+  section .container {
+    max-width: 89.6%;
+  }
+  .trusted-title:before,
+  .container > *:after,
+  #award .container:after {
+    content: none;
+  }
+  .certification-inner {
+    padding: 2rem 0;
+  }
+  .section-title {
+    font-size: 1.28rem;
+  }
+  .circle-dots.abs-icon {
+    display: none;
+  }
+  .certification-item {
+    -ms-flex-preferred-size: calc((100% - 1.75rem)/2);
+        flex-basis: calc((100% - 1.75rem)/2);
+    max-width: calc((100% - 1.75rem)/2);
+    margin-bottom: 1.28rem;
+  }
+  .certification__title {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .certification__image {
+    border: thin solid #f2f2f2;
+    padding: 0;
+  }
+  .loadmore {
+    color: #41AD49;
+    font-size: 1.28rem;
+    text-align: center;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .loadmore:before {
+    content: '';
+    position: absolute;
+    height: .125rem;
+    width: calc(100% - .175rem);
+    background-image: url(https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/trusted-line-hoz.svg);
+    top: .5rem;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    z-index: 1;
+  }
+  .loadmore span {
+    background: #fff;
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    padding: 0 1.25rem;
+  }
+  .award {
+    margin: 2.57rem 0;
+  }
+  #award .certification-inner:before {
+    width: 100%;
+  }
+  #award .container:before {
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    top: -1rem;
+  }
+  #award .certification-inner {
+    padding-bottom: 2.57rem;
+  }
+  .popup {
+    padding: 2.285rem;
+  }
+  .popup-contents {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .popup-contents > * {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .popup__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 1rem 1.857rem;
+  }
+  .popup__image img {
+    border: thin solid #f2f2f2;
+    display: -ms-grid;
+    display: grid;
+    -webkit-transform: scale(1.005);
+            transform: scale(1.005);
+  }
+  .popup__title {
+    margin-top: 0;
+  }
+  .popup-contents .popup__shares {
+    display: none;
+  }
+  .popup__image .share-post {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .share-post__label {
+    font-size: .857rem;
+  }
+  .close-btn {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .popup__image {
+    padding-top: 1.5rem;
+  }
+  .share-post {
+    margin: 1.5rem 0;
+  }
+}
+
+@media only screen and (max-width: 1365px) and (min-width: 1024px) {
+  .container > *:after {
+    width: .1325rem;
+  }
+}
+
+/* Fix for touch device */
+@media screen and (min-width: 1024px) {
+  .popup__image .share-post {
+    display: none;
+  }
+}
+
+/* Fix IE */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .share-post__item img {
+    max-width: 1.4rem;
+    width: auto;
+  }
+  .share-post__item.link-copy:hover {
+    background: transparent;
+  }
+}
+
+/* Fix MAC */
+.macos.safari .container > *:after {
+  background-image: url(https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/trusted-line-ver.png);
+}
+
+.macos.safari .certification-inner:before {
+  background-image: url(https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/trusted-line-hoz.png);
+}
+
+.macos.safari .trusted-title:before {
+  background-image: url(https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/trusted-line-short.png);
+}
+/*# sourceMappingURL=trusted-goodness.css.map */

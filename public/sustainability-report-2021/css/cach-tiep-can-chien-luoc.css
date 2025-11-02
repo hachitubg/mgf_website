@@ -1,0 +1,488 @@
+.section-1 {
+  position: relative;
+}
+.section-1 .section-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  text-align: left;
+  width: 1000px;
+}
+.section-1 .section-text .title {
+  font-size: 50px;
+  line-height: 59px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  flex: 1;
+  padding-left: 15px;
+}
+.section-1 .section-text .text-right li {
+  list-style: disc;
+  color: #fff;
+  font-size: 15px;
+}
+.section-1 .section-text .text-right li p {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 31px;
+  color: #fff;
+  flex: 1;
+  padding-left: 5px;
+}
+
+.section-2-en {
+  max-width: 1020px !important;
+}
+
+.section-2 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section-2 .title-heading {
+  font-size: 40px;
+  list-style: 45px;
+  text-transform: uppercase;
+  color: #3fac49;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+.section-2 .box {
+  display: flex;
+}
+.section-2 .box p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #231f20;
+  text-align: justify;
+}
+.section-2 .box .left {
+  flex: 0 0 33%;
+}
+.section-2 .box .right {
+  flex: 0 0 67%;
+  padding-left: 25px;
+}
+.section-2 .box .right .box-img-top {
+  display: flex;
+  padding-bottom: 20px;
+  padding-top: 8px;
+}
+.section-2 .box .right .box-img-top .wp-img {
+  flex: 0 0 25%;
+}
+.section-2 .box .right .box-img-top .wp-img img {
+  width: 87px;
+  height: 72px;
+  margin: 0;
+}
+.section-2 .box .right .border-line {
+  height: 1px;
+  background: rgba(138, 137, 137, 0.3215686275);
+}
+.section-2 .box .right .box-text-bottom {
+  display: flex;
+  margin-left: 20px;
+  padding-top: 15px;
+}
+.section-2 .box .right .box-text-bottom .wp-text {
+  padding-left: 10px;
+  flex: 0 0 25%;
+  position: relative;
+}
+.section-2 .box .right .box-text-bottom .wp-text::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: -18px;
+  left: 18px;
+  z-index: 2;
+}
+.section-2 .box .right .box-text-bottom .wp-text::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: -18px;
+  left: 10px;
+  z-index: 2;
+}
+.section-2 .box .right .box-text-bottom .wp-text:nth-child(1)::after {
+  background: #006937;
+}
+.section-2 .box .right .box-text-bottom .wp-text:nth-child(2)::after {
+  background: #26A9E0;
+}
+.section-2 .box .right .box-text-bottom .wp-text:nth-child(3)::after {
+  background: #3fac49;
+}
+.section-2 .box .right .box-text-bottom .wp-text:nth-child(4)::after {
+  background: #F89C1C;
+}
+.section-2 .box .right .box-text-bottom .wp-text:nth-child(1)::before {
+  background: #006937;
+}
+.section-2 .box .right .box-text-bottom .wp-text:nth-child(2)::before {
+  background: #26A9E0;
+}
+.section-2 .box .right .box-text-bottom .wp-text:nth-child(3)::before {
+  background: #3fac49;
+}
+.section-2 .box .right .box-text-bottom .wp-text:nth-child(4)::before {
+  background: #F89C1C;
+}
+.section-2 .box .right .box-text-bottom .wp-text .title {
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.section-2 .box .right .box-text-bottom .wp-text p {
+  text-align: left !important;
+  white-space: nowrap;
+}
+
+.section-3 {
+  background: #3fac49;
+  height: 252px;
+  display: flex;
+  align-items: center;
+  padding: 0 142px;
+  margin: 35px 0 75px;
+}
+.section-3 img {
+  width: 357px;
+  height: 386px;
+  margin-left: 60px;
+  margin-right: 125px;
+}
+.section-3 .section-text {
+  max-width: 433px;
+}
+.section-3 .section-text p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  text-align: justify;
+}
+
+.section-4 {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+.section-4 .box {
+  justify-content: space-between;
+}
+.section-4 .box .col-3 {
+  position: relative;
+  flex: 0 0 31%;
+}
+.section-4 .box .col-3 .wp-box {
+  padding: 0 20px;
+}
+.section-4 .box .col-3 .wp-box .box-head {
+  display: flex;
+  position: relative;
+  margin-bottom: 27px;
+}
+.section-4 .box .col-3 .wp-box .box-head img {
+  width: 190px;
+  height: 122px;
+  margin: 0;
+}
+.section-4 .box .col-3 .wp-box .box-head .title {
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  top: 74px;
+  left: 50%;
+}
+.section-4 .box .col-3 .wp-box p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #231F20;
+  text-align: justify;
+  padding-bottom: 35px;
+}
+.section-4 .box .col-3 .wp-box::before {
+  content: "";
+  background: url("https://www.greenfeed.com.vn/sustainability-report-2021/images/cach-tiep-can-chien-luoc/border-line.png");
+  width: 317px;
+  height: 242px;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 79px;
+  left: 0;
+  z-index: -1;
+}
+
+.section-5 {
+  position: relative;
+}
+.section-5::before {
+  content: "";
+  background: #3fac49;
+  width: 1260px;
+  height: 1060px;
+  display: block;
+  position: absolute;
+  bottom: -65px;
+  left: 0;
+  z-index: -1;
+}
+.section-5 .wp-section {
+  width: 1175px;
+  margin: 60px auto;
+  border-radius: 45px;
+  padding: 55px 100px;
+  background: #fff;
+  box-shadow: 4px 12px 24px rgba(0, 0, 0, 0.2);
+}
+.section-5 .wp-section .box-head .title-heading {
+  font-size: 40px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #3fac49;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.section-5 .wp-section .box-head .text-head {
+  font-size: 12px;
+  line-height: 15px;
+  color: #231f20;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-5 .wp-section .box-img .title {
+  font-size: 26px;
+  list-style: 31px;
+  text-transform: uppercase;
+  color: #3fac49;
+  text-align: center;
+  font-weight: 400;
+}
+.section-5 .wp-section .box-img .img-chart {
+  text-align: center;
+  margin-top: 40px;
+}
+.section-5 .wp-section .box-table {
+  margin-top: 40px;
+}
+.section-5 .wp-section .box-table .col-1 {
+  flex: 0 0 25.6%;
+}
+.section-5 .wp-section .box-table .col-2 {
+  flex: 0 0 32.1%;
+}
+.section-5 .wp-section .box-table .col-3 {
+  flex: 0 0 17.1%;
+}
+.section-5 .wp-section .box-table .col-4 {
+  flex: 0 0 24.4%;
+}
+.section-5 .wp-section .box-table .header {
+  display: flex;
+  justify-content: space-between;
+}
+.section-5 .wp-section .box-table .header .th {
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-5 .wp-section .box-table .header .th.bg-head {
+  background: #3fac49;
+  width: 100%;
+  height: 49px;
+  border-radius: 8px;
+}
+.section-5 .wp-section .box-table .header .th .bg-head-end {
+  background: #3fac49;
+  width: 100%;
+  height: 23px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-5 .wp-section .box-table .table-body {
+  padding: 10px 0;
+}
+.section-5 .wp-section .box-table .table-body .td .text-topic {
+  font-size: 15px;
+  line-height: 18px;
+  padding-left: 13px;
+  padding-bottom: 8px;
+}
+.section-5 .wp-section .box-table .table-body .td .text-topic .badge {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #E6E7E8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.section-5 .wp-section .box-table .table-body .td span {
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  margin-right: 5px;
+}
+.section-5 .wp-section .box-table .table-body .td .text-strategy {
+  font-size: 15px;
+  line-height: 18px;
+  color: #006937;
+}
+.section-5 .wp-section .box-table .table-body .box-logo {
+  padding-left: 35px;
+}
+.section-5 .wp-section .box-table .table-body .box-logo img {
+  width: 28px;
+  height: 28px;
+  margin: 0 5px 5px 0;
+}
+.section-5 .wp-section .box-table .table-body .box-icon-check .img-check {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+}
+.section-5 .wp-section .box-table .table-body .box-icon-check .img-check img {
+  width: 100%;
+}
+.section-5 .wp-section .box-table .table-body .box-icon-check .col-icon {
+  flex: 0 0 25%;
+  justify-content: center;
+  display: inline-grid;
+  align-items: center;
+}
+
+.section-6 .title-heading {
+  font-size: 40px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #3fac49;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 75px;
+  padding-top: 60px;
+}
+.section-6 .wp-img {
+  position: relative;
+}
+.section-6 .wp-img .section-text {
+  font-size: 12px;
+  line-height: 13px;
+  color: #231f20;
+  text-align: left;
+  position: absolute;
+  top: -30px;
+  right: 190px;
+}
+.section-6 .wp-img .section-text ul {
+  padding-left: 11px;
+}
+.section-6 .wp-img .section-text ul li {
+  list-style: decimal;
+}
+.section-6 .wp-img img {
+  width: 1204px;
+  height: 737px;
+  margin: 0 auto;
+}
+
+.section-7 {
+  background: #CBE7CB;
+  width: 100%;
+  height: 356px;
+}
+.section-7 .wp-box {
+  width: 810px;
+  margin: auto;
+  align-items: center;
+  padding: 29px 0;
+}
+.section-7 .wp-box .box-text {
+  flex: 0 0 50%;
+  font-size: 12px;
+  line-height: 15px;
+  color: #231F20;
+  text-align: justify;
+}
+.section-7 .wp-box .box-logo {
+  flex: 0 0 50%;
+}
+.section-7 .wp-box .box-logo .bg-box {
+  background: #fff;
+  width: 297px;
+  height: 297px;
+  margin-left: auto;
+  padding: 10px;
+}
+.section-7 .wp-box .box-logo .bg-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.section-7 .wp-box .box-logo .bg-box ul li {
+  display: inline-flex;
+}
+.section-7 .wp-box .box-logo .bg-box ul li img {
+  width: 84px;
+  height: 84px;
+  margin: 0;
+}
+
+.section-8 .title-heading {
+  font-size: 40px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #3fac49;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 60px;
+}
+.section-8 img {
+  margin-top: -25px;
+}
+.section-8 .btn {
+  width: 150px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #078844;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 3px 3px 11px rgba(0, 0, 0, 0.1882352941);
+}
+
+/*# sourceMappingURL=cach-tiep-can-chien-luoc.css.map */
