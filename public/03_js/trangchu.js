@@ -1,48 +1,47 @@
+jQuery(document).ready(function ($) {
+    jQuery('.banner-carousel').owlCarousel({
+        items:1,
+        nav:false,
+        navText:["<div class='nav-btn prev-nav '></div>","<div class='nav-btn next-nav '></div>"],
+        dots:false,
+        loop:true,
+        mouseDrag:false,
+        autoplay:true,
+        autoplayTimeout:8000,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+    });
+    
+    
+});
 
 jQuery(document).ready(function ($) {
-                    jQuery('.banner-carousel').owlCarousel({
-                        items:1,
-                        nav:false,
-                        navText:["<div class='nav-btn prev-nav '></div>","<div class='nav-btn next-nav '></div>"],
-                        dots:false,
-                        loop:true,
-                        mouseDrag:false,
-                        autoplay:true,
-                        autoplayTimeout:8000,
-                        animateOut: 'fadeOut',
-                        animateIn: 'fadeIn',
-                    });
-                   
-                    
-                });
 
-jQuery(document).ready(function ($) {
+    var autoplay = false;
+    if(window.matchMedia("(max-width: 1023px)").matches)
+        autoplay = true;
+    $('[data-fancybox]').fancybox({
+        fullScreen: {
+            autoStart: autoplay
+        },
 
-                    var autoplay = false;
-                    if(window.matchMedia("(max-width: 1023px)").matches)
-                        autoplay = true;
-                    $('[data-fancybox]').fancybox({
-                        fullScreen: {
-                            autoStart: autoplay
-                        },
+        // Set `touch: false` to disable panning/swiping
+        touch: {
+            vertical: true, // Allow to drag content vertically
+            momentum: true // Continue movement after releasing mouse/touch when panning
+        },
 
-                        // Set `touch: false` to disable panning/swiping
-                        touch: {
-                            vertical: true, // Allow to drag content vertically
-                            momentum: true // Continue movement after releasing mouse/touch when panning
-                        },
-
-                        video: {
-                            tpl:
-                            '<video class="fancybox-video fancybox-fullscreen" controls controlsList="nodownload">' +
-                            '<source src="{{src}}" type="{{format}}" />' +
-                            'Sorry, your browser doesn\'t support embedded videos, <a href="{{src}}">download</a> and watch with your favorite video player!' +
-                            "</video>",
-                            format: "", // custom video format
-                            autoStart: true
-                        },
-                    });
-                });
+        video: {
+            tpl:
+            '<video class="fancybox-video fancybox-fullscreen" controls controlsList="nodownload">' +
+            '<source src="{{src}}" type="{{format}}" />' +
+            'Sorry, your browser doesn\'t support embedded videos, <a href="{{src}}">download</a> and watch with your favorite video player!' +
+            "</video>",
+            format: "", // custom video format
+            autoStart: true
+        },
+    });
+});
 
 jQuery(document).ready(function ($) {
     NewsCarouselInit();
@@ -1678,7 +1677,7 @@ jQuery(document).ready(function ($) {
 jQuery.event.special.touchstart = { setup: function( _, ns, handle ) { this.addEventListener('touchstart', handle, { passive: !ns.includes('noPreventDefault') }); } }; jQuery.event.special.touchmove = { setup: function( _, ns, handle ) { this.addEventListener('touchmove', handle, { passive: !ns.includes('noPreventDefault') }); } };
                     jQuery(function($) {
             MainMenu();
-            SearchBox();
+            // SearchBox();
             Mobile_Nav();
             Sticky_Header();
             UserAgent();
@@ -1696,410 +1695,147 @@ jQuery.event.special.touchstart = { setup: function( _, ns, handle ) { this.addE
                     jQuery('.dt-primary-menu').removeClass('open-submenu');
                     jQuery('.header-main').removeClass('open-submenu');
                 });
-            }
-            function SearchBox()
-            {
-                jQuery('.dt-search-form input.dt-search').on('input', function(e)
+}
+
+function Sticky_Header() {
+    let LastScrollPos = 0;
+    let ticking = false;
+
+    function onScroll() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateStickyHeader);
+            ticking = true;
+        }
+    }
+
+    function updateStickyHeader() {
+        let offset = $('#dt-header').offset();
+        if (!offset) return;
+
+        let trigger_point = offset.top + $(window).height();
+        let trigger_point_header = offset.top + $('#dt-header').height();
+        let ScollPos = $(document).scrollTop();
+
+        
+            if (ScollPos < LastScrollPos && !$(".dt-toc").hasClass('expand')) {
+                if (ScollPos >= 1)
                 {
-                    jQuery('.dt-search-form').addClass('entered');
-                    if(search_data.length > 0 && jQuery(this).val().length)
-                    {
-                        search_list(jQuery(this));
+                    if (!$('body').hasClass('sticky-header')) {
+                        $('body').addClass('sticky-header').removeClass('sticky-header-down');
+                        $('.home .header-main').removeClass('header-transition');
                     }
-                    else
-                    {
-                        jQuery(".dt-search-results").empty().append(search_popular); 
-                    }
-                    
-                });
-                jQuery('.main-search,.form-trigger').on("click", function (e) {
-                    jQuery(this).parents('.dt-search-form').toggleClass('show');
-                                        jQuery(this).parents('.header-utility').children('.dt-search-results-wrapper').toggleClass('show');
-                    jQuery('.dt-search-form input.dt-search').focus();
-                });
-                jQuery('input.dt-search').on("click", function (e) {
-                    e.stopPropagation();
-                });
-                jQuery("body").on("click", function () {
-                    jQuery(".dt-search-list").addClass("hidden");
-                    jQuery('.dt-search-form').removeClass('show entered');
-                    jQuery('.dt-search-results-wrapper').removeClass('show entered');
-                    jQuery('.header-utility__wrapper').removeClass('ieshow');
-                    jQuery('.dt-search-form input.dt-search').val('');
-                    
-                });
-                jQuery(".dt-search-results-wrapper,.dt-search-form").on("click", function (e) {
-                    e.stopPropagation();
-                });
-                jQuery(".reset-button").on("click", function () {
-                    jQuery('body').trigger('click');
-                });
-                jQuery('a[href="#search"]').click(function(e){
-                    e.preventDefault();
-                    e.stopPropagation();
-                    jQuery('.main-search .autocompleate-wrapper').click();
-                }); 
-                var search_data = [];
-                var info = [];
-                var search_popular = $('.dt-search-results').php();
-                var template_tag = '<a href="{{link}}" class="search-result__tag">{{title}}</a>';
-                var template_post = '<div class="search-result__post"><a {{target}} href="{{link}}"><div class="search-result__post-thumb"><img src="{{img}}"></div><div class="search-result__post-content"><h3>{{title}}</h3><p>{{content}}</p></div></a></div>';
-                jQuery('.dt-search-form input.dt-search').on('focusin', function(e)
+                }
+                else
                 {
-                    var $this = jQuery(this);
-                    if(search_data.length == 0)
-                    {
-                    
-                        jQuery.ajax({
-                            url: 'https://www.greenfeed.com.vn/wp-admin/admin-ajax.php',
-                            type: "GET",
-                            data: { action: "dt_autocomplete_search" },
-                            dataType: "json",
-                            success: function (json_data) {
-                                if(json_data)
-                                {
-                                    search_data = json_data[0];
-                                    info = json_data[1];
-                                    search_list($this);
-                                }
-                            },
-                        });
-                    } 
-                });
-                function search_list($this)
+                    $('body').removeClass('sticky-header sticky-header-down');
+                }
+                
+            } else {
+                    if (ScollPos >= trigger_point_header) {
+                        if (!$('body').hasClass('sticky-header-down')) {
+                        $('body').removeClass('sticky-header').addClass('sticky-header-down');
+                        $('body').removeClass('offcanvas-active');
+                        $('.dt-main-menu .dt-dropdown-menu-wrapper').removeClass('active');
+                    }
+                } 
+                else 
                 {
-
-                    var t = 0;
-                    var val = $this.val();
-                    if(val.replace(/\s/g, '') == '' || val.length < 2)
-                    {
-                        return;
-                    }
-                    var parent_container = jQuery(".dt-search-results-wrapper");
-                    var list_parent = jQuery('<div class="dt-search-results"></div>');
-                    var flag = false;
-                    jQuery.each(search_data, function (index, value) {
-                        var j = 0;
-                        var query = '';
-                        if(value.viewall)
-                        {
-                            if(value.viewall == 'default')
-                            {
-                                query = '<a href="'+info.domain+'?s='+val+'">'+info.viewalllabel+'</a>';
-                            }
-                            else
-                            {
-                                query = '<a href="'+info.domain+'?s='+val+value.viewall+'">'+info.viewalllabel+'</a>';
-                            }
-                           
-                        }
-                        
-                        var typehtml = jQuery('<div class="search-result-row"><div class="search-result-row__header">'+value.icon+value.label+query+'</div><div class="search-result-row__list"></div></div>');
-                        for (i = 0; i < value.list.length; i++)
-                        {
-                            if(j == 5) //max 5 item
-                                break;
-                            var or_title = value.list[i].title;
-                            var title = value.list[i].title.toLowerCase();
-                            val = val.toLowerCase();
-                            var flag_found = false;
-                            var final_title = '';
-                            if (title.indexOf(val) !== -1) 
-                            {
-                                final_title = replace_search_value(or_title,$this.val());
-                                flag_found = true;
-                            }
-                            else
-                            {
-                                var index = replace_vi(title).indexOf(val);
-                                if(index !== -1)
-                                {
-                                    flag_found = true;
-                                    var newval = or_title.substring(index, index + val.length);
-                                    final_title = replace_search_value(or_title,newval);
-                                    
-                                }
-                                else
-                                {
-                                    final_title = or_title;
-                                }
-                            }
-                            //content
-                            var final_content = '';
-                            if(value.list[i].content)
-                            {
-                                var or_content = value.list[i].content;
-                                var content = value.list[i].content.toLowerCase();
-                                var index_c1 = content.indexOf(val);
-                                if ( index_c1 !== -1)
-                                {
-                                    flag_found = true;
-                                    var newval = '';
-                                    if(index_c1 > 50) //vi tri tim thay lon hon 20
-                                    {
-                                        newval = '...' + or_content.substring(index_c1 - 20, index_c1 + val.length + 30) + '...';
-                                    }
-                                    else
-                                    {
-                                        newval = or_content.substring(0, index_c1 + val.length + 30) + '...';
-                                    }
-                                    //xu ly tim tu dung nghia   
-                                    final_content = replace_search_value(newval,$this.val());
-                                    
-                                }
-                                else
-                                {
-                                    var index_c2 = replace_vi(content).indexOf(val);
-                                    if(index_c2 !== -1)
-                                    {
-                                        flag_found = true;
-                                        var newval = '';
-                                        if(index_c2 > 50) //vi tri tim thay lon hon 20
-                                        {
-                                            newval = '...' + or_content.substring(index_c2 - 20, index_c2 + val.length + 30) + '...';
-                                        }
-                                        else
-                                        {
-                                            newval = or_content.substring(0, index_c2 + val.length + 30) + '...';
-                                        }
-                                        //xu ly tim tu dung nghia
-                                        
-                                        final_content = replace_search_value(newval,$this.val());
-                                    }
-                                    else //ko thay cung lay 20 tu dau tien
-                                    {
-                                        final_content = or_content.substring(0, 60) + '...';
-                                    }
-                                }
-                            }
-                            if(flag_found)
-                            {
-                                if(value.type == 'tag')
-                                {
-                                    typehtml.find('.search-result-row__list').addClass('overscollx');
-                                    var html = template_tag;
-                                    html = html.replace("{{link}}", value.list[i].link);
-                                    html = html.replace("{{title}}", final_title);
-                                }
-                                else
-                                {
-                                    var html = template_post;
-                                    var target = '';
-                                    if(value.type == 'external')
-                                        target = 'target="_blank"';
-                                    html = html.replace("{{link}}", value.list[i].link);
-                                    html = html.replace("{{title}}", final_title);
-                                    html = html.replace("{{img}}", value.list[i].img);
-                                    html = html.replace("{{content}}", final_content);
-                                    html = html.replace("{{target}}", target);
-                                }
-                                typehtml.find('.search-result-row__list').append(html);
-                                j = j + 1;
-                            }
-                        }
-                        if (j > 0) {
-                            t++;
-                            list_parent.append(typehtml); 
-                        }
-                    });
-                    if (t > 0) 
-                    {
-                        parent_container.empty();
-                        parent_container.append(list_parent); 
-                    }
-                }
-               
-                function replace_search_value(str, search) {
-                    return str.replace(new RegExp("(" + preg_quote(search) + ")", 'gi'), "<strong>$1</strong>");
-                }
-                function preg_quote (str, delimiter) 
-                {
-                    return (str + '')
-                        .replace(new RegExp('[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\' + (delimiter || '') + '-]', 'g'), '\\$&')
-                }
-                function replace_vi(str) {
-                    str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
-                    str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
-                    str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
-                    str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
-                    str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
-                    str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
-                    str = str.replace(/đ/g, "d");
-                    str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
-                    str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
-                    str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
-                    str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
-                    str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
-                    str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
-                    str = str.replace(/Đ/g, "D");
-                    return str;
-                }
-            }
-            // function Sticky_Header() {
-            //     var LastScrollPos = 0;
-            //     $(window).scroll(function () {
-            //         var offset = $('#dt-header').offset();
-            //         var trigger_point = offset.top + $(window).height();
-                   
-            //         var ScollPos = $(document).scrollTop();
-            //         if (ScollPos >= trigger_point) {
-            //             if(ScollPos < LastScrollPos && !$(".dt-toc").hasClass('expand'))
-            //             {
-            //                 $('body').addClass('sticky-header');
-            //                 $('body').removeClass('sticky-header-down');
-            //                 $('.home .header-main').removeClass('header-transition');
-            //             }
-            //             else
-            //             {
-            //                 $('body').removeClass('sticky-header');
-            //                 $('body').addClass('sticky-header-down');
-            //                 jQuery('body').removeClass('offcanvas-active');
-            //                 $('.dt-main-menu').find('.dt-dropdown-menu-wrapper').removeClass('active');
-            //             }
-            //         } else {
-            //             $('body').removeClass('sticky-header sticky-header-down');
-            //         }
-            //         LastScrollPos = ScollPos;
-            //     });
-            // }
-            function Sticky_Header() {
-                let LastScrollPos = 0;
-                let ticking = false;
-
-                function onScroll() {
-                    if (!ticking) {
-                        window.requestAnimationFrame(updateStickyHeader);
-                        ticking = true;
-                    }
-                }
-
-                function updateStickyHeader() {
-                    let offset = $('#dt-header').offset();
-                    if (!offset) return;
-
-                    let trigger_point = offset.top + $(window).height();
-                    let trigger_point_header = offset.top + $('#dt-header').height();
-                    let ScollPos = $(document).scrollTop();
-
-                   
-                        if (ScollPos < LastScrollPos && !$(".dt-toc").hasClass('expand')) {
-                            if (ScollPos >= 1)
-                            {
-                                if (!$('body').hasClass('sticky-header')) {
-                                    $('body').addClass('sticky-header').removeClass('sticky-header-down');
-                                    $('.home .header-main').removeClass('header-transition');
-                                }
-                            }
-                            else
-                            {
-                                $('body').removeClass('sticky-header sticky-header-down');
-                            }
-                            
-                        } else {
-                             if (ScollPos >= trigger_point_header) {
-                                 if (!$('body').hasClass('sticky-header-down')) {
-                                    $('body').removeClass('sticky-header').addClass('sticky-header-down');
-                                    $('body').removeClass('offcanvas-active');
-                                    $('.dt-main-menu .dt-dropdown-menu-wrapper').removeClass('active');
-                                }
-                            } 
-                            else 
-                            {
-                                $('body').removeClass('sticky-header sticky-header-down');
-                            }
-                           
-                        }
-                    
-
-                    if (ScollPos >= trigger_point) {
-                        if (ScollPos < LastScrollPos) {
-                            if (!$('body').hasClass('sticky')) {
-                                $('body').addClass('sticky').removeClass('sticky-down');
-                               
-                            }
-                        } else {
-                            if (!$('body').hasClass('sticky-down')) {
-                                $('body').removeClass('sticky').addClass('sticky-down');
-                                
-                            }
-                        }
-                    } else {
-                        $('body').removeClass('sticky sticky-down');
-                    }
-
-                    LastScrollPos = ScollPos;
-                    ticking = false;
-                }
-
-                $(window).on('scroll', onScroll);
-            }
-
-            function Mobile_Nav() 
-            {
-                jQuery('.offcanvas-menu').on("click", function (event) {
-                    event.stopPropagation();
-                    event.preventDefault();
-                    jQuery("body").toggleClass('offcanvas-active');
-                    $('.dt-main-menu').find('.dt-dropdown-menu-wrapper').removeClass('active');
-                });
-
-                jQuery(document).click(function (event) {
-                    $target = jQuery(event.target);
-                    if (!$target.closest('.dt-main-menu').length && jQuery('.dt-main-menu').is(":visible")) {
-                        jQuery('body').removeClass('offcanvas-active');
-                        $('.dt-main-menu').find('.dt-dropdown-menu-wrapper').removeClass('active');
-                    } else {
-                        if ($target.closest('.offcanvas-close').length) {
-                        jQuery('body').removeClass('offcanvas-active');
-                        $('.dt-main-menu').find('.dt-dropdown-menu-wrapper').removeClass('active');
-                        }
-
-                    }
-                });
-
-                $('.dt-main-menu .menu-item .dt-dropdown-menu-wrapper').each(function(index, value){
-                    $(this).append('<span class="back">Trở lại</span>')
-                });
-
-                jQuery('.dt-primary-menu li > a > .caret').on('click', function(e) {
-                    e.preventDefault();
-                    $(this).parent().siblings('.dt-dropdown-menu-wrapper').addClass('active');
-                });
-                jQuery('.dt-primary-menu .back').on('click', function(e) {
-                    e.preventDefault();
-                    $(this).parent().removeClass('active');
-                });
-                // jQuery('.dt-primary-menu li > a > .caret').on('click', function(e) {
-                //     e.preventDefault();
-                //     $(this).parent().siblings('.dt-dropdown-menu-wrapper').addClass('active');
-                // });
-            }
-            function FooterMenu()
-            {
-                jQuery('.footer-menu > .dropdown > a').on('click', function(e) {
-                    e.preventDefault();
-                    jQuery(this).parent().toggleClass('expanded');
-                });
-            }
-            
-            function UserAgent()
-            {
-                if(navigator.userAgent.match(/iPhone/)) {
-                    $('html').addClass('iphone');
-                }
-                else if(navigator.userAgent.match(/iPad/i))
-                {
-                    $('html').addClass('ipad');
-                }
-                else if(navigator.userAgent.indexOf('Mac OS X') != -1) {
-                    $("html").addClass("macos");
-                }
-                if(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)
-                {
-                    $("html").addClass("safari");
+                    $('body').removeClass('sticky-header sticky-header-down');
                 }
                 
             }
+        
+
+        if (ScollPos >= trigger_point) {
+            if (ScollPos < LastScrollPos) {
+                if (!$('body').hasClass('sticky')) {
+                    $('body').addClass('sticky').removeClass('sticky-down');
+                    
+                }
+            } else {
+                if (!$('body').hasClass('sticky-down')) {
+                    $('body').removeClass('sticky').addClass('sticky-down');
+                    
+                }
+            }
+        } else {
+            $('body').removeClass('sticky sticky-down');
+        }
+
+        LastScrollPos = ScollPos;
+        ticking = false;
+    }
+
+    $(window).on('scroll', onScroll);
+}
+
+function Mobile_Nav() 
+{
+    jQuery(document).on("click", ".offcanvas-menu", function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+        jQuery("body").toggleClass('offcanvas-active');
+        $('.dt-main-menu').find('.dt-dropdown-menu-wrapper').removeClass('active');
+    });
+
+    jQuery(document).click(function (event) {
+        $target = jQuery(event.target);
+        if (!$target.closest('.dt-main-menu').length && jQuery('.dt-main-menu').is(":visible")) {
+            jQuery('body').removeClass('offcanvas-active');
+            $('.dt-main-menu').find('.dt-dropdown-menu-wrapper').removeClass('active');
+        } else {
+            if ($target.closest('.offcanvas-close').length) {
+            jQuery('body').removeClass('offcanvas-active');
+            $('.dt-main-menu').find('.dt-dropdown-menu-wrapper').removeClass('active');
+            }
+
+        }
+    });
+
+    $('.dt-main-menu .menu-item .dt-dropdown-menu-wrapper').each(function(index, value){
+        $(this).append('<span class="back">Trở lại</span>')
+    });
+
+    jQuery('.dt-primary-menu li > a > .caret').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent().siblings('.dt-dropdown-menu-wrapper').addClass('active');
+    });
+    jQuery('.dt-primary-menu .back').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent().removeClass('active');
+    });
+    // jQuery('.dt-primary-menu li > a > .caret').on('click', function(e) {
+    //     e.preventDefault();
+    //     $(this).parent().siblings('.dt-dropdown-menu-wrapper').addClass('active');
+    // });
+}
+            
+function FooterMenu()
+{
+    jQuery('.footer-menu > .dropdown > a').on('click', function(e) {
+        e.preventDefault();
+        jQuery(this).parent().toggleClass('expanded');
+    });
+}
+            
+function UserAgent()
+{
+    if(navigator.userAgent.match(/iPhone/)) {
+        $('html').addClass('iphone');
+    }
+    else if(navigator.userAgent.match(/iPad/i))
+    {
+        $('html').addClass('ipad');
+    }
+    else if(navigator.userAgent.indexOf('Mac OS X') != -1) {
+        $("html").addClass("macos");
+    }
+    if(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)
+    {
+        $("html").addClass("safari");
+    }
+    
+}
 
             if($('.breadcrumb').length && window.matchMedia("(max-width: 1023px)").matches)
             {
@@ -2199,8 +1935,6 @@ jQuery.event.special.touchstart = { setup: function( _, ns, handle ) { this.addE
                 });
                 $('.clinkhash').on('click', function(e) 
                 {
-                    console.log('clinkhash');
-                   
                     var url = $(this).attr("href");
                     var tabid = $(this).attr("href").substring(url.indexOf('#'));
                     if ($(tabid).length) {
@@ -2705,9 +2439,6 @@ jQuery(document).ready(function ($) {
             const drops = gsap.utils.toArray('.product-section .product-item .b0');
           
             drops.forEach((icon, i) => {
-                //MorphSVGPlugin.convertToPath("#b0"+(i)+""); 
-               // MorphSVGPlugin.convertToPath("#b1"+(i)+""); 
-                //MorphSVGPlugin.convertToPath("#b2"+(i)+""); 
                 dropsSection.add(
                     gsap.to(icon, 
                     {
@@ -2801,57 +2532,53 @@ jQuery(document).ready(function ($) {
             });
 
 jQuery(document).ready(function ($) {
-            if($('.newsletter-section').length)
-            {
-                var newsletterSection = new gsap.timeline({paused:true});
-                ScrollTrigger.create({
-                    trigger: '.newsletter-section',
-                    start: 'top center',
-                    onEnter: newsletterSectionAni,
-                // markers: true
-                });
-                function newsletterSectionAni()
-                {
-                    newsletterSection.play();
-                    
-                }
-                const gallerys = gsap.utils.toArray('.newsletter-section-inner>div');
-                gallerys.forEach((icon, i) => {
-                    newsletterSection.add(
-                        gsap.fromTo(icon, 
-                        {   alpha:0,
-                            y:50,
-                        }, {
-                            duration:.5, 
-                            alpha:1,
-                            y:0,
-                            ease: 'power4.easeOut',
-                        }),
-                        
-                    "-=.25"); 
-                });
+    if($('.newsletter-section').length) {
+        var newsletterSection = new gsap.timeline({paused:true});
+        ScrollTrigger.create({
+            trigger: '.newsletter-section',
+            start: 'top center',
+            onEnter: newsletterSectionAni,
+        // markers: true
+        });
+        function newsletterSectionAni()
+        {
+            newsletterSection.play();
             
-            }
-
+        }
+        const gallerys = gsap.utils.toArray('.newsletter-section-inner>div');
+        gallerys.forEach((icon, i) => {
+            newsletterSection.add(
+                gsap.fromTo(icon, 
+                {   alpha:0,
+                    y:50,
+                }, {
+                    duration:.5, 
+                    alpha:1,
+                    y:0,
+                    ease: 'power4.easeOut',
+                }),
+                
+            "-=.25"); 
         });
 
+    }
+});
 
-      jQuery(document).ready(function ($) {
-                    jQuery('.banner-carousel').owlCarousel({
-                        items:1,
-                        nav:false,
-                        navText:["<div class='nav-btn prev-nav '></div>","<div class='nav-btn next-nav '></div>"],
-                        dots:false,
-                        loop:true,
-                        mouseDrag:false,
-                        autoplay:true,
-                        autoplayTimeout:8000,
-                        animateOut: 'fadeOut',
-                        animateIn: 'fadeIn',
-                    });
-                   
-                    
-                });
+
+jQuery(document).ready(function ($) {
+    jQuery('.banner-carousel').owlCarousel({
+        items:1,
+        nav:false,
+        navText:["<div class='nav-btn prev-nav '></div>","<div class='nav-btn next-nav '></div>"],
+        dots:false,
+        loop:true,
+        mouseDrag:false,
+        autoplay:true,
+        autoplayTimeout:8000,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+    });
+});
 
 
         jQuery(document).ready(function ($) {

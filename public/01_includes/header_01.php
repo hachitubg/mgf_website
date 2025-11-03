@@ -26,7 +26,7 @@
           </span>
          </a>
         </li>
-        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6383" id="menu-item-6383">
+        <!-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6383" id="menu-item-6383">
          <a href="thuy-san/index.php" target="_blank">
           <span>
            AQUA
@@ -46,7 +46,7 @@
            TECH
           </span>
          </a>
-        </li>
+        </li> -->
        </ul>
       </div>
      </div>
@@ -56,23 +56,23 @@
     <div class="container-wide">
      <div class="header-main">
       <div class="logo">
-       <a href="index.php">
-        <img alt="GREENFEED Việt Nam" height="49" src="https://www.greenfeed.com.vn/wp-content/uploads/2021/08/logo.svg" width="178"/>
-        <img alt="logo" class="logo-white" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/logo-white.svg" width="60"/>
+       <a href="trang-chu.php">
+        <img alt="MGF Việt Nam" src="./05_images/logo-GMF.png" width="178" height="49"/>
+        <img alt="logo" class="logo-white" height="60" src="./05_images/logo-GMF.png" width="60"/>
        </a>
       </div>
       <div class="dt-main-menu">
        <div class="menu-main-menu-container">
         <ul class="dt-primary-menu header-menu" id="primary">
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5270" id="menu-item-5270">
-          <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu/ve-greenfeed/index.php">
+          <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu.php">
            <span>
             Giới thiệu
            </span>
-           <b class="caret">
-           </b>
+           <!-- <b class="caret">
+           </b> -->
           </a>
-          <div class="dt-dropdown-menu-wrapper">
+          <!-- <div class="dt-dropdown-menu-wrapper">
            <ul class="dropdown-menu">
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4480" id="menu-item-4480">
              <a href="gioi-thieu/ve-greenfeed/index.php">
@@ -89,17 +89,17 @@
              </a>
             </li>
            </ul>
-          </div>
+          </div> -->
          </li>
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-4574" id="menu-item-4574">
-          <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="san-pham-va-dich-vu/index.php">
+          <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="san-pham.php">
            <span>
             Sản phẩm và dịch vụ
            </span>
-           <b class="caret">
-           </b>
+           <!-- <b class="caret">
+           </b> -->
           </a>
-          <div class="dt-dropdown-menu-wrapper mega-wrapper">
+          <!-- <div class="dt-dropdown-menu-wrapper mega-wrapper">
            <ul class="dropdown-menu">
             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-5214" id="menu-item-5214">
              <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="thuc-an-chan-nuoi-gia-suc-gia-cam/vi/index.php" target="_blank">
@@ -346,9 +346,9 @@
              </div>
             </li>
            </ul>
-          </div>
+          </div> -->
          </li>
-         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-4897" id="menu-item-4897">
+         <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-4897" id="menu-item-4897">
           <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="phat-trien-ben-vung/index.php">
            <span>
             Phát triển bền vững
@@ -449,33 +449,33 @@
             </li>
            </ul>
           </div>
-         </li>
+         </li> -->
          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5733" id="menu-item-5733">
-          <a href="chuyen-muc/tin-tuc-va-su-kien/index.php">
+          <a href="tin-tuc.php">
            <span>
-            Truyền thông
+            Tin tức & Sự kiện
            </span>
           </a>
          </li>
-         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4941" id="menu-item-4941">
+         <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4941" id="menu-item-4941">
           <a href="co-hoi-nghe-nghiep/index.php">
            <span>
             Cơ hội nghề nghiệp
            </span>
           </a>
-         </li>
+         </li> -->
         </ul>
        </div>
-       <div class="header-utility__language">
+       <!-- <div class="header-utility__language">
         <a href="en/index.php">
          <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/flag-for-en.svg" width="60"/>
          en
         </a>
-       </div>
+       </div> -->
       </div>
       <div class="header-utility">
        <div class="header-utility__wrapper">
-        <div class="dt-search-form">
+        <!-- <div class="dt-search-form">
          <form action="https://www.greenfeed.com.vn/" method="get">
           <div class="main-search">
            <div class="autocompleate-wrapper">
@@ -492,19 +492,19 @@
          </form>
          <div class="form-trigger">
          </div>
-        </div>
-        <div class="header-utility__language">
+        </div> -->
+        <!-- <div class="header-utility__language">
          <a href="en/index.php">
           <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/flag-for-en.svg" width="60"/>
           en
          </a>
-        </div>
-        <a class="btn btn--outline contact-btn" href="lien-he/index.php">
+        </div> -->
+        <a class="btn btn--outline contact-btn" href="lien-he.php">
          Liên hệ
          <img alt="arr-next" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/arr-next.svg" width="60"/>
         </a>
        </div>
-       <div class="dt-search-results-wrapper">
+       <!-- <div class="dt-search-results-wrapper">
         <div class="dt-search-results">
          <div class="search-result-row">
           <div class="search-result-row__header">
@@ -530,8 +530,9 @@
           </div>
          </div>
         </div>
-       </div>
+       </div> -->
       </div>
+      
       <div class="header-mobile">
        <a class="offcanvas-menu" href="#">
         <button class="hamburger">
@@ -540,6 +541,7 @@
         </button>
        </a>
       </div>
+      
      </div>
     </div>
    </div>

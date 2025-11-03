@@ -1618,7 +1618,7 @@
     <!-- footer -->
     <?php include '01_includes/footer.php'; ?>
     <script id="trangchu-js" src="03_js/trangchu.js" type="text/javascript"></script>
-
+          
    <div class="loading">
     <div class="overlay">
     </div>

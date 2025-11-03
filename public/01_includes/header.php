@@ -7,12 +7,11 @@
   <style>
    img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }
   </style>
-  <link href="index.php" hreflang="vi" rel="alternate"/>
-  <link href="en/index.php" hreflang="en" rel="alternate"/>
+  <link href="trang-chu.php" hreflang="vi" rel="alternate"/>
 
-  <title> Công ty Cổ phần GREENFEED Việt Nam </title>
+  <title> MGF Việt Nam </title>
   
-  <link href="index.php" rel="canonical"/>
+  <link href="trang-chu.php" rel="canonical"/>
   
   <script class="rank-math-schema-pro" type="application/ld+json">
     {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.greenfeed.com.vn/#organization","name":"C\u00f4ng ty C\u1ed5 ph\u1ea7n GREENFEED Vi\u1ec7t Nam","url":"https://www.greenfeed.com.vn","email":"info@greenfeed.com.vn","logo":{"@type":"ImageObject","@id":"https://www.greenfeed.com.vn/#logo","url":"https://www.greenfeed.com.vn/wp-content/uploads/2021/08/117760826_2801866106715633_4638869783382961747_n.jpg","caption":"C\u00f4ng ty C\u1ed5 ph\u1ea7n GREENFEED Vi\u1ec7t Nam","inLanguage":"vi","width":"160","height":"90"}},{"@type":"WebSite","@id":"https://www.greenfeed.com.vn/#website","url":"https://www.greenfeed.com.vn","name":"C\u00f4ng ty C\u1ed5 ph\u1ea7n GREENFEED Vi\u1ec7t Nam","publisher":{"@id":"https://www.greenfeed.com.vn/#organization"},"inLanguage":"vi","potentialAction":{"@type":"SearchAction","target":"https://www.greenfeed.com.vn/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.greenfeed.com.vn/wp-content/uploads/2025/03/trang-trai-gia-suc-gia-cam-greenfeed-binh-thuan.jpg","url":"https://www.greenfeed.com.vn/wp-content/uploads/2025/03/trang-trai-gia-suc-gia-cam-greenfeed-binh-thuan.jpg","width":"2560","height":"1235","caption":"Trang tr\u1ea1i gia s\u00fac, gia c\u1ea7m c\u1ee7a GREENFEED t\u1ea1i B\u00ecnh Thu\u1eadn","inLanguage":"vi"},{"@type":"Person","@id":"https://www.greenfeed.com.vn/tac-gia/gf_admin/","name":"GREENFEED Vi\u1ec7t Nam","url":"https://www.greenfeed.com.vn/tac-gia/gf_admin/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/cd8746b60e45320914de95f0a1fe0d5ccfb5edf6fe3f038b0c3a32c4eaf376bf?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/cd8746b60e45320914de95f0a1fe0d5ccfb5edf6fe3f038b0c3a32c4eaf376bf?s=96&amp;d=mm&amp;r=g","caption":"GREENFEED Vi\u1ec7t Nam","inLanguage":"vi"},"worksFor":{"@id":"https://www.greenfeed.com.vn/#organization"}},{"@type":"WebPage","@id":"https://www.greenfeed.com.vn/#webpage","url":"https://www.greenfeed.com.vn/","name":"C\u00f4ng ty C\u1ed5 ph\u1ea7n GREENFEED Vi\u1ec7t Nam","datePublished":"2024-12-07T12:18:58+07:00","dateModified":"2025-09-16T16:04:34+07:00","author":{"@id":"https://www.greenfeed.com.vn/tac-gia/gf_admin/"},"isPartOf":{"@id":"https://www.greenfeed.com.vn/#website"},"primaryImageOfPage":{"@id":"https://www.greenfeed.com.vn/wp-content/uploads/2025/03/trang-trai-gia-suc-gia-cam-greenfeed-binh-thuan.jpg"},"inLanguage":"vi"},{"@type":"Article","headline":"C\u00f4ng ty C\u1ed5 ph\u1ea7n GREENFEED Vi\u1ec7t Nam","keywords":"GREENFEED Vi\u1ec7t Nam","datePublished":"2024-12-07T12:18:58+07:00","dateModified":"2025-09-16T16:04:34+07:00","author":{"@type":"Person","name":"GREENFEED Vi\u1ec7t Nam"},"publisher":{"@id":"https://www.greenfeed.com.vn/#organization"},"description":"Th\u00e0nh l\u1eadp n\u0103m 2003, GREENFEED l\u00e0 t\u1eadp \u0111o\u00e0n t\u00edch h\u1ee3p to\u00e0n chu\u1ed7i th\u1ef1c ph\u1ea9m FEED-FARM-FOOD v\u1edbi s\u1ee9 m\u1ec7nh x\u00e2y d\u1ef1ng c\u00e1c th\u01b0\u01a1ng hi\u1ec7u ch\u1ea5t l\u01b0\u1ee3ng, \u0111\u00e1ng tin c\u1eady v\u00e0 kh\u00f4ng ng\u1eebng ki\u1ebfn t\u1ea1o gi\u00e1 tr\u1ecb b\u1ec1n v\u1eefng cho kh\u00e1ch h\u00e0ng v\u00e0 x\u00e3 h\u1ed9i.","name":"C\u00f4ng ty C\u1ed5 ph\u1ea7n GREENFEED Vi\u1ec7t Nam","@id":"https://www.greenfeed.com.vn/#richSnippet","isPartOf":{"@id":"https://www.greenfeed.com.vn/#webpage"},"image":{"@id":"https://www.greenfeed.com.vn/wp-content/uploads/2025/03/trang-trai-gia-suc-gia-cam-greenfeed-binh-thuan.jpg"},"inLanguage":"vi","mainEntityOfPage":{"@id":"https://www.greenfeed.com.vn/#webpage"}}]}
@@ -65,21 +64,5 @@
   <link href="https://www.greenfeed.com.vn/wp-content/uploads/2021/07/cropped-favicon-32x32-1-192x192.png" rel="icon" sizes="192x192"/>
   <link href="https://www.greenfeed.com.vn/wp-content/uploads/2021/07/cropped-favicon-32x32-1-180x180.png" rel="apple-touch-icon"/>
   <meta content="https://www.greenfeed.com.vn/wp-content/uploads/2021/07/cropped-favicon-32x32-1-270x270.png" name="msapplication-TileImage"/>
-  <!-- Google Tag Manager -->
-  <!-- <script>
-    function getCookie(name) {
-    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-    return match ? match[2] : null;
-  }
-  document.addEventListener("DOMContentLoaded", function() {
-    if (getCookie("cookieConsent") == "accepted") { //script - #acceptCookie
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-P3CNJCZ');
-    }
-  });
-  </script> -->
 
  </head>

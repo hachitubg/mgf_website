@@ -6,7 +6,7 @@
       <div class="widget widget_text" id="text-4">
        <div class="textwidget">
         <div class="logo-footer">
-         <img alt="" class="aligncenter size-medium wp-image-194" decoding="async" height="1" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2021/08/logo.svg" width="1"/>
+         <img alt="" class="aligncenter size-medium wp-image-194" decoding="async" height="1" loading="lazy" src="./05_images/logo-GMF.png" width="1"/>
         </div>
         <p>
          <strong>

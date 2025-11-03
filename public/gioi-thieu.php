@@ -20,7 +20,7 @@
      <div class="dt-breadscrumb">
       <ul class="breadcrumb">
        <li>
-        <a href="../../index.php">
+        <a href="trang-chu.php">
          Trang chủ
         </a>
        </li>
@@ -48,7 +48,7 @@
      <a class="active" href="index.php">
       Về GREENFEED
      </a>
-     <a class="" href="../hanh-trinh-lon-manh/index.php">
+     <a class="" href="ccos.php">
       Hành trình lớn mạnh
      </a>
     </div>
@@ -847,7 +847,7 @@
        <span>
         Xem thêm
        </span>
-       <a class="btn btn--primary" href="../hanh-trinh-lon-manh/index.php">
+       <a class="btn btn--primary" href="ccos.php">
         Hành trình lớn mạnh
         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
        </a>

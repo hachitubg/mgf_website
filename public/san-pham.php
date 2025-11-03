@@ -56,7 +56,7 @@
             Trở thành công ty hàng đầu trong việc cung cấp giải pháp logistics trong toàn chuỗi Feed – Farm – Food
             </p>
             <p>
-            <a href="nganh-van-tai/index.php">
+            <a href="ccos.php">
                 Tìm hiểu thêm
                 <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
             </a>
@@ -79,7 +79,7 @@
             Cung cấp giải pháp số và hạ tầng công nghệ toàn diện, nâng cao hiệu quả vận hành và thúc đẩy phát triển bền vững.
             </p>
             <p>
-            <a href="nganh-cong-nghe/index.php">
+            <a href="ccos.php">
                 Tìm hiểu thêm
                 <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
             </a>
@@ -190,9 +190,9 @@
         </div>
         <div class="section__button">
             <p>
-            <a href="../thuc-an-chan-nuoi-gia-suc-gia-cam/vi/index.php">
-            Tìm hiểu thêm
-            <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
+            <a href="ccos.php">
+                Tìm hiểu thêm
+                <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
             </a>
             </p>
         </div>
@@ -296,9 +296,9 @@
         </div>
         <div class="section__button">
             <p>
-            <a href="nganh-chan-nuoi/index.php">
-            Tìm hiểu thêm
-            <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
+            <a href="ccos.php">
+                Tìm hiểu thêm
+                <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
             </a>
             </p>
         </div>
@@ -376,9 +376,9 @@
         </div>
         <div class="section__button">
             <p>
-            <a href="nganh-thuc-pham/index.php">
-            Tìm hiểu thêm
-            <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
+            <a href="ccos.php">
+                Tìm hiểu thêm
+                <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
             </a>
             </p>
         </div>
@@ -461,7 +461,7 @@
         </div>
         <div class="section__button">
             <p>
-            <a href="../thuy-san/index.php" rel="noopener" target="_blank">
+            <a href="ccos.php">
             Tìm hiểu thêm
             <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
             </a>
