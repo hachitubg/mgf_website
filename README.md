@@ -175,13 +175,46 @@ ls -lh backups/
 
 #### Download backup về máy local
 
-```bash
-# Trên máy local (Windows)
-scp user@IP_VPS:/home/mgf-website/backups/mgf_backup_*.sql.gz C:/backups/
+**Cách 1: Dùng SCP (Khuyến nghị)**
 
-# Hoặc pull về qua Git (nếu đã commit)
+```bash
+# Trên máy local Windows (Git Bash)
+cd /c/xampp/htdocs/mgf-website
+
+# Download 1 file cụ thể
+scp root@YOUR_VPS_IP:/home/mgf-website/backups/mgf_backup_20251105_120000.sql ./backups/
+
+# Download tất cả file backup
+scp root@YOUR_VPS_IP:/home/mgf-website/backups/*.sql ./backups/
+
+# Download file đã nén
+scp root@YOUR_VPS_IP:/home/mgf-website/backups/*.sql.gz ./backups/
+```
+
+**Cách 2: Dùng rsync (nếu có cài)**
+
+```bash
+# Sync toàn bộ thư mục backups
+rsync -avz --progress root@YOUR_VPS_IP:/home/mgf-website/backups/ ./backups/
+
+# Chỉ download file mới hơn
+rsync -avzu --progress root@YOUR_VPS_IP:/home/mgf-website/backups/ ./backups/
+```
+
+**Cách 3: Dùng Git (nếu đã commit backup)**
+
+```bash
+# Trên VPS: commit backup vào Git
+cd /home/mgf-website
+git add backups/*.sql
+git commit -m "Backup: $(date +%Y-%m-%d)"
+git push origin main
+
+# Trên local: pull về
 git pull origin main
 ```
+
+> **Lưu ý:** File `.sql` được ignore mặc định bởi `.gitignore`, nên phải dùng `git add backups/*.sql` để force add.
 
 ### Restore Database
 
