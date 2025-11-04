@@ -1,5 +1,5 @@
 <?php
 // Redirect to homepage
-header('Location: /public/trang-chu.php');
+header('Location: /public/trang-chu');
 exit;
 ?>

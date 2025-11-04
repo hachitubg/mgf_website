@@ -58,22 +58,22 @@
       <?php else: ?>
       <!-- Fallback banners if database is empty -->
       <div class="banner__image">
-       <a href="coming-soon.php">
+       <a href="coming-soon">
         <img alt="Trang trại gia súc, gia cầm của MGF tại Bình Thuận" class="attachment-full size-full" decoding="async" fetchpriority="high" height="1235" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/trang-trai-gia-suc-gia-cam-greenfeed-binh-thuan.jpg" width="2560"/>
        </a>
       </div>
       <div class="banner__image">
-       <a href="coming-soon.php">
+       <a href="coming-soon">
         <img alt="Nhà máy MGF tại tỉnh Hà Nam" class="attachment-full size-full" decoding="async" height="926" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/nha-may-greenfeed-tai-tinh-ha-nam.jpg" width="1920"/>
        </a>
       </div>
       <div class="banner__image">
-       <a href="coming-soon.php">
+       <a href="coming-soon">
         <img alt="Trại Heo MGF tại huyện Cẩm Mỹ tỉnh Đồng Nai" class="attachment-full size-full" decoding="async" height="1235" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/trai-heo-greenfeed-tai-huyen-cam-my-tinh-dong-nai.jpg" width="2560"/>
        </a>
       </div>
       <div class="banner__image">
-       <a href="coming-soon.php">
+       <a href="coming-soon">
         <img alt="Trang trại gia súc, gia cầm của MGF tại Bình Thuận" class="attachment-full size-full" decoding="async" height="926" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/trang-trai-gia-suc-gia-cam-tai-tinh-binh-thuan.jpg" width="1920"/>
        </a>
       </div>
@@ -566,7 +566,7 @@
          </li>
         </ul>
         <p>
-         <a class="btn btn--primary" href="gioi-thieu.php">
+         <a class="btn btn--primary" href="gioi-thieu">
           Tìm hiểu thêm
           <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
          </a>
@@ -624,7 +624,7 @@
            : '05_images/no-image.jpg';
        ?>
        <div class="product-item">
-        <a class="product-item__link" href="chi-tiet-san-pham.php?slug=<?= htmlspecialchars($product['slug']) ?>">
+        <a class="product-item__link" href="chi-tiet-san-pham?slug=<?= htmlspecialchars($product['slug']) ?>">
          <img alt="filter" height="60" src="06_icons/long-arr-next.svg" width="60"/>
         </a>
         <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
@@ -651,7 +651,7 @@
           </p>
          </div>
         </div>
-        <a class="product-item__link-abs" href="chi-tiet-san-pham.php?slug=<?= htmlspecialchars($product['slug']) ?>">
+        <a class="product-item__link-abs" href="chi-tiet-san-pham?slug=<?= htmlspecialchars($product['slug']) ?>">
         </a>
        </div>
        <?php endforeach; ?>
@@ -737,7 +737,7 @@
        <h3 class="section-title">
         Tin tức và Sự kiện
        </h3>
-       <a class="viewall btn btn--outline" href="tin-tuc.php">
+       <a class="viewall btn btn--outline" href="tin-tuc">
         Xem tất cả
        </a>
       </div>
@@ -751,7 +751,7 @@
         <article class="article-item post_<?= $post['id'] ?>">
          <div class="article-box">
           <div class="article__image">
-           <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($post['slug']) ?>">
+           <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($post['slug']) ?>">
             <img alt="<?= htmlspecialchars($post['title']) ?>" class="attachment-full size-full wp-post-image" decoding="async" src="<?= htmlspecialchars($image_url) ?>"/>
            </a>
            <?php if ($post['category_name']): ?>
@@ -768,11 +768,11 @@
             </span>
            </div>
            <h3 class="article__title" title="<?= htmlspecialchars($post['title']) ?>">
-            <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($post['slug']) ?>">
+            <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($post['slug']) ?>">
              <?= htmlspecialchars($post['title']) ?>
             </a>
            </h3>
-           <a class="readmore" href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($post['slug']) ?>">
+           <a class="readmore" href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($post['slug']) ?>">
             Xem thêm
             <img alt="long-arr-next" height="60" src="06_icons/long-arr-next.svg" width="60"/>
            </a>
@@ -793,7 +793,7 @@
     <div class="container">
      <div class="layers-inner">
       <div class="layers-list">
-       <a class="layer-item active" href="coming-soon.php">
+       <a class="layer-item active" href="coming-soon">
         <div class="layer-image">
          <img alt="" class="attachment-full size-full" decoding="async" height="902" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/fbee64008d12914e7f9eb7f950a103ef-e1748153967589.jpg" width="1920"/>
         </div>
@@ -809,7 +809,7 @@
          E
         </div>
        </a>
-       <a class="layer-item" href="coming-soon.php">
+       <a class="layer-item" href="coming-soon">
         <div class="layer-image">
          <img alt="" class="attachment-full size-full" decoding="async" height="1284" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/06/phu-nu-trong-chuong-trinh-tiep-suc-nha-nong-cua-greenfeed-2.jpg" width="1920"/>
         </div>
@@ -825,7 +825,7 @@
          S
         </div>
        </a>
-       <a class="layer-item" href="coming-soon.php">
+       <a class="layer-item" href="coming-soon">
         <div class="layer-image">
          <img alt="" class="attachment-full size-full" decoding="async" height="1073" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/833356f8e36564addde08211c286f5ef.jpg" width="1920"/>
         </div>

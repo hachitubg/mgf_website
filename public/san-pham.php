@@ -88,13 +88,13 @@ if ($category_slug) {
             <div class="dt-breadscrumb">
                 <ul class="breadcrumb">
                     <li>
-                        <a href="trang-chu.php">
+                        <a href="trang-chu">
                             Trang chủ
                         </a>
                     </li>
                     <?php if ($current_category): ?>
                     <li>
-                        <a href="san-pham.php">
+                        <a href="san-pham">
                             Sản phẩm và dịch vụ
                         </a>
                     </li>
@@ -124,13 +124,13 @@ if ($category_slug) {
             <div class="category-filter">
                 <!-- Desktop View -->
                 <div class="category-filter-desktop" style="display: flex; flex-wrap: wrap; gap: 15px;">
-                    <a href="san-pham.php" 
+                    <a href="san-pham" 
                        class="category-filter-item <?= empty($category_slug) ? 'active' : '' ?>"
                        style="padding: 10px 24px; background: <?= empty($category_slug) ? 'linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%)' : '#fff' ?>; color: <?= empty($category_slug) ? '#fff' : '#054326' ?>; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border: 2px solid <?= empty($category_slug) ? 'transparent' : '#e0e0e0' ?>; display: inline-block; white-space: nowrap;">
                         Tất cả sản phẩm
                     </a>
                     <?php foreach ($categories as $cat): ?>
-                    <a href="san-pham.php?category=<?= htmlspecialchars($cat['slug']) ?>" 
+                    <a href="san-pham?category=<?= htmlspecialchars($cat['slug']) ?>" 
                        class="category-filter-item <?= $category_slug === $cat['slug'] ? 'active' : '' ?>"
                        style="padding: 10px 24px; background: <?= $category_slug === $cat['slug'] ? 'linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%)' : '#fff' ?>; color: <?= $category_slug === $cat['slug'] ? '#fff' : '#054326' ?>; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border: 2px solid <?= $category_slug === $cat['slug'] ? 'transparent' : '#e0e0e0' ?>; display: inline-block; white-space: nowrap;">
                         <?= htmlspecialchars($cat['name']) ?>
@@ -149,7 +149,7 @@ if ($category_slug) {
                         </svg>
                     </button>
                     <div class="category-dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; right: 0; margin-top: 8px; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-height: 300px; overflow-y: auto; z-index: 100;">
-                        <a href="san-pham.php" 
+                        <a href="san-pham" 
                            class="category-dropdown-item <?= empty($category_slug) ? 'active' : '' ?>"
                            style="display: block; padding: 12px 16px; color: <?= empty($category_slug) ? '#2eb058' : '#054326' ?>; font-weight: <?= empty($category_slug) ? '600' : '500' ?>; font-size: 14px; text-decoration: none; border-bottom: 1px solid #f0f0f0; transition: background 0.2s ease;">
                             Tất cả sản phẩm
@@ -160,7 +160,7 @@ if ($category_slug) {
                             <?php endif; ?>
                         </a>
                         <?php foreach ($categories as $cat): ?>
-                        <a href="san-pham.php?category=<?= htmlspecialchars($cat['slug']) ?>" 
+                        <a href="san-pham?category=<?= htmlspecialchars($cat['slug']) ?>" 
                            class="category-dropdown-item <?= $category_slug === $cat['slug'] ? 'active' : '' ?>"
                            style="display: block; padding: 12px 16px; color: <?= $category_slug === $cat['slug'] ? '#2eb058' : '#054326' ?>; font-weight: <?= $category_slug === $cat['slug'] ? '600' : '500' ?>; font-size: 14px; text-decoration: none; border-bottom: 1px solid #f0f0f0; transition: background 0.2s ease;">
                             <?= htmlspecialchars($cat['name']) ?>
@@ -257,7 +257,7 @@ if ($category_slug) {
                 <img src="05_images/no-products.svg" alt="Không có sản phẩm" style="max-width: 200px; margin-bottom: 20px; opacity: 0.6;" onerror="this.style.display='none'"/>
                 <h3 style="color: #666; font-size: 20px; margin-bottom: 10px;">Không có sản phẩm nào</h3>
                 <p style="color: #999;">Vui lòng chọn danh mục khác hoặc quay lại sau.</p>
-                <a href="san-pham.php" class="btn btn--primary" style="margin-top: 20px; display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%); color: #fff; text-decoration: none; border-radius: 25px;">
+                <a href="san-pham" class="btn btn--primary" style="margin-top: 20px; display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%); color: #fff; text-decoration: none; border-radius: 25px;">
                     Xem tất cả sản phẩm
                 </a>
             </div>
@@ -278,7 +278,7 @@ if ($category_slug) {
                     }
                 ?>
                 <div class="product-card" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s ease;">
-                    <a href="chi-tiet-san-pham.php?slug=<?= htmlspecialchars($product['slug']) ?>" style="text-decoration: none; color: inherit; display: block;">
+                    <a href="chi-tiet-san-pham?slug=<?= htmlspecialchars($product['slug']) ?>" style="text-decoration: none; color: inherit; display: block;">
                         <div class="product-card-image" style="position: relative; aspect-ratio: 4/3; overflow: hidden; background: #f5f5f5;">
                             <img src="<?= htmlspecialchars($image_url) ?>" 
                                  alt="<?= htmlspecialchars($product['title']) ?>"

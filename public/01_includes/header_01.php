@@ -10,21 +10,21 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
       <div class="menu-top-bar-container">
        <ul class="dt-secondary-menu header-menu" id="secondary">
         <li class="color-primary menu-item menu-item-type-custom menu-item-object-custom menu-item-6382" id="menu-item-6382">
-         <a href="coming-soon.php">
+         <a href="coming-soon">
           <span>
            FEED
           </span>
          </a>
         </li>
         <li class="color-primary menu-item menu-item-type-post_type menu-item-object-page menu-item-5546" id="menu-item-5546">
-         <a href="coming-soon.php">
+         <a href="coming-soon">
           <span>
            FARM
           </span>
          </a>
         </li>
         <li class="color-primary menu-item menu-item-type-post_type menu-item-object-page menu-item-5544" id="menu-item-5544">
-         <a href="coming-soon.php">
+         <a href="coming-soon">
           <span>
            FOOD
           </span>
@@ -60,7 +60,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <div class="container-wide">
      <div class="header-main">
       <div class="logo">
-       <a href="trang-chu.php"<?php echo ($current_page == 'trang-chu') ? ' class="active"' : ''; ?>>
+       <a href="trang-chu"<?php echo ($current_page == 'trang-chu') ? ' class="active"' : ''; ?>>
         <img alt="MGF Việt Nam" src="05_images/logo-GMF.png" width="178" height="49"/>
         <img alt="logo" class="logo-white" height="60" src="05_images/logo-GMF.png" width="60"/>
        </a>
@@ -69,14 +69,14 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
        <div class="menu-main-menu-container">
         <ul class="dt-primary-menu header-menu" id="primary">
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5270<?php echo ($current_page == 'trang-chu') ? ' active' : ''; ?>" id="menu-item-5270">
-          <a class="dropdown-toggle<?php echo ($current_page == 'trang-chu') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="trang-chu.php">
+          <a class="dropdown-toggle<?php echo ($current_page == 'trang-chu') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="trang-chu">
            <span>
             Trang Chủ
            </span>
           </a>
          </li>
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5270<?php echo ($current_page == 'gioi-thieu') ? ' active' : ''; ?>" id="menu-item-5270">
-          <a class="dropdown-toggle<?php echo ($current_page == 'gioi-thieu') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu.php">
+          <a class="dropdown-toggle<?php echo ($current_page == 'gioi-thieu') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu">
            <span>
             Giới thiệu
            </span>
@@ -103,7 +103,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
           </div> -->
          </li>
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-4574<?php echo ($current_page == 'san-pham' || $current_page == 'chi-tiet-san-pham') ? ' active' : ''; ?>" id="menu-item-4574">
-          <a class="dropdown-toggle<?php echo ($current_page == 'san-pham' || $current_page == 'chi-tiet-san-pham') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="san-pham.php">
+          <a class="dropdown-toggle<?php echo ($current_page == 'san-pham' || $current_page == 'chi-tiet-san-pham') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="san-pham">
            <span>
             Sản phẩm và dịch vụ
            </span>
@@ -462,7 +462,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
           </div>
          </li> -->
          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5733<?php echo ($current_page == 'tin-tuc' || $current_page == 'chi-tiet-tin-tuc') ? ' active' : ''; ?>" id="menu-item-5733">
-          <a href="tin-tuc.php"<?php echo ($current_page == 'tin-tuc' || $current_page == 'chi-tiet-tin-tuc') ? ' class="active"' : ''; ?>>
+          <a href="tin-tuc"<?php echo ($current_page == 'tin-tuc' || $current_page == 'chi-tiet-tin-tuc') ? ' class="active"' : ''; ?>>
            <span>
             Tin tức & Sự kiện
            </span>
@@ -510,7 +510,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
           en
          </a>
         </div> -->
-        <a class="btn btn--outline contact-btn" href="lien-he.php">
+        <a class="btn btn--outline contact-btn" href="lien-he">
          Liên hệ
          <img alt="arr-next" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/arr-next.svg" width="60"/>
         </a>

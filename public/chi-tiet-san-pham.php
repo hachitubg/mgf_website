@@ -63,10 +63,10 @@ $related_products = $stmt->fetchAll();
             <div class="container">
                 <div class="dt-breadscrumb">
                     <ul class="breadcrumb">
-                        <li><a href="trang-chu.php">Trang chủ</a></li>
-                        <li><a href="san-pham.php">Sản phẩm</a></li>
+                        <li><a href="trang-chu">Trang chủ</a></li>
+                        <li><a href="san-pham">Sản phẩm</a></li>
                         <?php if ($product['category_name']): ?>
-                        <li><a href="san-pham.php?category=<?= htmlspecialchars($product['category_slug']) ?>">
+                        <li><a href="san-pham?category=<?= htmlspecialchars($product['category_slug']) ?>">
                             <?= htmlspecialchars($product['category_name']) ?>
                         </a></li>
                         <?php endif; ?>
@@ -137,7 +137,7 @@ $related_products = $stmt->fetchAll();
                         </div>
 
                         <div class="product-actions">
-                            <a href="lien-he.php?product=<?= urlencode($product['title']) ?>" class="btn btn--primary">
+                            <a href="lien-he?product=<?= urlencode($product['title']) ?>" class="btn btn--primary">
                                 Liên hệ đặt hàng
                                 <img alt="arr" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
                             </a>
@@ -169,7 +169,7 @@ $related_products = $stmt->fetchAll();
                         }
                     ?>
                     <div class="related-product-item">
-                        <a href="chi-tiet-san-pham.php?slug=<?= htmlspecialchars($rel_product['slug']) ?>" class="product-link">
+                        <a href="chi-tiet-san-pham?slug=<?= htmlspecialchars($rel_product['slug']) ?>" class="product-link">
                             <div class="product-image">
                                 <img src="<?= htmlspecialchars($rel_image) ?>" alt="<?= htmlspecialchars($rel_product['title']) ?>">
                             </div>

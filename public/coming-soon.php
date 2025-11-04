@@ -371,7 +371,7 @@
                 </div>
             </div>
 
-            <a href="trang-chu.php" class="btn-home">
+            <a href="trang-chu" class="btn-home">
                 <span>← Về Trang Chủ</span>
             </a>
 

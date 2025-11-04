@@ -37,7 +37,7 @@
      <div class="dt-breadscrumb">
       <ul class="breadcrumb">
        <li>
-        <a href="trang-chu.php">
+        <a href="trang-chu">
          Trang chủ
         </a>
        </li>
@@ -62,10 +62,10 @@
     <!-- TAB -->
    <!-- <div class="page-nav page-nav-4644">
     <div class="container">
-     <a class="active" href="index.php">
+     <a class="active" href="gioi-thieu">
       Về MGF
      </a>
-     <a class="" href="ccos.php">
+     <a class="" href="ccos">
       Hành trình lớn mạnh
      </a>
     </div>
@@ -878,7 +878,7 @@
        <span>
         Xem thêm
        </span>
-       <a class="btn btn--primary" href="ccos.php">
+       <a class="btn btn--primary" href="ccos">
         Hành trình lớn mạnh
         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
        </a>

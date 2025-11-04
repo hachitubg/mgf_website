@@ -36,7 +36,7 @@
      <div class="dt-breadscrumb">
       <ul class="breadcrumb">
        <li>
-        <a href="trang-chu.php">
+        <a href="trang-chu">
          Trang chủ
         </a>
        </li>

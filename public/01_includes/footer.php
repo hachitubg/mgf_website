@@ -19,7 +19,7 @@
          </strong>
          <br/>
          Địa chỉ:
-         <a href="coming-soon.php">
+         <a href="coming-soon">
           TT19-09, khu đấu giá 31ha, Xã Gia Lâm, Thành Phố Hà Nội, Việt Nam
          </a>
          <br/>
@@ -69,7 +69,7 @@
       <div class="menu-footer-container">
        <ul class="dt-footer-menu footer-menu" id="footer">
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5518" id="menu-item-5518">
-         <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu.php">
+         <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu">
           <span>
            VỀ MGF
           </span>
@@ -79,42 +79,42 @@
          <div class="dt-dropdown-menu-wrapper">
           <ul class="dropdown-menu">
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5524" id="menu-item-5524">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Hành trình lớn mạnh
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5525" id="menu-item-5525">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Tầm nhìn và sứ mệnh
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5527" id="menu-item-5527">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Mạng lưới phát triển
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5528" id="menu-item-5528">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Phát triển bền vững
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6935" id="menu-item-6935">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Tiêu chuẩn bền vững
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5529" id="menu-item-5529">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Cổng tiếp nhận thông tin MGF
              </span>
@@ -124,7 +124,7 @@
          </div>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5519" id="menu-item-5519">
-         <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="coming-soon.php">
+         <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="coming-soon">
           <span>
            THU HÚT NHÂN TÀI
           </span>
@@ -134,14 +134,14 @@
          <div class="dt-dropdown-menu-wrapper">
           <ul class="dropdown-menu">
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7252" id="menu-item-7252">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Cơ hội nghề nghiệp
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5531" id="menu-item-5531">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Văn hóa doanh nghiệp
              </span>
@@ -151,7 +151,7 @@
          </div>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5522" id="menu-item-5522">
-         <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="coming-soon.php">
+         <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="coming-soon">
           <span>
            CỘNG ĐỒNG BỀN VỮNG
           </span>
@@ -161,35 +161,35 @@
          <div class="dt-dropdown-menu-wrapper">
           <ul class="dropdown-menu">
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5535" id="menu-item-5535">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Tiếp sức nhà nông
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5532" id="menu-item-5532">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Bữa ăn trọn vẹn
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5533" id="menu-item-5533">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Chắp cánh ước mơ
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5536" id="menu-item-5536">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Triệu mầm xanh cho Việt Nam
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5534" id="menu-item-5534">
-            <a href="coming-soon.php">
+            <a href="coming-soon">
              <span>
               Hỗ trợ cộng đồng
              </span>
@@ -199,7 +199,7 @@
          </div>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5523" id="menu-item-5523">
-         <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="lien-he.php">
+         <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="lien-he">
           <span>
            LIÊN HỆ
           </span>
@@ -209,21 +209,21 @@
          <div class="dt-dropdown-menu-wrapper">
           <ul class="dropdown-menu">
            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5537" id="menu-item-5537">
-            <a href="lien-he.php">
+            <a href="lien-he">
              <span>
               Đặt hàng
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5538" id="menu-item-5538">
-            <a href="lien-he.php">
+            <a href="lien-he">
              <span>
               Hợp tác
              </span>
             </a>
            </li>
            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5539" id="menu-item-5539">
-            <a href="lien-he.php">
+            <a href="lien-he">
              <span>
               Truyền thông
              </span>
@@ -236,16 +236,16 @@
       </div>
      </div>
      <div class="footer-cer">
-      <a class="cer-item" href="coming-soon.php">
+      <a class="cer-item" href="coming-soon">
        <img alt="" class="attachment-full size-full" decoding="async" height="231" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/logo-csi-100-doanh-nghiep-ben-vung.png" width="490"/>
       </a>
-      <a class="cer-item" href="coming-soon.php">
+      <a class="cer-item" href="coming-soon">
        <img alt="" class="attachment-full size-full" decoding="async" height="718" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/08/area.png" width="486"/>
       </a>
-      <a class="cer-item" href="coming-soon.php">
+      <a class="cer-item" href="coming-soon">
        <img alt="" class="attachment-full size-full" decoding="async" height="576" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/08/logo-gptw-1.png" width="339"/>
       </a>
-      <a class="cer-item" href="coming-soon.php">
+      <a class="cer-item" href="coming-soon">
        <img alt="" class="attachment-full size-full" decoding="async" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/08/asc.svg"/>
       </a>
      </div>
@@ -255,21 +255,21 @@
       <div class="menu-footer-bottom-container">
        <ul class="dt-footer-bottom-menu footer-bottom-menu" id="footer-bottom">
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4640" id="menu-item-4640">
-         <a href="coming-soon.php">
+         <a href="coming-soon">
           <span>
            Chính sách bảo mật
           </span>
          </a>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5515" id="menu-item-5515">
-         <a href="coming-soon.php">
+         <a href="coming-soon">
           <span>
            Chính sách cookie
           </span>
          </a>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4641" id="menu-item-4641">
-         <a href="coming-soon.php">
+         <a href="coming-soon">
           <span>
            Điều khoản sử dụng
           </span>

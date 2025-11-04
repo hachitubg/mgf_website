@@ -84,7 +84,7 @@ $banner_image = $banner && $banner['image_path']
      <div class="dt-breadscrumb">
       <ul class="breadcrumb">
        <li>
-        <a href="trang-chu.php">Trang chủ</a>
+        <a href="trang-chu">Trang chủ</a>
        </li>
        <li>
         <span class="active">Tin tức và sự kiện</span>
@@ -116,12 +116,12 @@ $banner_image = $banner && $banner['image_path']
         <!-- Main Featured Article -->
         <article class="news-featured-main">
          <div class="news-card">
-          <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($featured_first['slug']) ?>" class="news-card-image">
+          <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($featured_first['slug']) ?>" class="news-card-image">
            <img src="<?= htmlspecialchars($image_url) ?>" alt="<?= htmlspecialchars($featured_first['title']) ?>" fetchpriority="high">
           </a>
           <div class="news-card-content">
            <h3 class="news-card-title">
-            <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($featured_first['slug']) ?>">
+            <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($featured_first['slug']) ?>">
              <?= htmlspecialchars($featured_first['title']) ?>
             </a>
            </h3>
@@ -152,12 +152,12 @@ $banner_image = $banner && $banner['image_path']
              : '05_images/no-image.jpg';
          ?>
          <article class="news-card">
-          <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($post['slug']) ?>" class="news-card-image">
+          <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($post['slug']) ?>" class="news-card-image">
            <img src="<?= htmlspecialchars($image_url) ?>" alt="<?= htmlspecialchars($post['title']) ?>" loading="lazy">
           </a>
           <div class="news-card-content">
            <h3 class="news-card-title">
-            <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($post['slug']) ?>">
+            <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($post['slug']) ?>">
              <?= htmlspecialchars($post['title']) ?>
             </a>
            </h3>
@@ -178,11 +178,11 @@ $banner_image = $banner && $banner['image_path']
       <div class="news-section">
        <h2 class="news-section-title">Danh mục bài viết</h2>
        <div class="news-categories">
-        <a href="tin-tuc.php" class="news-category-btn <?= empty($category_slug) ? 'active' : '' ?>">
+        <a href="tin-tuc" class="news-category-btn <?= empty($category_slug) ? 'active' : '' ?>">
          Tất cả
         </a>
         <?php foreach ($categories as $cat): ?>
-        <a href="tin-tuc.php?category=<?= htmlspecialchars($cat['slug']) ?>" class="news-category-btn <?= $category_slug === $cat['slug'] ? 'active' : '' ?>">
+        <a href="tin-tuc?category=<?= htmlspecialchars($cat['slug']) ?>" class="news-category-btn <?= $category_slug === $cat['slug'] ? 'active' : '' ?>">
          <?= htmlspecialchars($cat['name']) ?>
         </a>
         <?php endforeach; ?>
@@ -207,7 +207,7 @@ $banner_image = $banner && $banner['image_path']
           }
         ?>
         <article class="news-card">
-         <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($post['slug']) ?>" class="news-card-image">
+         <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($post['slug']) ?>" class="news-card-image">
           <img src="<?= htmlspecialchars($image_url) ?>" alt="<?= htmlspecialchars($post['title']) ?>" loading="lazy">
          </a>
          <div class="news-card-content">
@@ -218,7 +218,7 @@ $banner_image = $banner && $banner['image_path']
            </span>
           </div>
           <h3 class="news-card-title">
-           <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($post['slug']) ?>">
+           <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($post['slug']) ?>">
             <?= htmlspecialchars($post['title']) ?>
            </a>
           </h3>

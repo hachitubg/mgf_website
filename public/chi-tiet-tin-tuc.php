@@ -76,12 +76,12 @@ $image_url = $post['featured_image']
     
     <!-- Breadcrumb -->
     <div class="post-breadcrumb">
-     <a href="trang-chu.php">Trang chủ</a>
+     <a href="trang-chu">Trang chủ</a>
      <span>/</span>
-     <a href="tin-tuc.php">Tin tức</a>
+     <a href="tin-tuc">Tin tức</a>
      <?php if ($post['category_name']): ?>
      <span>/</span>
-     <a href="tin-tuc.php?category=<?= htmlspecialchars($post['category_slug']) ?>">
+     <a href="tin-tuc?category=<?= htmlspecialchars($post['category_slug']) ?>">
       <?= htmlspecialchars($post['category_name']) ?>
      </a>
      <?php endif; ?>
@@ -156,7 +156,7 @@ $image_url = $post['featured_image']
       <?php if ($post['category_name']): ?>
       <div class="post-category-tag">
        <strong>Danh mục:</strong>
-       <a href="tin-tuc.php?category=<?= htmlspecialchars($post['category_slug']) ?>" class="category-badge">
+       <a href="tin-tuc?category=<?= htmlspecialchars($post['category_slug']) ?>" class="category-badge">
         <?= htmlspecialchars($post['category_name']) ?>
        </a>
       </div>
@@ -172,10 +172,10 @@ $image_url = $post['featured_image']
       <div class="sidebar-widget">
        <h3 class="sidebar-widget-title">Danh mục bài viết</h3>
        <ul class="sidebar-category-list">
-        <li><a href="tin-tuc.php" class="sidebar-category-link">Tất cả</a></li>
+        <li><a href="tin-tuc" class="sidebar-category-link">Tất cả</a></li>
         <?php foreach ($categories as $cat): ?>
         <li>
-         <a href="tin-tuc.php?category=<?= htmlspecialchars($cat['slug']) ?>" class="sidebar-category-link">
+         <a href="tin-tuc?category=<?= htmlspecialchars($cat['slug']) ?>" class="sidebar-category-link">
           <?= htmlspecialchars($cat['name']) ?>
          </a>
         </li>
@@ -195,12 +195,12 @@ $image_url = $post['featured_image']
             : '05_images/no-image.jpg';
         ?>
         <div class="sidebar-post-item">
-         <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($rec_post['slug']) ?>" class="sidebar-post-thumb">
+         <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($rec_post['slug']) ?>" class="sidebar-post-thumb">
           <img src="<?= htmlspecialchars($rec_image) ?>" alt="<?= htmlspecialchars($rec_post['title']) ?>"/>
          </a>
          <div class="sidebar-post-info">
           <h4 class="sidebar-post-title">
-           <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($rec_post['slug']) ?>">
+           <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($rec_post['slug']) ?>">
             <?= htmlspecialchars($rec_post['title']) ?>
            </a>
           </h4>
@@ -232,7 +232,7 @@ $image_url = $post['featured_image']
           : '05_images/no-image.jpg';
       ?>
       <article class="related-post-card">
-       <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($rel_post['slug']) ?>" class="related-post-image">
+       <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($rel_post['slug']) ?>" class="related-post-image">
         <img src="<?= htmlspecialchars($rel_image) ?>" alt="<?= htmlspecialchars($rel_post['title']) ?>"/>
        </a>
        <div class="related-post-content">
@@ -240,7 +240,7 @@ $image_url = $post['featured_image']
          <?= date('d/m/Y', strtotime($rel_post['created_at'])) ?>
         </span>
         <h3 class="related-post-title">
-         <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($rel_post['slug']) ?>">
+         <a href="chi-tiet-tin-tuc?slug=<?= htmlspecialchars($rel_post['slug']) ?>">
           <?= htmlspecialchars($rel_post['title']) ?>
          </a>
         </h3>
