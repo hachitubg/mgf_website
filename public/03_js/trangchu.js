@@ -1861,47 +1861,47 @@ function UserAgent()
                 updateMask();
             }
             
-            if($('.menu-top-bar-container').length && window.matchMedia("(max-width: 1023px)").matches)
-            {
-                const $container = $('.menu-top-bar-container');
-                const $scroll = $('.dt-secondary-menu');
-                $container.append('<div class="prev"><span class="m_scroll_arrows unu"></span> <span class="m_scroll_arrows doi"></span> <span class="m_scroll_arrows trei"></span></div><div class="next"><span class="m_scroll_arrows unu"></span> <span class="m_scroll_arrows doi"></span> <span class="m_scroll_arrows trei"></span></div>');
-                function showTopbarArrow() {
-                    const scrollLeft = $scroll.scrollLeft();
-                    const maxScroll = $scroll[0].scrollWidth - $scroll[0].clientWidth;
-                    if(scrollLeft < maxScroll - 5) //scroll sang phải
-                    {
-                       $container.find('.prev').fadeOut();
-                        $container.find('.next').fadeIn();
+            // if($('.menu-top-bar-container').length && window.matchMedia("(max-width: 1023px)").matches)
+            // {
+            //     const $container = $('.menu-top-bar-container');
+            //     const $scroll = $('.dt-secondary-menu');
+            //     $container.append('<div class="prev"><span class="m_scroll_arrows unu"></span> <span class="m_scroll_arrows doi"></span> <span class="m_scroll_arrows trei"></span></div><div class="next"><span class="m_scroll_arrows unu"></span> <span class="m_scroll_arrows doi"></span> <span class="m_scroll_arrows trei"></span></div>');
+            //     function showTopbarArrow() {
+            //         const scrollLeft = $scroll.scrollLeft();
+            //         const maxScroll = $scroll[0].scrollWidth - $scroll[0].clientWidth;
+            //         if(scrollLeft < maxScroll - 5) //scroll sang phải
+            //         {
+            //            $container.find('.prev').fadeOut();
+            //             $container.find('.next').fadeIn();
                         
-                    }
-                    else
-                    {
+            //         }
+            //         else
+            //         {
                         
-                        $container.find('.prev').fadeIn();
-                        $container.find('.next').fadeOut();
-                    }
+            //             $container.find('.prev').fadeIn();
+            //             $container.find('.next').fadeOut();
+            //         }
                     
-                }
+            //     }
 
-                jQuery('body').on('click', '.menu-top-bar-container .next' ,function(e) {
-                    e.preventDefault();
-                    $scroll.animate({
-                        scrollLeft: $scroll[0].scrollWidth - $scroll[0].clientWidth
-                    }, 500);
-                });
+            //     jQuery('body').on('click', '.menu-top-bar-container .next' ,function(e) {
+            //         e.preventDefault();
+            //         $scroll.animate({
+            //             scrollLeft: $scroll[0].scrollWidth - $scroll[0].clientWidth
+            //         }, 500);
+            //     });
 
-                jQuery('body').on('click', '.menu-top-bar-container .prev' ,function(e) {
-                    e.preventDefault();
-                    $scroll.animate({
-                        scrollLeft: 0
-                    }, 500);
-                });
+            //     jQuery('body').on('click', '.menu-top-bar-container .prev' ,function(e) {
+            //         e.preventDefault();
+            //         $scroll.animate({
+            //             scrollLeft: 0
+            //         }, 500);
+            //     });
 
-                $scroll.on('scroll', showTopbarArrow);
-                $(window).on('resize', showTopbarArrow);
-                showTopbarArrow();
-            }
+            //     $scroll.on('scroll', showTopbarArrow);
+            //     $(window).on('resize', showTopbarArrow);
+            //     showTopbarArrow();
+            // }
 
             setTimeout(function() { 
                 scrollToHash()

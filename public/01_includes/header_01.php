@@ -68,6 +68,13 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
       <div class="dt-main-menu">
        <div class="menu-main-menu-container">
         <ul class="dt-primary-menu header-menu" id="primary">
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5270<?php echo ($current_page == 'trang-chu') ? ' active' : ''; ?>" id="menu-item-5270">
+          <a class="dropdown-toggle<?php echo ($current_page == 'trang-chu') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="trang-chu.php">
+           <span>
+            Trang Chủ
+           </span>
+          </a>
+         </li>
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5270<?php echo ($current_page == 'gioi-thieu') ? ' active' : ''; ?>" id="menu-item-5270">
           <a class="dropdown-toggle<?php echo ($current_page == 'gioi-thieu') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu.php">
            <span>
