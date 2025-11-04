@@ -152,45 +152,103 @@ EXIT;
 
 ### Backup Database
 
-#### Tạo thư mục backup
-
-```bash
-mkdir -p /home/backups
-```
-
-#### Backup với timestamp
+#### Backup nhanh (trong project)
 
 ```bash
 cd /home/mgf-website
-sudo docker exec mgf_mysql mysqldump -u mgf_user -pmgf_password_2024 mgf_website > /home/backups/mgf_backup_$(date +%Y%m%d_%H%M%S).sql
+
+# Backup với timestamp
+sudo docker exec mgf_mysql mysqldump -u root -pmgf_root_password_2024 mgf_website 2>/dev/null > backups/mgf_backup_$(date +%Y%m%d_%H%M%S).sql
+
+# Backup và nén ngay
+sudo docker exec mgf_mysql mysqldump -u root -pmgf_root_password_2024 mgf_website 2>/dev/null | gzip > backups/mgf_backup_$(date +%Y%m%d_%H%M%S).sql.gz
+
+# Backup đơn giản (latest)
+sudo docker exec mgf_mysql mysqldump -u root -pmgf_root_password_2024 mgf_website 2>/dev/null > backups/mgf_backup_latest.sql
 ```
 
-#### Backup đơn giản
+#### Xem danh sách backup
 
 ```bash
-sudo docker exec mgf_mysql mysqldump -u mgf_user -pmgf_password_2024 mgf_website > /home/backups/mgf_backup_latest.sql
+ls -lh backups/
 ```
 
-#### Backup và nén
+#### Download backup về máy local
 
 ```bash
-sudo docker exec mgf_mysql mysqldump -u mgf_user -pmgf_password_2024 mgf_website | gzip > /home/backups/mgf_backup_$(date +%Y%m%d).sql.gz
+# Trên máy local (Windows)
+scp user@IP_VPS:/home/mgf-website/backups/mgf_backup_*.sql.gz C:/backups/
+
+# Hoặc pull về qua Git (nếu đã commit)
+git pull origin main
 ```
 
 ### Restore Database
 
 ```bash
+cd /home/mgf-website
+
 # Restore từ file SQL
-sudo docker exec -i mgf_mysql mysql -u mgf_user -pmgf_password_2024 mgf_website < /home/backups/mgf_backup_20251105.sql
+sudo docker exec -i mgf_mysql mysql -u root -pmgf_root_password_2024 mgf_website < backups/mgf_backup_20251105_143000.sql
 
 # Restore từ file đã nén
-gunzip < /home/backups/mgf_backup_20251105.sql.gz | sudo docker exec -i mgf_mysql mysql -u mgf_user -pmgf_password_2024 mgf_website
+gunzip < backups/mgf_backup_20251105_143000.sql.gz | sudo docker exec -i mgf_mysql mysql -u root -pmgf_root_password_2024 mgf_website
 ```
 
-### Xem danh sách backup
+### Script Backup Tự Động
 
 ```bash
-ls -lh /home/backups/
+# Tạo script
+sudo nano /home/backup-mgf.sh
+```
+
+**Nội dung script:**
+
+```bash
+#!/bin/bash
+# MGF Database Auto Backup
+
+BACKUP_DIR="/home/mgf-website/backups"
+DATE=$(date +%Y%m%d_%H%M%S)
+BACKUP_FILE="mgf_backup_$DATE.sql"
+
+echo "🔄 Backing up MGF database..."
+
+# Backup
+docker exec mgf_mysql mysqldump -u root -pmgf_root_password_2024 mgf_website 2>/dev/null > $BACKUP_DIR/$BACKUP_FILE
+
+if [ $? -eq 0 ]; then
+    # Compress
+    gzip $BACKUP_DIR/$BACKUP_FILE
+    
+    # Delete backups older than 7 days
+    find $BACKUP_DIR -name "*.sql.gz" -mtime +7 -delete
+    
+    echo "✅ Backup successful: $BACKUP_FILE.gz"
+    ls -lh $BACKUP_DIR/$BACKUP_FILE.gz
+else
+    echo "❌ Backup failed!"
+    exit 1
+fi
+```
+
+**Setup cron job:**
+
+```bash
+# Cho phép thực thi
+sudo chmod +x /home/backup-mgf.sh
+
+# Thêm vào crontab (backup mỗi ngày 2h sáng)
+sudo crontab -e
+
+# Thêm dòng này:
+0 2 * * * /home/backup-mgf.sh >> /var/log/mgf-backup.log 2>&1
+```
+
+**Xem log backup:**
+
+```bash
+sudo tail -f /var/log/mgf-backup.log
 ```
 
 ---
