@@ -86,7 +86,7 @@
             </label>
             <input data-format-error="Số điện thoại không đúng định dạng" data-missing-error="Vui lòng nhập số điện thoại" id="phone" name="phone" placeholder="Số điện thoại" required type="tel"/>
            </div>
-           <div class="form-group input-group">
+           <div class="form-group input-group" style="width:100%">
             <label for="email">
              Email <span style="color: red;">*</span>
             </label>
