@@ -49,7 +49,7 @@ $recent_stmt = $pdo->query("SELECT p.*, c.name as category_name
 $recent_posts = $recent_stmt->fetchAll();
 
 $image_url = $post['featured_image'] 
-    ? '../uploads/posts/' . $post['featured_image']
+    ? '../' . $post['featured_image']
     : '05_images/no-image.jpg';
 ?>
 <!DOCTYPE html>
@@ -191,7 +191,7 @@ $image_url = $post['featured_image']
        <div class="sidebar-posts-list">
         <?php foreach ($recent_posts as $rec_post): 
           $rec_image = $rec_post['featured_image'] 
-            ? '../uploads/posts/' . $rec_post['featured_image']
+            ? '../' . $rec_post['featured_image']
             : '05_images/no-image.jpg';
         ?>
         <div class="sidebar-post-item">
@@ -228,7 +228,7 @@ $image_url = $post['featured_image']
      <div class="related-posts-grid">
       <?php foreach ($related_posts as $rel_post): 
         $rel_image = $rel_post['featured_image'] 
-          ? '../uploads/posts/' . $rel_post['featured_image']
+          ? '../' . $rel_post['featured_image']
           : '05_images/no-image.jpg';
       ?>
       <article class="related-post-card">

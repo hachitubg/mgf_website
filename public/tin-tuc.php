@@ -110,7 +110,7 @@ $banner_image = $banner && $banner['image_path']
         $featured_first = array_shift($featured_posts);
         if ($featured_first):
           $image_url = $featured_first['featured_image'] 
-            ? '../uploads/posts/' . $featured_first['featured_image']
+            ? '../' . $featured_first['featured_image']
             : '05_images/no-image.jpg';
         ?>
         <!-- Main Featured Article -->
@@ -148,7 +148,7 @@ $banner_image = $banner && $banner['image_path']
         <div class="news-featured-side">
          <?php foreach (array_slice($featured_posts, 0, 4) as $post): 
            $image_url = $post['featured_image'] 
-             ? '../uploads/posts/' . $post['featured_image']
+             ? '../' . $post['featured_image']
              : '05_images/no-image.jpg';
          ?>
          <article class="news-card">
@@ -199,7 +199,7 @@ $banner_image = $banner && $banner['image_path']
        <div class="news-grid">
         <?php foreach ($posts as $post): 
           $image_url = $post['featured_image'] 
-            ? '../uploads/posts/' . $post['featured_image']
+            ? '../' . $post['featured_image']
             : '05_images/no-image.jpg';
           $short_excerpt = mb_substr(strip_tags($post['excerpt'] ?? ''), 0, 100, 'UTF-8');
           if (mb_strlen(strip_tags($post['excerpt'] ?? '')) > 100) {

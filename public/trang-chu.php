@@ -744,7 +744,7 @@
       <div class="news-carousel owl-carousel owl-theme carousel--style1">
        <?php foreach ($posts as $post): 
          $image_url = $post['featured_image'] 
-           ? '../uploads/posts/' . $post['featured_image']
+           ? '../' . $post['featured_image']
            : '05_images/no-image.jpg';
        ?>
        <div class="news__item">
