@@ -122,27 +122,56 @@ if ($category_slug) {
     <section class="category-filter-section" style="padding: 40px 0; background: #f8f9fa;">
         <div class="container">
             <div class="category-filter">
-                <div class="category-filter-header" style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 20px;">
-                    <button class="mobile-filter-toggle" style="display: none; background: none; border: none; color: #2eb058; font-size: 14px; cursor: pointer; padding: 5px 10px; font-weight: 500;">
-                        <span class="toggle-text">Xem thêm</span>
-                        <svg class="toggle-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align: middle; margin-left: 4px; transition: transform 0.3s ease;">
-                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="category-filter-list" style="display: flex; flex-wrap: wrap; gap: 15px;">
+                <!-- Desktop View -->
+                <div class="category-filter-desktop" style="display: flex; flex-wrap: wrap; gap: 15px;">
                     <a href="san-pham.php" 
                        class="category-filter-item <?= empty($category_slug) ? 'active' : '' ?>"
-                       style="padding: 10px 24px; background: <?= empty($category_slug) ? 'linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%)' : '#fff' ?>; color: <?= empty($category_slug) ? '#fff' : '#054326' ?>; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border: 2px solid <?= empty($category_slug) ? 'transparent' : '#e0e0e0' ?>; display: inline-block;">
+                       style="padding: 10px 24px; background: <?= empty($category_slug) ? 'linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%)' : '#fff' ?>; color: <?= empty($category_slug) ? '#fff' : '#054326' ?>; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border: 2px solid <?= empty($category_slug) ? 'transparent' : '#e0e0e0' ?>; display: inline-block; white-space: nowrap;">
                         Tất cả sản phẩm
                     </a>
                     <?php foreach ($categories as $cat): ?>
                     <a href="san-pham.php?category=<?= htmlspecialchars($cat['slug']) ?>" 
                        class="category-filter-item <?= $category_slug === $cat['slug'] ? 'active' : '' ?>"
-                       style="padding: 10px 24px; background: <?= $category_slug === $cat['slug'] ? 'linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%)' : '#fff' ?>; color: <?= $category_slug === $cat['slug'] ? '#fff' : '#054326' ?>; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border: 2px solid <?= $category_slug === $cat['slug'] ? 'transparent' : '#e0e0e0' ?>; display: inline-block;">
+                       style="padding: 10px 24px; background: <?= $category_slug === $cat['slug'] ? 'linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%)' : '#fff' ?>; color: <?= $category_slug === $cat['slug'] ? '#fff' : '#054326' ?>; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border: 2px solid <?= $category_slug === $cat['slug'] ? 'transparent' : '#e0e0e0' ?>; display: inline-block; white-space: nowrap;">
                         <?= htmlspecialchars($cat['name']) ?>
                     </a>
                     <?php endforeach; ?>
+                </div>
+
+                <!-- Mobile View - Dropdown -->
+                <div class="category-filter-mobile" style="display: none; position: relative;">
+                    <button class="category-dropdown-toggle" style="width: 100%; padding: 12px 16px; background: #fff; border: 2px solid #e0e0e0; border-radius: 8px; color: #054326; font-weight: 600; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s ease;">
+                        <span class="selected-category">
+                            <?= $current_category ? htmlspecialchars($current_category['name']) : 'Tất cả sản phẩm' ?>
+                        </span>
+                        <svg class="dropdown-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" style="transition: transform 0.3s ease;">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="category-dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; right: 0; margin-top: 8px; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-height: 300px; overflow-y: auto; z-index: 100;">
+                        <a href="san-pham.php" 
+                           class="category-dropdown-item <?= empty($category_slug) ? 'active' : '' ?>"
+                           style="display: block; padding: 12px 16px; color: <?= empty($category_slug) ? '#2eb058' : '#054326' ?>; font-weight: <?= empty($category_slug) ? '600' : '500' ?>; font-size: 14px; text-decoration: none; border-bottom: 1px solid #f0f0f0; transition: background 0.2s ease;">
+                            Tất cả sản phẩm
+                            <?php if (empty($category_slug)): ?>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="float: right; margin-top: 2px;">
+                                <path d="M13 4L6 11L3 8" stroke="#2eb058" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <?php endif; ?>
+                        </a>
+                        <?php foreach ($categories as $cat): ?>
+                        <a href="san-pham.php?category=<?= htmlspecialchars($cat['slug']) ?>" 
+                           class="category-dropdown-item <?= $category_slug === $cat['slug'] ? 'active' : '' ?>"
+                           style="display: block; padding: 12px 16px; color: <?= $category_slug === $cat['slug'] ? '#2eb058' : '#054326' ?>; font-weight: <?= $category_slug === $cat['slug'] ? '600' : '500' ?>; font-size: 14px; text-decoration: none; border-bottom: 1px solid #f0f0f0; transition: background 0.2s ease;">
+                            <?= htmlspecialchars($cat['name']) ?>
+                            <?php if ($category_slug === $cat['slug']): ?>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="float: right; margin-top: 2px;">
+                                <path d="M13 4L6 11L3 8" stroke="#2eb058" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <?php endif; ?>
+                        </a>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,50 +187,62 @@ if ($category_slug) {
             box-shadow: 0 4px 16px rgba(46, 176, 88, 0.3);
         }
         
+        .category-dropdown-item:hover {
+            background: #f8f9fa;
+        }
+        .category-dropdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        .category-dropdown-toggle:hover {
+            border-color: #2eb058;
+            box-shadow: 0 2px 8px rgba(46, 176, 88, 0.1);
+        }
+        
+        .category-dropdown-toggle.active .dropdown-icon {
+            transform: rotate(180deg);
+        }
+        
         @media (max-width: 768px) {
             .category-filter-section {
                 padding: 20px 0 !important;
             }
-            .mobile-filter-toggle {
-                display: inline-flex !important;
-                align-items: center;
+            .category-filter-desktop {
+                display: none !important;
             }
-            .category-filter-list {
-                gap: 8px !important;
-                max-height: 40px;
-                overflow: hidden;
-                transition: max-height 0.4s ease;
-            }
-            .category-filter-list.expanded {
-                max-height: 1000px;
-            }
-            .category-filter-list.expanded ~ .category-filter-header .toggle-icon {
-                transform: rotate(180deg);
-            }
-            .category-filter-item {
-                padding: 6px 14px !important;
-                font-size: 13px !important;
-                white-space: nowrap;
+            .category-filter-mobile {
+                display: block !important;
             }
         }
     </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const toggleBtn = document.querySelector('.mobile-filter-toggle');
-            const filterList = document.querySelector('.category-filter-list');
-            const toggleText = document.querySelector('.toggle-text');
-            const toggleIcon = document.querySelector('.toggle-icon');
+            // Mobile dropdown toggle
+            const dropdownToggle = document.querySelector('.category-dropdown-toggle');
+            const dropdownMenu = document.querySelector('.category-dropdown-menu');
+            const dropdownIcon = document.querySelector('.dropdown-icon');
             
-            if (toggleBtn && filterList) {
-                toggleBtn.addEventListener('click', function() {
-                    filterList.classList.toggle('expanded');
-                    if (filterList.classList.contains('expanded')) {
-                        toggleText.textContent = 'Thu gọn';
-                        toggleIcon.style.transform = 'rotate(180deg)';
+            if (dropdownToggle && dropdownMenu) {
+                // Toggle dropdown
+                dropdownToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const isOpen = dropdownMenu.style.display === 'block';
+                    
+                    if (isOpen) {
+                        dropdownMenu.style.display = 'none';
+                        dropdownToggle.classList.remove('active');
                     } else {
-                        toggleText.textContent = 'Xem thêm';
-                        toggleIcon.style.transform = 'rotate(0deg)';
+                        dropdownMenu.style.display = 'block';
+                        dropdownToggle.classList.add('active');
+                    }
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                        dropdownMenu.style.display = 'none';
+                        dropdownToggle.classList.remove('active');
                     }
                 });
             }
@@ -226,8 +267,13 @@ if ($category_slug) {
                     $image_url = $product['image_path'] 
                         ? '../uploads/products/' . $product['image_path']
                         : '05_images/no-image.jpg';
-                    $short_desc = mb_substr(strip_tags($product['description'] ?? ''), 0, 80, 'UTF-8');
-                    if (mb_strlen(strip_tags($product['description'] ?? '')) > 80) {
+                    
+                    // Clean description: remove HTML tags properly
+                    $clean_desc = strip_tags($product['description'] ?? '');
+                    // Remove any remaining HTML entities
+                    $clean_desc = html_entity_decode($clean_desc, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+                    $short_desc = mb_substr($clean_desc, 0, 80, 'UTF-8');
+                    if (mb_strlen($clean_desc) > 80) {
                         $short_desc .= '...';
                     }
                 ?>
@@ -238,16 +284,16 @@ if ($category_slug) {
                                  alt="<?= htmlspecialchars($product['title']) ?>"
                                  style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;"
                                  loading="lazy"/>
-                            <?php if ($product['category_name']): ?>
-                            <div class="product-category-badge" style="position: absolute; top: 12px; left: 12px; padding: 6px 14px; background: linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%); color: #fff; border-radius: 20px; font-size: 12px; font-weight: 600;">
-                                <?= htmlspecialchars($product['category_name']) ?>
-                            </div>
-                            <?php endif; ?>
                         </div>
                         <div class="product-card-content" style="padding: 20px;">
                             <h3 class="product-card-title" style="font-size: 18px; font-weight: 700; color: #054326; margin-bottom: 10px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 50px;">
                                 <?= htmlspecialchars($product['title']) ?>
                             </h3>
+                            <?php if ($product['category_name']): ?>
+                            <div class="product-category-badge" style="display: inline-block; margin-bottom: 10px; padding: 4px 12px; background: linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%); color: #fff; border-radius: 15px; font-size: 11px; font-weight: 600; width: fit-content; max-width: 100%;">
+                                <?= htmlspecialchars($product['category_name']) ?>
+                            </div>
+                            <?php endif; ?>
                             <?php if ($short_desc): ?>
                             <p class="product-card-desc" style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: 63px;">
                                 <?= htmlspecialchars($short_desc) ?>
@@ -349,10 +395,14 @@ if ($category_slug) {
                         font-size: 13px !important;
                     }
                     .product-category-badge {
-                        padding: 4px 10px !important;
+                        padding: 3px 8px !important;
                         font-size: 10px !important;
-                        top: 8px !important;
-                        left: 8px !important;
+                        margin-bottom: 6px !important;
+                        width: fit-content !important;
+                        max-width: 100% !important;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 
