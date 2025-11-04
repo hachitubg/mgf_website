@@ -68,7 +68,7 @@ function slugify($text) {
     <?php unset($_SESSION['error']); ?>
   <?php endif; ?>
 
-  <form method="POST" action="save.php" enctype="multipart/form-data" style="max: width 100%;">
+  <form method="POST" action="save.php" enctype="multipart/form-data" style="max-width:100%">
     <?php if ($isEditMode): ?>
       <input type="hidden" name="id" value="<?= $post['id'] ?>">
     <?php endif; ?>
@@ -136,7 +136,6 @@ function slugify($text) {
       <button type="submit" class="btn"><?= $isEditMode ? 'Cập nhật' : 'Thêm bài viết' ?></button>
       <a href="index.php" class="btn">Hủy</a>
     </div>
-  </form>
   </form>
 
   </div>
