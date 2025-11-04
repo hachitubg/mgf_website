@@ -22,6 +22,9 @@ if (!$post) {
     exit;
 }
 
+// Set page title based on post title
+$page_title = $post['title'];
+
 // Get related posts (same category)
 $stmt = $pdo->prepare("SELECT p.*, c.name as category_name 
                        FROM posts p 

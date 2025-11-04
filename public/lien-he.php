@@ -6,6 +6,7 @@
  <link href="02_css/style_lienhe.css" id="main-style-css" media="all" rel="stylesheet" type="text/css"/>
  <link href="02_css/contact.css" id="page-style-css" media="all" rel="stylesheet" type="text/css"/>
  <?php 
+ $page_title = "Liên hệ";
  require_once __DIR__ . '/../includes/db.php';
  
  // Get banner for this page

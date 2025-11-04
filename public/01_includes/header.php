@@ -9,7 +9,7 @@
   </style>
   <link href="trang-chu.php" hreflang="vi" rel="alternate"/>
 
-  <title> MGF Việt Nam </title>
+  <title><?php echo isset($page_title) ? $page_title . ' - MGF Việt Nam' : 'MGF Việt Nam'; ?></title>
   
   <link href="trang-chu.php" rel="canonical"/>
   
@@ -60,9 +60,9 @@
   <link as="font" crossorigin="" href="04_fonts/SVN-GothamBold.woff2" rel="preload" type="font/woff2"/>
   <link as="font" crossorigin="" href="04_fonts/SVN-GothamBookItalic.woff2" rel="preload" type="font/woff2"/>
 
-  <link href="https://www.greenfeed.com.vn/wp-content/uploads/2021/07/cropped-favicon-32x32-1-32x32.png" rel="icon" sizes="32x32"/>
-  <link href="https://www.greenfeed.com.vn/wp-content/uploads/2021/07/cropped-favicon-32x32-1-192x192.png" rel="icon" sizes="192x192"/>
-  <link href="https://www.greenfeed.com.vn/wp-content/uploads/2021/07/cropped-favicon-32x32-1-180x180.png" rel="apple-touch-icon"/>
-  <meta content="https://www.greenfeed.com.vn/wp-content/uploads/2021/07/cropped-favicon-32x32-1-270x270.png" name="msapplication-TileImage"/>
+  <link href="05_images/logo-MG.png" rel="icon" sizes="32x32"/>
+  <link href="05_images/logo-MGF.png" rel="icon" sizes="192x192"/>
+  <link href="05_images/logo-MGF.png" rel="apple-touch-icon"/>
+  <meta content="05_images/logo-MGF.png" name="msapplication-TileImage"/>
 
  </head>

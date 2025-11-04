@@ -6,6 +6,7 @@
  <link href="02_css/style_trangchu.css" id="main-style-css" media="all" rel="stylesheet" type="text/css"/>
  <link href="02_css/home.css" id="page-style-css" media="all" rel="stylesheet" type="text/css"/>
  <?php 
+ $page_title = "Trang chủ";
  require_once __DIR__ . '/../includes/db.php';
  
  // Get homepage banners

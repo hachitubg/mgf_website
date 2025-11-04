@@ -1,5 +1,9 @@
     <!-- Header -->
   <header id="dt-header">
+<?php
+// Detect current page
+$current_page = basename($_SERVER['PHP_SELF'], '.php');
+?>
    <div class="top-bar">
     <div class="container-wide">
      <div class="top-bar-menu">
@@ -56,16 +60,16 @@
     <div class="container-wide">
      <div class="header-main">
       <div class="logo">
-       <a href="trang-chu.php">
-        <img alt="MGF Việt Nam" src="./05_images/logo-GMF.png" width="178" height="49"/>
-        <img alt="logo" class="logo-white" height="60" src="./05_images/logo-GMF.png" width="60"/>
+       <a href="trang-chu.php"<?php echo ($current_page == 'trang-chu') ? ' class="active"' : ''; ?>>
+        <img alt="MGF Việt Nam" src="05_images/logo-GMF.png" width="178" height="49"/>
+        <img alt="logo" class="logo-white" height="60" src="05_images/logo-GMF.png" width="60"/>
        </a>
       </div>
       <div class="dt-main-menu">
        <div class="menu-main-menu-container">
         <ul class="dt-primary-menu header-menu" id="primary">
-         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5270" id="menu-item-5270">
-          <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu.php">
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5270<?php echo ($current_page == 'gioi-thieu') ? ' active' : ''; ?>" id="menu-item-5270">
+          <a class="dropdown-toggle<?php echo ($current_page == 'gioi-thieu') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu.php">
            <span>
             Giới thiệu
            </span>
@@ -91,8 +95,8 @@
            </ul>
           </div> -->
          </li>
-         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-4574" id="menu-item-4574">
-          <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="san-pham.php">
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-4574<?php echo ($current_page == 'san-pham' || $current_page == 'chi-tiet-san-pham') ? ' active' : ''; ?>" id="menu-item-4574">
+          <a class="dropdown-toggle<?php echo ($current_page == 'san-pham' || $current_page == 'chi-tiet-san-pham') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="san-pham.php">
            <span>
             Sản phẩm và dịch vụ
            </span>
@@ -450,8 +454,8 @@
            </ul>
           </div>
          </li> -->
-         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5733" id="menu-item-5733">
-          <a href="tin-tuc.php">
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5733<?php echo ($current_page == 'tin-tuc' || $current_page == 'chi-tiet-tin-tuc') ? ' active' : ''; ?>" id="menu-item-5733">
+          <a href="tin-tuc.php"<?php echo ($current_page == 'tin-tuc' || $current_page == 'chi-tiet-tin-tuc') ? ' class="active"' : ''; ?>>
            <span>
             Tin tức & Sự kiện
            </span>

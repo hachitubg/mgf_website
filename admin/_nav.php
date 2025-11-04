@@ -5,7 +5,7 @@ $adminBase = BASE_URL . '/admin';
 ?>
 <div class="admin-header">
   <div class="admin-logo">
-    <img src="<?php echo rtrim(BASE_URL, '/'); ?>/public/images/logo-GMF.png" alt="MGF Logo">
+    <img src="<?php echo rtrim(BASE_URL, '/'); ?>/admin/images/logo-GMF.png" alt="MGF Logo">
     <span>MGF Admin</span>
   </div>
 </div>

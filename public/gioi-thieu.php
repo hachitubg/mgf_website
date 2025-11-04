@@ -7,6 +7,7 @@
  <link href="02_css/style-gioi-thieu.css" id="main-style-css" media="all" rel="stylesheet" type="text/css"/>
  <link href="02_css/intro.css" id="intro-style-css" media="all" rel="stylesheet" type="text/css"/>
  <?php 
+ $page_title = "Giới thiệu";
  require_once __DIR__ . '/../includes/db.php';
  
  // Get banner for this page
@@ -868,9 +869,9 @@
       </div>
      </div>
     </div>
-
    </section>
-   <section class="program" id="program">
+
+   <!-- <section class="program" id="program">
     <div class="container">
      <div class="program-inner">
       <div class="program-viewmore">
@@ -884,8 +885,7 @@
       </div>
      </div>
     </div>
-
-   </section>
+   </section> -->
    
   </main>
 

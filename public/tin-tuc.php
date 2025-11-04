@@ -1,4 +1,5 @@
 <?php
+$page_title = "Tin tức & Sự kiện";
 require_once __DIR__ . '/../includes/db.php';
 
 // Pagination

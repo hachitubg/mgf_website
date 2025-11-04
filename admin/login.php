@@ -157,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <div class="login-wrapper">
     <div class="login-container">
       <div class="login-header">
-        <img src="../public/images/logo-GMF.png" alt="MGF Logo" class="logo">
+        <img src="../admin/images/logo-GMF.png" alt="MGF Logo" class="logo">
         <p>Hệ Thống Quản Trị</p>
       </div>
       

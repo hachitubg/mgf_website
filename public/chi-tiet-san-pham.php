@@ -18,11 +18,24 @@ $stmt->execute([$slug]);
 $product = $stmt->fetch();
 
 if (!$product) {
-    header('Location: trang-chu.php');
+    header('Location: san-pham.php');
     exit;
 }
 
-// Lấy tất cả hình ảnh của sản phẩm
+// Set page title based on product name
+$page_title = $product['name'];
+$stmt->execute([$slug]);
+$product = $stmt->fetch();
+
+if (!$product) {
+    header('Location: san-pham.php');
+    exit;
+}
+
+// Set page title based on product name
+$page_title = $product['name'];
+
+// Lấy danh sách hình ảnh của sản phẩm
 $stmt = $pdo->prepare("SELECT * FROM product_images WHERE product_id = ? ORDER BY sort_order ASC");
 $stmt->execute([$product['id']]);
 $images = $stmt->fetchAll();

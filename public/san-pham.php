@@ -1,4 +1,5 @@
 <?php
+$page_title = "Sản phẩm và dịch vụ";
 require_once __DIR__ . '/../includes/db.php';
 
 // Pagination
