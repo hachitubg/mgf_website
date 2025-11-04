@@ -117,7 +117,7 @@
             “ĐỒNG HÀNH ĐỔI MỚI VƯƠN TỚI THÀNH CÔNG”
             </p>
             <p>
-            GREENFEED tâm huyết phát triển giải pháp dinh dưỡng vật nuôi hàng đầu. Với kinh nghiệm hơn 2 thập kỉ trong ngành, sở hữu hệ thống 9 nhà máy có dây chuyền sản xuất đạt chuẩn Quốc Tế, hiện đại tại Việt Nam và các nước trong khu vực Đông Nam Á, cùng các chuyên gia hàng đầu, đội ngũ nhân viên chuyên nghiệp và tận tâm. GREENFEED có khả năng cung cấp ra thị trường hơn 2,5 triệu tấn sản phẩm chất lượng hàng năm, tự tin mang đến cho Khách Hàng những giải pháp tốt nhất với hiệu quả kinh tế cao, bền vững.
+            MGF tâm huyết phát triển giải pháp dinh dưỡng vật nuôi hàng đầu. Với kinh nghiệm hơn 2 thập kỉ trong ngành, sở hữu hệ thống 9 nhà máy có dây chuyền sản xuất đạt chuẩn Quốc Tế, hiện đại tại Việt Nam và các nước trong khu vực Đông Nam Á, cùng các chuyên gia hàng đầu, đội ngũ nhân viên chuyên nghiệp và tận tâm. MGF có khả năng cung cấp ra thị trường hơn 2,5 triệu tấn sản phẩm chất lượng hàng năm, tự tin mang đến cho Khách Hàng những giải pháp tốt nhất với hiệu quả kinh tế cao, bền vững.
             </p>
         </div>
         <div class="branch-list">
@@ -261,10 +261,10 @@
         </div>
         <div class="section__content">
             <p>
-            Ngành chăn nuôi GREENFEED đã và đang hợp tác cùng các đối tác di truyền giống hàng đầu thế giới để phát triển hệ thống trang trại chăn nuôi hiệu quả &amp; bền vững hàng đầu; cung ứng nguồn con giống chất lượng với năng suất vượt trội cho người chăn nuôi và các sản phẩm thương phẩm phù hợp với nhu cầu &amp; thị hiếu người tiêu dùng.
+            Ngành chăn nuôi MGF đã và đang hợp tác cùng các đối tác di truyền giống hàng đầu thế giới để phát triển hệ thống trang trại chăn nuôi hiệu quả &amp; bền vững hàng đầu; cung ứng nguồn con giống chất lượng với năng suất vượt trội cho người chăn nuôi và các sản phẩm thương phẩm phù hợp với nhu cầu &amp; thị hiếu người tiêu dùng.
             </p>
             <p>
-            Ngành chăn nuôi heo của GREENFEED vinh dự là đại diện duy nhất của Việt Nam nằm trong
+            Ngành chăn nuôi heo của MGF vinh dự là đại diện duy nhất của Việt Nam nằm trong
             <strong>
             Top 37 công ty chăn nuôi lớn nhất toàn cầu (World Mega Producer 2024).
             </strong>
@@ -333,7 +333,7 @@
             “Nhà cung cấp thực phẩm hàng đầu – mang đến những sản phẩm cấp tiến, dinh dưỡng, ngon, an toàn và giá cả hợp lí cho mỗi gia đình Việt Nam.”
             </p>
             <p>
-            Là mảnh ghép hoàn thiện chuỗi thực phẩm lành 3F Plus, các thương hiệu thực phẩm của GREENFEED có sứ mệnh mang nguồn thịt và các sản phẩm lành-ngon-tiện lợi chế biến từ thịt đến với bữa ăn của hàng triệu gia đình Việt Nam. Đồng thời, hướng đến cung cấp giải pháp đầu ra dành cho các trại đối tác đáp ứng tiêu chuẩn, đồng hành cùng nhà chăn nuôi trên chặng đường chăn nuôi hiệu quả, bền vững.
+            Là mảnh ghép hoàn thiện chuỗi thực phẩm lành 3F Plus, các thương hiệu thực phẩm của MGF có sứ mệnh mang nguồn thịt và các sản phẩm lành-ngon-tiện lợi chế biến từ thịt đến với bữa ăn của hàng triệu gia đình Việt Nam. Đồng thời, hướng đến cung cấp giải pháp đầu ra dành cho các trại đối tác đáp ứng tiêu chuẩn, đồng hành cùng nhà chăn nuôi trên chặng đường chăn nuôi hiệu quả, bền vững.
             </p>
         </div>
         <div class="branch-list">
@@ -410,7 +410,7 @@
             “TRỞ THÀNH THƯƠNG HIỆU THỦY SẢN HÀNG ĐẦU TẠI VIỆT NAM”
             </p>
             <p>
-            GREENFEED đồng hành cùng người nuôi trong từng giai đoạn tích hợp, từ cung cấp bộ sản phẩm đầu vào chất lượng chuyên biệt cho từng loại thủy sản, quản lý vận hành giúp tối ưu hiệu quả và chi phí, đến theo dõi tiến độ và xây dựng hệ thống đầu ra để kết nối tiêu thụ với bên ngoài.
+            MGF đồng hành cùng người nuôi trong từng giai đoạn tích hợp, từ cung cấp bộ sản phẩm đầu vào chất lượng chuyên biệt cho từng loại thủy sản, quản lý vận hành giúp tối ưu hiệu quả và chi phí, đến theo dõi tiến độ và xây dựng hệ thống đầu ra để kết nối tiêu thụ với bên ngoài.
             </p>
         </div>
         <div class="branch-list">

@@ -10,7 +10,7 @@
         </div>
         <p>
          <strong>
-          CÔNG TY CỔ PHẦN GREENFEED VIỆT NAM
+          CÔNG TY CỔ PHẦN NÔNG NGHIỆP CÔNG NGHỆ CAO MGF
          </strong>
         </p>
         <p>
@@ -19,18 +19,18 @@
          </strong>
          <br/>
          Địa chỉ:
-         <a href="https://www.google.com/maps/place/GreenFeed+VietNam+-+LongAn/@10.6251181,106.4735345,369m/data=!3m1!1e3!4m14!1m7!3m6!1s0x310acb887909aa0b:0xde7ba49d50797ba8!2sGreenFeed+VietNam+-+LongAn!8m2!3d10.6251181!4d106.4741782!16s%2Fg%2F11rvvdl2b!3m5!1s0x310acb887909aa0b:0xde7ba49d50797ba8!8m2!3d10.6251181!4d106.4741782!16s%2Fg%2F11rvvdl2b?entry=ttu&amp;g_ep=EgoyMDI1MDcwOC4wIKXMDSoASAFQAw%3D%3D" rel="nofollow noopener sponsored" target="_blank">
-          Đường tỉnh 832, Ấp 5 Nhựt Chánh, Xã Bình Đức, Tỉnh Tây Ninh, Việt Nam
+         <a href="" rel="nofollow noopener sponsored" target="_blank">
+          TT19-09, khu đấu giá 31ha, Xã Gia Lâm, Thành Phố Hà Nội, Việt Nam
          </a>
          <br/>
          Số điện thoại:
-         <a href="tel:+84 272 363 2881">
-          +84 272 363 2881
+         <a href="tel:+84 98 773 8533">
+          +84 98 773 8533
          </a>
          <br/>
          Email:
-         <a href="mailto:info@greenfeed.com.vn">
-          info@greenfeed.com.vn
+         <a href="mailto:info@mgf.com.vn">
+          info@mgf.com.vn
          </a>
         </p>
         <p>
@@ -38,27 +38,27 @@
           <strong>
            Chịu trách nhiệm nội dung:
           </strong>
-          Ông Hồ Sĩ Lượng
+          Ông Hachi Tu
          </em>
          <br/>
          <em>
           <strong>
            Giấy phép thiết lập trang:
           </strong>
-          Số 02/GP-TTĐT cấp bởi Sở TT &amp; TT tỉnh Long An ngày 23/04/2019
+          Số XX/GP-TTĐT cấp bởi Sở TT &amp; TT tỉnh Hà Nội ngày 06/10/2025.
          </em>
         </p>
         <div class="socials">
-         <a class="facebook" href="https://www.facebook.com/greenfeedvn" rel="nofollow" target="_blank">
+         <a class="facebook" href="https://www.facebook.com/" rel="nofollow" target="_blank">
           <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/fb.svg"/>
          </a>
-         <a class="zalo-oa" href="https://zalo.me/greenfeedvn" rel="nofollow" target="_blank">
+         <a class="zalo-oa" href="https://zalo.me/" rel="nofollow" target="_blank">
           <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/icon-zalo.svg"/>
          </a>
-         <a class="linkedin" href="https://www.linkedin.com/company/greenfeed/" rel="nofollow" target="_blank">
+         <a class="linkedin" href="https://www.linkedin.com/" rel="nofollow" target="_blank">
           <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/in.svg"/>
          </a>
-         <a class="youtube" href="https://www.youtube.com/@GREENFEEDVIETNAM" rel="nofollow" target="_blank">
+         <a class="youtube" href="https://www.youtube.com/" rel="nofollow" target="_blank">
           <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/youtube-icon.svg"/>
          </a>
         </div>
@@ -71,7 +71,7 @@
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5518" id="menu-item-5518">
          <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu/ve-greenfeed/index.php">
           <span>
-           VỀ GREENFEED
+           VỀ MGF
           </span>
           <b class="caret">
           </b>
@@ -116,7 +116,7 @@
            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5529" id="menu-item-5529">
             <a href="cong-tiep-nhan-thong-tin-greenfeed/index.php">
              <span>
-              Cổng tiếp nhận thông tin GREENFEED
+              Cổng tiếp nhận thông tin MGF
              </span>
             </a>
            </li>
@@ -298,70 +298,70 @@
               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5600" id="menu-item-5600">
                <a href="https://www.greenfeed.com.vn/tool/fb_group_deeplink/vinhlong.php" rel="nofollow" target="_blank">
                 <span>
-                 GREENFEED Vĩnh Long
+                 MGF Vĩnh Long
                 </span>
                </a>
               </li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5601" id="menu-item-5601">
                <a href="https://www.greenfeed.com.vn/tool/fb_group_deeplink/longan.php" rel="nofollow" target="_blank">
                 <span>
-                 GREENFEED Long An
+                 MGF Long An
                 </span>
                </a>
               </li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5602" id="menu-item-5602">
                <a href="https://www.greenfeed.com.vn/tool/fb_group_deeplink/dongnai.php" rel="nofollow" target="_blank">
                 <span>
-                 GREENFEED Đồng Nai
+                 MGF Đồng Nai
                 </span>
                </a>
               </li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5603" id="menu-item-5603">
                <a href="https://www.greenfeed.com.vn/tool/fb_group_deeplink/binhdinh.php" rel="nofollow" target="_blank">
                 <span>
-                 GREENFEED Bình Định
+                 MGF Bình Định
                 </span>
                </a>
               </li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5604" id="menu-item-5604">
                <a href="https://www.greenfeed.com.vn/tool/fb_group_deeplink/hungyen.php" rel="nofollow" target="_blank">
                 <span>
-                 GREENFEED Hưng Yên
+                 MGF Hưng Yên
                 </span>
                </a>
               </li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5605" id="menu-item-5605">
                <a href="https://www.greenfeed.com.vn/tool/fb_group_deeplink/hanam.php">
                 <span>
-                 GREENFEED Hà Nam
+                 MGF Hà Nam
                 </span>
                </a>
               </li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5608" id="menu-item-5608">
                <a href="https://www.greenfeed.com.vn/tool/fb_group_deeplink/campuchia.php" rel="nofollow" target="_blank">
                 <span>
-                 GREENFEED Cambodia
+                 MGF Cambodia
                 </span>
                </a>
               </li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5609" id="menu-item-5609">
                <a href="https://www.greenfeed.com.vn/tool/fb_group_deeplink/myanmar.php" rel="nofollow" target="_blank">
                 <span>
-                 GREENFEED Myanmar
+                 MGF Myanmar
                 </span>
                </a>
               </li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5606" id="menu-item-5606">
                <a href="https://www.greenfeed.com.vn/tool/fb_group_deeplink/thuysan.php" rel="nofollow" target="_blank">
                 <span>
-                 GREENFEED Thủy Sản
+                 MGF Thủy Sản
                 </span>
                </a>
               </li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5607" id="menu-item-5607">
                <a href="https://www.greenfeed.com.vn/tool/fb_group_deeplink/outrace.php" rel="nofollow" target="_blank">
                 <span>
-                 GREENFEED Outrace
+                 MGF Outrace
                 </span>
                </a>
               </li>
@@ -466,7 +466,7 @@
      </div>
      <div class="copyright">
       <b>
-       © 2003-2025 GREENFEED Việt Nam
+       © 2003-2025 MGF Việt Nam
       </b>
      </div>
     </div>

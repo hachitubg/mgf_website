@@ -15,29 +15,29 @@
   <!-- main -->
   <main class="site-main" id="dt-main-content" role="main">
    <h1 class="sr-only">
-    GREENFEED Việt Nam
+    MGF Việt Nam
    </h1>
    <section class="banner" id="banner">
     <div class="banner-inner">
      <div class="banner__images owl-carousel banner-carousel owl-theme" style="display:block">
       <div class="banner__image">
        <a href="#">
-        <img alt="Trang trại gia súc, gia cầm của GREENFEED tại Bình Thuận" class="attachment-full size-full" decoding="async" fetchpriority="high" height="1235" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/trang-trai-gia-suc-gia-cam-greenfeed-binh-thuan.jpg" width="2560"/>
+        <img alt="Trang trại gia súc, gia cầm của MGF tại Bình Thuận" class="attachment-full size-full" decoding="async" fetchpriority="high" height="1235" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/trang-trai-gia-suc-gia-cam-greenfeed-binh-thuan.jpg" width="2560"/>
        </a>
       </div>
       <div class="banner__image">
        <a href="#">
-        <img alt="Nhà máy GREENFEED tại tỉnh Hà Nam" class="attachment-full size-full" decoding="async" height="926" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/nha-may-greenfeed-tai-tinh-ha-nam.jpg" width="1920"/>
+        <img alt="Nhà máy MGF tại tỉnh Hà Nam" class="attachment-full size-full" decoding="async" height="926" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/nha-may-greenfeed-tai-tinh-ha-nam.jpg" width="1920"/>
        </a>
       </div>
       <div class="banner__image">
        <a href="#">
-        <img alt="Trại Heo GREENFEED tại huyện Cẩm Mỹ tỉnh Đồng Nai" class="attachment-full size-full" decoding="async" height="1235" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/trai-heo-greenfeed-tai-huyen-cam-my-tinh-dong-nai.jpg" width="2560"/>
+        <img alt="Trại Heo MGF tại huyện Cẩm Mỹ tỉnh Đồng Nai" class="attachment-full size-full" decoding="async" height="1235" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/trai-heo-greenfeed-tai-huyen-cam-my-tinh-dong-nai.jpg" width="2560"/>
        </a>
       </div>
       <div class="banner__image">
        <a href="#">
-        <img alt="Trang trại gia súc, gia cầm của GREENFEED tại Bình Thuận" class="attachment-full size-full" decoding="async" height="926" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/trang-trai-gia-suc-gia-cam-tai-tinh-binh-thuan.jpg" width="1920"/>
+        <img alt="Trang trại gia súc, gia cầm của MGF tại Bình Thuận" class="attachment-full size-full" decoding="async" height="926" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/trang-trai-gia-suc-gia-cam-tai-tinh-binh-thuan.jpg" width="1920"/>
        </a>
       </div>
      </div>
@@ -45,15 +45,15 @@
       <div class="banner__content-inner">
        <div class="banner__slogan">
         <p>
-         CHUỖI THỰC PHẨM LÀNH TỪ TRANG TRẠI ĐẾN BÀN ĂN
+         CHUYÊN CUNG CẤP CÁC GIẢI PHÁP CHĂN NUÔI
         </p>
         <h2>
          <strong>
-          GROW ON
+          NĂNG LƯỢNG 
           <br class="om"/>
-          SHARED GOODNESS
+          XANH
          </strong>
-         Nuôi dưỡng điều lành – Đồng hành lớn mạnh
+         Tối ưu công nghệ sản xuất thức ăn chăn nuôi
         </h2>
         <div class="btns">
          <a class="banner-video-btn btn btn--outline" data-fancybox="" href="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/Greenfeed-Tong-Quan-Gioi-Thieu-Tap-Doan.mp4">
@@ -498,20 +498,20 @@
          Giới thiệu
         </span>
         <h3 class="section-title">
-         VỀ GREENFEED
+         VỀ MGF
         </h3>
        </div>
        <div class="brands__content">
         <h4>
          <strong>
-          Giải pháp chăn nuôi xanh trong chuỗi thực phẩm sạch 3F Plus (Feed – Farm – Food) của GREENFEED nuôi dưỡng những giá trị tốt lành nhất từ trang trại đến bữa cơm gia đình.
+          Giải pháp chăn nuôi xanh trong chuỗi thực phẩm sạch 3F Plus (Feed – Farm – Food) của MGF nuôi dưỡng những giá trị tốt lành nhất từ trang trại đến bữa cơm gia đình.
          </strong>
         </h4>
         <p>
-         Trong suốt chặng đường hơn 20 năm phát triển, GREENFEED tâm huyết mang lại những giải pháp đổi mới, sáng tạo nhằm xây dựng hệ sinh thái thực phẩm sạch bền vững. Chúng tôi tin rằng những giá trị tốt sẽ mang lại những thành quả lành từ giải pháp chăn nuôi bền vững. Nguồn cám sạch, con giống tốt là tiền đề cho vụ nuôi thành công, mang lại bữa ăn lành, ngon cho sức khoẻ của hàng triệu người tiêu dùng.
+         Trong suốt chặng đường phát triển, MGF luôn tâm huyết mang lại những giải pháp đổi mới, sáng tạo nhằm xây dựng hệ sinh thái thực phẩm sạch bền vững. Chúng tôi tin rằng những giá trị tốt sẽ mang lại những thành quả lành, xuất phát từ giải pháp chăn nuôi bền vững. Nguồn cám sạch, con giống tốt là tiền đề cho vụ nuôi thành công, mang lại bữa ăn lành, ngon, tốt cho sức khỏe của hàng triệu người tiêu dùng.
         </p>
         <p>
-         Chúng tôi tự hào góp phần tạo ra một hệ sinh thái thực phẩm sạch thịnh vượng, vì sự phát triển bền vững của môi trường, kinh tế và cộng đồng.
+         MGF tự hào góp phần tạo nên một hệ sinh thái thực phẩm sạch thịnh vượng, hướng đến sự phát triển bền vững của môi trường, kinh tế và cộng đồng.
         </p>
         <ul>
          <li>
@@ -548,6 +548,71 @@
        </h3>
       </div>
       <div class="products-carousel owl-carousel owl-theme carousel--style1">
+       <?php
+       // Include database connection
+       require_once '../includes/db.php';
+
+       try {
+           // Query to get featured products (limit 6, ordered by display_order)
+           $stmt = $pdo->prepare("
+               SELECT p.*, c.name as category_name
+               FROM products p
+               LEFT JOIN categories c ON p.category_id = c.id
+               WHERE c.is_active = 1
+               ORDER BY p.display_order ASC, p.created_at DESC
+               LIMIT 6
+           ");
+           $stmt->execute();
+           $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+           foreach ($products as $product):
+               // Get first image if available
+               $imageStmt = $pdo->prepare("SELECT image_path FROM product_images WHERE product_id = ? ORDER BY sort_order ASC LIMIT 1");
+               $imageStmt->execute([$product['id']]);
+               $image = $imageStmt->fetch(PDO::FETCH_ASSOC);
+               $imageUrl = $image ? '../uploads/products/' . $image['image_path'] : 'https://via.placeholder.com/495x495/0C7A07/FFFFFF?text=' . urlencode($product['title']);
+
+               // Extract first paragraph from description for subtitle
+               $description = strip_tags($product['description']);
+               $subtitle = substr($description, 0, 100) . (strlen($description) > 100 ? '...' : '');
+       ?>
+       <div class="product-item">
+        <a class="product-item__link" href="san-pham/<?php echo htmlspecialchars($product['slug']); ?>.php">
+         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+        </a>
+        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
+         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b0<?php echo $product['id']; ?>" transform="translate(-10 -10)">
+         </path>
+         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b2<?php echo $product['id']; ?>" transform="translate(-10 -10)">
+         </path>
+         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b1<?php echo $product['id']; ?>" transform="translate(-10 -10)">
+         </path>
+        </svg>
+        <div class="product-item__image">
+         <img alt="<?php echo htmlspecialchars($product['title']); ?>" class="attachment-full size-full" decoding="async" height="495" src="<?php echo htmlspecialchars($imageUrl); ?>" width="495"/>
+        </div>
+        <div class="product-item__content">
+         <span class="subtitle">
+          <?php echo htmlspecialchars($product['category_name'] ?? 'Sản phẩm'); ?>
+         </span>
+         <h3>
+          <?php echo htmlspecialchars($product['title']); ?>
+         </h3>
+         <div class="description">
+          <p>
+           <?php echo htmlspecialchars($subtitle); ?>
+          </p>
+         </div>
+        </div>
+        <a class="product-item__link-abs" href="san-pham/<?php echo htmlspecialchars($product['slug']); ?>.php">
+        </a>
+       </div>
+       <?php
+           endforeach;
+       } catch (PDOException $e) {
+           // Fallback to static content if database error
+           echo '<!-- Database error: ' . htmlspecialchars($e->getMessage()) . ' -->';
+       ?>
        <div class="product-item">
         <a class="product-item__link" href="thuc-an-chan-nuoi-gia-suc-gia-cam/vi/index.php" target="_blank">
          <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
@@ -579,167 +644,16 @@
         <a class="product-item__link-abs" href="thuc-an-chan-nuoi-gia-suc-gia-cam/vi/index.php" target="_blank">
         </a>
        </div>
-       <div class="product-item">
-        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-chan-nuoi/index.php">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b01" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b21" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b11" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="" class="attachment-full size-full" decoding="async" height="371" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/DSC1407-1.jpg" width="372"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          FARM
-         </span>
-         <h3>
-          Chăn nuôi
-         </h3>
-         <div class="description">
-          <p>
-           HỆ THỐNG TRANG TRẠI CHĂN NUÔI HIỆU QUẢ VÀ BỀN VỮNG
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-chan-nuoi/index.php">
-        </a>
-       </div>
-       <div class="product-item">
-        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-thuc-pham/index.php">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b02" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b22" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b12" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="" class="attachment-full size-full" decoding="async" height="357" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/Wyn_0120_a-1.jpg" width="357"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          FOOD
-         </span>
-         <h3>
-          Thực phẩm
-         </h3>
-         <div class="description">
-          <p>
-           THỰC PHẨM LÀNH, NGON, DINH DƯỠNG CHO BỮA ĂN TRỌN VẸN
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-thuc-pham/index.php">
-        </a>
-       </div>
-       <div class="product-item">
-        <a class="product-item__link" href="thuy-san/index.php" target="_blank">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b03" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b23" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b13" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="" class="attachment-full size-full" decoding="async" height="357" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/service-img-04.jpg.jpg" width="357"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          AQUA
-         </span>
-         <h3>
-          Thuỷ hải sản
-         </h3>
-         <div class="description">
-          <p>
-           CHUỖI GIÁ TRỊ NGÀNH THỦY HẢI SẢN HIỆU QUẢ VÀ BỀN VỮNG
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="thuy-san/index.php" target="_blank">
-        </a>
-       </div>
-       <div class="product-item">
-        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-van-tai/index.php">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b04" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b24" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b14" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="Xe tải QD Logistics thuộc GREENFEED đang vận chuyển hàng" class="attachment-full size-full" decoding="async" height="517" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/067250697f06d7db3d214f3f68857324-e1740856996917.jpg" width="540"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          LOGISTICS
-         </span>
-         <h3>
-          Vận tải
-         </h3>
-         <div class="description">
-          <p>
-           ĐỐI TÁC VẬN TẢI CHIẾN LƯỢC HIỆU QUẢ
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-van-tai/index.php">
-        </a>
-       </div>
-       <div class="product-item">
-        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-cong-nghe/index.php">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b05" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b25" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b15" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="Hạ tầng và Công nghệ tại GREENFEED" class="attachment-full size-full" decoding="async" height="512" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/ha-tang-va-cong-nghe-tai-greenfeed.jpg" width="512"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          TECH
-         </span>
-         <h3>
-          Công nghệ
-         </h3>
-         <div class="description">
-          <p>
-           GIẢI PHÁP CNTT-TT VÀ CHUYỂN ĐỔI SỐ TOÀN DIỆN
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-cong-nghe/index.php">
-        </a>
-       </div>
+       <?php } ?>
       </div>
      </div>
 
     </div>
    </section>
-   <section class="clients" id="clients">
+
+
+   <!-- Đối tác danh tiếng toàn cầu -->
+   <!-- <section class="clients" id="clients">
     <div class="container">
      <div class="clients-inner">
       <div class="section-title-wrapper text-center">
@@ -770,16 +684,18 @@
 
      </div>
     </div>
-   </section>
-   <section class="newsletter-section" id="newsletter">
+   </section> -->
+   
+   <!-- Nhận ngay thông tin mới nhất từ MGF -->
+   <!-- <section class="newsletter-section" id="newsletter">
     <div class="section-bg">
-     <img alt="Đàn Heo con đang ở trong chuồng tại 1 trại của GREENFEED" class="attachment-full size-full" decoding="async" height="257" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/dan-heo-con-dang-o-trong-chuong-greenfeed-viet-nam.jpg" width="1600"/>
+     <img alt="Đàn Heo con đang ở trong chuồng tại 1 trại của MGF" class="attachment-full size-full" decoding="async" height="257" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/dan-heo-con-dang-o-trong-chuong-greenfeed-viet-nam.jpg" width="1600"/>
     </div>
     <div class="container">
      <div class="newsletter-section-inner">
       <div class="section-title-wrapper">
        <h3 class="newsletter-title section-title">
-        Nhận ngay thông tin mới nhất từ GREENFEED
+        Nhận ngay thông tin mới nhất từ MGF
        </h3>
       </div>
       <div class="newsletter-trigger">
@@ -790,8 +706,9 @@
       </div>
      </div>
     </div>
-    
-   </section>
+   </section> -->
+
+   <!-- Tin tức và Sự kiện -->
    <section class="news" id="news">
     <div class="container">
      <div class="news-inner">
@@ -879,7 +796,7 @@
          <div class="article-box">
           <div class="article__image">
            <a href="bo-ba-giai-phap-dinh-duong-thu-y-greenfeed-la-thuong-hieu-vang-nong-nghiep-viet-nam-2025/index.php">
-            <img alt="BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y GREENFEED LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025" class="attachment-full size-full wp-post-image" decoding="async" height="675" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/Website-GFxEB-GoldBrandNNVN-Oct25.jpg" width="1000"/>
+            <img alt="BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y MGF LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025" class="attachment-full size-full wp-post-image" decoding="async" height="675" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/Website-GFxEB-GoldBrandNNVN-Oct25.jpg" width="1000"/>
            </a>
            <div class="article_category">
             Thức ăn chăn nuôi
@@ -896,9 +813,9 @@
              338,778
             </span>
            </div>
-           <h3 class="article__title" title="BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y GREENFEED LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025">
+           <h3 class="article__title" title="BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y MGF LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025">
             <a href="bo-ba-giai-phap-dinh-duong-thu-y-greenfeed-la-thuong-hieu-vang-nong-nghiep-viet-nam-2025/index.php">
-             BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y GREENFEED LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025
+             BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y MGF LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025
             </a>
            </h3>
            <a class="readmore" href="bo-ba-giai-phap-dinh-duong-thu-y-greenfeed-la-thuong-hieu-vang-nong-nghiep-viet-nam-2025/index.php">
@@ -949,7 +866,7 @@
          <div class="article-box">
           <div class="article__image">
            <a href="greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet/index.php">
-            <img alt="GREENFEED ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT" class="attachment-full size-full wp-post-image" decoding="async" height="2560" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet-1-scaled.jpg" width="2560"/>
+            <img alt="MGF ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT" class="attachment-full size-full wp-post-image" decoding="async" height="2560" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet-1-scaled.jpg" width="2560"/>
            </a>
            <div class="article_category">
             Tiếp Sức Nhà Nông
@@ -966,9 +883,9 @@
              179,916
             </span>
            </div>
-           <h3 class="article__title" title="GREENFEED ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT">
+           <h3 class="article__title" title="MGF ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT">
             <a href="greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet/index.php">
-             GREENFEED ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT
+             MGF ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT
             </a>
            </h3>
            <a class="readmore" href="greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet/index.php">
@@ -984,7 +901,7 @@
          <div class="article-box">
           <div class="article__image">
            <a href="mua-vang-ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025/index.php">
-            <img alt="“MÙA VÀNG” BA CHIẾN THẮNG CỦA GREENFEED TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025" class="attachment-full size-full wp-post-image" decoding="async" height="900" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025-6.jpg" width="1600"/>
+            <img alt="“MÙA VÀNG” BA CHIẾN THẮNG CỦA MGF TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025" class="attachment-full size-full wp-post-image" decoding="async" height="900" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025-6.jpg" width="1600"/>
            </a>
            <div class="article_category">
             Hành trình lớn mạnh
@@ -1001,9 +918,9 @@
              538,791
             </span>
            </div>
-           <h3 class="article__title" title="“MÙA VÀNG” BA CHIẾN THẮNG CỦA GREENFEED TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025">
+           <h3 class="article__title" title="“MÙA VÀNG” BA CHIẾN THẮNG CỦA MGF TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025">
             <a href="mua-vang-ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025/index.php">
-             “MÙA VÀNG” BA CHIẾN THẮNG CỦA GREENFEED TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025
+             “MÙA VÀNG” BA CHIẾN THẮNG CỦA MGF TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025
             </a>
            </h3>
            <a class="readmore" href="mua-vang-ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025/index.php">
@@ -1019,7 +936,7 @@
          <div class="article-box">
           <div class="article__image">
            <a href="greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025/index.php">
-            <img alt="GREENFEED GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025" class="attachment-full size-full wp-post-image" decoding="async" height="2560" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025-9b-scaled.jpg" width="2560"/>
+            <img alt="MGF GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025" class="attachment-full size-full wp-post-image" decoding="async" height="2560" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025-9b-scaled.jpg" width="2560"/>
            </a>
            <div class="article_category">
             Trang trại và con giống
@@ -1036,9 +953,9 @@
              411,510
             </span>
            </div>
-           <h3 class="article__title" title="GREENFEED GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025">
+           <h3 class="article__title" title="MGF GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025">
             <a href="greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025/index.php">
-             GREENFEED GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025
+             MGF GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025
             </a>
            </h3>
            <a class="readmore" href="greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025/index.php">
@@ -1054,7 +971,7 @@
          <div class="article-box">
           <div class="article__image">
            <a href="greenfeed-va-hanh-trinh-tham-gia-chuoi-gia-tri-thuy-hai-san-toan-cau/index.php">
-            <img alt="GREENFEED VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU" class="attachment-full size-full wp-post-image" decoding="async" height="673" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/Trai-thuy-hai-san-greenfeed-3.jpg" width="1029"/>
+            <img alt="MGF VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU" class="attachment-full size-full wp-post-image" decoding="async" height="673" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/Trai-thuy-hai-san-greenfeed-3.jpg" width="1029"/>
            </a>
            <div class="article_category">
             Thủy hải sản
@@ -1071,9 +988,9 @@
              319,638
             </span>
            </div>
-           <h3 class="article__title" title="GREENFEED VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU">
+           <h3 class="article__title" title="MGF VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU">
             <a href="greenfeed-va-hanh-trinh-tham-gia-chuoi-gia-tri-thuy-hai-san-toan-cau/index.php">
-             GREENFEED VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU
+             MGF VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU
             </a>
            </h3>
            <a class="readmore" href="greenfeed-va-hanh-trinh-tham-gia-chuoi-gia-tri-thuy-hai-san-toan-cau/index.php">
@@ -1091,6 +1008,8 @@
      </div>
     </div>
    </section>
+
+
    <section class="layers" id="layers">
     <div class="container">
      <div class="layers-inner">
@@ -1148,7 +1067,10 @@
     </div>
 
    </section>
-   <section class="development-section" id="development">
+
+
+    <!-- Cộng đồng bền vững -->
+   <!-- <section class="development-section" id="development">
     <div class="container">
      <div class="development-section-inner">
       <div class="development-section__images">
@@ -1174,7 +1096,7 @@
          Cộng đồng bền vững
         </h3>
         <p class="description">
-         GREENFEED cam kết tạo ra giá trị bền vững cho cộng đồng thông qua các chương trình nâng cao chất lượng cuộc sống, đặc biệt là phụ nữ và trẻ em, tại các khu vực hoạt động. Đây là cam kết lâu dài nhằm lan tỏa những giá trị tích cực và xây dựng cộng đồng phát triển bền vững.
+         MGF cam kết tạo ra giá trị bền vững cho cộng đồng thông qua các chương trình nâng cao chất lượng cuộc sống, đặc biệt là phụ nữ và trẻ em, tại các khu vực hoạt động. Đây là cam kết lâu dài nhằm lan tỏa những giá trị tích cực và xây dựng cộng đồng phát triển bền vững.
         </p>
        </div>
        <div class="development-accordions">
@@ -1276,7 +1198,7 @@
            </div>
           </h4>
           <p>
-           GREENFEED luôn ấp ủ mong muốn dùng nguồn lực của mình để góp sức nâng cao dinh dưỡng cho trẻ em Việt Nam
+           MGF luôn ấp ủ mong muốn dùng nguồn lực của mình để góp sức nâng cao dinh dưỡng cho trẻ em Việt Nam
           </p>
           <a class="viewmore" href="phat-trien-ben-vung/s-xa-hoi-ben-vung/cong-dong-ben-vung/bua-an-tron-ven/index.php">
            Tìm hiểu thêm
@@ -1353,7 +1275,7 @@
            </div>
           </h4>
           <p>
-           Là một trong những hoạt động phúc lợi của GREENFEED với sự chung tay và đồng hành của tập thể nhân viên
+           Là một trong những hoạt động phúc lợi của MGF với sự chung tay và đồng hành của tập thể nhân viên
           </p>
           <a class="viewmore" href="phat-trien-ben-vung/s-xa-hoi-ben-vung/cong-dong-ben-vung/chap-canh-uoc-mo/index.php">
            Tìm hiểu thêm
@@ -1447,7 +1369,7 @@
            </div>
           </h4>
           <p>
-           GREENFEED hiểu rằng sự phát triển bền vững của doanh nghiệp luôn gắn liền với sự thịnh vượng của cộng đồng địa phương.
+           MGF hiểu rằng sự phát triển bền vững của doanh nghiệp luôn gắn liền với sự thịnh vượng của cộng đồng địa phương.
           </p>
           <a class="viewmore" href="phat-trien-ben-vung/s-xa-hoi-ben-vung/cong-dong-ben-vung/ho-tro-cong-dong/index.php">
            Tìm hiểu thêm
@@ -1528,8 +1450,11 @@
      </div>
     </div>
 
-   </section>
-   <section class="certificates" id="certificates">
+   </section> -->
+
+
+   <!-- Chứng nhận và Giải thưởng -->
+   <!-- <section class="certificates" id="certificates">
     <div class="container">
      <div class="certificates-inner">
       <div class="section-title-wrapper text-center">
@@ -1542,8 +1467,8 @@
       </div>
       <div class="certificates-list owl-carousel owl-theme carousel--style1">
        <div class="certificate-item">
-        <a class="lightbox" data-caption="Best Aquaculture Practices" data-fancybox="gallery" href="https://www.greenfeed.com.vn/wp-content/uploads/2025/08/BAP-Feed-Mill-2025-GREENFEED-1-560x792.png">
-         <img alt="GREENFEED - Global Seafood Alliance BAP Certificate" class="attachment-dt-thumbnail-medium size-dt-thumbnail-medium" decoding="async" height="792" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/08/BAP-Feed-Mill-2025-GREENFEED-1-560x792.png" width="560"/>
+        <a class="lightbox" data-caption="Best Aquaculture Practices" data-fancybox="gallery" href="https://www.greenfeed.com.vn/wp-content/uploads/2025/08/BAP-Feed-Mill-2025-MGF-1-560x792.png">
+         <img alt="MGF - Global Seafood Alliance BAP Certificate" class="attachment-dt-thumbnail-medium size-dt-thumbnail-medium" decoding="async" height="792" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/08/BAP-Feed-Mill-2025-MGF-1-560x792.png" width="560"/>
          <div class="certificate-item__title">
           Chứng nhận
           <span>
@@ -1611,7 +1536,7 @@
 
      </div>
     </div>
-   </section>
+   </section> -->
 
   </main>
 

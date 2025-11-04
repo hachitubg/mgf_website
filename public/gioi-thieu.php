@@ -31,13 +31,13 @@
        </li>
        <li>
         <span class="active">
-         Về GREENFEED
+         Về MGF
         </span>
        </li>
       </ul>
      </div>
      <h1 class="header-title">
-      Về GREENFEED
+      Về MGF
      </h1>
     </div>
    </div>
@@ -46,7 +46,7 @@
    <!-- <div class="page-nav page-nav-4644">
     <div class="container">
      <a class="active" href="index.php">
-      Về GREENFEED
+      Về MGF
      </a>
      <a class="" href="ccos.php">
       Hành trình lớn mạnh
@@ -63,17 +63,17 @@
          Giới thiệu
         </div>
         <h2 class="section-title">
-         Về GREENFEED
+         Về MGF
         </h2>
        </div>
        <div class="philosophy__content">
         <p>
          <strong>
-          GREENFEED là tập đoàn nông nghiệp – thực phẩm hàng đầu Việt Nam với chuỗi thực phẩm tích hợp 3F Plus (Feed – Farm – Food) – “Lành ngon từ trang trại đến bàn ăn”. Từ khi thành lập năm 2003, chúng tôi luôn kiên định sứ mệnh xây dựng các thương hiệu chất lượng, đáng tin cậy và không ngừng kiến tạo giá trị bền vững cho khách hàng và xã hội.​
+          MGF là tập đoàn nông nghiệp – thực phẩm hàng đầu Việt Nam với chuỗi thực phẩm tích hợp 3F Plus (Feed – Farm – Food) – “Lành ngon từ trang trại đến bàn ăn”. Từ khi thành lập năm 2003, chúng tôi luôn kiên định sứ mệnh xây dựng các thương hiệu chất lượng, đáng tin cậy và không ngừng kiến tạo giá trị bền vững cho khách hàng và xã hội.​
          </strong>
         </p>
         <p>
-         Với hệ thống hàng chục nhà máy và trang trại chuẩn quốc tế trải khắp Việt Nam, Lào, Campuchia và Myanmar, GREENFEED hướng đến trở thành thương hiệu hàng đầu, hiệu quả, và đáng tin cậy trên toàn chuỗi thực phẩm toàn cầu cùng các ứng dụng công nghệ vượt trội.​
+         Với hệ thống hàng chục nhà máy và trang trại chuẩn quốc tế trải khắp Việt Nam, Lào, Campuchia và Myanmar, MGF hướng đến trở thành thương hiệu hàng đầu, hiệu quả, và đáng tin cậy trên toàn chuỗi thực phẩm toàn cầu cùng các ứng dụng công nghệ vượt trội.​
         </p>
         <p>
          <a class="btn btn--primary" href="https://greenfeed.bxht.info/ve-greenfeed/" style="display: none;">
@@ -521,12 +521,12 @@
        <div class="brands__content">
         <p>
          <span style="font-weight: 400;">
-          GREENFEED tin rằng những giá trị tốt sẽ mang lại những thành quả lành từ giải pháp chăn nuôi bền vững. Nguồn cám sạch, con giống tốt là tiền đề cho vụ nuôi thành công, mang lại bữa ăn lành, ngon cho sức khỏe của hàng triệu người tiêu dùng. Môi trường làm việc tốt giúp nuôi dưỡng những tư duy đột phá, đổi mới sáng tạo, khơi nguồn cho những tận tâm phụng sự, những nỗ lực, cam kết vì thành công của đối tác, khách hàng và những đối tượng dự phần khác.
+          MGF tin rằng những giá trị tốt sẽ mang lại những thành quả lành từ giải pháp chăn nuôi bền vững. Nguồn cám sạch, con giống tốt là tiền đề cho vụ nuôi thành công, mang lại bữa ăn lành, ngon cho sức khỏe của hàng triệu người tiêu dùng. Môi trường làm việc tốt giúp nuôi dưỡng những tư duy đột phá, đổi mới sáng tạo, khơi nguồn cho những tận tâm phụng sự, những nỗ lực, cam kết vì thành công của đối tác, khách hàng và những đối tượng dự phần khác.
          </span>
         </p>
         <p>
          <span style="font-weight: 400;">
-          Không ngừng phát triển giải pháp tích hợp toàn chuỗi 3F Plus, GREENFEED đặt tâm huyết sẻ chia, lan tỏa những giá trị lành. Với cam kết phát triển bền vững, chúng tôi đã, đang và sẽ luôn nỗ lực tạo ra một hệ sinh thái thực phẩm sạch thịnh vượng, vì sự phát triển cân bằng của môi trường, kinh tế và cả cộng đồng.​
+          Không ngừng phát triển giải pháp tích hợp toàn chuỗi 3F Plus, MGF đặt tâm huyết sẻ chia, lan tỏa những giá trị lành. Với cam kết phát triển bền vững, chúng tôi đã, đang và sẽ luôn nỗ lực tạo ra một hệ sinh thái thực phẩm sạch thịnh vượng, vì sự phát triển cân bằng của môi trường, kinh tế và cả cộng đồng.​
          </span>
         </p>
         <ul>
@@ -560,29 +560,43 @@
      <div class="mision-inner">
       <div class="section-title-wrapper">
        <h2 class="section-title">
-        GREENFEED WAY
+        MGF WAY
        </h2>
       </div>
-      <div class="mision-row mision">
-       <div class="title">
-        Sứ mệnh
-       </div>
-       <div class="content">
-        <p>
-         GREENFEED xây dựng các thương hiệu chất lượng, đáng tin cậy và không ngừng kiến tạo giá trị bền vững cho khách hàng và xã hội.
-        </p>
-       </div>
-      </div>
+
       <div class="mision-row vision">
        <div class="title">
         Tầm nhìn
        </div>
        <div class="content">
         <p>
-         GREENFEED trở thành thương hiệu hàng đầu, hiệu quả, đáng tin cậy trên toàn chuỗi thực phẩm trong và ngoài nước cùng các ứng dụng công nghệ vượt trội.
+         Đóng vai trò quan trọng trong việc nuôi dưỡng dân số thế giới bằng phương thức phù hợp với con người, động vật và môi trường.
         </p>
        </div>
       </div>
+
+      <div class="mision-row mision">
+       <div class="title">
+        Sứ mệnh
+       </div>
+       <div class="content">
+        <p>
+         Cung cấp thức ăn chăn nuôi chất lượng cao, thực phẩm an toàn, giải pháp bền vững – tạo chuỗi giá trị tốt nhất cho cộng đồng.
+        </p>
+       </div>
+      </div>
+
+      <div class="mision-row vision">
+       <div class="title">
+        Chiến lược
+       </div>
+       <div class="content">
+        <p>
+         Giữ vững vị thế dẫn đầu, tối ưu hóa giá trị gia tăng thông qua kiến thức dinh dưỡng, sản xuất và con giống.
+        </p>
+       </div>
+      </div>
+
       <div class="mision-row value">
        <div class="title">
         Giá trị
@@ -655,18 +669,18 @@
       <div class="culture__contents">
        <div class="section-title-wrapper">
         <div class="section-subtitle">
-         GREENFEED WAY
+         MGF WAY
         </div>
         <h2 class="section-title">
          Hành vi cần thể hiện
          <br/>
-         của GREENFEEDERS
+         của MFDERS
         </h2>
        </div>
        <div class="culture__content">
         <p>
          <span style="font-weight: 400;">
-          Tại GREENFEED, những chuẩn mực này là kim chỉ nam để con người GREENFEED ứng dụng trong công việc và giao tiếp. Những hành vi này sẽ tiếp tục định hình cách làm việc và những chuẩn mực ứng xử của con người GREENFEED trong nội bộ và với mọi đối tượng dự phần.
+          Tại MGF, những chuẩn mực này là kim chỉ nam để con người MGF ứng dụng trong công việc và giao tiếp. Những hành vi này sẽ tiếp tục định hình cách làm việc và những chuẩn mực ứng xử của con người MGF trong nội bộ và với mọi đối tượng dự phần.
          </span>
         </p>
         <p>

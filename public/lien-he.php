@@ -48,7 +48,7 @@
          Liên hệ
         </span>
         <h2 class="form__title">
-         GREENFEED VIỆT NAM
+         MGF VIỆT NAM
         </h2>
         <span class="form__close close-btn">
          <img alt="Close" height="10" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/close.svg" width="10"/>
@@ -1100,7 +1100,7 @@
               <a href="ccos.php" rel="noopener" target="_blank">
                chính sách bảo mật
               </a>
-              của GREENFEED Vietnam.
+              của MGF Vietnam.
              </p>
             </label>
            </div>
@@ -1108,7 +1108,7 @@
             <input checked="" class="form-control checkbox-control" id="newsletter_#cooperate" name="newsletter" type="checkbox" value="1"/>
             <label for="newsletter_#cooperate">
              <p>
-              Tôi đồng ý nhận thông tin mới nhất từ GREENFEED Vietnam.
+              Tôi đồng ý nhận thông tin mới nhất từ MGF Vietnam.
              </p>
             </label>
            </div>
@@ -1546,7 +1546,7 @@
                             if(flag)
                             {
                                                                 var formData = form.serialize();
-                                 formData = formData+"&SubmitPlatform=Website&SourceMedium=" + 'Unknown'+"&current_url="+window.location.href+"&current_title=Liên hệ - GREENFEED Việt Nam";
+                                 formData = formData+"&SubmitPlatform=Website&SourceMedium=" + 'Unknown'+"&current_url="+window.location.href+"&current_title=Liên hệ - MGF Việt Nam";
                                 jQuery.ajax({
                                     url: 'https://www.greenfeed.com.vn/wp-admin/admin-ajax.php',
                                     type: "POST",
@@ -1755,7 +1755,7 @@
     <div class="contact-offices">
      <div class="company-info">
       <h2>
-       CÔNG TY CỔ PHẦN GREENFEED VIỆT NAM
+       CÔNG TY CỔ PHẦN NÔNG NGHIỆP CÔNG NGHỆ CAO MGF
       </h2>
       <p>
        <strong style="font-weight: 500;">
@@ -1764,19 +1764,19 @@
       </p>
       <p>
        <a data-schema-attribute="" href="https://www.google.com/maps/place/GreenFeed+VietNam+-+LongAn/@10.6251181,106.4735345,369m/data=!3m1!1e3!4m14!1m7!3m6!1s0x310acb887909aa0b:0xde7ba49d50797ba8!2sGreenFeed+VietNam+-+LongAn!8m2!3d10.6251181!4d106.4741782!16s%2Fg%2F11rvvdl2b!3m5!1s0x310acb887909aa0b:0xde7ba49d50797ba8!8m2!3d10.6251181!4d106.4741782!16s%2Fg%2F11rvvdl2b?entry=ttu&amp;g_ep=EgoyMDI1MDcwOC4wIKXMDSoASAFQAw%3D%3D" rel="noopener" target="_blank">
-        Đường tỉnh 832, Ấp 5 Nhựt Chánh, Xã Bình Đức, Tỉnh Tây Ninh, Việt Nam
+        TT19-09, khu đấu giá 31ha, Xã Gia Lâm, Thành Phố Hà Nội, Việt Nam
        </a>
       </p>
       <p>
        Số điện thoại:
        <a href="tel:+842723632881">
-        +84 272 363 2881
+        +84 98 773 8533
        </a>
       </p>
       <p>
        Email:
-       <a href="mailto:info@greenfeed.com.vn">
-        info@greenfeed.com.vn
+       <a href="mailto:info@mgf.com.vn">
+        info@mgf.com.vn
        </a>
        |  Email truyền thông:
        <a href="mailto:truyenthong@greenfeed.com.vn">
@@ -1801,7 +1801,7 @@
          <div class="office-item__address">
           <img alt="Location" height="10" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/Map.svg" width="10"/>
           <p>
-           <a href="https://www.google.com/maps/place/GREENFEED+Việt+Nam+(Văn+phòng+TP.+HCM)/@10.7826153,106.6973054,138m/data=!3m1!1e3!4m6!3m5!1s0x31752f3b142e0f21:0x6ef4afcd99b61c9b!8m2!3d10.7827533!4d106.6974318!16s%2Fg%2F11f636shtq?entry=ttu&amp;g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" rel="nofollow noopener sponsored" target="_blank">
+           <a href="https://www.google.com/maps/place/MGF+Việt+Nam+(Văn+phòng+TP.+HCM)/@10.7826153,106.6973054,138m/data=!3m1!1e3!4m6!3m5!1s0x31752f3b142e0f21:0x6ef4afcd99b61c9b!8m2!3d10.7827533!4d106.6974318!16s%2Fg%2F11f636shtq?entry=ttu&amp;g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" rel="nofollow noopener sponsored" target="_blank">
             Tầng 22, tòa nhà Centec, 72 – 74 Nguyễn Thị Minh Khai, phường Xuân Hòa, TP. HCM.
            </a>
           </p>
@@ -1820,7 +1820,7 @@
          <div class="office-item__address">
           <img alt="Location" height="10" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/Map.svg" width="10"/>
           <p>
-           <a href="https://www.google.com/maps/place/GREENFEED+ĐỒNG+NAI/@10.98594,106.9466864,17z/data=!3m1!4b1!4m6!3m5!1s0x3174e7f416feeee3:0x6f926e30b055728f!8m2!3d10.9859348!4d106.951552!16s%2Fg%2F11fj58dcd_?entry=ttu&amp;g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D" rel="nofollow noopener sponsored" target="_blank">
+           <a href="https://www.google.com/maps/place/MGF+ĐỒNG+NAI/@10.98594,106.9466864,17z/data=!3m1!4b1!4m6!3m5!1s0x3174e7f416feeee3:0x6f926e30b055728f!8m2!3d10.9859348!4d106.951552!16s%2Fg%2F11fj58dcd_?entry=ttu&amp;g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D" rel="nofollow noopener sponsored" target="_blank">
             KCN Sông Mây, xã Bình Minh, tỉnh Đồng Nai.
            </a>
           </p>
@@ -1915,7 +1915,7 @@
        <div class="offices-list flex">
         <div class="office-item">
          <h3 class="office-item__title">
-          GREENFEED Campuchia
+          MGF Campuchia
          </h3>
          <div class="office-item__address">
           <img alt="Location" height="10" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/Map.svg" width="10"/>
@@ -1932,7 +1932,7 @@
         </div>
         <div class="office-item">
          <h3 class="office-item__title">
-          GREENFEED Myanmar
+          MGF Myanmar
          </h3>
          <div class="office-item__address">
           <img alt="Location" height="10" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/Map.svg" width="10"/>
@@ -1951,7 +1951,7 @@
         </div>
         <div class="office-item">
          <h3 class="office-item__title">
-          GREENFEED Lào
+          MGF Lào
          </h3>
          <div class="office-item__address">
           <img alt="Location" height="10" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/Map.svg" width="10"/>

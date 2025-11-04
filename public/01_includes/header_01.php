@@ -77,7 +77,7 @@
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4480" id="menu-item-4480">
              <a href="gioi-thieu/ve-greenfeed/index.php">
               <span>
-               Về GREENFEED
+               Về MGF
               </span>
              </a>
             </li>

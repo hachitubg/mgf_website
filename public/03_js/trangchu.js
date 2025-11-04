@@ -1166,7 +1166,7 @@ jQuery(document).ready(function ($) {
                             if(flag)
                             {
                                                                 var formData = form.serialize();
-                                formData = formData+"&SubmitPlatform=Website&SourceMedium=" + 'Unknown'+"&current_url="+window.location.href+"&current_title=Công ty Cổ phần GREENFEED Việt Nam";
+                                formData = formData+"&SubmitPlatform=Website&SourceMedium=" + 'Unknown'+"&current_url="+window.location.href+"&current_title=Công ty Cổ phần MGF Việt Nam";
                                 jQuery.ajax({
                                     url: 'https://www.greenfeed.com.vn/wp-admin/admin-ajax.php',
                                     type: "POST",

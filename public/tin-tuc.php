@@ -59,7 +59,7 @@
             </h3>
             <p class="expert">
              <span>
-              “Với GREENFEED, công nghệ không chỉ là công cụ tối ưu hiệu quả, mà còn là người bạn đồng hành giúp con người làm việc thông minh hơn, sáng tạo hơn và lan tỏa điều lành rộng hơn”. Bà Nguyễn Tâm Trang, Phó Chủ tịch HĐĐH, TGĐ Khối Nhân sự và Dịch vụ nơi làm việc chia sẻ về chuyển đổi năng lực của tổ chức trong thời đại AI tại sự kiện The Makeover 2025.
+              “Với MGF, công nghệ không chỉ là công cụ tối ưu hiệu quả, mà còn là người bạn đồng hành giúp con người làm việc thông minh hơn, sáng tạo hơn và lan tỏa điều lành rộng hơn”. Bà Nguyễn Tâm Trang, Phó Chủ tịch HĐĐH, TGĐ Khối Nhân sự và Dịch vụ nơi làm việc chia sẻ về chuyển đổi năng lực của tổ chức trong thời đại AI tại sự kiện The Makeover 2025.
              </span>
             </p>
             <div class="article_meta">
@@ -84,7 +84,7 @@
           <div class="article-box">
            <div class="article__image">
             <a href="ccos.php">
-             <img alt="MỘT NGÀY NGỌT NGÀO THEO CÁCH RẤT GREENFEED" class="attachment-full size-full wp-post-image" decoding="async" height="2000" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/02.png" width="2000"/>
+             <img alt="MỘT NGÀY NGỌT NGÀO THEO CÁCH RẤT MGF" class="attachment-full size-full wp-post-image" decoding="async" height="2000" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/02.png" width="2000"/>
             </a>
            </div>
            <div class="article__info">
@@ -98,9 +98,9 @@
               137,808
              </span>
             </div>
-            <h3 class="article__title" title="MỘT NGÀY NGỌT NGÀO THEO CÁCH RẤT GREENFEED">
+            <h3 class="article__title" title="MỘT NGÀY NGỌT NGÀO THEO CÁCH RẤT MGF">
              <a href="ccos.php">
-              MỘT NGÀY NGỌT NGÀO THEO CÁCH RẤT GREENFEED
+              MỘT NGÀY NGỌT NGÀO THEO CÁCH RẤT MGF
              </a>
             </h3>
             <div class="article_category">
@@ -115,7 +115,7 @@
           <div class="article-box">
            <div class="article__image">
             <a href="ccos.php">
-             <img alt="GREENFEED ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT" class="attachment-full size-full wp-post-image" decoding="async" height="2560" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet-1-scaled.jpg" width="2560"/>
+             <img alt="MGF ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT" class="attachment-full size-full wp-post-image" decoding="async" height="2560" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet-1-scaled.jpg" width="2560"/>
             </a>
            </div>
            <div class="article__info">
@@ -129,9 +129,9 @@
               179,916
              </span>
             </div>
-            <h3 class="article__title" title="GREENFEED ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT">
+            <h3 class="article__title" title="MGF ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT">
              <a href="ccos.php">
-              GREENFEED ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT
+              MGF ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT
              </a>
             </h3>
             <div class="article_category">
@@ -146,7 +146,7 @@
           <div class="article-box">
            <div class="article__image">
             <a href="ccos.php">
-             <img alt="“MÙA VÀNG” BA CHIẾN THẮNG CỦA GREENFEED TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025" class="attachment-full size-full wp-post-image" decoding="async" height="900" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025-6.jpg" width="1600"/>
+             <img alt="“MÙA VÀNG” BA CHIẾN THẮNG CỦA MGF TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025" class="attachment-full size-full wp-post-image" decoding="async" height="900" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025-6.jpg" width="1600"/>
             </a>
            </div>
            <div class="article__info">
@@ -160,9 +160,9 @@
               538,791
              </span>
             </div>
-            <h3 class="article__title" title="“MÙA VÀNG” BA CHIẾN THẮNG CỦA GREENFEED TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025">
+            <h3 class="article__title" title="“MÙA VÀNG” BA CHIẾN THẮNG CỦA MGF TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025">
              <a href="ccos.php">
-              “MÙA VÀNG” BA CHIẾN THẮNG CỦA GREENFEED TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025
+              “MÙA VÀNG” BA CHIẾN THẮNG CỦA MGF TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025
              </a>
             </h3>
             <div class="article_category">
@@ -177,7 +177,7 @@
           <div class="article-box">
            <div class="article__image">
             <a href="ccos.php">
-             <img alt="GREENFEED GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025" class="attachment-full size-full wp-post-image" decoding="async" height="2560" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025-9b-scaled.jpg" width="2560"/>
+             <img alt="MGF GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025" class="attachment-full size-full wp-post-image" decoding="async" height="2560" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025-9b-scaled.jpg" width="2560"/>
             </a>
            </div>
            <div class="article__info">
@@ -191,9 +191,9 @@
               411,510
              </span>
             </div>
-            <h3 class="article__title" title="GREENFEED GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025">
+            <h3 class="article__title" title="MGF GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025">
              <a href="ccos.php">
-              GREENFEED GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025
+              MGF GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025
              </a>
             </h3>
             <div class="article_category">
@@ -273,7 +273,7 @@
             </h2>
             <p class="expert">
              <span>
-              Bộ sản phẩm thức ăn chăn nuôi G.TEK công nghệ xanh của GREENFEED Việt Nam vinh dự là “Thương hiệu…
+              Bộ sản phẩm thức ăn chăn nuôi G.TEK công nghệ xanh của MGF Việt Nam vinh dự là “Thương hiệu…
              </span>
             </p>
            </a>
@@ -285,7 +285,7 @@
          <div class="article-box">
           <div class="article__image">
            <a href="ccos.php">
-            <img alt="BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y GREENFEED LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025" class="attachment-dt-thumbnail-medium size-dt-thumbnail-medium wp-post-image" decoding="async" height="378" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/Website-GFxEB-GoldBrandNNVN-Oct25-560x378.jpg" width="560"/>
+            <img alt="BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y MGF LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025" class="attachment-dt-thumbnail-medium size-dt-thumbnail-medium wp-post-image" decoding="async" height="378" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/Website-GFxEB-GoldBrandNNVN-Oct25-560x378.jpg" width="560"/>
            </a>
           </div>
           <div class="article__info">
@@ -299,14 +299,14 @@
             </span>
            </div>
            <a href="ccos.php">
-            <h2 class="article__title" title="BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y GREENFEED LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025">
+            <h2 class="article__title" title="BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y MGF LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025">
              <span>
-              BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y GREENFEED LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025
+              BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y MGF LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025
              </span>
             </h2>
             <p class="expert">
              <span>
-              GREENFEED tiếp tục khẳng định dấu ấn chất lượng với bộ ba giải pháp dinh dưỡng và thú y được…
+              MGF tiếp tục khẳng định dấu ấn chất lượng với bộ ba giải pháp dinh dưỡng và thú y được…
              </span>
             </p>
            </a>
@@ -351,7 +351,7 @@
          <div class="article-box">
           <div class="article__image">
            <a href="ccos.php">
-            <img alt="GREENFEED VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU" class="attachment-dt-thumbnail-medium size-dt-thumbnail-medium wp-post-image" decoding="async" height="366" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/Trai-thuy-hai-san-greenfeed-3-560x366.jpg" width="560"/>
+            <img alt="MGF VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU" class="attachment-dt-thumbnail-medium size-dt-thumbnail-medium wp-post-image" decoding="async" height="366" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/Trai-thuy-hai-san-greenfeed-3-560x366.jpg" width="560"/>
            </a>
           </div>
           <div class="article__info">
@@ -365,14 +365,14 @@
             </span>
            </div>
            <a href="ccos.php">
-            <h2 class="article__title" title="GREENFEED VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU">
+            <h2 class="article__title" title="MGF VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU">
              <span>
-              GREENFEED VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU
+              MGF VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU
              </span>
             </h2>
             <p class="expert">
              <span>
-              Nhà máy thức ăn thủy hải sản của GREENFEED chính thức được công nhận đạt chuẩn quốc tế ASC, khẳng…
+              Nhà máy thức ăn thủy hải sản của MGF chính thức được công nhận đạt chuẩn quốc tế ASC, khẳng…
              </span>
             </p>
            </a>
