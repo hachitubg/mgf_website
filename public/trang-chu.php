@@ -5,7 +5,17 @@
  <!-- Includes header.php -->
  <link href="02_css/style_trangchu.css" id="main-style-css" media="all" rel="stylesheet" type="text/css"/>
  <link href="02_css/home.css" id="page-style-css" media="all" rel="stylesheet" type="text/css"/>
- <?php include '01_includes/header.php'; ?>
+ <?php 
+ require_once __DIR__ . '/../includes/db.php';
+ 
+ // Get homepage banners
+ $banner_stmt = $pdo->query("SELECT * FROM banners 
+                             WHERE location_code = 'trang_chu' AND is_active = 1 
+                             ORDER BY sort_order ASC, id DESC");
+ $banners = $banner_stmt->fetchAll();
+ 
+ include '01_includes/header.php'; 
+ ?>
 
  <body class="home wp-singular page-template page-template-page-templates page-template-trang-chu-2024 page-template-page-templatestrang-chu-2024-php page page-id-4564 wp-theme-greenfeed loading-effect fade-in">
 
@@ -20,6 +30,32 @@
    <section class="banner" id="banner">
     <div class="banner-inner">
      <div class="banner__images owl-carousel banner-carousel owl-theme" style="display:block">
+      <?php if (!empty($banners)): ?>
+        <?php foreach ($banners as $index => $banner): 
+          $banner_image = $banner['image_path'] 
+            ? '../' . $banner['image_path']
+            : 'https://www.greenfeed.com.vn/wp-content/uploads/2025/03/trang-trai-gia-suc-gia-cam-greenfeed-binh-thuan.jpg';
+        ?>
+        <div class="banner__image">
+          <?php if (!empty($banner['link_url'])): ?>
+          <a href="<?= htmlspecialchars($banner['link_url']) ?>">
+            <img alt="<?= htmlspecialchars($banner['title'] ?? 'Banner ' . ($index + 1)) ?>" 
+                 class="attachment-full size-full" 
+                 decoding="async" 
+                 <?= $index === 0 ? 'fetchpriority="high"' : '' ?>
+                 src="<?= htmlspecialchars($banner_image) ?>"/>
+          </a>
+          <?php else: ?>
+            <img alt="<?= htmlspecialchars($banner['title'] ?? 'Banner ' . ($index + 1)) ?>" 
+                 class="attachment-full size-full" 
+                 decoding="async" 
+                 <?= $index === 0 ? 'fetchpriority="high"' : '' ?>
+                 src="<?= htmlspecialchars($banner_image) ?>"/>
+          <?php endif; ?>
+        </div>
+        <?php endforeach; ?>
+      <?php else: ?>
+      <!-- Fallback banners if database is empty -->
       <div class="banner__image">
        <a href="#">
         <img alt="Trang trại gia súc, gia cầm của MGF tại Bình Thuận" class="attachment-full size-full" decoding="async" fetchpriority="high" height="1235" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/trang-trai-gia-suc-gia-cam-greenfeed-binh-thuan.jpg" width="2560"/>
@@ -40,6 +76,7 @@
         <img alt="Trang trại gia súc, gia cầm của MGF tại Bình Thuận" class="attachment-full size-full" decoding="async" height="926" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/trang-trai-gia-suc-gia-cam-tai-tinh-binh-thuan.jpg" width="1920"/>
        </a>
       </div>
+      <?php endif; ?>
      </div>
      <div class="banner__content">
       <div class="banner__content-inner">

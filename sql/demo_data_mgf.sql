@@ -42,27 +42,27 @@ INSERT INTO `categories` (`name`, `slug`, `type`, `description`, `is_active`, `s
 
 -- Sản phẩm HEO
 INSERT INTO `products` (`title`, `slug`, `category_id`, `description`, `price`, `promo_price`, `display_order`, `created_at`, `updated_at`) VALUES
-('MGF M11S - Thức ăn heo con giai đoạn 1', 'mgf-m11s-thuc-an-heo-con-giai-doan-1', 1, '<h3>Đặc điểm sản phẩm MGF M11S</h3><p>Thức ăn heo con MGF M11S được nghiên cứu và phát triển đặc biệt cho giai đoạn từ 7-20kg - giai đoạn quan trọng nhất trong quá trình phát triển của heo con.</p><h4>Thành phần dinh dưỡng:</h4><ul><li>Protein: 18-20%</li><li>Năng lượng trao đổi: 3200-3400 kcal/kg</li><li>Lysine: 1.2-1.4%</li><li>Canxi, Phospho cân bằng</li><li>Vitamin và khoáng chất vi lượng đầy đủ</li></ul><h4>Lợi ích:</h4><ul><li>Tăng trọng nhanh, đồng đều</li><li>Tăng cường miễn dịch</li><li>Giảm tỷ lệ tiêu chảy</li><li>Chi phí thức ăn tối ưu</li></ul>', 18500.00, 17500.00, 1, NOW(), NOW()),
+('MGF M11S - Thức ăn heo con', 'mgf-m11s-thuc-an-heo-con-giai-doan-1', 1, '<h3>Đặc điểm sản phẩm MGF M11S</h3><p>Thức ăn heo con MGF M11S được nghiên cứu và phát triển đặc biệt cho giai đoạn từ 7-20kg - giai đoạn quan trọng nhất trong quá trình phát triển của heo con.</p><h4>Thành phần dinh dưỡng:</h4><ul><li>Protein: 18-20%</li><li>Năng lượng trao đổi: 3200-3400 kcal/kg</li><li>Lysine: 1.2-1.4%</li><li>Canxi, Phospho cân bằng</li><li>Vitamin và khoáng chất vi lượng đầy đủ</li></ul><h4>Lợi ích:</h4><ul><li>Tăng trọng nhanh, đồng đều</li><li>Tăng cường miễn dịch</li><li>Giảm tỷ lệ tiêu chảy</li><li>Chi phí thức ăn tối ưu</li></ul>', 18500.00, 17500.00, 1, NOW(), NOW()),
 
-('MGF M12S - Thức ăn heo con giai đoạn 2', 'mgf-m12s-thuc-an-heo-con-giai-doan-2', 1, '<h3>MGF M12S - Giai đoạn phát triển quan trọng</h3><p>Sản phẩm được thiết kế cho heo giai đoạn 20-40kg với công thức dinh dưỡng cân bằng, giúp heo phát triển khung xương và cơ bắp tối ưu.</p><h4>Ưu điểm:</h4><ul><li>Hỗ trợ tăng trưởng vượt trội</li><li>Tăng cường sức khỏe đường ruột</li><li>Cải thiện hệ miễn dịch</li><li>FCR tối ưu</li></ul>', 17500.00, NULL, 2, NOW(), NOW()),
+('MGF M12S - Thức ăn heo con', 'mgf-m12s-thuc-an-heo-con-giai-doan-2', 1, '<h3>MGF M12S - Giai đoạn phát triển quan trọng</h3><p>Sản phẩm được thiết kế cho heo giai đoạn 20-40kg với công thức dinh dưỡng cân bằng, giúp heo phát triển khung xương và cơ bắp tối ưu.</p><h4>Ưu điểm:</h4><ul><li>Hỗ trợ tăng trưởng vượt trội</li><li>Tăng cường sức khỏe đường ruột</li><li>Cải thiện hệ miễn dịch</li><li>FCR tối ưu</li></ul>', 17500.00, NULL, 2, NOW(), NOW()),
 
-('MGF M15S - Thức ăn heo thịt giai đoạn 1', 'mgf-m15s-thuc-an-heo-thit-giai-doan-1', 1, '<h3>MGF M15S - Thức ăn heo thịt chất lượng</h3><p>Công thức đặc biệt cho giai đoạn heo thịt 40-70kg, giúp tăng trọng nhanh với chi phí thấp.</p><h4>Đối tượng:</h4><ul><li>Heo thịt từ 40-70kg</li><li>Tối ưu chi phí chăn nuôi</li><li>Tăng trọng ổn định</li></ul>', 16500.00, NULL, 3, NOW(), NOW()),
+('MGF M15S - Thức ăn heo thịt', 'mgf-m15s-thuc-an-heo-thit-giai-doan-1', 1, '<h3>MGF M15S - Thức ăn heo thịt chất lượng</h3><p>Công thức đặc biệt cho giai đoạn heo thịt 40-70kg, giúp tăng trọng nhanh với chi phí thấp.</p><h4>Đối tượng:</h4><ul><li>Heo thịt từ 40-70kg</li><li>Tối ưu chi phí chăn nuôi</li><li>Tăng trọng ổn định</li></ul>', 16500.00, NULL, 3, NOW(), NOW()),
 
-('MGF M16S - Thức ăn heo thịt giai đoạn 2', 'mgf-m16s-thuc-an-heo-thit-giai-doan-2', 1, '<h3>MGF M16S - Giai đoạn hoàn thiện</h3><p>Sản phẩm cho heo giai đoạn 70-90kg, giúp tăng tỷ lệ nạc, giảm mỡ, cải thiện chất lượng thịt.</p><h4>Ưu điểm:</h4><ul><li>Tối ưu hóa tỷ lệ nạc</li><li>Giảm lượng mỡ</li><li>Chất lượng thịt cao</li></ul>', 15800.00, 14900.00, 4, NOW(), NOW()),
+('MGF M16S - Thức ăn heo thịt', 'mgf-m16s-thuc-an-heo-thit-giai-doan-2', 1, '<h3>MGF M16S - Giai đoạn hoàn thiện</h3><p>Sản phẩm cho heo giai đoạn 70-90kg, giúp tăng tỷ lệ nạc, giảm mỡ, cải thiện chất lượng thịt.</p><h4>Ưu điểm:</h4><ul><li>Tối ưu hóa tỷ lệ nạc</li><li>Giảm lượng mỡ</li><li>Chất lượng thịt cao</li></ul>', 15800.00, 14900.00, 4, NOW(), NOW()),
 
-('MGF M17S - Thức ăn heo thịt giai đoạn 3', 'mgf-m17s-thuc-an-heo-thit-giai-doan-3', 1, '<h3>MGF M17S - Hoàn thiện trước xuất chuồng</h3><p>Công thức cuối cùng trước khi xuất chuồng, đảm bảo chất lượng thịt tốt nhất.</p><h4>Đặc điểm:</h4><ul><li>Heo từ 90kg đến xuất chuồng</li><li>Hoàn thiện chất lượng thịt</li><li>Tối ưu lợi nhuận</li></ul>', 15200.00, NULL, 5, NOW(), NOW()),
+('MGF M17S - Thức ăn heo thịt', 'mgf-m17s-thuc-an-heo-thit-giai-doan-3', 1, '<h3>MGF M17S - Hoàn thiện trước xuất chuồng</h3><p>Công thức cuối cùng trước khi xuất chuồng, đảm bảo chất lượng thịt tốt nhất.</p><h4>Đặc điểm:</h4><ul><li>Heo từ 90kg đến xuất chuồng</li><li>Hoàn thiện chất lượng thịt</li><li>Tối ưu lợi nhuận</li></ul>', 15200.00, NULL, 5, NOW(), NOW()),
 
 -- Sản phẩm GÀ
-('MGF G10S - Thức ăn gà thịt giai đoạn 1', 'mgf-g10s-thuc-an-ga-thit-giai-doan-1', 2, '<h3>MGF G10S - Khởi đầu vững chắc</h3><p>Thức ăn gà thịt giai đoạn đầu với công thức đặc biệt, giúp gà con khỏe mạnh ngay từ những ngày đầu.</p><h4>Thành phần:</h4><ul><li>Protein cao: 22-24%</li><li>Năng lượng: 3000-3100 kcal/kg</li><li>Vitamin, khoáng chất đầy đủ</li><li>Men vi sinh hỗ trợ tiêu hóa</li></ul><h4>Đối tượng:</h4><ul><li>Gà thịt 1-10 ngày tuổi</li><li>Giúp gà khởi đầu tốt</li></ul>', 19800.00, 18500.00, 6, NOW(), NOW()),
+('MGF G10S - Thức ăn gà thịt', 'mgf-g10s-thuc-an-ga-thit-giai-doan-1', 2, '<h3>MGF G10S - Khởi đầu vững chắc</h3><p>Thức ăn gà thịt giai đoạn đầu với công thức đặc biệt, giúp gà con khỏe mạnh ngay từ những ngày đầu.</p><h4>Thành phần:</h4><ul><li>Protein cao: 22-24%</li><li>Năng lượng: 3000-3100 kcal/kg</li><li>Vitamin, khoáng chất đầy đủ</li><li>Men vi sinh hỗ trợ tiêu hóa</li></ul><h4>Đối tượng:</h4><ul><li>Gà thịt 1-10 ngày tuổi</li><li>Giúp gà khởi đầu tốt</li></ul>', 19800.00, 18500.00, 6, NOW(), NOW()),
 
-('MGF G20S - Thức ăn gà thịt giai đoạn 2', 'mgf-g20s-thuc-an-ga-thit-giai-doan-2', 2, '<h3>MGF G20S - Giai đoạn tăng trưởng</h3><p>Sản phẩm cho gà giai đoạn phát triển nhanh, tối ưu hóa tăng trọng.</p><h4>Ưu điểm:</h4><ul><li>Gà 11-25 ngày tuổi</li><li>Tăng trưởng vượt trội</li><li>FCR tối ưu</li></ul>', 18200.00, NULL, 7, NOW(), NOW()),
+('MGF G20S - Thức ăn gà thịt', 'mgf-g20s-thuc-an-ga-thit-giai-doan-2', 2, '<h3>MGF G20S - Giai đoạn tăng trưởng</h3><p>Sản phẩm cho gà giai đoạn phát triển nhanh, tối ưu hóa tăng trọng.</p><h4>Ưu điểm:</h4><ul><li>Gà 11-25 ngày tuổi</li><li>Tăng trưởng vượt trội</li><li>FCR tối ưu</li></ul>', 18200.00, NULL, 7, NOW(), NOW()),
 
-('MGF G30S - Thức ăn gà thịt giai đoạn 3', 'mgf-g30s-thuc-an-ga-thit-giai-doan-3', 2, '<h3>MGF G30S - Hoàn thiện chất lượng</h3><p>Công thức cuối cùng giúp gà đạt trọng lượng xuất chuồng với chất lượng thịt tốt nhất.</p><h4>Đặc điểm:</h4><ul><li>Gà từ 26 ngày đến xuất chuồng</li><li>Chất lượng thịt cao</li><li>Trọng lượng đồng đều</li></ul>', 17500.00, NULL, 8, NOW(), NOW()),
+('MGF G30S - Thức ăn gà thịt', 'mgf-g30s-thuc-an-ga-thit-giai-doan-3', 2, '<h3>MGF G30S - Hoàn thiện chất lượng</h3><p>Công thức cuối cùng giúp gà đạt trọng lượng xuất chuồng với chất lượng thịt tốt nhất.</p><h4>Đặc điểm:</h4><ul><li>Gà từ 26 ngày đến xuất chuồng</li><li>Chất lượng thịt cao</li><li>Trọng lượng đồng đều</li></ul>', 17500.00, NULL, 8, NOW(), NOW()),
 
 -- Sản phẩm VỊT
-('MGF D01 Super - Thức ăn vịt thịt giai đoạn 1', 'mgf-d01-super-thuc-an-vit-thit-giai-doan-1', 3, '<h3>MGF D01 Super - Vịt khỏe từ đầu</h3><p>Thức ăn vịt con với công thức Super đặc biệt, giúp vịt phát triển nhanh và khỏe mạnh.</p><h4>Ưu điểm nổi bật:</h4><ul><li>Protein cao 20-22%</li><li>Tăng trọng nhanh</li><li>Giảm tỷ lệ chết</li><li>Tối ưu chi phí</li></ul><h4>Đối tượng:</h4><ul><li>Vịt thịt 1-14 ngày tuổi</li></ul>', 17800.00, 16500.00, 9, NOW(), NOW()),
+('MGF D01 Super - Thức ăn vịt thịt', 'mgf-d01-super-thuc-an-vit-thit-giai-doan-1', 3, '<h3>MGF D01 Super - Vịt khỏe từ đầu</h3><p>Thức ăn vịt con với công thức Super đặc biệt, giúp vịt phát triển nhanh và khỏe mạnh.</p><h4>Ưu điểm nổi bật:</h4><ul><li>Protein cao 20-22%</li><li>Tăng trọng nhanh</li><li>Giảm tỷ lệ chết</li><li>Tối ưu chi phí</li></ul><h4>Đối tượng:</h4><ul><li>Vịt thịt 1-14 ngày tuổi</li></ul>', 17800.00, 16500.00, 9, NOW(), NOW()),
 
-('MGF D02 Super - Thức ăn vịt thịt giai đoạn 2', 'mgf-d02-super-thuc-an-vit-thit-giai-doan-2', 3, '<h3>MGF D02 Super - Phát triển tối đa</h3><p>Sản phẩm cho vịt giai đoạn phát triển và hoàn thiện, đảm bảo chất lượng thịt.</p><h4>Ưu điểm:</h4><ul><li>Vịt từ 15 ngày đến xuất chuồng</li><li>Tăng trọng mạnh</li><li>Chất lượng thịt tốt</li></ul>', 16200.00, NULL, 10, NOW(), NOW()),
+('MGF D02 Super - Thức ăn vịt thịt', 'mgf-d02-super-thuc-an-vit-thit-giai-doan-2', 3, '<h3>MGF D02 Super - Phát triển tối đa</h3><p>Sản phẩm cho vịt giai đoạn phát triển và hoàn thiện, đảm bảo chất lượng thịt.</p><h4>Ưu điểm:</h4><ul><li>Vịt từ 15 ngày đến xuất chuồng</li><li>Tăng trọng mạnh</li><li>Chất lượng thịt tốt</li></ul>', 16200.00, NULL, 10, NOW(), NOW()),
 
 -- Sản phẩm CÁ
 ('MGF Fish Pro - Thức ăn cá da trơn', 'mgf-fish-pro-thuc-an-ca-da-tron', 4, '<h3>MGF Fish Pro - Dòng cá da trơn</h3><p>Thức ăn chuyên dụng cho cá da trơn với công thức đặc biệt, giúp cá phát triển nhanh, khỏe mạnh.</p><h4>Đối tượng:</h4><ul><li>Cá da trơn (cá tra, cá basa)</li><li>Phát triển nhanh</li><li>Chất lượng thịt tốt</li></ul>', 14500.00, NULL, 11, NOW(), NOW()),
@@ -106,23 +106,3 @@ INSERT INTO `posts` (`title`, `slug`, `category_id`, `excerpt`, `content`, `is_a
 ('Kỹ thuật chăn nuôi vịt thịt theo tiêu chuẩn VietGAP', 'ky-thuat-chan-nuoi-vit-thit-vietgap', 10, 'Hướng dẫn chi tiết quy trình chăn nuôi vịt thịt theo tiêu chuẩn VietGAP, đảm bảo an toàn và hiệu quả.', '<h2>Quy trình chăn nuôi vịt chuẩn VietGAP</h2><p>VietGAP là tiêu chuẩn thực hành nông nghiệp tốt, giúp nâng cao chất lượng sản phẩm và bảo vệ môi trường.</p><h3>Các bước chính:</h3><ol><li>Chuẩn bị chuồng trại đạt tiêu chuẩn</li><li>Chọn giống vịt chất lượng</li><li>Sử dụng thức ăn đạt chuẩn (MGF D01 Super, D02 Super)</li><li>Quản lý môi trường và vệ sinh</li><li>Ghi chép nhật ký chăn nuôi đầy đủ</li></ol><p>MGF cung cấp giải pháp dinh dưỡng toàn diện cho chăn nuôi vịt theo tiêu chuẩn VietGAP.</p>', 1, NOW(), NOW()),
 
 ('MGF tham gia triển lãm Nông nghiệp Quốc tế VietnamAg 2025', 'mgf-tham-gia-trien-lam-vietnamag-2025', 8, 'MGF góp mặt tại triển lãm Nông nghiệp Quốc tế VietnamAg 2025, giới thiệu các sản phẩm và công nghệ tiên tiến.', '<h2>MGF tại VietnamAg 2025</h2><p>Với gian hàng rộng 200m², MGF đã thu hút sự quan tâm của hàng nghìn khách tham quan.</p><h3>Điểm nhấn tại triển lãm:</h3><ul><li>Trưng bày toàn bộ dòng sản phẩm thức ăn chăn nuôi</li><li>Tư vấn kỹ thuật miễn phí</li><li>Chương trình ưu đãi đặc biệt</li><li>Hội thảo chuyên đề về dinh dưỡng chăn nuôi</li></ul><p>Triển lãm là cơ hội để MGF gặp gỡ, trao đổi với khách hàng và đối tác, đồng thời giới thiệu những sản phẩm mới nhất.</p>', 1, NOW(), NOW());
-
--- =====================================================
--- 5. BANNERS
--- =====================================================
-INSERT INTO `banners` (`title`, `location_code`, `image_path`, `link_url`, `is_active`, `sort_order`, `created_at`, `updated_at`) VALUES
-('Banner Trang chủ - Feed Farm Food', 'trang_chu', 'https://via.placeholder.com/1920x600/0C7A07/FFFFFF?text=MGF+Feed+Farm+Food', 'trang-chu.php', 1, 1, NOW(), NOW()),
-('Banner Sản phẩm chất lượng cao', 'trang_chu', 'https://via.placeholder.com/1920x600/06B841/FFFFFF?text=San+pham+chat+luong+cao', 'danh-sach-san-pham.php', 1, 2, NOW(), NOW()),
-('Banner Danh sách sản phẩm', 'danh_sach_san_pham', 'https://via.placeholder.com/1920x400/0C7A07/FFFFFF?text=Danh+sach+san+pham+MGF', 'danh-sach-san-pham.php', 1, 1, NOW(), NOW()),
-('Banner Tin tức & Sự kiện', 'danh_sach_tin_tuc', 'https://via.placeholder.com/1920x400/095505/FFFFFF?text=Tin+tuc+va+Su+kien', 'danh-sach-tin-tuc.php', 1, 1, NOW(), NOW());
-
--- =====================================================
--- END OF DEMO DATA
--- =====================================================
-
--- Thống kê
-SELECT 'DEMO DATA INSERTED SUCCESSFULLY!' as status;
-SELECT COUNT(*) as total_categories FROM categories;
-SELECT COUNT(*) as total_products FROM products;
-SELECT COUNT(*) as total_posts FROM posts;
-SELECT COUNT(*) as total_banners FROM banners;

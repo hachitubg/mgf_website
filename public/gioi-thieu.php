@@ -6,7 +6,23 @@
  <link href="02_css/gioi-thieu.css" id="selectize_style-css" media="all" rel="stylesheet" type="text/css"/>
  <link href="02_css/style-gioi-thieu.css" id="main-style-css" media="all" rel="stylesheet" type="text/css"/>
  <link href="02_css/intro.css" id="intro-style-css" media="all" rel="stylesheet" type="text/css"/>
- <?php include '01_includes/header.php'; ?>
+ <?php 
+ require_once __DIR__ . '/../includes/db.php';
+ 
+ // Get banner for this page
+ $banner_stmt = $pdo->query("SELECT * FROM banners 
+                             WHERE location_code = 'gioi_thieu' AND is_active = 1 
+                             ORDER BY sort_order ASC, id DESC 
+                             LIMIT 1");
+ $banner = $banner_stmt->fetch();
+ 
+ // Set banner image
+ $banner_image = $banner && $banner['image_path'] 
+    ? '../uploads/banners/' . $banner['image_path']
+    : 'https://www.greenfeed.com.vn/wp-content/uploads/2024/12/fbee64008d12914e7f9eb7f950a103ef-e1748153967589.jpg';
+ 
+ include '01_includes/header.php'; 
+ ?>
 
  <body class="wp-singular page-template page-template-page-templates page-template-ve-greenfeed page-template-page-templatesve-greenfeed-php page page-id-4478 page-child parent-pageid-4644 wp-theme-greenfeed loading-effect">
 
@@ -15,7 +31,7 @@
 
   <!-- main -->
   <main class="site-main" id="dt-main-content" role="main">
-   <div class="header-background" style="background-image:url('https://www.greenfeed.com.vn/wp-content/uploads/2024/12/fbee64008d12914e7f9eb7f950a103ef-e1748153967589.jpg')">
+   <div class="header-background" style="background-image:url('<?= htmlspecialchars($banner_image) ?>')">
     <div class="container">
      <div class="dt-breadscrumb">
       <ul class="breadcrumb">

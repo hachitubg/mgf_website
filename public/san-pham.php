@@ -42,6 +42,18 @@ $products = $stmt->fetchAll();
 $cat_stmt = $pdo->query("SELECT * FROM categories WHERE type = 'product' AND is_active = 1 ORDER BY sort_order ASC");
 $categories = $cat_stmt->fetchAll();
 
+// Get banner for this page
+$banner_stmt = $pdo->query("SELECT * FROM banners 
+                            WHERE location_code = 'san_pham' AND is_active = 1 
+                            ORDER BY sort_order ASC, id DESC 
+                            LIMIT 1");
+$banner = $banner_stmt->fetch();
+
+// Set banner image
+$banner_image = $banner && $banner['image_path'] 
+   ? '../uploads/banners/' . $banner['image_path']
+   : 'https://www.greenfeed.com.vn/wp-content/uploads/2024/12/Image-e1741807224867.jpg';
+
 // Get current category info
 $current_category = null;
 if ($category_slug) {
@@ -70,7 +82,7 @@ if ($category_slug) {
 
   <!-- main -->
   <main class="site-main" id="dt-main-content" role="main">
-    <div class="header-background" style="background-image:url('https://www.greenfeed.com.vn/wp-content/uploads/2024/12/Image-e1741807224867.jpg')">
+    <div class="header-background" style="background-image:url('<?= htmlspecialchars($banner_image) ?>')">
         <div class="container">
             <div class="dt-breadscrumb">
                 <ul class="breadcrumb">

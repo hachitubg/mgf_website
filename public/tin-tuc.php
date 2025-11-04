@@ -48,6 +48,18 @@ $featured_posts = $featured_stmt->fetchAll();
 // Get post categories
 $cat_stmt = $pdo->query("SELECT * FROM categories WHERE type = 'post' AND is_active = 1 ORDER BY sort_order ASC");
 $categories = $cat_stmt->fetchAll();
+
+// Get banner for this page
+$banner_stmt = $pdo->query("SELECT * FROM banners 
+                            WHERE location_code = 'tin_tuc' AND is_active = 1 
+                            ORDER BY sort_order ASC, id DESC 
+                            LIMIT 1");
+$banner = $banner_stmt->fetch();
+
+// Set banner image
+$banner_image = $banner && $banner['image_path'] 
+   ? '../uploads/banners/' . $banner['image_path']
+   : 'https://www.greenfeed.com.vn/wp-content/uploads/2024/12/833356f8e36564addde08211c286f5ef.jpg';
 ?>
 <!DOCTYPE html>
 <html lang="vi" prefix="og: https://ogp.me/ns#">
@@ -312,7 +324,7 @@ $categories = $cat_stmt->fetchAll();
 
   <!-- main -->
   <main class="site-main" id="dt-main-content" role="main">
-   <div class="header-background" style="background-image:url('https://www.greenfeed.com.vn/wp-content/uploads/2024/12/833356f8e36564addde08211c286f5ef.jpg')">
+   <div class="header-background" style="background-image:url('<?= htmlspecialchars($banner_image) ?>')">
     <div class="container">
      <div class="dt-breadscrumb">
       <ul class="breadcrumb">

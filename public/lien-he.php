@@ -5,7 +5,23 @@
  <!-- Includes header.php -->
  <link href="02_css/style_lienhe.css" id="main-style-css" media="all" rel="stylesheet" type="text/css"/>
  <link href="02_css/contact.css" id="page-style-css" media="all" rel="stylesheet" type="text/css"/>
- <?php include '01_includes/header.php'; ?>
+ <?php 
+ require_once __DIR__ . '/../includes/db.php';
+ 
+ // Get banner for this page
+ $banner_stmt = $pdo->query("SELECT * FROM banners 
+                             WHERE location_code = 'lien_he' AND is_active = 1 
+                             ORDER BY sort_order ASC, id DESC 
+                             LIMIT 1");
+ $banner = $banner_stmt->fetch();
+ 
+ // Set banner image
+ $banner_image = $banner && $banner['image_path'] 
+    ? '../uploads/banners/' . $banner['image_path']
+    : 'https://www.greenfeed.com.vn/wp-content/uploads/2024/12/833356f8e36564addde08211c286f5ef.jpg';
+ 
+ include '01_includes/header.php'; 
+ ?>
 
  <body class="wp-singular page-template page-template-page-templates page-template-contact page-template-page-templatescontact-php page page-id-155 wp-theme-greenfeed loading-effect">
 
@@ -14,7 +30,7 @@
 
    <!-- main -->
    <main class="site-main" id="dt-main-content" role="main">
-   <div class="header-background" style="background-image:url('https://www.greenfeed.com.vn/wp-content/uploads/2024/12/833356f8e36564addde08211c286f5ef.jpg')">
+   <div class="header-background" style="background-image:url('<?= htmlspecialchars($banner_image) ?>')">
     <div class="container">
      <div class="dt-breadscrumb">
       <ul class="breadcrumb">
