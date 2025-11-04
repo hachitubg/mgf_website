@@ -82,7 +82,7 @@ $related_products = $stmt->fetchAll();
                     <div class="product-gallery">
                         <div class="main-image">
                             <?php 
-                            $main_image = !empty($images) ? '/uploads/products/' . $images[0]['image_path'] : '05_images/no-image.jpg';
+                            $main_image = !empty($images) ? '../uploads/products/' . $images[0]['image_path'] : '05_images/no-image.jpg';
                             ?>
                             <img id="mainProductImage" src="<?= htmlspecialchars($main_image) ?>" alt="<?= htmlspecialchars($product['title']) ?>">
                         </div>
@@ -90,8 +90,8 @@ $related_products = $stmt->fetchAll();
                         <?php if (count($images) > 1): ?>
                         <div class="thumbnail-images">
                             <?php foreach ($images as $index => $image): ?>
-                            <div class="thumbnail <?= $index === 0 ? 'active' : '' ?>" onclick="changeMainImage('<?= htmlspecialchars('/uploads/products/' . $image['image_path']) ?>', this)">
-                                <img src="<?= htmlspecialchars('/uploads/products/' . $image['image_path']) ?>" alt="<?= htmlspecialchars($product['title']) ?> - Ảnh <?= $index + 1 ?>">
+                            <div class="thumbnail <?= $index === 0 ? 'active' : '' ?>" onclick="changeMainImage('<?= htmlspecialchars('../uploads/products/' . $image['image_path']) ?>', this)">
+                                <img src="<?= htmlspecialchars('../uploads/products/' . $image['image_path']) ?>" alt="<?= htmlspecialchars($product['title']) ?> - Ảnh <?= $index + 1 ?>">
                             </div>
                             <?php endforeach; ?>
                         </div>
@@ -159,7 +159,7 @@ $related_products = $stmt->fetchAll();
                 <div class="related-products-carousel owl-carousel owl-theme">
                     <?php foreach ($related_products as $rel_product): 
                         $rel_image = $rel_product['image_path'] 
-                            ? '/uploads/products/' . $rel_product['image_path']
+                            ? '../uploads/products/' . $rel_product['image_path']
                             : '05_images/no-image.jpg';
                         $short_desc = mb_substr(strip_tags($rel_product['description'] ?? ''), 0, 100, 'UTF-8');
                         if (mb_strlen(strip_tags($rel_product['description'] ?? '')) > 100) {

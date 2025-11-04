@@ -57,6 +57,253 @@ $categories = $cat_stmt->fetchAll();
  <link href="02_css/style_tintuc.css" id="main-style-css" media="all" rel="stylesheet" type="text/css"/>
  <link href="02_css/post.css" id="page-style-css" media="all" rel="stylesheet" type="text/css"/>
  <?php include '01_includes/header.php'; ?>
+ 
+ <style>
+  /* Fade-in animations */
+  @keyframes fadeInUp {
+   from {
+    opacity: 0;
+    transform: translateY(30px);
+   }
+   to {
+    opacity: 1;
+    transform: translateY(0);
+   }
+  }
+  
+  @keyframes fadeIn {
+   from { opacity: 0; }
+   to { opacity: 1; }
+  }
+  
+  .header-background {
+   animation: fadeIn 0.8s ease-out;
+  }
+  
+  .category-section {
+   animation: fadeInUp 0.6s ease-out;
+   animation-fill-mode: both;
+  }
+  
+  .category-section:nth-child(1) { animation-delay: 0.1s; }
+  .category-section:nth-child(2) { animation-delay: 0.2s; }
+  .category-section:nth-child(3) { animation-delay: 0.3s; }
+  
+  /* Article hover effects */
+  .article-item {
+   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+   position: relative;
+  }
+  
+  .article-item:hover {
+   transform: translateY(-8px);
+   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .article__image {
+   position: relative;
+   overflow: hidden;
+   border-radius: 8px;
+  }
+  
+  .article__image img {
+   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+  }
+  
+  .article-item:hover .article__image img {
+   transform: scale(1.1);
+  }
+  
+  .article__image::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: linear-gradient(135deg, rgba(166, 203, 93, 0.3) 0%, rgba(46, 176, 88, 0.3) 100%);
+   opacity: 0;
+   transition: opacity 0.4s ease;
+  }
+  
+  .article-item:hover .article__image::after {
+   opacity: 1;
+  }
+  
+  /* Title hover effect */
+  .article__title a {
+   position: relative;
+   transition: color 0.3s ease;
+   display: inline-block;
+  }
+  
+  .article__title a::after {
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 2px;
+   bottom: -2px;
+   left: 0;
+   background: linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%);
+   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .article-item:hover .article__title a::after {
+   width: 100%;
+  }
+  
+  .article-item:hover .article__title a {
+   color: #2eb058;
+  }
+  
+  /* Category badge animation */
+  .article_category {
+   transition: all 0.3s ease;
+   display: inline-block;
+  }
+  
+  .article-item:hover .article_category {
+   background: linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%);
+   color: #fff;
+   transform: translateX(5px);
+  }
+  
+  /* Category filter buttons */
+  .category-list a {
+   position: relative;
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   overflow: hidden;
+  }
+  
+  .category-list a::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%);
+   transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+   z-index: -1;
+  }
+  
+  .category-list a:hover::before,
+  .category-list a.active::before {
+   left: 0;
+  }
+  
+  .category-list a:hover,
+  .category-list a.active {
+   color: #fff;
+   transform: translateY(-2px);
+   box-shadow: 0 4px 12px rgba(46, 176, 88, 0.3);
+  }
+  
+  /* Pagination hover */
+  .page-numbers {
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .page-numbers:hover {
+   transform: scale(1.1);
+   box-shadow: 0 4px 12px rgba(46, 176, 88, 0.2);
+  }
+  
+  .prev.page-numbers:hover,
+  .next.page-numbers:hover {
+   transform: scale(1.15);
+  }
+  
+  .prev.page-numbers:hover img {
+   transform: translateX(-3px) rotate(180deg);
+   transition: transform 0.3s ease;
+  }
+  
+  .next.page-numbers:hover img {
+   transform: translateX(3px);
+   transition: transform 0.3s ease;
+  }
+  
+  /* Featured articles special effects */
+  .articles-popular .news__item:first-child .article-item {
+   background: linear-gradient(135deg, rgba(166, 203, 93, 0.05) 0%, rgba(46, 176, 88, 0.05) 100%);
+   border-radius: 12px;
+   padding: 10px;
+  }
+  
+  .articles-popular .news__item:first-child .article-item:hover {
+   background: linear-gradient(135deg, rgba(166, 203, 93, 0.1) 0%, rgba(46, 176, 88, 0.1) 100%);
+  }
+  
+  /* Smooth scroll reveal for articles */
+  .articles-wrapper .article-item {
+   opacity: 0;
+   animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .articles-wrapper .article-item:nth-child(1) { animation-delay: 0.1s; }
+  .articles-wrapper .article-item:nth-child(2) { animation-delay: 0.15s; }
+  .articles-wrapper .article-item:nth-child(3) { animation-delay: 0.2s; }
+  .articles-wrapper .article-item:nth-child(4) { animation-delay: 0.25s; }
+  .articles-wrapper .article-item:nth-child(5) { animation-delay: 0.3s; }
+  .articles-wrapper .article-item:nth-child(6) { animation-delay: 0.35s; }
+  .articles-wrapper .article-item:nth-child(7) { animation-delay: 0.4s; }
+  .articles-wrapper .article-item:nth-child(8) { animation-delay: 0.45s; }
+  .articles-wrapper .article-item:nth-child(9) { animation-delay: 0.5s; }
+  .articles-wrapper .article-item:nth-child(10) { animation-delay: 0.55s; }
+  .articles-wrapper .article-item:nth-child(11) { animation-delay: 0.6s; }
+  .articles-wrapper .article-item:nth-child(12) { animation-delay: 0.65s; }
+  
+  /* Date badge animation */
+  .article_date {
+   transition: all 0.3s ease;
+  }
+  
+  .article-item:hover .article_date {
+   color: #2eb058;
+  }
+  
+  .article_date img {
+   transition: transform 0.3s ease;
+  }
+  
+  .article-item:hover .article_date img {
+   transform: rotate(360deg);
+  }
+  
+  /* Section title animation */
+  .category-section-title {
+   position: relative;
+   display: inline-block;
+  }
+  
+  .category-section-title::after {
+   content: '';
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   width: 60px;
+   height: 3px;
+   background: linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%);
+   border-radius: 2px;
+   animation: expandWidth 0.8s ease-out;
+  }
+  
+  @keyframes expandWidth {
+   from { width: 0; }
+   to { width: 60px; }
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+   .article-item:hover {
+    transform: translateY(-4px);
+   }
+  }
+ </style>
 
  <body class="archive category category-tin-tuc-va-su-kien category-177 wp-theme-greenfeed loading-effect">
 
@@ -98,7 +345,7 @@ $categories = $cat_stmt->fetchAll();
        <div class="articles-popular">
         <?php foreach (array_slice($featured_posts, 0, 5) as $index => $post): 
           $image_url = $post['featured_image'] 
-            ? '/uploads/posts/' . $post['featured_image']
+            ? '../uploads/posts/' . $post['featured_image']
             : '05_images/no-image.jpg';
         ?>
         <div class="news__item">
@@ -183,7 +430,7 @@ $categories = $cat_stmt->fetchAll();
         <?php else: ?>
         <?php foreach ($posts as $post): 
           $image_url = $post['featured_image'] 
-            ? '/uploads/posts/' . $post['featured_image']
+            ? '../uploads/posts/' . $post['featured_image']
             : '05_images/no-image.jpg';
           $short_excerpt = mb_substr(strip_tags($post['excerpt'] ?? ''), 0, 100, 'UTF-8');
           if (mb_strlen(strip_tags($post['excerpt'] ?? '')) > 100) {

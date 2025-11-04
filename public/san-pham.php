@@ -211,7 +211,7 @@ if ($category_slug) {
             <div class="products-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-bottom: 40px;">
                 <?php foreach ($products as $product): 
                     $image_url = $product['image_path'] 
-                        ? '/uploads/products/' . $product['image_path']
+                        ? '../uploads/products/' . $product['image_path']
                         : '05_images/no-image.jpg';
                     $short_desc = mb_substr(strip_tags($product['description'] ?? ''), 0, 80, 'UTF-8');
                     if (mb_strlen(strip_tags($product['description'] ?? '')) > 80) {
