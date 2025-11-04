@@ -1,20 +1,16 @@
 <?php
-// includes/config.docker.php
-// Configuration for Docker environment
+// includes/config.php
+// Auto-detect environment and load appropriate config
 
-// Database connection (sử dụng environment variables từ Docker)
-define('DB_HOST', getenv('DB_HOST') ?: 'db');
-define('DB_NAME', getenv('DB_NAME') ?: 'mgf_website');
-define('DB_USER', getenv('DB_USER') ?: 'mgf_user');
-define('DB_PASS', getenv('DB_PASS') ?: 'mgf_password_2024');
+// Detect environment
+$isDocker = getenv('DOCKER_ENV') !== false || file_exists('/.dockerenv');
 
-// Base URL - để trống hoặc '/' khi chạy trên domain riêng
-define('BASE_URL', '');
-
-define('UPLOAD_DIR', __DIR__ . '/../uploads');
-define('UPLOAD_URL', BASE_URL . '/uploads');
-
-// Timezone
-date_default_timezone_set('Asia/Ho_Chi_Minh');
+if ($isDocker) {
+    // Docker environment
+    require_once __DIR__ . '/config.docker.php';
+} else {
+    // Local XAMPP environment
+    require_once __DIR__ . '/config.local.php';
+}
 
 ?>
