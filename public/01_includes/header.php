@@ -60,9 +60,9 @@
   <link as="font" crossorigin="" href="04_fonts/SVN-GothamBold.woff2" rel="preload" type="font/woff2"/>
   <link as="font" crossorigin="" href="04_fonts/SVN-GothamBookItalic.woff2" rel="preload" type="font/woff2"/>
 
-  <link href="05_images/logo-MG.png" rel="icon" sizes="32x32"/>
-  <link href="05_images/logo-MGF.png" rel="icon" sizes="192x192"/>
-  <link href="05_images/logo-MGF.png" rel="apple-touch-icon"/>
-  <meta content="05_images/logo-MGF.png" name="msapplication-TileImage"/>
+  <link href="05_images/logo-GMF.png" rel="icon" sizes="32x32"/>
+  <link href="05_images/logo-GMF.png" rel="icon" sizes="192x192"/>
+  <link href="05_images/logo-GMF.png" rel="apple-touch-icon"/>
+  <meta content="05_images/logo-GMF.png" name="msapplication-TileImage"/>
 
  </head>
