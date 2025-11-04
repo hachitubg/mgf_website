@@ -11,8 +11,9 @@ $categoriesStmt = $pdo->prepare('SELECT * FROM categories WHERE type = ? ORDER B
 $categoriesStmt->execute(['product']);
 $categories = $categoriesStmt->fetchAll();
 
-// Fetch products with image count
-$sql = "SELECT p.*, COUNT(pi.id) AS images_count, c.name as category_name
+// Fetch products with image count and first image
+$sql = "SELECT p.*, COUNT(pi.id) AS images_count, c.name as category_name,
+        (SELECT image_path FROM product_images WHERE product_id = p.id ORDER BY display_order ASC, id ASC LIMIT 1) as first_image
         FROM products p
         LEFT JOIN product_images pi ON p.id = pi.product_id
         LEFT JOIN categories c ON p.category_id = c.id";
@@ -73,6 +74,26 @@ $products = $stmt->fetchAll();
       color: #1d1d1f;
       min-width: 30px;
       text-align: center;
+    }
+    .product-thumbnail {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #e5e5e7;
+      display: block;
+    }
+    .no-image-placeholder {
+      width: 60px;
+      height: 60px;
+      background: #f5f5f7;
+      border-radius: 8px;
+      border: 1px solid #e5e5e7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #86868b;
+      font-size: 24px;
     }
     .save-order-btn {
       position: fixed;
@@ -146,7 +167,7 @@ $products = $stmt->fetchAll();
 
   <table>
     <thead>
-      <tr><th style="width:40px">Sắp xếp</th><th></th><th>Tên Sản Phẩm</th><th>Danh Mục</th><th>Giá</th><th>Khuyến Mãi</th><th>Hình</th><th>Ngày Tạo</th><th>Hành Động</th></tr>
+      <tr><th style="width:40px">Sắp xếp</th><th></th><th>Hình ảnh</th><th>Tên Sản Phẩm</th><th>Danh Mục</th><th>Giá</th><th>Khuyến Mãi</th><th>Số hình</th><th>Ngày Tạo</th><th>Hành Động</th></tr>
     </thead>
     <tbody id="products-tbody">
     <?php foreach ($products as $index => $p): ?>
@@ -158,6 +179,15 @@ $products = $stmt->fetchAll();
               <path d="M5 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm6 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM5 7a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm6 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM5 11a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm6 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
             </svg>
           </span>
+        </td>
+        <td>
+          <?php if ($p['first_image']): ?>
+            <img src="../../uploads/products/<?php echo htmlspecialchars($p['first_image']); ?>" alt="<?php echo htmlspecialchars($p['title']); ?>" class="product-thumbnail">
+          <?php else: ?>
+            <div class="no-image-placeholder">
+              <i class="fas fa-image"></i>
+            </div>
+          <?php endif; ?>
         </td>
         <td><?php echo htmlspecialchars($p['title'] ?: '(Chưa có tên)'); ?></td>
         <td><?php echo $p['category_name'] ? htmlspecialchars($p['category_name']) : '<span class="muted">Chưa phân loại</span>'; ?></td>
