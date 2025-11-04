@@ -24,7 +24,6 @@ desktop.ini
 # Environment files
 .env
 .env.local
-includes/config.local.php
 
 # Temporary files
 tmp/
