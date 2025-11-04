@@ -539,6 +539,19 @@
     </div>
    </section>
 
+   <?php
+   // Load products from database
+   require_once __DIR__ . '/../includes/db.php';
+   $stmt = $pdo->query("SELECT p.*, pi.image_path, c.name as category_name 
+                        FROM products p 
+                        LEFT JOIN product_images pi ON p.id = pi.product_id AND pi.sort_order = 0
+                        LEFT JOIN categories c ON p.category_id = c.id
+                        WHERE 1=1
+                        ORDER BY p.display_order ASC, p.id DESC 
+                        LIMIT 12");
+   $products = $stmt->fetchAll();
+   ?>
+
    <!-- sản phẩm và dịch vụ -->
    <section class="product-section" id="product">
     <div class="container">
@@ -549,194 +562,53 @@
        </h3>
       </div>
       <div class="products-carousel owl-carousel owl-theme carousel--style1">
+       <?php foreach ($products as $product): 
+         // Giới hạn mô tả chỉ 50 ký tự
+         $short_desc = mb_substr(strip_tags($product['description'] ?? ''), 0, 50, 'UTF-8');
+         if (mb_strlen(strip_tags($product['description'] ?? '')) > 50) {
+           $short_desc .= '...';
+         }
+         
+         // Xử lý hình ảnh
+         $image_url = $product['image_path'] 
+           ? '/uploads/products/' . $product['image_path']
+           : '05_images/no-image.jpg';
+       ?>
        <div class="product-item">
-        <a class="product-item__link" href="thuc-an-chan-nuoi-gia-suc-gia-cam/vi/index.php" target="_blank">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+        <a class="product-item__link" href="chi-tiet-san-pham.php?slug=<?= htmlspecialchars($product['slug']) ?>">
+         <img alt="filter" height="60" src="06_icons/long-arr-next.svg" width="60"/>
         </a>
         <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b00" transform="translate(-10 -10)">
+         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b0<?= $product['id'] ?>" transform="translate(-10 -10)">
          </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b20" transform="translate(-10 -10)">
+         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b2<?= $product['id'] ?>" transform="translate(-10 -10)">
          </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b10" transform="translate(-10 -10)">
+         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b1<?= $product['id'] ?>" transform="translate(-10 -10)">
          </path>
         </svg>
         <div class="product-item__image">
-         <img alt="" class="attachment-full size-full" decoding="async" height="495" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/Nhamay-newlogo-1.jpg" width="495"/>
+         <img alt="<?= htmlspecialchars($product['title']) ?>" class="attachment-full size-full" decoding="async" height="495" src="<?= htmlspecialchars($image_url) ?>" width="495"/>
         </div>
         <div class="product-item__content">
          <span class="subtitle">
-          FEED
+          <?= htmlspecialchars($product['category_name'] ?? 'Sản phẩm') ?>
          </span>
          <h3>
-          Thức ăn chăn nuôi
+          <?= htmlspecialchars($product['title']) ?>
          </h3>
          <div class="description">
           <p>
-           GIẢI PHÁP CHĂN NUÔI TOÀN DIỆN, HIỆU QUẢ VÀ BỀN VỮNG
+           <?= htmlspecialchars($short_desc) ?>
           </p>
          </div>
         </div>
-        <a class="product-item__link-abs" href="thuc-an-chan-nuoi-gia-suc-gia-cam/vi/index.php" target="_blank">
+        <a class="product-item__link-abs" href="chi-tiet-san-pham.php?slug=<?= htmlspecialchars($product['slug']) ?>">
         </a>
        </div>
-       <div class="product-item">
-        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-chan-nuoi/index.php">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b01" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b21" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b11" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="" class="attachment-full size-full" decoding="async" height="371" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/DSC1407-1.jpg" width="372"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          FARM
-         </span>
-         <h3>
-          Chăn nuôi
-         </h3>
-         <div class="description">
-          <p>
-           HỆ THỐNG TRANG TRẠI CHĂN NUÔI HIỆU QUẢ VÀ BỀN VỮNG
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-chan-nuoi/index.php">
-        </a>
-       </div>
-       <div class="product-item">
-        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-thuc-pham/index.php">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b02" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b22" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b12" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="" class="attachment-full size-full" decoding="async" height="357" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/Wyn_0120_a-1.jpg" width="357"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          FOOD
-         </span>
-         <h3>
-          Thực phẩm
-         </h3>
-         <div class="description">
-          <p>
-           THỰC PHẨM LÀNH, NGON, DINH DƯỠNG CHO BỮA ĂN TRỌN VẸN
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-thuc-pham/index.php">
-        </a>
-       </div>
-       <div class="product-item">
-        <a class="product-item__link" href="thuy-san/index.php" target="_blank">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b03" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b23" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b13" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="" class="attachment-full size-full" decoding="async" height="357" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/service-img-04.jpg.jpg" width="357"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          AQUA
-         </span>
-         <h3>
-          Thuỷ hải sản
-         </h3>
-         <div class="description">
-          <p>
-           CHUỖI GIÁ TRỊ NGÀNH THỦY HẢI SẢN HIỆU QUẢ VÀ BỀN VỮNG
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="thuy-san/index.php" target="_blank">
-        </a>
-       </div>
-       <div class="product-item">
-        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-van-tai/index.php">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b04" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b24" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b14" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="Xe tải QD Logistics thuộc GREENFEED đang vận chuyển hàng" class="attachment-full size-full" decoding="async" height="517" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/067250697f06d7db3d214f3f68857324-e1740856996917.jpg" width="540"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          LOGISTICS
-         </span>
-         <h3>
-          Vận tải
-         </h3>
-         <div class="description">
-          <p>
-           ĐỐI TÁC VẬN TẢI CHIẾN LƯỢC HIỆU QUẢ
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-van-tai/index.php">
-        </a>
-       </div>
-       <div class="product-item">
-        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-cong-nghe/index.php">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b05" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b25" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b15" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="Hạ tầng và Công nghệ tại GREENFEED" class="attachment-full size-full" decoding="async" height="512" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/ha-tang-va-cong-nghe-tai-greenfeed.jpg" width="512"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          TECH
-         </span>
-         <h3>
-          Công nghệ
-         </h3>
-         <div class="description">
-          <p>
-           GIẢI PHÁP CNTT-TT VÀ CHUYỂN ĐỔI SỐ TOÀN DIỆN
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-cong-nghe/index.php">
-        </a>
-       </div>
+       <?php endforeach; ?>
       </div>
      </div>
+
     </div>
    </section>
 
@@ -790,12 +662,23 @@
       <div class="newsletter-trigger">
        <a class="btn btn--normal" href="#newsletter">
         Nhận thông tin
-        <img alt="long-arr" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+        <img alt="long-arr" height="60" src="06_icons/long-arr-next.svg" width="60"/>
        </a>
       </div>
      </div>
     </div>
    </section> -->
+
+   <?php
+   // Load posts from database
+   $stmt = $pdo->query("SELECT p.*, c.name as category_name 
+                        FROM posts p 
+                        LEFT JOIN categories c ON p.category_id = c.id
+                        WHERE p.is_active = 1
+                        ORDER BY p.created_at DESC 
+                        LIMIT 8");
+   $posts = $stmt->fetchAll();
+   ?>
 
    <!-- Tin tức và Sự kiện -->
    <section class="news" id="news">
@@ -805,291 +688,50 @@
        <h3 class="section-title">
         Tin tức và Sự kiện
        </h3>
-       <a class="viewall btn btn--outline" href="chuyen-muc/tin-tuc-va-su-kien/index.php">
+       <a class="viewall btn btn--outline" href="tin-tuc.php">
         Xem tất cả
        </a>
       </div>
       <div class="news-carousel owl-carousel owl-theme carousel--style1">
+       <?php foreach ($posts as $post): 
+         $image_url = $post['featured_image'] 
+           ? '/uploads/posts/' . $post['featured_image']
+           : '05_images/no-image.jpg';
+       ?>
        <div class="news__item">
-        <article class="article-item post_7868">
+        <article class="article-item post_<?= $post['id'] ?>">
          <div class="article-box">
           <div class="article__image">
-           <a href="bo-san-pham-g-tek-cong-nghe-xanh-dat-giai-thuong-hieu-vang-nong-nghiep-viet-nam-2025/index.php">
-            <img alt="BỘ SẢN PHẨM G.TEK CÔNG NGHỆ XANH ĐẠT GIẢI THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025" class="attachment-full size-full wp-post-image" decoding="async" height="928" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/BO-SAN-PHAM-G.TEK-CONG-NGHE-XANH-DAT-GIAI-THUONG-HIEU-VANG-NONG-NGHIEP-VIETNAM-2025.jpg" width="1808"/>
+           <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($post['slug']) ?>">
+            <img alt="<?= htmlspecialchars($post['title']) ?>" class="attachment-full size-full wp-post-image" decoding="async" src="<?= htmlspecialchars($image_url) ?>"/>
            </a>
+           <?php if ($post['category_name']): ?>
            <div class="article_category">
-            Thức ăn chăn nuôi
+            <?= htmlspecialchars($post['category_name']) ?>
            </div>
+           <?php endif; ?>
           </div>
           <div class="article__info">
            <div class="article_meta">
             <span class="article_date">
              <img alt="date" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/date.svg" width="60"/>
-             30-10-2025
-            </span>
-            <span class="article_view">
-             <img alt="view" height="18" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/view.svg" width="18"/>
-             83,259
+             <?= date('d-m-Y', strtotime($post['created_at'])) ?>
             </span>
            </div>
-           <h3 class="article__title" title="BỘ SẢN PHẨM G.TEK CÔNG NGHỆ XANH ĐẠT GIẢI THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025">
-            <a href="bo-san-pham-g-tek-cong-nghe-xanh-dat-giai-thuong-hieu-vang-nong-nghiep-viet-nam-2025/index.php">
-             BỘ SẢN PHẨM G.TEK CÔNG NGHỆ XANH ĐẠT GIẢI THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025
+           <h3 class="article__title" title="<?= htmlspecialchars($post['title']) ?>">
+            <a href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($post['slug']) ?>">
+             <?= htmlspecialchars($post['title']) ?>
             </a>
            </h3>
-           <a class="readmore" href="bo-san-pham-g-tek-cong-nghe-xanh-dat-giai-thuong-hieu-vang-nong-nghiep-viet-nam-2025/index.php">
+           <a class="readmore" href="chi-tiet-tin-tuc.php?slug=<?= htmlspecialchars($post['slug']) ?>">
             Xem thêm
-            <img alt="long-arr-next" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+            <img alt="long-arr-next" height="60" src="06_icons/long-arr-next.svg" width="60"/>
            </a>
           </div>
          </div>
         </article>
        </div>
-       <div class="news__item">
-        <article class="article-item post_7856">
-         <div class="article-box">
-          <div class="article__image">
-           <a href="kich-hoat-nang-luc-chuyen-doi-thoi-ai/index.php">
-            <img alt="KÍCH HOẠT NĂNG LỰC CHUYỂN ĐỔI THỜI AI" class="attachment-full size-full wp-post-image" decoding="async" height="675" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/WebsiteGFxCOM-Hitech-29Oct25.jpg" width="1000"/>
-           </a>
-           <div class="article_category">
-            Hành trình lớn mạnh
-           </div>
-          </div>
-          <div class="article__info">
-           <div class="article_meta">
-            <span class="article_date">
-             <img alt="date" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/date.svg" width="60"/>
-             30-10-2025
-            </span>
-            <span class="article_view">
-             <img alt="view" height="18" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/view.svg" width="18"/>
-             54,549
-            </span>
-           </div>
-           <h3 class="article__title" title="KÍCH HOẠT NĂNG LỰC CHUYỂN ĐỔI THỜI AI">
-            <a href="kich-hoat-nang-luc-chuyen-doi-thoi-ai/index.php">
-             KÍCH HOẠT NĂNG LỰC CHUYỂN ĐỔI THỜI AI
-            </a>
-           </h3>
-           <a class="readmore" href="kich-hoat-nang-luc-chuyen-doi-thoi-ai/index.php">
-            Xem thêm
-            <img alt="long-arr-next" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-           </a>
-          </div>
-         </div>
-        </article>
-       </div>
-       <div class="news__item">
-        <article class="article-item post_7799">
-         <div class="article-box">
-          <div class="article__image">
-           <a href="bo-ba-giai-phap-dinh-duong-thu-y-greenfeed-la-thuong-hieu-vang-nong-nghiep-viet-nam-2025/index.php">
-            <img alt="BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y MGF LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025" class="attachment-full size-full wp-post-image" decoding="async" height="675" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/Website-GFxEB-GoldBrandNNVN-Oct25.jpg" width="1000"/>
-           </a>
-           <div class="article_category">
-            Thức ăn chăn nuôi
-           </div>
-          </div>
-          <div class="article__info">
-           <div class="article_meta">
-            <span class="article_date">
-             <img alt="date" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/date.svg" width="60"/>
-             18-10-2025
-            </span>
-            <span class="article_view">
-             <img alt="view" height="18" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/view.svg" width="18"/>
-             338,778
-            </span>
-           </div>
-           <h3 class="article__title" title="BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y MGF LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025">
-            <a href="bo-ba-giai-phap-dinh-duong-thu-y-greenfeed-la-thuong-hieu-vang-nong-nghiep-viet-nam-2025/index.php">
-             BỘ BA GIẢI PHÁP DINH DƯỠNG &amp; THÚ Y MGF LÀ THƯƠNG HIỆU VÀNG NÔNG NGHIỆP VIỆT NAM 2025
-            </a>
-           </h3>
-           <a class="readmore" href="bo-ba-giai-phap-dinh-duong-thu-y-greenfeed-la-thuong-hieu-vang-nong-nghiep-viet-nam-2025/index.php">
-            Xem thêm
-            <img alt="long-arr-next" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-           </a>
-          </div>
-         </div>
-        </article>
-       </div>
-       <div class="news__item">
-        <article class="article-item post_7794">
-         <div class="article-box">
-          <div class="article__image">
-           <a href="chuoi-gia-tri-thuc-pham-lanh-ngon-vi-mot-tuong-lai-ben-vung/index.php">
-            <img alt="CHUỖI GIÁ TRỊ THỰC PHẨM LÀNH, NGON VÌ MỘT TƯƠNG LAI BỀN VỮNG" class="attachment-full size-full wp-post-image" decoding="async" height="2048" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/chuoi-gia-tri-thuc-pham-lanh-ngon-vi-mot-tuong-lai-ben-vung.jpg" width="2048"/>
-           </a>
-           <div class="article_category">
-            Thực phẩm
-           </div>
-          </div>
-          <div class="article__info">
-           <div class="article_meta">
-            <span class="article_date">
-             <img alt="date" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/date.svg" width="60"/>
-             16-10-2025
-            </span>
-            <span class="article_view">
-             <img alt="view" height="18" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/view.svg" width="18"/>
-             203,841
-            </span>
-           </div>
-           <h3 class="article__title" title="CHUỖI GIÁ TRỊ THỰC PHẨM LÀNH, NGON VÌ MỘT TƯƠNG LAI BỀN VỮNG">
-            <a href="chuoi-gia-tri-thuc-pham-lanh-ngon-vi-mot-tuong-lai-ben-vung/index.php">
-             CHUỖI GIÁ TRỊ THỰC PHẨM LÀNH, NGON VÌ MỘT TƯƠNG LAI BỀN VỮNG
-            </a>
-           </h3>
-           <a class="readmore" href="chuoi-gia-tri-thuc-pham-lanh-ngon-vi-mot-tuong-lai-ben-vung/index.php">
-            Xem thêm
-            <img alt="long-arr-next" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-           </a>
-          </div>
-         </div>
-        </article>
-       </div>
-       <div class="news__item">
-        <article class="article-item post_7779">
-         <div class="article-box">
-          <div class="article__image">
-           <a href="greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet/index.php">
-            <img alt="MGF ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT" class="attachment-full size-full wp-post-image" decoding="async" height="2560" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet-1-scaled.jpg" width="2560"/>
-           </a>
-           <div class="article_category">
-            Tiếp Sức Nhà Nông
-           </div>
-          </div>
-          <div class="article__info">
-           <div class="article_meta">
-            <span class="article_date">
-             <img alt="date" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/date.svg" width="60"/>
-             14-10-2025
-            </span>
-            <span class="article_view">
-             <img alt="view" height="18" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/view.svg" width="18"/>
-             179,916
-            </span>
-           </div>
-           <h3 class="article__title" title="MGF ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT">
-            <a href="greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet/index.php">
-             MGF ĐỒNG HÀNH TIẾP SỨC ƯỚC MƠ SINH KẾ CHO NÔNG DÂN VIỆT
-            </a>
-           </h3>
-           <a class="readmore" href="greenfeed-dong-hanh-tiep-suc-uoc-mo-sinh-ke-cho-nong-dan-viet/index.php">
-            Xem thêm
-            <img alt="long-arr-next" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-           </a>
-          </div>
-         </div>
-        </article>
-       </div>
-       <div class="news__item">
-        <article class="article-item post_7758">
-         <div class="article-box">
-          <div class="article__image">
-           <a href="mua-vang-ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025/index.php">
-            <img alt="“MÙA VÀNG” BA CHIẾN THẮNG CỦA MGF TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025" class="attachment-full size-full wp-post-image" decoding="async" height="900" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025-6.jpg" width="1600"/>
-           </a>
-           <div class="article_category">
-            Hành trình lớn mạnh
-           </div>
-          </div>
-          <div class="article__info">
-           <div class="article_meta">
-            <span class="article_date">
-             <img alt="date" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/date.svg" width="60"/>
-             10-10-2025
-            </span>
-            <span class="article_view">
-             <img alt="view" height="18" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/view.svg" width="18"/>
-             538,791
-            </span>
-           </div>
-           <h3 class="article__title" title="“MÙA VÀNG” BA CHIẾN THẮNG CỦA MGF TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025">
-            <a href="mua-vang-ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025/index.php">
-             “MÙA VÀNG” BA CHIẾN THẮNG CỦA MGF TẠI ASIA PACIFIC ENTERPRISE AWARDS 2025
-            </a>
-           </h3>
-           <a class="readmore" href="mua-vang-ba-chien-thang-cua-greenfeed-tai-asia-pacific-enterprise-awards-2025/index.php">
-            Xem thêm
-            <img alt="long-arr-next" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-           </a>
-          </div>
-         </div>
-        </article>
-       </div>
-       <div class="news__item">
-        <article class="article-item post_7738">
-         <div class="article-box">
-          <div class="article__image">
-           <a href="greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025/index.php">
-            <img alt="MGF GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025" class="attachment-full size-full wp-post-image" decoding="async" height="2560" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025-9b-scaled.jpg" width="2560"/>
-           </a>
-           <div class="article_category">
-            Trang trại và con giống
-           </div>
-          </div>
-          <div class="article__info">
-           <div class="article_meta">
-            <span class="article_date">
-             <img alt="date" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/date.svg" width="60"/>
-             09-10-2025
-            </span>
-            <span class="article_view">
-             <img alt="view" height="18" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/view.svg" width="18"/>
-             411,510
-            </span>
-           </div>
-           <h3 class="article__title" title="MGF GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025">
-            <a href="greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025/index.php">
-             MGF GIỚI THIỆU ỨNG DỤNG CHUYỂN ĐỔI SỐ TRONG QUẢN LÝ TRANG TRẠI THÔNG MINH TẠI VIETSTOCK EXPO &amp; FORUM 2025
-            </a>
-           </h3>
-           <a class="readmore" href="greenfeed-gioi-thieu-ung-dung-chuyen-doi-so-trong-quan-ly-trang-trai-thong-minh-tai-vietstock-expo-forum-2025/index.php">
-            Xem thêm
-            <img alt="long-arr-next" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-           </a>
-          </div>
-         </div>
-        </article>
-       </div>
-       <div class="news__item">
-        <article class="article-item post_7721">
-         <div class="article-box">
-          <div class="article__image">
-           <a href="greenfeed-va-hanh-trinh-tham-gia-chuoi-gia-tri-thuy-hai-san-toan-cau/index.php">
-            <img alt="MGF VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU" class="attachment-full size-full wp-post-image" decoding="async" height="673" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/10/Trai-thuy-hai-san-greenfeed-3.jpg" width="1029"/>
-           </a>
-           <div class="article_category">
-            Thủy hải sản
-           </div>
-          </div>
-          <div class="article__info">
-           <div class="article_meta">
-            <span class="article_date">
-             <img alt="date" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/date.svg" width="60"/>
-             08-10-2025
-            </span>
-            <span class="article_view">
-             <img alt="view" height="18" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/view.svg" width="18"/>
-             319,638
-            </span>
-           </div>
-           <h3 class="article__title" title="MGF VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU">
-            <a href="greenfeed-va-hanh-trinh-tham-gia-chuoi-gia-tri-thuy-hai-san-toan-cau/index.php">
-             MGF VÀ HÀNH TRÌNH THAM GIA CHUỖI GIÁ TRỊ THỦY HẢI SẢN TOÀN CẦU
-            </a>
-           </h3>
-           <a class="readmore" href="greenfeed-va-hanh-trinh-tham-gia-chuoi-gia-tri-thuy-hai-san-toan-cau/index.php">
-            Xem thêm
-            <img alt="long-arr-next" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-           </a>
-          </div>
-         </div>
-        </article>
-       </div>
+       <?php endforeach; ?>
       </div>
       <div class="carousel-counter">
       </div>
@@ -1097,7 +739,6 @@
      </div>
     </div>
    </section>
-
 
    <section class="layers" id="layers">
     <div class="container">
@@ -1202,7 +843,7 @@
           </p>
           <a class="viewmore" href="phat-trien-ben-vung/s-xa-hoi-ben-vung/cong-dong-ben-vung/tiep-suc-nha-nong/index.php">
            Tìm hiểu thêm
-           <img alt="arr" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+           <img alt="arr" height="60" src="06_icons/long-arr-next.svg" width="60"/>
           </a>
          </div>
          <div class="accordion__content">
@@ -1291,7 +932,7 @@
           </p>
           <a class="viewmore" href="phat-trien-ben-vung/s-xa-hoi-ben-vung/cong-dong-ben-vung/bua-an-tron-ven/index.php">
            Tìm hiểu thêm
-           <img alt="arr" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+           <img alt="arr" height="60" src="06_icons/long-arr-next.svg" width="60"/>
           </a>
          </div>
          <div class="accordion__content">
@@ -1368,7 +1009,7 @@
           </p>
           <a class="viewmore" href="phat-trien-ben-vung/s-xa-hoi-ben-vung/cong-dong-ben-vung/chap-canh-uoc-mo/index.php">
            Tìm hiểu thêm
-           <img alt="arr" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+           <img alt="arr" height="60" src="06_icons/long-arr-next.svg" width="60"/>
           </a>
          </div>
          <div class="accordion__content">
@@ -1421,7 +1062,7 @@
           </p>
           <a class="viewmore" href="phat-trien-ben-vung/s-xa-hoi-ben-vung/cong-dong-ben-vung/trieu-mam-xanh-cho-viet-nam/index.php">
            Tìm hiểu thêm
-           <img alt="arr" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+           <img alt="arr" height="60" src="06_icons/long-arr-next.svg" width="60"/>
           </a>
          </div>
          <div class="accordion__content">
@@ -1462,7 +1103,7 @@
           </p>
           <a class="viewmore" href="phat-trien-ben-vung/s-xa-hoi-ben-vung/cong-dong-ben-vung/ho-tro-cong-dong/index.php">
            Tìm hiểu thêm
-           <img alt="arr" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+           <img alt="arr" height="60" src="06_icons/long-arr-next.svg" width="60"/>
           </a>
          </div>
          <div class="accordion__content">
