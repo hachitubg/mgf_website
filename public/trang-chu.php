@@ -537,8 +537,9 @@
       </div>
      </div>
     </div>
-
    </section>
+
+   <!-- sản phẩm và dịch vụ -->
    <section class="product-section" id="product">
     <div class="container">
      <div class="product-section-inner">
@@ -548,71 +549,6 @@
        </h3>
       </div>
       <div class="products-carousel owl-carousel owl-theme carousel--style1">
-       <?php
-       // Include database connection
-       require_once '../includes/db.php';
-
-       try {
-           // Query to get featured products (limit 6, ordered by display_order)
-           $stmt = $pdo->prepare("
-               SELECT p.*, c.name as category_name
-               FROM products p
-               LEFT JOIN categories c ON p.category_id = c.id
-               WHERE c.is_active = 1
-               ORDER BY p.display_order ASC, p.created_at DESC
-               LIMIT 6
-           ");
-           $stmt->execute();
-           $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-           foreach ($products as $product):
-               // Get first image if available
-               $imageStmt = $pdo->prepare("SELECT image_path FROM product_images WHERE product_id = ? ORDER BY sort_order ASC LIMIT 1");
-               $imageStmt->execute([$product['id']]);
-               $image = $imageStmt->fetch(PDO::FETCH_ASSOC);
-               $imageUrl = $image ? '../uploads/products/' . $image['image_path'] : 'https://via.placeholder.com/495x495/0C7A07/FFFFFF?text=' . urlencode($product['title']);
-
-               // Extract first paragraph from description for subtitle
-               $description = strip_tags($product['description']);
-               $subtitle = substr($description, 0, 100) . (strlen($description) > 100 ? '...' : '');
-       ?>
-       <div class="product-item">
-        <a class="product-item__link" href="san-pham/<?php echo htmlspecialchars($product['slug']); ?>.php">
-         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-        </a>
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
-         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b0<?php echo $product['id']; ?>" transform="translate(-10 -10)">
-         </path>
-         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b2<?php echo $product['id']; ?>" transform="translate(-10 -10)">
-         </path>
-         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b1<?php echo $product['id']; ?>" transform="translate(-10 -10)">
-         </path>
-        </svg>
-        <div class="product-item__image">
-         <img alt="<?php echo htmlspecialchars($product['title']); ?>" class="attachment-full size-full" decoding="async" height="495" src="<?php echo htmlspecialchars($imageUrl); ?>" width="495"/>
-        </div>
-        <div class="product-item__content">
-         <span class="subtitle">
-          <?php echo htmlspecialchars($product['category_name'] ?? 'Sản phẩm'); ?>
-         </span>
-         <h3>
-          <?php echo htmlspecialchars($product['title']); ?>
-         </h3>
-         <div class="description">
-          <p>
-           <?php echo htmlspecialchars($subtitle); ?>
-          </p>
-         </div>
-        </div>
-        <a class="product-item__link-abs" href="san-pham/<?php echo htmlspecialchars($product['slug']); ?>.php">
-        </a>
-       </div>
-       <?php
-           endforeach;
-       } catch (PDOException $e) {
-           // Fallback to static content if database error
-           echo '<!-- Database error: ' . htmlspecialchars($e->getMessage()) . ' -->';
-       ?>
        <div class="product-item">
         <a class="product-item__link" href="thuc-an-chan-nuoi-gia-suc-gia-cam/vi/index.php" target="_blank">
          <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
@@ -644,10 +580,163 @@
         <a class="product-item__link-abs" href="thuc-an-chan-nuoi-gia-suc-gia-cam/vi/index.php" target="_blank">
         </a>
        </div>
-       <?php } ?>
+       <div class="product-item">
+        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-chan-nuoi/index.php">
+         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+        </a>
+        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
+         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b01" transform="translate(-10 -10)">
+         </path>
+         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b21" transform="translate(-10 -10)">
+         </path>
+         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b11" transform="translate(-10 -10)">
+         </path>
+        </svg>
+        <div class="product-item__image">
+         <img alt="" class="attachment-full size-full" decoding="async" height="371" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/DSC1407-1.jpg" width="372"/>
+        </div>
+        <div class="product-item__content">
+         <span class="subtitle">
+          FARM
+         </span>
+         <h3>
+          Chăn nuôi
+         </h3>
+         <div class="description">
+          <p>
+           HỆ THỐNG TRANG TRẠI CHĂN NUÔI HIỆU QUẢ VÀ BỀN VỮNG
+          </p>
+         </div>
+        </div>
+        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-chan-nuoi/index.php">
+        </a>
+       </div>
+       <div class="product-item">
+        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-thuc-pham/index.php">
+         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+        </a>
+        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
+         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b02" transform="translate(-10 -10)">
+         </path>
+         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b22" transform="translate(-10 -10)">
+         </path>
+         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b12" transform="translate(-10 -10)">
+         </path>
+        </svg>
+        <div class="product-item__image">
+         <img alt="" class="attachment-full size-full" decoding="async" height="357" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/Wyn_0120_a-1.jpg" width="357"/>
+        </div>
+        <div class="product-item__content">
+         <span class="subtitle">
+          FOOD
+         </span>
+         <h3>
+          Thực phẩm
+         </h3>
+         <div class="description">
+          <p>
+           THỰC PHẨM LÀNH, NGON, DINH DƯỠNG CHO BỮA ĂN TRỌN VẸN
+          </p>
+         </div>
+        </div>
+        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-thuc-pham/index.php">
+        </a>
+       </div>
+       <div class="product-item">
+        <a class="product-item__link" href="thuy-san/index.php" target="_blank">
+         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+        </a>
+        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
+         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b03" transform="translate(-10 -10)">
+         </path>
+         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b23" transform="translate(-10 -10)">
+         </path>
+         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b13" transform="translate(-10 -10)">
+         </path>
+        </svg>
+        <div class="product-item__image">
+         <img alt="" class="attachment-full size-full" decoding="async" height="357" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/service-img-04.jpg.jpg" width="357"/>
+        </div>
+        <div class="product-item__content">
+         <span class="subtitle">
+          AQUA
+         </span>
+         <h3>
+          Thuỷ hải sản
+         </h3>
+         <div class="description">
+          <p>
+           CHUỖI GIÁ TRỊ NGÀNH THỦY HẢI SẢN HIỆU QUẢ VÀ BỀN VỮNG
+          </p>
+         </div>
+        </div>
+        <a class="product-item__link-abs" href="thuy-san/index.php" target="_blank">
+        </a>
+       </div>
+       <div class="product-item">
+        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-van-tai/index.php">
+         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+        </a>
+        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
+         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b04" transform="translate(-10 -10)">
+         </path>
+         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b24" transform="translate(-10 -10)">
+         </path>
+         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b14" transform="translate(-10 -10)">
+         </path>
+        </svg>
+        <div class="product-item__image">
+         <img alt="Xe tải QD Logistics thuộc GREENFEED đang vận chuyển hàng" class="attachment-full size-full" decoding="async" height="517" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/067250697f06d7db3d214f3f68857324-e1740856996917.jpg" width="540"/>
+        </div>
+        <div class="product-item__content">
+         <span class="subtitle">
+          LOGISTICS
+         </span>
+         <h3>
+          Vận tải
+         </h3>
+         <div class="description">
+          <p>
+           ĐỐI TÁC VẬN TẢI CHIẾN LƯỢC HIỆU QUẢ
+          </p>
+         </div>
+        </div>
+        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-van-tai/index.php">
+        </a>
+       </div>
+       <div class="product-item">
+        <a class="product-item__link" href="san-pham-va-dich-vu/nganh-cong-nghe/index.php">
+         <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
+        </a>
+        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 328.5 478" xmlns="http://www.w3.org/2000/svg">
+         <path class="b0" d="M300.26,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C261.49,22.51,249.47,10,233.09,10H40A30,30,0,0,0,10,40V458a30,30,0,0,0,30,30H308a30,30,0,0,0,30-30V126.93C338,99.78,314.91,92.62,300.26,85.15Z" fill="#fff" id="b05" transform="translate(-10 -10)">
+         </path>
+         <path class="b2" d="M300.76,85.15c-8.83-4.51-25.87-10.44-31.09-31.57C262,22.51,250,10,233.59,10H40.5a30,30,0,0,0-30,30V458a30,30,0,0,0,30,30h268a30,30,0,0,0,30-30V126.93C338.5,99.78,315.41,92.62,300.76,85.15Z" fill="#fff" id="b25" transform="translate(-10 -10)">
+         </path>
+         <path class="b1" d="M40.5,10h268a30,30,0,0,1,30,30V458a30,30,0,0,1-30,30H40.5a30,30,0,0,1-30-30V40A30,30,0,0,1,40.5,10Z" fill="#fff" id="b15" transform="translate(-10 -10)">
+         </path>
+        </svg>
+        <div class="product-item__image">
+         <img alt="Hạ tầng và Công nghệ tại GREENFEED" class="attachment-full size-full" decoding="async" height="512" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/ha-tang-va-cong-nghe-tai-greenfeed.jpg" width="512"/>
+        </div>
+        <div class="product-item__content">
+         <span class="subtitle">
+          TECH
+         </span>
+         <h3>
+          Công nghệ
+         </h3>
+         <div class="description">
+          <p>
+           GIẢI PHÁP CNTT-TT VÀ CHUYỂN ĐỔI SỐ TOÀN DIỆN
+          </p>
+         </div>
+        </div>
+        <a class="product-item__link-abs" href="san-pham-va-dich-vu/nganh-cong-nghe/index.php">
+        </a>
+       </div>
       </div>
      </div>
-
     </div>
    </section>
 
