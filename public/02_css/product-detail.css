@@ -95,7 +95,7 @@
 }
 
 .product-title {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     color: #054326;
     margin-bottom: 24px;
@@ -106,7 +106,7 @@
 
 /* ==================== Price Section ==================== */
 .product-price-section {
-    padding: 24px;
+    padding: 16px;
     background: linear-gradient(135deg, #f8fdf5 0%, #e8f5e9 100%);
     border-radius: 12px;
     margin-bottom: 32px;
@@ -121,7 +121,7 @@
 }
 
 .price-current {
-    font-size: 42px;
+    font-size: 26px;
     font-weight: 700;
     color: #2eb058;
     line-height: 1;
@@ -322,23 +322,29 @@
 }
 
 .related-products-carousel .owl-dots {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
 }
 
-.related-products-carousel .owl-dot {
-    width: 12px;
-    height: 12px;
+/* Simplified dots: small circular indicators, green when active */
+.related-products-carousel .owl-dots .owl-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
     background: #d0d0d0 !important;
     border-radius: 50%;
     margin: 0 6px;
-    transition: all 0.3s ease;
+    transition: transform 0.18s ease, background 0.18s ease;
 }
 
-.related-products-carousel .owl-dot.active {
+.related-products-carousel .owl-dots .owl-dot.active {
     background: #2eb058 !important;
-    width: 30px;
-    border-radius: 6px;
+    transform: scale(1.25);
+}
+
+/* Hide nav arrows on very small screens via CSS as a fallback */
+@media (max-width: 767px) {
+    .related-products-carousel .owl-nav { display: none !important; }
 }
 
 /* Product Card - Vertical Layout */

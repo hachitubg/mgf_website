@@ -58,22 +58,22 @@
       <?php else: ?>
       <!-- Fallback banners if database is empty -->
       <div class="banner__image">
-       <a href="#">
+       <a href="coming-soon.php">
         <img alt="Trang trại gia súc, gia cầm của MGF tại Bình Thuận" class="attachment-full size-full" decoding="async" fetchpriority="high" height="1235" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/trang-trai-gia-suc-gia-cam-greenfeed-binh-thuan.jpg" width="2560"/>
        </a>
       </div>
       <div class="banner__image">
-       <a href="#">
+       <a href="coming-soon.php">
         <img alt="Nhà máy MGF tại tỉnh Hà Nam" class="attachment-full size-full" decoding="async" height="926" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/nha-may-greenfeed-tai-tinh-ha-nam.jpg" width="1920"/>
        </a>
       </div>
       <div class="banner__image">
-       <a href="#">
+       <a href="coming-soon.php">
         <img alt="Trại Heo MGF tại huyện Cẩm Mỹ tỉnh Đồng Nai" class="attachment-full size-full" decoding="async" height="1235" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/trai-heo-greenfeed-tai-huyen-cam-my-tinh-dong-nai.jpg" width="2560"/>
        </a>
       </div>
       <div class="banner__image">
-       <a href="#">
+       <a href="coming-soon.php">
         <img alt="Trang trại gia súc, gia cầm của MGF tại Bình Thuận" class="attachment-full size-full" decoding="async" height="926" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/trang-trai-gia-suc-gia-cam-tai-tinh-binh-thuan.jpg" width="1920"/>
        </a>
       </div>
@@ -566,7 +566,7 @@
          </li>
         </ul>
         <p>
-         <a class="btn btn--primary" href="gioi-thieu/ve-greenfeed/index.php">
+         <a class="btn btn--primary" href="gioi-thieu.php">
           Tìm hiểu thêm
           <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
          </a>
@@ -601,9 +601,20 @@
       </div>
       <div class="products-carousel owl-carousel owl-theme carousel--style1">
        <?php foreach ($products as $product): 
+         // Lọc hết HTML tags và entities, loại bỏ whitespace dư thừa
+         $description = $product['description'] ?? '';
+         // Loại bỏ tất cả thẻ HTML
+         $description = strip_tags($description);
+         // Decode HTML entities
+         $description = html_entity_decode($description, ENT_QUOTES, 'UTF-8');
+         // Loại bỏ nhiều khoảng trắng liên tiếp
+         $description = preg_replace('/\s+/', ' ', $description);
+         // Trim khoảng trắng đầu cuối
+         $description = trim($description);
+         
          // Giới hạn mô tả chỉ 50 ký tự
-         $short_desc = mb_substr(strip_tags($product['description'] ?? ''), 0, 50, 'UTF-8');
-         if (mb_strlen(strip_tags($product['description'] ?? '')) > 50) {
+         $short_desc = mb_substr($description, 0, 50, 'UTF-8');
+         if (mb_strlen($description) > 50) {
            $short_desc .= '...';
          }
          
@@ -782,7 +793,7 @@
     <div class="container">
      <div class="layers-inner">
       <div class="layers-list">
-       <a class="layer-item active" href="phat-trien-ben-vung/e-moi-truong-ben-vung/index.php">
+       <a class="layer-item active" href="coming-soon.php">
         <div class="layer-image">
          <img alt="" class="attachment-full size-full" decoding="async" height="902" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/fbee64008d12914e7f9eb7f950a103ef-e1748153967589.jpg" width="1920"/>
         </div>
@@ -798,7 +809,7 @@
          E
         </div>
        </a>
-       <a class="layer-item" href="phat-trien-ben-vung/s-xa-hoi-ben-vung/index.php">
+       <a class="layer-item" href="coming-soon.php">
         <div class="layer-image">
          <img alt="" class="attachment-full size-full" decoding="async" height="1284" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/06/phu-nu-trong-chuong-trinh-tiep-suc-nha-nong-cua-greenfeed-2.jpg" width="1920"/>
         </div>
@@ -814,7 +825,7 @@
          S
         </div>
        </a>
-       <a class="layer-item" href="phat-trien-ben-vung/g-quan-tri-chuoi-cung-ung-ben-vung/index.php">
+       <a class="layer-item" href="coming-soon.php">
         <div class="layer-image">
          <img alt="" class="attachment-full size-full" decoding="async" height="1073" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/833356f8e36564addde08211c286f5ef.jpg" width="1920"/>
         </div>

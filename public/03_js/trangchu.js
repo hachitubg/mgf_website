@@ -1,3 +1,15 @@
+// Fix passive event listener warnings - MUST run before any jQuery event bindings
+jQuery.event.special.touchstart = { 
+    setup: function( _, ns, handle ) { 
+        this.addEventListener('touchstart', handle, { passive: !ns.includes('noPreventDefault') }); 
+    } 
+}; 
+jQuery.event.special.touchmove = { 
+    setup: function( _, ns, handle ) { 
+        this.addEventListener('touchmove', handle, { passive: !ns.includes('noPreventDefault') }); 
+    } 
+};
+
 jQuery(document).ready(function ($) {
     jQuery('.banner-carousel').owlCarousel({
         items:1,
@@ -1673,8 +1685,6 @@ jQuery(document).ready(function ($) {
                 districtcf.disable();
             });
 
-
-jQuery.event.special.touchstart = { setup: function( _, ns, handle ) { this.addEventListener('touchstart', handle, { passive: !ns.includes('noPreventDefault') }); } }; jQuery.event.special.touchmove = { setup: function( _, ns, handle ) { this.addEventListener('touchmove', handle, { passive: !ns.includes('noPreventDefault') }); } };
                     jQuery(function($) {
             MainMenu();
             // SearchBox();
@@ -2334,138 +2344,147 @@ function UserAgent()
                 return BrandTL;
             }
         });
+
+
+
+
 jQuery(document).ready(function ($) {
+    $('a[href="#product"]').click(function(e) {
+        e.preventDefault(); // Ngăn chặn cuộn mặc định
+        let targetOffset = $("#product").offset().top - 220;
+        gsap.to(window, { duration: 1.5, scrollTo: targetOffset, ease: Back.easeOut });
+    });
 
-            $('a[href="#product"]').click(function(e) {
-                e.preventDefault(); // Ngăn chặn cuộn mặc định
-                let targetOffset = $("#product").offset().top - 220;
-                gsap.to(window, { duration: 1.5, scrollTo: targetOffset, ease: Back.easeOut });
-            });
-
-            ProductCarouselInit();
-            var owl;
-            function ProductCarouselInit()
-            {
-                owl = jQuery('.products-carousel').owlCarousel({
-                   nav:true,
-                    navText:["<div class='nav-btn prev-nav '><img width='28' height='28' src='https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/arr-next2.svg' alt='Prev'></div>","<div class='nav-btn next-nav '><img width='28' height='28' src='https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/arr-next2.svg' alt='Next'></div>"],
-                    dots:false,
-                    loop:false,
-                    margin:20,
+    ProductCarouselInit();
+    var owl;
+    function ProductCarouselInit()
+    {
+        owl = jQuery('.products-carousel').owlCarousel({
+            nav:true,
+            navText:["<div class='nav-btn prev-nav '><img width='28' height='28' src='https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/arr-next2.svg' alt='Prev'></div>","<div class='nav-btn next-nav '><img width='28' height='28' src='https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/arr-next2.svg' alt='Next'></div>"],
+            dots:false,
+            loop:false,
+            margin:20,
+            stagePadding:0,
+            items:4,
+            smartSpeed:450,
+            autoplay: false,
+            //autoplayTimeout: 10000, 
+            autoplayHoverPause: true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:false,
+                    dots:true,
+                    margin:12,
+                    stagePadding:50,
+                },
+                600:{
                     stagePadding:0,
+                    items:2,
+                },
+                1024:{
                     items:4,
-                    smartSpeed:450,
-                    autoplay: false,
-                    //autoplayTimeout: 10000, 
-                    autoplayHoverPause: true,
-                    responsive:{
-                        0:{
-                            items:1,
-                            nav:false,
-                            dots:true,
-                            margin:12,
-                            stagePadding:50,
-                        },
-                        600:{
-                            stagePadding:0,
-                            items:2,
-                        },
-                        1024:{
-                            items:4,
-                            stagePadding:40,
-                        }
-                    },
-                    // onInitialized  : slidecounter,
-                    onTranslated: checkDirection 
-                });
-            }
-           var restartTimeout;
-            function checkDirection(event) {
-               
-                var count = event.item.count; // Tổng số item
-                var itemsPerPage = event.page.size; // Số item trên mỗi trang
-                var currentPage = event.item.index; // Trang hiện tại (bắt đầu từ 0)
-                var totalPages = Math.ceil(count / itemsPerPage); // Tổng số trang (bắt đầu từ 0)
-                if(window.matchMedia("(max-width: 1023px)").matches)
-                    totalPages--;
-
-                clearTimeout(restartTimeout);
-                
-                if (currentPage >= totalPages) {
-                    restartTimeout = setTimeout(function(){
-                        jQuery('.products-carousel').trigger("to.owl.carousel", [0, 500]); // Quay về trang đầu tiên trong 0.5s
-                    }, 5000); // Chờ 5 giây rồi quay lại
+                    stagePadding:40,
                 }
-            }
-
-            var dropsSection = new gsap.timeline({paused:true,onComplete () { changeflagDrops(); }});
-            var valueSection = new gsap.timeline({paused:true});
-            ScrollTrigger.create({
-                trigger: '.product-section',
-                start: 'top center',
-                onEnter: valueSectionAni,
-            });
-            function valueSectionAni()
-            {
-                jQuery('.products-carousel').trigger('play.owl.autoplay', [5000]);
-
-                valueSection.play();
-                setTimeout(function() { 
-                    dropsSection.play();
-                }, 200);
-            }
-
-            const gallerys = gsap.utils.toArray('.product-section .product-item');
-            gallerys.forEach((icon, i) => {
-                valueSection.add(
-                    gsap.fromTo(icon, 
-                    {   alpha:0,
-                        y:50,
-                    }, {
-                        duration:.75, 
-                        alpha:1,
-                        y:0,
-                        ease: 'power4.easeOut',
-                    }),
-                    
-                "-=.35"); 
-            });
-           
-           var flag_drop = false;
-           function changeflagDrops()
-            {
-                flag_drop = true;
-            }
-            const drops = gsap.utils.toArray('.product-section .product-item .b0');
-          
-            drops.forEach((icon, i) => {
-                dropsSection.add(
-                    gsap.to(icon, 
-                    {
-                       duration: .55, 
-                       morphSVG:"#b1"+(i)+"", 
-                        ease: 'power4.easeOut',
-                    }),
-                    
-                "-=.25"); 
-            });
-
-
-            $(".product-item").each(function(i, el) {
-                var tl = new gsap.timeline({paused: true});
-                var ele_child = $(el).find('.b0')[0];
-                tl.to(ele_child, { duration: .375, morphSVG:"#b2"+(i)+"", ease: 'power4.easeOut',});
-                el.animation = tl;
-                $(el).on("mouseenter",function(){
-                   if(flag_drop)
-                    this.animation.play();
-                }).on("mouseleave",function(){
-                    if(flag_drop)
-                    this.animation.reverse();
-                });
-                
-            });
+            },
+            // onInitialized  : slidecounter,
+            onTranslated: checkDirection 
         });
+    }
+    var restartTimeout;
+    function checkDirection(event) {
+        
+        var count = event.item.count; // Tổng số item
+        var itemsPerPage = event.page.size; // Số item trên mỗi trang
+        var currentPage = event.item.index; // Trang hiện tại (bắt đầu từ 0)
+        var totalPages = Math.ceil(count / itemsPerPage); // Tổng số trang (bắt đầu từ 0)
+        if(window.matchMedia("(max-width: 1023px)").matches)
+            totalPages--;
+
+        clearTimeout(restartTimeout);
+        
+        if (currentPage >= totalPages) {
+            restartTimeout = setTimeout(function(){
+                jQuery('.products-carousel').trigger("to.owl.carousel", [0, 500]); // Quay về trang đầu tiên trong 0.5s
+            }, 5000); // Chờ 5 giây rồi quay lại
+        }
+    }
+
+    var dropsSection = new gsap.timeline({paused:true,onComplete () { changeflagDrops(); }});
+    var valueSection = new gsap.timeline({paused:true});
+    ScrollTrigger.create({
+        trigger: '.product-section',
+        start: 'top center',
+        onEnter: valueSectionAni,
+    });
+    function valueSectionAni()
+    {
+        jQuery('.products-carousel').trigger('play.owl.autoplay', [5000]);
+
+        valueSection.play();
+        setTimeout(function() { 
+            dropsSection.play();
+        }, 200);
+    }
+
+    const gallerys = gsap.utils.toArray('.product-section .product-item');
+    gallerys.forEach((icon, i) => {
+        valueSection.add(
+            gsap.fromTo(icon, 
+            {   alpha:0,
+                y:50,
+            }, {
+                duration:.75, 
+                alpha:1,
+                y:0,
+                ease: 'power4.easeOut',
+            }),
+            
+        "-=.35"); 
+    });
+    
+    var flag_drop = false;
+    function changeflagDrops()
+    {
+        flag_drop = true;
+    }
+    const drops = gsap.utils.toArray('.product-section .product-item .b0');
+    
+    drops.forEach((icon, i) => {
+        // Lấy ID thực tế từ element thay vì dùng index
+        var targetId = icon.id.replace('b0', 'b1');
+        dropsSection.add(
+            gsap.to(icon, 
+            {
+                duration: .55, 
+                morphSVG:"#" + targetId, 
+                ease: 'power4.easeOut',
+            }),
+            
+        "-=.25"); 
+    });
+
+
+    $(".product-item").each(function(i, el) {
+        var tl = new gsap.timeline({paused: true});
+        var ele_child = $(el).find('.b0')[0];
+        if(ele_child) {
+            // Lấy ID thực tế từ element
+            var b0Id = ele_child.id;
+            var b2Id = b0Id.replace('b0', 'b2');
+            tl.to(ele_child, { duration: .375, morphSVG:"#" + b2Id, ease: 'power4.easeOut',});
+            el.animation = tl;
+            $(el).on("mouseenter",function(){
+                if(flag_drop)
+                this.animation.play();
+            }).on("mouseleave",function(){
+                if(flag_drop)
+                this.animation.reverse();
+            });
+        }
+    });
+});
 
 
 

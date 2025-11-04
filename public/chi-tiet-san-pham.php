@@ -23,17 +23,7 @@ if (!$product) {
 }
 
 // Set page title based on product name
-$page_title = $product['name'];
-$stmt->execute([$slug]);
-$product = $stmt->fetch();
-
-if (!$product) {
-    header('Location: san-pham.php');
-    exit;
-}
-
-// Set page title based on product name
-$page_title = $product['name'];
+$page_title = $product['title'];
 
 // Lấy danh sách hình ảnh của sản phẩm
 $stmt = $pdo->prepare("SELECT * FROM product_images WHERE product_id = ? ORDER BY sort_order ASC");
@@ -152,7 +142,6 @@ $related_products = $stmt->fetchAll();
                                 <img alt="arr" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
                             </a>
                             <a href="tel:1900633627" class="btn btn--outline">
-                                <img alt="phone" height="20" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/phone.svg" width="20"/>
                                 Hotline: 1900 633 627
                             </a>
                         </div>
@@ -240,19 +229,23 @@ $related_products = $stmt->fetchAll();
                 responsive: {
                     0: {
                         items: 1,
-                        margin: 20
+                        margin: 20,
+                        nav: false
                     },
                     480: {
                         items: 2,
-                        margin: 20
+                        margin: 20,
+                        nav: false
                     },
                     768: {
                         items: 3,
-                        margin: 25
+                        margin: 25,
+                        nav: true
                     },
                     1024: {
                         items: 4,
-                        margin: 30
+                        margin: 30,
+                        nav: true
                     }
                 }
             });
