@@ -1,20 +1,20 @@
 <?php
-// includes/config.php
-// Edit these values if your XAMPP MySQL settings differ
+// includes/config.docker.php
+// Configuration for Docker environment
 
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'mgf_website');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+// Database connection (sử dụng environment variables từ Docker)
+define('DB_HOST', getenv('DB_HOST') ?: 'db');
+define('DB_NAME', getenv('DB_NAME') ?: 'mgf_website');
+define('DB_USER', getenv('DB_USER') ?: 'mgf_user');
+define('DB_PASS', getenv('DB_PASS') ?: 'mgf_password_2024');
 
-// If you placed the project in htdocs/mgf-website then BASE_URL should be '/mgf-website'
-// Adjust if your setup differs (virtual host, subfolder, etc.)
-define('BASE_URL', '/mgf-website');
+// Base URL - để trống hoặc '/' khi chạy trên domain riêng
+define('BASE_URL', '');
 
 define('UPLOAD_DIR', __DIR__ . '/../uploads');
 define('UPLOAD_URL', BASE_URL . '/uploads');
 
-// Simple timezone
+// Timezone
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 ?>
