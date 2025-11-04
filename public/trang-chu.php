@@ -94,13 +94,13 @@
          Tối ưu công nghệ sản xuất thức ăn chăn nuôi
         </h2>
         <div class="btns">
-         <a class="banner-video-btn btn btn--outline" data-fancybox="" href="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/Greenfeed-Tong-Quan-Gioi-Thieu-Tap-Doan.mp4">
+         <!-- <a class="banner-video-btn btn btn--outline" data-fancybox="" href="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/Greenfeed-Tong-Quan-Gioi-Thieu-Tap-Doan.mp4">
           <img alt="Play video" height="42" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/play-circle-outline.svg" width="42"/>
           XEM VIDEO
           <od>
            HÀNH TRÌNH LỚN MẠNH
           </od>
-         </a>
+         </a> -->
          <a class="btn btn--normal" href="#product">
           <od>
            TẤT CẢ

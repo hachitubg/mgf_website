@@ -9,21 +9,21 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
       <div class="menu-top-bar-container">
        <ul class="dt-secondary-menu header-menu" id="secondary">
         <li class="color-primary menu-item menu-item-type-custom menu-item-object-custom menu-item-6382" id="menu-item-6382">
-         <a href="../../thuc-an-chan-nuoi-gia-suc-gia-cam/vi/index.php" target="_blank">
+         <a href="coming-soon.php">
           <span>
            FEED
           </span>
          </a>
         </li>
         <li class="color-primary menu-item menu-item-type-post_type menu-item-object-page menu-item-5546" id="menu-item-5546">
-         <a href="../../san-pham-va-dich-vu/nganh-chan-nuoi/index.php">
+         <a href="coming-soon.php">
           <span>
            FARM
           </span>
          </a>
         </li>
         <li class="color-primary menu-item menu-item-type-post_type menu-item-object-page menu-item-5544" id="menu-item-5544">
-         <a href="../../san-pham-va-dich-vu/nganh-thuc-pham/index.php">
+         <a href="coming-soon.php">
           <span>
            FOOD
           </span>
