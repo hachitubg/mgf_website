@@ -1006,10 +1006,7 @@
    <?php
    // Load products from database
    require_once __DIR__ . '/../includes/db.php';
-   $stmt = $pdo->query("SELECT 
-                          p.*,
-                          pi.image_path,
-                          c.name AS category_name
+   $stmt = $pdo->query("SELECT p.*, pi.image_path, c.name AS category_name
                       FROM products p
                       LEFT JOIN product_images pi ON pi.product_id = p.id
                           AND pi.sort_order = (SELECT MIN(sort_order) FROM product_images WHERE product_id = p.id)

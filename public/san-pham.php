@@ -32,7 +32,8 @@ $stmt = $pdo->prepare("SELECT p.*, c.name as category_name, c.slug as category_s
                        pi.image_path
                        FROM products p 
                        LEFT JOIN categories c ON p.category_id = c.id
-                       LEFT JOIN product_images pi ON p.id = pi.product_id AND pi.sort_order = 0
+                       LEFT JOIN product_images pi ON p.id = pi.product_id 
+                            AND pi.sort_order = (SELECT MIN(sort_order) FROM product_images WHERE product_id = p.id)
                        $where
                        ORDER BY p.display_order ASC, p.id DESC 
                        LIMIT $per_page OFFSET $offset");

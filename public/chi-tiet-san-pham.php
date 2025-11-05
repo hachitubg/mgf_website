@@ -33,7 +33,8 @@ $images = $stmt->fetchAll();
 // Lấy sản phẩm liên quan (cùng danh mục)
 $stmt = $pdo->prepare("SELECT p.*, pi.image_path 
                        FROM products p 
-                       LEFT JOIN product_images pi ON p.id = pi.product_id AND pi.sort_order = 0
+                       LEFT JOIN product_images pi ON p.id = pi.product_id 
+                            AND pi.sort_order = (SELECT MIN(sort_order) FROM product_images WHERE product_id = p.id)
                        WHERE p.category_id = ? AND p.id != ? 
                        ORDER BY RAND() 
                        LIMIT 6");
