@@ -55,7 +55,7 @@
    <div class="container">
     <div class="company-introduce flex">
      <div class="company-image">
-      <img alt="" class="attachment-full size-full" decoding="async" fetchpriority="high" height="629" src="https://www.greenfeed.com.vn/wp-content/uploads/2021/08/nha-may-cam-thuc-an-chan-nuoi-greenfeed.jpg" width="1200">
+      <img alt="" class="attachment-full size-full" decoding="async" fetchpriority="high" height="629" src="05_images/banner3.png" width="1200">
       </img>
      </div>
      <div class="company-content">
@@ -196,7 +196,8 @@
 
      </div>
     </div>
-    <div class="contact-offices">
+
+    <!-- <div class="contact-offices">
      <div class="company-info">
       <h2>
        CÔNG TY CỔ PHẦN NÔNG NGHIỆP CÔNG NGHỆ CAO MGF
@@ -415,7 +416,8 @@
        </div>
       </div>
      </div>
-    </div>
+    </div> -->
+
    </div>
    
   </main>
