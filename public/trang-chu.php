@@ -1016,7 +1016,7 @@
                         LEFT JOIN categories c ON c.id = p.category_id
                         GROUP BY p.id
                         ORDER BY p.display_order, p.id DESC
-                        LIMIT 10;");
+                        LIMIT 10");
    $products = $stmt->fetchAll();
    ?>
 
