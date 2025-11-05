@@ -190,8 +190,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    header('Location: index.php');
-    exit;
+  // Process images that were marked for deletion in the form (deleted_images[])
+  if ($isEditMode && !empty($_POST['deleted_images']) && is_array($_POST['deleted_images'])) {
+    $delIds = array_map('intval', $_POST['deleted_images']);
+    $select = $pdo->prepare('SELECT id, image_path, product_id FROM product_images WHERE id = ? LIMIT 1');
+    $deleteStmt = $pdo->prepare('DELETE FROM product_images WHERE id = ?');
+    foreach ($delIds as $delId) {
+      $select->execute([$delId]);
+      $row = $select->fetch();
+      if ($row && intval($row['product_id']) === intval($productId)) {
+        $file = $uploadDir . DIRECTORY_SEPARATOR . $row['image_path'];
+        if (is_file($file)) @unlink($file);
+        $deleteStmt->execute([$delId]);
+      }
+    }
+  }
+
+  header('Location: index.php');
+  exit;
 }
 
 $pageTitle = $isEdit ? 'Sửa Sản Phẩm' : 'Thêm Sản Phẩm';
@@ -232,6 +248,8 @@ unset($_SESSION['form_errors'], $_SESSION['form_data']);
 
     <form method="post" enctype="multipart/form-data" style="max: width 100%;" id="product-form">
       <input type="hidden" name="id" value="<?php echo $id; ?>">
+      <!-- Container for hidden inputs marking images to delete on save -->
+      <div id="deleted-images-container"></div>
       
       <div class="form-row">
         <label>Tên Sản Phẩm <span class="required">*</span></label>
@@ -488,9 +506,22 @@ unset($_SESSION['form_errors'], $_SESSION['form_data']);
       }
     });
 
+    // Mark image for deletion but don't call server yet; deletion happens on Save
     function deleteImage(imageId) {
       if (!confirm('Xóa hình ảnh này?')) return;
-      window.location.href = 'delete_image.php?image_id=' + imageId + '&product_id=<?php echo $id; ?>';
+
+      // Add hidden input to indicate this image should be deleted on form submit
+      var container = document.getElementById('deleted-images-container');
+      if (!container) return alert('Không thể xóa hình ảnh (container không tồn tại)');
+      var input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'deleted_images[]';
+      input.value = imageId;
+      container.appendChild(input);
+
+      // Remove the image element from the UI so user sees it as deleted
+      var el = document.querySelector('.image-list-item[data-image-id="' + imageId + '"]');
+      if (el) el.remove();
     }
 
     // Image reordering functions
