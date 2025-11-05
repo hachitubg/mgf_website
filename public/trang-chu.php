@@ -1006,13 +1006,17 @@
    <?php
    // Load products from database
    require_once __DIR__ . '/../includes/db.php';
-   $stmt = $pdo->query("SELECT p.*, pi.image_path, c.name as category_name 
-                        FROM products p 
-                        LEFT JOIN product_images pi ON p.id = pi.product_id AND pi.sort_order = 0
-                        LEFT JOIN categories c ON p.category_id = c.id
-                        WHERE 1=1
-                        ORDER BY p.display_order ASC, p.id DESC 
-                        LIMIT 12");
+   $stmt = $pdo->query("SELECT p.*, pi.image_path, c.name AS category_name
+                        FROM products p
+                        LEFT JOIN (
+                            SELECT product_id, image_path
+                            FROM product_images
+                            ORDER BY sort_order
+                        ) pi ON pi.product_id = p.id
+                        LEFT JOIN categories c ON c.id = p.category_id
+                        GROUP BY p.id
+                        ORDER BY p.display_order, p.id DESC
+                        LIMIT 10;");
    $products = $stmt->fetchAll();
    ?>
 
