@@ -12,35 +12,21 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
         <li class="color-primary menu-item menu-item-type-custom menu-item-object-custom menu-item-6382" id="menu-item-6382">
          <a href="coming-soon">
           <span>
-           Trang Chủ
+           FEED
           </span>
          </a>
         </li>
         <li class="color-primary menu-item menu-item-type-post_type menu-item-object-page menu-item-5546" id="menu-item-5546">
          <a href="coming-soon">
           <span>
-           Giới thiệu
+           FARM
           </span>
          </a>
         </li>
         <li class="color-primary menu-item menu-item-type-post_type menu-item-object-page menu-item-5544" id="menu-item-5544">
          <a href="coming-soon">
           <span>
-           Sản phẩm và dịch vụ
-          </span>
-         </a>
-        </li>
-        <li class="color-primary menu-item menu-item-type-custom menu-item-object-custom menu-item-6382" id="menu-item-6382">
-         <a href="coming-soon">
-          <span>
-           Tin tức & Sự kiện
-          </span>
-         </a>
-        </li>
-        <li class="color-primary menu-item menu-item-type-post_type menu-item-object-page menu-item-5546" id="menu-item-5546">
-         <a href="coming-soon">
-          <span>
-           Liên hệ
+           FOOD
           </span>
          </a>
         </li>
@@ -85,14 +71,14 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5270<?php echo ($current_page == 'trang-chu') ? ' active' : ''; ?>" id="menu-item-5270">
           <a class="dropdown-toggle<?php echo ($current_page == 'trang-chu') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="trang-chu">
            <span>
-            FEED
+            Trang Chủ
            </span>
           </a>
          </li>
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5270<?php echo ($current_page == 'gioi-thieu') ? ' active' : ''; ?>" id="menu-item-5270">
           <a class="dropdown-toggle<?php echo ($current_page == 'gioi-thieu') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="gioi-thieu">
            <span>
-            FARM
+            Giới thiệu
            </span>
            <!-- <b class="caret">
            </b> -->
@@ -119,7 +105,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-4574<?php echo ($current_page == 'san-pham' || $current_page == 'chi-tiet-san-pham') ? ' active' : ''; ?>" id="menu-item-4574">
           <a class="dropdown-toggle<?php echo ($current_page == 'san-pham' || $current_page == 'chi-tiet-san-pham') ? ' active' : ''; ?>" data-hover="dropdown" data-toggle="dropdown" href="san-pham">
            <span>
-            FOOD
+            Sản phẩm và dịch vụ
            </span>
            <!-- <b class="caret">
            </b> -->
@@ -475,13 +461,13 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
            </ul>
           </div>
          </li> -->
-         <!-- <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5733<?php echo ($current_page == 'tin-tuc' || $current_page == 'chi-tiet-tin-tuc') ? ' active' : ''; ?>" id="menu-item-5733">
+         <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5733<?php echo ($current_page == 'tin-tuc' || $current_page == 'chi-tiet-tin-tuc') ? ' active' : ''; ?>" id="menu-item-5733">
           <a href="tin-tuc"<?php echo ($current_page == 'tin-tuc' || $current_page == 'chi-tiet-tin-tuc') ? ' class="active"' : ''; ?>>
            <span>
             Tin tức & Sự kiện
            </span>
           </a>
-         </li> -->
+         </li>
          <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4941" id="menu-item-4941">
           <a href="co-hoi-nghe-nghiep/index.php">
            <span>
