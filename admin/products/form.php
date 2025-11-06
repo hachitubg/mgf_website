@@ -38,8 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = trim($_POST['title'] ?? '');
     $slug = trim($_POST['slug'] ?? '');
     $category_id = isset($_POST['category_id']) && $_POST['category_id'] !== '' ? intval($_POST['category_id']) : null;
-    $price = floatval($_POST['price'] ?? 0);
-    $promo_price = isset($_POST['promo_price']) && $_POST['promo_price'] !== '' ? floatval($_POST['promo_price']) : null;
     $description = $_POST['description'] ?? '';
 
     // Server-side validation
@@ -53,14 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if (!$category_id) {
         $errors[] = 'Vui lòng chọn danh mục sản phẩm';
-    }
-    
-    if ($price < 0) {
-        $errors[] = 'Giá phải lớn hơn hoặc bằng 0';
-    }
-    
-    if ($promo_price !== null && ($promo_price < 0 || $promo_price >= $price)) {
-        $errors[] = 'Giá khuyến mãi phải nhỏ hơn giá gốc';
     }
     
     // Validate images for new products only
@@ -138,8 +128,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
         
-        $upd = $pdo->prepare('UPDATE products SET title = ?, slug = ?, category_id = ?, price = ?, promo_price = ?, description = ? WHERE id = ?');
-        $upd->execute([$title, $slug, $category_id, $price, $promo_price, $description, $postId]);
+        $upd = $pdo->prepare('UPDATE products SET title = ?, slug = ?, category_id = ?, description = ? WHERE id = ?');
+        $upd->execute([$title, $slug, $category_id, $description, $postId]);
         $productId = $postId;
     } else {
         // Create new product - check if slug is unique
@@ -153,8 +143,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
         
-        $ins = $pdo->prepare('INSERT INTO products (title, slug, category_id, price, promo_price, description) VALUES (?, ?, ?, ?, ?, ?)');
-        $ins->execute([$title, $slug, $category_id, $price, $promo_price, $description]);
+        $ins = $pdo->prepare('INSERT INTO products (title, slug, category_id, description) VALUES (?, ?, ?, ?)');
+        $ins->execute([$title, $slug, $category_id, $description]);
         $productId = $pdo->lastInsertId();
     }
 
@@ -281,31 +271,6 @@ unset($_SESSION['form_errors'], $_SESSION['form_data']);
         <span class="form-error">Vui lòng chọn danh mục</span>
       </div>
 
-      <div class="form-grid">
-        <div class="form-row">
-          <label>Giá Bán (VNĐ) <span class="required">*</span></label>
-          <input type="text" 
-                 name="price_display" 
-                 id="price_display" 
-                 placeholder="VD: 1.000.000" 
-                 required 
-                 value="<?php echo isset($formData['price']) || isset($product['price']) ? number_format($formData['price'] ?? $product['price'] ?? 0, 0, ',', '.') : ''; ?>">
-          <input type="hidden" name="price" id="price" value="<?php echo htmlspecialchars($formData['price'] ?? $product['price'] ?? '0'); ?>">
-          <span class="form-error">Giá bán bắt buộc</span>
-          <p class="muted">Nhập số tiền, VD: 1000000 hoặc 1.000.000</p>
-        </div>
-        <div class="form-row">
-          <label>Giá Khuyến Mãi (VNĐ)</label>
-          <input type="text" 
-                 name="promo_price_display" 
-                 id="promo_price_display" 
-                 placeholder="VD: 800.000"
-                 value="<?php echo (isset($formData['promo_price']) || isset($product['promo_price'])) && ($formData['promo_price'] ?? $product['promo_price'] ?? null) !== null ? number_format($formData['promo_price'] ?? $product['promo_price'], 0, ',', '.') : ''; ?>">
-          <input type="hidden" name="promo_price" id="promo_price" value="<?php echo htmlspecialchars($formData['promo_price'] ?? $product['promo_price'] ?? ''); ?>">
-          <p class="muted">Để trống nếu không có khuyến mãi</p>
-        </div>
-      </div>
-
       <div class="form-row">
         <label>Mô Tả</label>
         <textarea id="description" name="description" rows="10"><?php echo htmlspecialchars($formData['description'] ?? $product['description'] ?? ''); ?></textarea>
@@ -395,8 +360,6 @@ unset($_SESSION['form_errors'], $_SESSION['form_data']);
     // Form validation
     document.getElementById('product-form').addEventListener('submit', function(e) {
       var title = document.getElementById('title').value.trim();
-      var price = parseFloat(document.getElementById('price').value);
-      var promoPrice = document.getElementById('promo_price').value;
       var fileInput = document.getElementById('product-images');
       var isEdit = <?php echo $isEdit ? 'true' : 'false'; ?>;
 
@@ -421,19 +384,6 @@ unset($_SESSION['form_errors'], $_SESSION['form_data']);
         hasError = true;
       }
 
-      // Validate price
-      if (isNaN(price) || price < 0) {
-        document.getElementById('price').closest('.form-row').classList.add('has-error');
-        hasError = true;
-      }
-
-      // Validate promo price if provided
-      if (promoPrice && (parseFloat(promoPrice) < 0 || parseFloat(promoPrice) >= price)) {
-        document.getElementById('promo_price').closest('.form-row').classList.add('has-error');
-        alert('Giá khuyến mãi phải nhỏ hơn giá gốc');
-        hasError = true;
-      }
-
       // Validate images for new products
       if (!isEdit && fileInput.files.length === 0) {
         fileInput.closest('.form-row').classList.add('has-error');
@@ -444,65 +394,6 @@ unset($_SESSION['form_errors'], $_SESSION['form_data']);
       if (hasError) {
         e.preventDefault();
         return false;
-      }
-    });
-
-    // VNĐ Currency Formatter
-    function formatVND(amount) {
-      return new Intl.NumberFormat('vi-VN', {
-        style: 'currency',
-        currency: 'VND'
-      }).format(amount);
-    }
-
-    // Format price inputs with thousand separators
-    function formatPriceInput(value) {
-      // Remove all non-digit characters
-      var number = value.replace(/\D/g, '');
-      // Format with thousand separators
-      return number.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
-
-    function parsePriceInput(value) {
-      // Remove all dots and return number
-      return value.replace(/\./g, '');
-    }
-
-    // Price display input
-    var priceDisplay = document.getElementById('price_display');
-    var priceHidden = document.getElementById('price');
-    
-    priceDisplay.addEventListener('input', function(e) {
-      var formatted = formatPriceInput(this.value);
-      this.value = formatted;
-      priceHidden.value = parsePriceInput(formatted);
-    });
-
-    priceDisplay.addEventListener('blur', function(e) {
-      if (this.value) {
-        var formatted = formatPriceInput(this.value);
-        this.value = formatted;
-        priceHidden.value = parsePriceInput(formatted);
-      }
-    });
-
-    // Promo price display input
-    var promoPriceDisplay = document.getElementById('promo_price_display');
-    var promoPriceHidden = document.getElementById('promo_price');
-    
-    promoPriceDisplay.addEventListener('input', function(e) {
-      var formatted = formatPriceInput(this.value);
-      this.value = formatted;
-      promoPriceHidden.value = parsePriceInput(formatted);
-    });
-
-    promoPriceDisplay.addEventListener('blur', function(e) {
-      if (this.value) {
-        var formatted = formatPriceInput(this.value);
-        this.value = formatted;
-        promoPriceHidden.value = parsePriceInput(formatted);
-      } else {
-        promoPriceHidden.value = '';
       }
     });
 

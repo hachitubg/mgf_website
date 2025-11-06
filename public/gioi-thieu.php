@@ -19,8 +19,47 @@
  
  // Set banner image
  $banner_image = $banner && $banner['image_path'] 
-    ? '../uploads/banners/' . $banner['image_path']
+    ? '../' . $banner['image_path']
     : 'https://www.greenfeed.com.vn/wp-content/uploads/2024/12/fbee64008d12914e7f9eb7f950a103ef-e1748153967589.jpg';
+ 
+ // Get image 1 (philosophy section)
+ $img1_stmt = $pdo->query("SELECT * FROM banners 
+                           WHERE location_code = 'gioi_thieu_1' AND is_active = 1 
+                           ORDER BY sort_order ASC, id DESC 
+                           LIMIT 1");
+ $img1_banner = $img1_stmt->fetch();
+ $image_1 = $img1_banner && $img1_banner['image_path'] 
+    ? '../' . $img1_banner['image_path']
+    : 'https://www.greenfeed.com.vn/wp-content/uploads/2025/03/ve-greenfeed-va-mo-hinh-chuoi-cung-ung-tich-hop-gia-tri.jpg';
+ 
+ // Get image 2 (culture section)
+ $img2_stmt = $pdo->query("SELECT * FROM banners 
+                           WHERE location_code = 'gioi_thieu_2' AND is_active = 1 
+                           ORDER BY sort_order ASC, id DESC 
+                           LIMIT 1");
+ $img2_banner = $img2_stmt->fetch();
+ $image_2 = $img2_banner && $img2_banner['image_path'] 
+    ? '../' . $img2_banner['image_path']
+    : 'https://www.greenfeed.com.vn/wp-content/uploads/2025/01/4435df285f0da8dff93dd502c91701ee.jpg';
+ 
+ // Get icons for culture section
+ $icons_stmt = $pdo->query("SELECT * FROM banners 
+                            WHERE location_code = 'gioi_thieu_icon' AND is_active = 1 
+                            ORDER BY sort_order ASC, id DESC 
+                            LIMIT 8");
+ $icons = $icons_stmt->fetchAll();
+ 
+ // Default icons if database is empty
+ $default_icons = [
+    ['title' => 'NHÀ MÁY MỚI', 'description' => '<strong>Công suất thiết kế 25.000 tấn/tháng.</strong>', 'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-1.svg'],
+    ['title' => 'SẢN LƯỢNG BÁN HÀNG', 'description' => '<strong>Đạt 20.000 – 22.000 tấn/tháng.</strong>', 'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-2.svg'],
+    ['title' => 'TRẠI NỘI BỘ', 'description' => '<strong>10.000 heo nái + 100.000 heo thịt.</strong>', 'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-3.svg'],
+    ['title' => 'GÀ GIỐNG', 'description' => '<strong>Sản xuất 100.000 con/tháng.</strong>', 'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-4.svg'],
+    ['title' => 'CỔ PHẦN HÓA', 'description' => '<strong>Thực hiện vào năm 2028.</strong>', 'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-5.svg'],
+    ['title' => 'ĐỊNH VỊ SẢN PHẨM', 'description' => '<strong>- Cám heo cao cấp: M11S, M12S, M15S, M16S, M17S<br/>- Cám gà cao cấp: G10S, G20S, G30S<br/>- Cám vịt cao cấp: D01 Super, D02 Super</strong>', 'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-6.svg'],
+    ['title' => 'PHÂN KHÚC THỊ TRƯỜNG', 'description' => '<strong>Cạnh tranh trực tiếp với CP, Carill, De Heus, Japfa, Greenfeed, Hồng Hà và các doanh nghiệp Trung Quốc.</strong>', 'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-7.svg'],
+    ['title' => 'CHIẾN LƯỢC KINH DOANH', 'description' => '<strong>Vận hành theo hệ sinh thái, tối ưu năng lực sản xuất – phân phối – chăn nuôi.</strong>', 'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-8.svg'],
+ ];
  
  include '01_includes/header.php'; 
  ?>
@@ -80,18 +119,38 @@
          Giới thiệu
         </div>
         <h2 class="section-title">
-         Về MGF
+         MGF là ai?
         </h2>
        </div>
        <div class="philosophy__content">
         <p>
-         <strong>
-          MGF là tập đoàn nông nghiệp – thực phẩm hàng đầu Việt Nam với chuỗi thực phẩm tích hợp 3F Plus (Feed – Farm – Food) – “Lành ngon từ trang trại đến bàn ăn”. Từ khi thành lập năm 2003, chúng tôi luôn kiên định sứ mệnh xây dựng các thương hiệu chất lượng, đáng tin cậy và không ngừng kiến tạo giá trị bền vững cho khách hàng và xã hội.​
-         </strong>
-        </p>
-        <p>
-         Với hệ thống hàng chục nhà máy và trang trại chuẩn quốc tế trải khắp Việt Nam, Lào, Campuchia và Myanmar, MGF hướng đến trở thành thương hiệu hàng đầu, hiệu quả, và đáng tin cậy trên toàn chuỗi thực phẩm toàn cầu cùng các ứng dụng công nghệ vượt trội.​
-        </p>
+            Với hệ thống nhà máy và trang trại nông nghiệp công nghệ cao trải rộng khắp Việt Nam,
+            <strong>MGF</strong> đang khẳng định vị thế tiên phong trong chuỗi giá trị nông nghiệp – thực phẩm.
+            Nhờ nền tảng sản xuất toàn diện và ứng dụng công nghệ cao, MGF hướng đến trở thành
+            thương hiệu <strong>dẫn đầu</strong> và <strong>đáng tin cậy</strong> trong chuỗi thực phẩm bền vững.
+         </p>
+
+         <h3>Chuỗi nhà máy chuyên biệt</h3>
+         <ul>
+            <li><strong>Hải Dương:</strong> Nhà máy sản xuất thức ăn chăn nuôi</li>
+            <li><strong>Bắc Giang:</strong> Nhà máy sản xuất thuốc thú y</li>
+            <li><strong>Thanh Hóa:</strong> Nhà máy sản xuất thuốc bảo vệ thực vật</li>
+            <li><strong>Nam Định:</strong> Nhà máy sản xuất phân bón</li>
+            <li><strong>Hưng Yên:</strong> Nhà máy sản xuất nhựa polime</li>
+         </ul>
+
+         <h3>Hệ thống trang trại quy mô lớn</h3>
+         <p>
+            Vận hành theo tiêu chuẩn quốc tế, đảm bảo an toàn sinh học và phúc lợi vật nuôi:
+         </p>
+         <ul>
+            <li><strong>10.000</strong> heo nái</li>
+            <li><strong>100.000</strong> heo thịt</li>
+         </ul>
+
+         <p class="mgf-cta">
+            MGF không ngừng tối ưu hóa vận hành, nâng chuẩn chất lượng và phát triển bền vững để phục vụ người tiêu dùng trong nước và quốc tế.
+         </p>
         <p>
          <a class="btn btn--primary" href="https://greenfeed.bxht.info/ve-greenfeed/" style="display: none;">
           Tìm hiểu thêm
@@ -101,7 +160,7 @@
        </div>
       </div>
       <div class="philosophy__image">
-       <img alt="" class="attachment-full size-full" decoding="async" fetchpriority="high" height="728" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/03/ve-greenfeed-va-mo-hinh-chuoi-cung-ung-tich-hop-gia-tri.jpg" width="1060"/>
+       <img alt="MGF - Giới thiệu" class="attachment-full size-full" decoding="async" fetchpriority="high" src="<?= htmlspecialchars($image_1) ?>"/>
       </div>
      </div>
     </div>
@@ -522,49 +581,47 @@
        </svg>
       </div>
       <div class="brands__contents">
-       <div class="section-title-wrapper">
-        <span class="section-subtitle">
-         Triết lý thương hiệu
-        </span>
-        <h3 class="section-title">
-         Nuôi dưỡng điều lành
-         <br/>
-         Đồng hành lớn mạnh​
-        </h3>
-       </div>
-       <div class="brands__content">
-        <p>
-         <span style="font-weight: 400;">
-          MGF tin rằng những giá trị tốt sẽ mang lại những thành quả lành từ giải pháp chăn nuôi bền vững. Nguồn cám sạch, con giống tốt là tiền đề cho vụ nuôi thành công, mang lại bữa ăn lành, ngon cho sức khỏe của hàng triệu người tiêu dùng. Môi trường làm việc tốt giúp nuôi dưỡng những tư duy đột phá, đổi mới sáng tạo, khơi nguồn cho những tận tâm phụng sự, những nỗ lực, cam kết vì thành công của đối tác, khách hàng và những đối tượng dự phần khác.
-         </span>
-        </p>
-        <p>
-         <span style="font-weight: 400;">
-          Không ngừng phát triển giải pháp tích hợp toàn chuỗi 3F Plus, MGF đặt tâm huyết sẻ chia, lan tỏa những giá trị lành. Với cam kết phát triển bền vững, chúng tôi đã, đang và sẽ luôn nỗ lực tạo ra một hệ sinh thái thực phẩm sạch thịnh vượng, vì sự phát triển cân bằng của môi trường, kinh tế và cả cộng đồng.​
-         </span>
-        </p>
-        <ul>
-         <li>
-          Giải pháp chăn nuôi hiệu quả
-         </li>
-         <li>
-          Con giống chuẩn quốc tế
-         </li>
-         <li>
-          Dinh dưỡng vật nuôi tối ưu
-         </li>
-         <li>
-          Mô hình trại tiên tiến
-         </li>
-        </ul>
-        <p>
-         <a class="btn btn--primary" href="https://greenfeed.bxht.info/ve-greenfeed/" style="display: none;">
-          Tìm hiểu thêm
-          <img alt="" class="aligncenter size-full wp-image-4581" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
-         </a>
-        </p>
-       </div>
-      </div>
+         <div class="section-title-wrapper">
+            <span class="section-subtitle">
+               Hành trình phát triển
+            </span>
+            <h3 class="section-title">
+               Từ sở hữu tư nhân
+               <br/>
+               Đến tổ chức toàn quốc
+            </h3>
+         </div>
+
+         <div class="brands__content">
+            <p>
+               <span style="font-weight: 400;">
+               MGF khởi nguồn là một doanh nghiệp tư nhân với khát vọng tạo ra giá trị bền vững cho ngành nông nghiệp Việt Nam. Với tầm nhìn dài hạn, MGF từng bước xây dựng hệ thống nhà máy sản xuất theo chuyên ngành, hình thành nền tảng vững chắc cho chiến lược phát triển toàn diện.
+               </span>
+            </p>
+
+            <p>
+               <span style="font-weight: 400;">
+               Đến nay, MGF đã vận hành chuỗi nhà máy trên toàn quốc gồm: Nhà máy sản xuất thức ăn chăn nuôi tại Hải Dương (2025), Nhà máy sản xuất thuốc thú y tại Bắc Giang (2023), Nhà máy sản xuất thuốc bảo vệ thực vật tại Thanh Hóa, Nhà máy sản xuất phân bón tại Nam Định, và Nhà máy sản xuất nhựa polime tại Hưng Yên. Năng lực sản xuất quy mô lớn, hiệu quả cao là nền tảng để MGF mở rộng và phát triển mạnh mẽ trong tương lai.
+               </span>
+            </p>
+
+            <ul>
+               <li>Thức ăn chăn nuôi cho heo: heo con, heo thịt, nái chửa, nái nuôi con</li>
+               <li>Thức ăn chăn nuôi cho gia cầm: gà thịt, gà đẻ, vịt thịt, vịt đẻ, cút…</li>
+               <li>Thức ăn thủy sản: cá da trơn, cá có vảy, ếch…</li>
+               <li>Thức ăn cho chim bồ câu</li>
+               <li>Thức ăn cho bò: bò sữa, bò thịt</li>
+            </ul>
+
+            <p>
+               <a class="btn btn--primary" href="#" style="display: none;">
+               Tìm hiểu thêm
+               <img alt="" class="aligncenter size-full" decoding="async" src="https://greenfeed.bxht.info/wp-content/uploads/2024/12/long-arr-next.svg"/>
+               </a>
+            </p>
+         </div>
+         </div>
+
      </div>
     </div>
 
@@ -574,7 +631,7 @@
      <div class="mision-inner">
       <div class="section-title-wrapper">
        <h2 class="section-title">
-        MGF WAY
+        ĐỊNH HƯỚNG MGF
        </h2>
       </div>
 
@@ -679,193 +736,68 @@
    </section>
    <section class="culture-section" id="culture">
     <div class="container">
-     <div class="culture-inner">
-      <div class="culture__contents">
-       <div class="section-title-wrapper">
-        <div class="section-subtitle">
-         MGF WAY
-        </div>
-        <h2 class="section-title">
-         Hành vi cần thể hiện
-         <br/>
-         của MFDERS
-        </h2>
-       </div>
-       <div class="culture__content">
-        <p>
-         <span style="font-weight: 400;">
-          Tại MGF, những chuẩn mực này là kim chỉ nam để con người MGF ứng dụng trong công việc và giao tiếp. Những hành vi này sẽ tiếp tục định hình cách làm việc và những chuẩn mực ứng xử của con người MGF trong nội bộ và với mọi đối tượng dự phần.
-         </span>
-        </p>
-        <p>
-        </p>
-       </div>
-       <div class="culture__behaviors">
-        <div class="culture__behavior">
-         <div class="icon">
-          <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-1.svg"/>
+      <div class="culture-inner">
+         <div class="culture__contents">
+            <div class="section-title-wrapper">
+            <div class="section-subtitle">
+               Dự án trọng điểm
+            </div>
+            <h2 class="section-title">
+               Các dự án trọng điểm
+               <br/>
+               giai đoạn 2026 – 2030
+            </h2>
+            </div>
+
+            <div class="culture__content">
+            <p>
+               <span style="font-weight: 400;">
+                  Giai đoạn 2026–2030 đánh dấu bước chuyển mình quan trọng của MGF, với nhiều dự án quy mô lớn được triển khai nhằm mở rộng năng lực sản xuất và nâng tầm thương hiệu.
+                  Những mục tiêu chiến lược này tạo nền tảng cho quá trình tăng trưởng bền vững và hướng đến mô hình doanh nghiệp hiện đại, hiệu quả.
+               </span>
+            </p>
+            </div>
+
+            <div class="culture__behaviors">
+            <?php 
+            $icon_list = !empty($icons) ? $icons : $default_icons;
+            foreach ($icon_list as $index => $icon):
+               $icon_image = '';
+               if (isset($icon['image_path']) && $icon['image_path']) {
+                  // From database
+                  $icon_image = '../' . $icon['image_path'];
+               } elseif (isset($icon['image'])) {
+                  // From default array
+                  $icon_image = $icon['image'];
+               }
+               
+               $icon_title = htmlspecialchars($icon['title'] ?? '');
+               $icon_desc = $icon['description'] ?? '';
+            ?>
+            <div class="culture__behavior">
+               <div class="icon">
+                  <img alt="<?= $icon_title ?>" class="attachment-full size-full" decoding="async"
+                  src="<?= htmlspecialchars($icon_image) ?>" />
+               </div>
+               <div class="title">
+                  <?= $icon_title ?>
+               </div>
+               <div class="content">
+                  <?= $icon_desc ?>
+               </div>
+            </div>
+            <?php endforeach; ?>
+
+            </div>
          </div>
-         <div class="title">
-          TRUNG THỰC
+
+         <div class="culture__image">
+            <img alt="MGF - Dự án trọng điểm" class="attachment-full size-full" decoding="async" 
+            src="<?= htmlspecialchars($image_2) ?>" />
          </div>
-         <div class="content">
-          <div>
-           <div>
-            <strong>
-             Nói, làm đúng bản chất vấn đề.
-            </strong>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div class="culture__behavior">
-         <div class="icon">
-          <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-2.svg"/>
-         </div>
-         <div class="title">
-          TỰ TIN
-         </div>
-         <div class="content">
-          <div>
-           <div>
-            <strong>
-             Vững chắc và mạnh mẽ trong công việc.
-            </strong>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div class="culture__behavior">
-         <div class="icon">
-          <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-3.svg"/>
-         </div>
-         <div class="title">
-          NHIỆT HUYẾT
-         </div>
-         <div class="content">
-          <div>
-           <div>
-            <strong>
-             Đam mê, sáng tạo, cam kết với công việc và kết quả.
-            </strong>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div class="culture__behavior">
-         <div class="icon">
-          <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-4.svg"/>
-         </div>
-         <div class="title">
-          THỰC THI
-         </div>
-         <div class="content">
-          <div>
-           <div>
-            <strong>
-             Luôn có bước tiếp theo để kế hoạch, định hướng được thực hiện và mục tiêu hoàn tất.
-            </strong>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div class="culture__behavior">
-         <div class="icon">
-          <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-5.svg"/>
-         </div>
-         <div class="title">
-          KIÊN ĐỊNH
-         </div>
-         <div class="content">
-          <div>
-           <div>
-            <strong>
-             Dứt khoát, kiên trì đi đến cùng để
-            </strong>
-           </div>
-           <div>
-            <strong>
-             hoàn thành công việc.
-            </strong>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div class="culture__behavior">
-         <div class="icon">
-          <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-6.svg"/>
-         </div>
-         <div class="title">
-          CẦU TIẾN
-         </div>
-         <div class="content">
-          <div>
-           <div>
-            <strong>
-             Không ngừng học hỏi, nỗ lực và phát triển.
-            </strong>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div class="culture__behavior">
-         <div class="icon">
-          <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-7.svg"/>
-         </div>
-         <div class="title">
-          ĐỒNG LÒNG
-         </div>
-         <div class="content">
-          <div>
-           <div>
-            <strong>
-             Mạnh dạn thẳng thắn trao đổi, chia sẻ nhưng nhất quán, phối hợp, hỗ trợ sau khi thống nhất.
-            </strong>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div class="culture__behavior">
-         <div class="icon">
-          <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-8.svg"/>
-         </div>
-         <div class="title">
-          ĐỒNG ĐỘI
-         </div>
-         <div class="content">
-          <div>
-           <div>
-            <strong>
-             Truyền năng lượng, hợp tác, hỗ trợ, chấp nhận bổ sung để hoàn thiện thay vì bất đồng.
-            </strong>
-           </div>
-          </div>
-         </div>
-        </div>
-        <div class="culture__behavior">
-         <div class="icon">
-          <img alt="" class="attachment-full size-full" decoding="async" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/02/hanh-vi-9.svg"/>
-         </div>
-         <div class="title">
-          CAN ĐẢM
-         </div>
-         <div class="content">
-          <div>
-           <div>
-            <strong>
-             Nhìn nhận các khó khăn, thách thức, yếu kém để khắc phục và vươn lên.
-            </strong>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
       </div>
-      <div class="culture__image">
-       <img alt="" class="attachment-full size-full" decoding="async" height="900" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/4435df285f0da8dff93dd502c91701ee.jpg" width="1200"/>
       </div>
-     </div>
-    </div>
+
    </section>
 
    <!-- <section class="program" id="program">

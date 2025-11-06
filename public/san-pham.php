@@ -53,7 +53,7 @@ $banner = $banner_stmt->fetch();
 
 // Set banner image
 $banner_image = $banner && $banner['image_path'] 
-   ? '../uploads/banners/' . $banner['image_path']
+   ? '../' . $banner['image_path']
    : 'https://www.greenfeed.com.vn/wp-content/uploads/2024/12/Image-e1741807224867.jpg';
 
 // Get current category info
@@ -300,26 +300,8 @@ if ($category_slug) {
                                 <?= htmlspecialchars($short_desc) ?>
                             </p>
                             <?php endif; ?>
-                            <?php if ($product['price'] > 0): ?>
-                            <div class="product-card-price" style="margin-bottom: 16px;">
-                                <?php if ($product['promo_price'] > 0 && $product['promo_price'] < $product['price']): ?>
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <span style="font-size: 22px; font-weight: 700; color: #2eb058;">
-                                        <?= number_format($product['promo_price'], 0, ',', '.') ?>đ
-                                    </span>
-                                    <span style="font-size: 15px; color: #999; text-decoration: line-through;">
-                                        <?= number_format($product['price'], 0, ',', '.') ?>đ
-                                    </span>
-                                </div>
-                                <?php else: ?>
-                                <span style="font-size: 22px; font-weight: 700; color: #2eb058;">
-                                    <?= number_format($product['price'], 0, ',', '.') ?>đ
-                                </span>
-                                <?php endif; ?>
-                            </div>
-                            <?php endif; ?>
-                            <div class="product-card-action" style="padding-top: 12px; border-top: 1px solid #f0f0f0;">
-                                <span style="color: #2eb058; font-weight: 600; font-size: 14px;">
+                            <div class="product-card-actions" style="padding-top: 12px; border-top: 1px solid #f0f0f0; display: flex; gap: 10px; align-items: center; justify-content: space-between;">
+                                <span style="color: #2eb058; font-weight: 600; font-size: 14px; flex: 1;">
                                     Xem chi tiết 
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align: middle; margin-left: 4px;">
                                         <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -328,6 +310,14 @@ if ($category_slug) {
                             </div>
                         </div>
                     </a>
+                    <div class="product-card-contact" style="padding: 0 20px 20px 20px;">
+                        <a href="lien-he?product=<?= urlencode($product['title']) ?>" class="btn-contact" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 90%; padding: 10px 16px; background: linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%); color: #fff; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(46, 176, 88, 0.3);" onclick="event.stopPropagation();">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <span>Liên hệ</span>
+                        </a>
+                    </div>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -341,6 +331,16 @@ if ($category_slug) {
                     transform: scale(1.1);
                 }
                 
+                .btn-contact:hover {
+                    background: linear-gradient(135deg, #8fb84a 0%, #268a45 100%);
+                    box-shadow: 0 4px 16px rgba(46, 176, 88, 0.5);
+                    transform: translateY(-2px);
+                }
+                
+                .btn-contact:active {
+                    transform: translateY(0);
+                }
+                
                 @media (max-width: 768px) {
                     .products-grid {
                         grid-template-columns: 1fr !important;
@@ -348,62 +348,46 @@ if ($category_slug) {
                     }
                     .product-card {
                         display: flex !important;
-                        flex-direction: row !important;
-                        align-items: stretch;
+                        flex-direction: column !important;
                     }
-                    .product-card a {
-                        display: flex !important;
+                    .product-card > a {
+                        display: block !important;
                         width: 100%;
                     }
                     .product-card-image {
-                        flex: 0 0 120px !important;
-                        aspect-ratio: 1/1 !important;
-                        min-height: 120px;
+                        aspect-ratio: 16/9 !important;
                     }
                     .product-card-content {
-                        flex: 1;
-                        padding: 12px !important;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
+                        padding: 16px !important;
                     }
                     .product-card-title {
-                        font-size: 15px !important;
+                        font-size: 16px !important;
                         min-height: auto !important;
-                        -webkit-line-clamp: 2 !important;
-                        margin-bottom: 6px !important;
+                        margin-bottom: 8px !important;
                     }
                     .product-card-desc {
-                        font-size: 12px !important;
+                        font-size: 13px !important;
                         min-height: auto !important;
                         -webkit-line-clamp: 2 !important;
-                        margin-bottom: 8px !important;
-                        line-height: 1.4 !important;
+                        margin-bottom: 12px !important;
                     }
-                    .product-card-price {
-                        margin-bottom: 8px !important;
+                    .product-card-actions {
+                        padding-top: 10px !important;
                     }
-                    .product-card-price span:first-child {
-                        font-size: 16px !important;
-                    }
-                    .product-card-price span:last-child {
-                        font-size: 12px !important;
-                    }
-                    .product-card-action {
-                        padding-top: 8px !important;
-                    }
-                    .product-card-action span {
+                    .product-card-actions span {
                         font-size: 13px !important;
                     }
+                    .product-card-contact {
+                        padding: 0 16px 16px 16px !important;
+                    }
+                    .btn-contact {
+                        padding: 12px 16px !important;
+                        font-size: 14px !important;
+                    }
                     .product-category-badge {
-                        padding: 3px 8px !important;
+                        padding: 3px 10px !important;
                         font-size: 10px !important;
-                        margin-bottom: 6px !important;
-                        width: fit-content !important;
-                        max-width: 100% !important;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
+                        margin-bottom: 8px !important;
                     }
                 }
                 

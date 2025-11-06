@@ -235,20 +235,6 @@
        </ul>
       </div>
      </div>
-     <div class="footer-cer">
-      <a class="cer-item" href="coming-soon">
-       <img alt="" class="attachment-full size-full" decoding="async" height="231" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/09/logo-csi-100-doanh-nghiep-ben-vung.png" width="490"/>
-      </a>
-      <a class="cer-item" href="coming-soon">
-       <img alt="" class="attachment-full size-full" decoding="async" height="718" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/08/area.png" width="486"/>
-      </a>
-      <a class="cer-item" href="coming-soon">
-       <img alt="" class="attachment-full size-full" decoding="async" height="576" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/08/logo-gptw-1.png" width="339"/>
-      </a>
-      <a class="cer-item" href="coming-soon">
-       <img alt="" class="attachment-full size-full" decoding="async" loading="lazy" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/08/asc.svg"/>
-      </a>
-     </div>
     </div>
     <div class="footer-bottom">
      <div class="footer-bottom__menu">

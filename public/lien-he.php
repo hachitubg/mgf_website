@@ -18,7 +18,7 @@
  
  // Set banner image
  $banner_image = $banner && $banner['image_path'] 
-    ? '../uploads/banners/' . $banner['image_path']
+    ? '../' . $banner['image_path']
     : 'https://www.greenfeed.com.vn/wp-content/uploads/2024/12/833356f8e36564addde08211c286f5ef.jpg';
  
  include '01_includes/header.php'; 
@@ -80,7 +80,7 @@
             </label>
             <input data-missing-error="Vui lòng nhập họ tên" id="fullname" name="name" placeholder="Họ tên" required type="text"/>
            </div>
-           <div class="form-group input-group">
+           <div class="form-group input-group" style="width:100%">
             <label for="phone">
              Số điện thoại <span style="color: red;">*</span>
             </label>

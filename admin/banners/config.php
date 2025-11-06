@@ -4,10 +4,13 @@
 
 define('BANNER_LOCATIONS', [
     'trang_chu' => 'Trang Chủ - Slider',
+    'trang_chu_esg' => 'Trang Chủ - ESG Banner',
     'gioi_thieu' => 'Giới Thiệu - Banner',
+    'gioi_thieu_1' => 'Giới Thiệu - Hình ảnh 1',
+    'gioi_thieu_2' => 'Giới Thiệu - Hình ảnh 2',
+    'gioi_thieu_icon' => 'Giới Thiệu - Icon',
     'san_pham' => 'Sản Phẩm - Banner',
     'tin_tuc' => 'Tin Tức - Banner',
-    'banner_khac' => 'Các Banner khác',
 ]);
 
 /**

@@ -1215,58 +1215,79 @@
     </div>
    </section>
 
+   <?php
+   // Load ESG banners from database
+   $esg_stmt = $pdo->query("SELECT * FROM banners 
+                             WHERE location_code = 'trang_chu_esg' AND is_active = 1 
+                             ORDER BY sort_order ASC, id DESC
+                             LIMIT 3");
+   $esg_banners = $esg_stmt->fetchAll();
+   
+   // Default ESG content
+   $default_esg_content = [
+     [
+       'keyword' => 'E',
+       'title' => 'Môi trường',
+       'description' => 'Cam kết giảm phát thải, tiết kiệm tài nguyên, và bảo vệ hệ sinh thái thông qua các giải pháp bền vững.',
+       'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2024/12/fbee64008d12914e7f9eb7f950a103ef-e1748153967589.jpg'
+     ],
+     [
+       'keyword' => 'S',
+       'title' => 'Xã hội',
+       'description' => 'Tạo cơ hội phát triển cho cộng đồng, nâng cao chất lượng cuộc sống và đảm bảo bình đẳng xã hội.',
+       'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2025/06/phu-nu-trong-chuong-trinh-tiep-suc-nha-nong-cua-greenfeed-2.jpg'
+     ],
+     [
+       'keyword' => 'G',
+       'title' => 'Quản trị',
+       'description' => 'Xây dựng hệ thống quản trị minh bạch, đạo đức, và kiểm soát rủi ro hiệu quả để thúc đẩy sự phát triển lâu dài.',
+       'image' => 'https://www.greenfeed.com.vn/wp-content/uploads/2024/12/833356f8e36564addde08211c286f5ef.jpg'
+     ]
+   ];
+   ?>
+
    <section class="layers" id="layers">
     <div class="container">
      <div class="layers-inner">
       <div class="layers-list">
-       <a class="layer-item active" href="coming-soon">
+       <?php 
+       $esg_count = count($esg_banners);
+       for ($i = 0; $i < 3; $i++): 
+         $is_active = ($i === 0) ? 'active' : '';
+         
+         // Use database banner if available, otherwise use default
+         if ($i < $esg_count) {
+           $banner = $esg_banners[$i];
+           $image_url = $banner['image_path'] ? '../' . $banner['image_path'] : $default_esg_content[$i]['image'];
+           $link_url = $banner['link_url'] ?: 'coming-soon';
+           $title = $banner['title'] ?: $default_esg_content[$i]['title'];
+           $description = $banner['description'] ?: $default_esg_content[$i]['description'];
+           $keyword = $default_esg_content[$i]['keyword'];
+         } else {
+           $image_url = $default_esg_content[$i]['image'];
+           $link_url = 'coming-soon';
+           $title = $default_esg_content[$i]['title'];
+           $description = $default_esg_content[$i]['description'];
+           $keyword = $default_esg_content[$i]['keyword'];
+         }
+       ?>
+       <a class="layer-item <?= $is_active ?>" href="<?= htmlspecialchars($link_url) ?>">
         <div class="layer-image">
-         <img alt="" class="attachment-full size-full" decoding="async" height="902" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/fbee64008d12914e7f9eb7f950a103ef-e1748153967589.jpg" width="1920"/>
+         <img alt="<?= htmlspecialchars($title) ?>" class="attachment-full size-full" decoding="async" src="<?= htmlspecialchars($image_url) ?>"/>
         </div>
         <div class="layer-content">
          <h3>
-          Môi trường
+          <?= htmlspecialchars($title) ?>
          </h3>
          <p>
-          Cam kết giảm phát thải, tiết kiệm tài nguyên, và bảo vệ hệ sinh thái thông qua các giải pháp bền vững.
+          <?= htmlspecialchars($description) ?>
          </p>
         </div>
         <div class="layer-keyword">
-         E
+         <?= htmlspecialchars($keyword) ?>
         </div>
        </a>
-       <a class="layer-item" href="coming-soon">
-        <div class="layer-image">
-         <img alt="" class="attachment-full size-full" decoding="async" height="1284" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/06/phu-nu-trong-chuong-trinh-tiep-suc-nha-nong-cua-greenfeed-2.jpg" width="1920"/>
-        </div>
-        <div class="layer-content">
-         <h3>
-          Xã hội
-         </h3>
-         <p>
-          Tạo cơ hội phát triển cho cộng đồng, nâng cao chất lượng cuộc sống và đảm bảo bình đẳng xã hội.
-         </p>
-        </div>
-        <div class="layer-keyword">
-         S
-        </div>
-       </a>
-       <a class="layer-item" href="coming-soon">
-        <div class="layer-image">
-         <img alt="" class="attachment-full size-full" decoding="async" height="1073" src="https://www.greenfeed.com.vn/wp-content/uploads/2024/12/833356f8e36564addde08211c286f5ef.jpg" width="1920"/>
-        </div>
-        <div class="layer-content">
-         <h3>
-          Quản trị
-         </h3>
-         <p>
-          Xây dựng hệ thống quản trị minh bạch, đạo đức, và kiểm soát rủi ro hiệu quả để thúc đẩy sự phát triển lâu dài.
-         </p>
-        </div>
-        <div class="layer-keyword">
-         G
-        </div>
-       </a>
+       <?php endfor; ?>
       </div>
      </div>
     </div>

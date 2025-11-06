@@ -59,7 +59,7 @@ $banner = $banner_stmt->fetch();
 
 // Set banner image
 $banner_image = $banner && $banner['image_path'] 
-   ? '../uploads/banners/' . $banner['image_path']
+   ? '../' . $banner['image_path']
    : 'https://www.greenfeed.com.vn/wp-content/uploads/2024/12/833356f8e36564addde08211c286f5ef.jpg';
 ?>
 <!DOCTYPE html>

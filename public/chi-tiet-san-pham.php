@@ -31,10 +31,11 @@ $stmt->execute([$product['id']]);
 $images = $stmt->fetchAll();
 
 // Lấy sản phẩm liên quan (cùng danh mục)
-$stmt = $pdo->prepare("SELECT p.*, pi.image_path 
+$stmt = $pdo->prepare("SELECT p.*, pi.image_path, c.name as category_name 
                        FROM products p 
                        LEFT JOIN product_images pi ON p.id = pi.product_id 
                             AND pi.sort_order = (SELECT MIN(sort_order) FROM product_images WHERE product_id = p.id)
+                       LEFT JOIN categories c ON c.id = p.category_id
                        WHERE p.category_id = ? AND p.id != ? 
                        ORDER BY RAND() 
                        LIMIT 6");
@@ -112,24 +113,6 @@ $related_products = $stmt->fetchAll();
 
                         <h1 class="product-title"><?= htmlspecialchars($product['title']) ?></h1>
 
-                        <?php if ($product['price'] > 0): ?>
-                        <div class="product-price-section">
-                            <?php if ($product['promo_price'] > 0 && $product['promo_price'] < $product['price']): ?>
-                                <div class="price-wrapper">
-                                    <span class="price-current"><?= number_format($product['promo_price'], 0, ',', '.') ?>đ</span>
-                                    <span class="price-original"><?= number_format($product['price'], 0, ',', '.') ?>đ</span>
-                                    <span class="price-discount">
-                                        -<?= round((($product['price'] - $product['promo_price']) / $product['price']) * 100) ?>%
-                                    </span>
-                                </div>
-                            <?php else: ?>
-                                <div class="price-wrapper">
-                                    <span class="price-current"><?= number_format($product['price'], 0, ',', '.') ?>đ</span>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                        <?php endif; ?>
-
                         <div class="product-description">
                             <h3>Mô tả sản phẩm</h3>
                             <div class="description-content">
@@ -153,40 +136,62 @@ $related_products = $stmt->fetchAll();
 
         <!-- Sản phẩm liên quan -->
         <?php if (!empty($related_products)): ?>
-        <section class="related-products-section">
+        <section class="related-products-section" style="padding: 60px 0; background: #f8f9fa;">
             <div class="container">
-                <div class="section-title-wrapper text-center">
-                    <h3 class="section-title">Sản phẩm liên quan</h3>
+                <div class="section-title-wrapper text-center" style="margin-bottom: 40px;">
+                    <h3 class="section-title" style="font-size: 32px; font-weight: 700; color: #054326; margin-bottom: 10px;">Sản phẩm liên quan</h3>
+                    <p style="color: #666; font-size: 16px;">Khám phá thêm các sản phẩm tương tự</p>
                 </div>
                 
-                <div class="related-products-carousel owl-carousel owl-theme">
+                <div class="related-products-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
                     <?php foreach ($related_products as $rel_product): 
                         $rel_image = $rel_product['image_path'] 
                             ? '../uploads/products/' . $rel_product['image_path']
                             : '05_images/no-image.jpg';
-                        $short_desc = mb_substr(strip_tags($rel_product['description'] ?? ''), 0, 100, 'UTF-8');
-                        if (mb_strlen(strip_tags($rel_product['description'] ?? '')) > 100) {
+                        
+                        // Clean description: remove HTML tags properly
+                        $clean_desc = strip_tags($rel_product['description'] ?? '');
+                        // Remove any remaining HTML entities
+                        $clean_desc = html_entity_decode($clean_desc, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+                        // Remove extra whitespace
+                        $clean_desc = preg_replace('/\s+/', ' ', $clean_desc);
+                        $clean_desc = trim($clean_desc);
+                        
+                        $short_desc = mb_substr($clean_desc, 0, 80, 'UTF-8');
+                        if (mb_strlen($clean_desc) > 80) {
                             $short_desc .= '...';
                         }
                     ?>
-                    <div class="related-product-item">
-                        <a href="chi-tiet-san-pham?slug=<?= htmlspecialchars($rel_product['slug']) ?>" class="product-link">
-                            <div class="product-image">
-                                <img src="<?= htmlspecialchars($rel_image) ?>" alt="<?= htmlspecialchars($rel_product['title']) ?>">
+                    <div class="related-product-card" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s ease;">
+                        <a href="chi-tiet-san-pham?slug=<?= htmlspecialchars($rel_product['slug']) ?>" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="product-card-image" style="position: relative; aspect-ratio: 4/3; overflow: hidden; background: #f5f5f5;">
+                                <img src="<?= htmlspecialchars($rel_image) ?>" 
+                                     alt="<?= htmlspecialchars($rel_product['title']) ?>"
+                                     style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;"
+                                     loading="lazy"/>
                             </div>
-                            <div class="product-content">
-                                <h4 class="product-title"><?= htmlspecialchars($rel_product['title']) ?></h4>
-                                <p class="product-excerpt"><?= htmlspecialchars($short_desc) ?></p>
-                                <?php if ($rel_product['price'] > 0): ?>
-                                <div class="product-price">
-                                    <?php if ($rel_product['promo_price'] > 0 && $rel_product['promo_price'] < $rel_product['price']): ?>
-                                        <span class="price-promo"><?= number_format($rel_product['promo_price'], 0, ',', '.') ?>đ</span>
-                                        <span class="price-old"><?= number_format($rel_product['price'], 0, ',', '.') ?>đ</span>
-                                    <?php else: ?>
-                                        <span class="price"><?= number_format($rel_product['price'], 0, ',', '.') ?>đ</span>
-                                    <?php endif; ?>
+                            <div class="product-card-content" style="padding: 20px;">
+                                <h4 class="product-card-title" style="font-size: 18px; font-weight: 700; color: #054326; margin-bottom: 10px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 50px;">
+                                    <?= htmlspecialchars($rel_product['title']) ?>
+                                </h4>
+                                <?php if ($rel_product['category_name']): ?>
+                                <div class="product-category-badge" style="display: inline-block; margin-bottom: 10px; padding: 4px 12px; background: linear-gradient(135deg, #a6cb5d 0%, #2eb058 100%); color: #fff; border-radius: 15px; font-size: 11px; font-weight: 600; width: fit-content; max-width: 100%;">
+                                    <?= htmlspecialchars($rel_product['category_name']) ?>
                                 </div>
                                 <?php endif; ?>
+                                <?php if ($short_desc): ?>
+                                <p class="product-card-desc" style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: 63px;">
+                                    <?= htmlspecialchars($short_desc) ?>
+                                </p>
+                                <?php endif; ?>
+                                <div class="product-card-action" style="padding-top: 12px; border-top: 1px solid #f0f0f0;">
+                                    <span style="color: #2eb058; font-weight: 600; font-size: 14px;">
+                                        Xem chi tiết 
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="vertical-align: middle; margin-left: 4px;">
+                                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -194,6 +199,88 @@ $related_products = $stmt->fetchAll();
                 </div>
             </div>
         </section>
+
+        <style>
+            .related-product-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            }
+            .related-product-card:hover .product-card-image img {
+                transform: scale(1.1);
+            }
+            
+            @media (max-width: 768px) {
+                .related-products-section {
+                    padding: 40px 0 !important;
+                }
+                .related-products-grid {
+                    grid-template-columns: 1fr !important;
+                    gap: 16px !important;
+                }
+                .related-product-card {
+                    display: flex !important;
+                    flex-direction: row !important;
+                    align-items: stretch;
+                }
+                .related-product-card a {
+                    display: flex !important;
+                    width: 100%;
+                }
+                .related-product-card .product-card-image {
+                    flex: 0 0 120px !important;
+                    aspect-ratio: 1/1 !important;
+                    min-height: 120px;
+                }
+                .related-product-card .product-card-content {
+                    flex: 1;
+                    padding: 12px !important;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+                .related-product-card .product-card-title {
+                    font-size: 15px !important;
+                    min-height: auto !important;
+                    -webkit-line-clamp: 2 !important;
+                    margin-bottom: 6px !important;
+                }
+                .related-product-card .product-card-desc {
+                    font-size: 12px !important;
+                    min-height: auto !important;
+                    -webkit-line-clamp: 2 !important;
+                    margin-bottom: 8px !important;
+                    line-height: 1.4 !important;
+                }
+                .related-product-card .product-card-action {
+                    padding-top: 8px !important;
+                }
+                .related-product-card .product-card-action span {
+                    font-size: 13px !important;
+                }
+                .related-product-card .product-category-badge {
+                    padding: 3px 8px !important;
+                    font-size: 10px !important;
+                    margin-bottom: 6px !important;
+                    width: fit-content !important;
+                    max-width: 100% !important;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            
+            @media (min-width: 769px) and (max-width: 1024px) {
+                .related-products-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+            }
+            
+            @media (min-width: 1025px) and (max-width: 1280px) {
+                .related-products-grid {
+                    grid-template-columns: repeat(3, 1fr) !important;
+                }
+            }
+        </style>
         <?php endif; ?>
 
     </main>
@@ -212,45 +299,6 @@ $related_products = $stmt->fetchAll();
             // Add active class to clicked thumbnail
             thumbnail.classList.add('active');
         }
-
-        // Initialize related products carousel
-        $(document).ready(function() {
-            $('.related-products-carousel').owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: true,
-                dots: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                navText: [
-                    '<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M25 30L15 20L25 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-                    '<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M15 30L25 20L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-                ],
-                responsive: {
-                    0: {
-                        items: 1,
-                        margin: 20,
-                        nav: false
-                    },
-                    480: {
-                        items: 2,
-                        margin: 20,
-                        nav: false
-                    },
-                    768: {
-                        items: 3,
-                        margin: 25,
-                        nav: true
-                    },
-                    1024: {
-                        items: 4,
-                        margin: 30,
-                        nav: true
-                    }
-                }
-            });
-        });
     </script>
     <script id="sanpham-js" src="03_js/sanpham.js" type="text/javascript"></script>
 
