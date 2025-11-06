@@ -11,6 +11,7 @@ define('BANNER_LOCATIONS', [
     'gioi_thieu_icon' => 'Giới Thiệu - Icon',
     'san_pham' => 'Sản Phẩm - Banner',
     'tin_tuc' => 'Tin Tức - Banner',
+    'lien_he' => 'Liên hệ - Banner',
 ]);
 
 /**
