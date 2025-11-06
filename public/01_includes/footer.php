@@ -459,6 +459,40 @@
    </div>
   </footer>
 
+   <!-- Floating quick contact (phone & Zalo) -->
+   <div id="mgf-floating-ctas" aria-hidden="false">
+      <a class="mgf-cta mgf-phone" href="tel:0987738533" title="Gọi 098 773 8533" aria-label="Gọi 098 773 8533">
+         <img src="./05_images/phone-icon.png" alt="Gọi điện">
+         <span class="mgf-label">098 773 8533</span>
+      </a>
+      <!-- <a class="mgf-cta mgf-zalo" href="https://zalo.me/0987738533" target="_blank" rel="noopener" title="Zalo 098 773 8533" aria-label="Zalo 098 773 8533">
+         <img src="./05_images/zalo-icon.png" alt="Zalo">
+         <span class="mgf-label">Zalo: 098 773 8533</span>
+      </a> -->
+   </div>
+
+   <style>
+      /* Floating CTAs: simple, desktop-hover only. */
+      #mgf-floating-ctas{ position:fixed; right:18px; bottom:18px; z-index:1200; display:flex; flex-direction:column; gap:12px; pointer-events:none }
+      /* light green background (visible behind icon and on expanded pill) */
+      #mgf-floating-ctas .mgf-cta{ pointer-events:auto; display:flex; align-items:center; justify-content:center; width:54px; height:54px; padding:3px; border-radius:50%; background:linear-gradient(135deg,#e6fff0,#bbf7d0); box-shadow:0 8px 28px rgba(0,0,0,0.12); color:#fff; text-decoration:none; overflow:visible; transition: width 0.45s cubic-bezier(.22,.61,.36,1), padding 0.45s cubic-bezier(.22,.61,.36,1), border-radius 0.45s }
+      #mgf-floating-ctas .mgf-cta img{ width:48px; height:48px; object-fit:cover; display:block; margin:0; border-radius:50% }
+      .mgf-label{ display:inline-block; max-width:0; overflow:hidden; white-space:nowrap; opacity:0; transform:translateX(6px); color:#fff; font-weight:600; font-size:14px; transition: max-width 0.45s ease, opacity 0.45s ease, transform 0.45s ease }
+
+      /* Hover/expand only on pointer-capable devices */
+      @media (hover: hover) and (pointer: fine){
+      #mgf-floating-ctas .mgf-cta:hover{ width:170px; padding:10px 18px; border-radius:28px; justify-content:flex-start; box-shadow:0 14px 46px rgba(0,0,0,0.16); background:linear-gradient(135deg,#cfffe0,#9ef1b5) }
+         #mgf-floating-ctas .mgf-cta:hover .mgf-label{ max-width:220px; opacity:1; transform:none; margin-left:8px }
+      }
+
+      /* Mobile: keep icons small and static */
+      @media (max-width:768px){
+         #mgf-floating-ctas{ right:12px; bottom:12px; gap:10px }
+         #mgf-floating-ctas .mgf-cta{ width:44px; height:44px; padding:6px }
+         #mgf-floating-ctas .mgf-cta img{ width:40px; height:40px }
+         .mgf-label{ display:none }
+      }
+   </style>
 
    <link href="./02_css/popup-ctab.css?ver=d65c088057488138bf039a3e61e34ccf411" id="popup_style-css" media="all" rel="stylesheet" type="text/css"/>
    <link href="./02_css/form.css?ver=d65c088057488138bf039a3e61e34ccf411" id="form_style-css" media="all" rel="stylesheet" type="text/css"/>
