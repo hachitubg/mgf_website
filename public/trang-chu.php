@@ -1258,10 +1258,12 @@
          // Use database banner if available, otherwise use default
          if ($i < $esg_count) {
            $banner = $esg_banners[$i];
-           $image_url = $banner['image_path'] ? '../' . $banner['image_path'] : $default_esg_content[$i]['image'];
-           $link_url = $banner['link_url'] ?: 'coming-soon';
-           $title = $banner['title'] ?: $default_esg_content[$i]['title'];
-           $description = $banner['description'] ?: $default_esg_content[$i]['description'];
+           // Chỉ update hình ảnh từ database, giữ nguyên nội dung text mặc định
+           $image_url = !empty($banner['image_path']) ? '../' . $banner['image_path'] : $default_esg_content[$i]['image'];
+           $link_url = !empty($banner['link_url']) ? $banner['link_url'] : 'coming-soon';
+           // Giữ nguyên title và description mặc định
+           $title = $default_esg_content[$i]['title'];
+           $description = $default_esg_content[$i]['description'];
            $keyword = $default_esg_content[$i]['keyword'];
          } else {
            $image_url = $default_esg_content[$i]['image'];
