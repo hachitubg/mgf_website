@@ -59,13 +59,24 @@
       </img>
      </div>
      <div class="company-content">
+      <!-- Direct contact info (moved above the form) -->
+      <div class="contact-direct" id="contactDirect">
+        <h2 class="contact-direct__title">Thông tin liên hệ trực tiếp</h2>
+        <ul class="contact-direct__list">
+          <li class="contact-item"><strong>Số điện thoại:</strong> <a href="tel:+84987738533">+84 98 773 8533</a></li>
+          <li class="contact-item"><strong>Zalo:</strong> <a href="https://zalo.me/+84987738533" target="_blank" rel="noopener">+84 98 773 8533</a></li>
+          <li class="contact-item"><strong>Email:</strong> <a href="mailto:info@mgf.com.vn">info@mgf.com.vn</a></li>
+          <li class="contact-item"><strong>Địa chỉ:</strong> TT19-09, khu đấu giá 31ha, Xã Gia Lâm, Thành Phố Hà Nội, Việt Nam</li>
+        </ul>
+      </div>
+
       <div class="form-wrap" data-trigger="#cooperate">
        <div class="form-header">
         <span class="form__subtitle">
-         Liên hệ
+         Chúng tôi sẽ chủ động liên lạc với bạn để hỗ trợ và tư vấn trong thời gian sớm nhất.
         </span>
         <h2 class="form__title">
-         MGF VIỆT NAM
+         GỬI TIN NHẮN TỚI CHO MGF VIỆT NAM
         </h2>
         <span class="form__close close-btn">
          <img alt="Close" height="10" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/close.svg" width="10"/>
@@ -192,6 +203,27 @@
          });
        });
        </script>
+      <script>
+      jQuery(function($){
+        var $el = $('#contactDirect');
+        if (!$el.length) return;
+
+        function revealContact(){
+          var top = $el.offset().top;
+          var scroll = $(window).scrollTop();
+          var wh = $(window).height();
+          if (scroll + wh > top + 80) {
+            $el.addClass('visible');
+            $(window).off('scroll', revealContact);
+          }
+        }
+
+        // reveal on load if visible
+        setTimeout(revealContact, 150);
+        // reveal on scroll
+        $(window).on('scroll', revealContact);
+      });
+      </script>
       </div>
 
      </div>

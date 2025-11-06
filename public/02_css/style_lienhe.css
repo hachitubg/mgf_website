@@ -1998,6 +1998,59 @@ html[lang=en-GB] .dt-search-results-wrapper {
 {
   /* display:none; */
 }
+/* --------------------------------------------------------------
+   Contact direct (added for lien-he.php)
+   -------------------------------------------------------------- */
+#contactDirect{
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 1.5rem;
+  background: #f8f9fa;
+  border-radius: .5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .6s cubic-bezier(.2,.9,.2,1), transform .6s cubic-bezier(.2,.9,.2,1);
+}
+#contactDirect.visible{
+  opacity: 1;
+  transform: none;
+}
+.contact-direct__title{
+  margin: 0 0 .5rem;
+  font-size: 1.125rem;
+  color: #274b33;
+  font-weight: 600;
+}
+.contact-direct__list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.contact-item{
+  font-size: .975rem;
+  color: #222;
+}
+.contact-item a{
+  color: #60aa55;
+  text-decoration: none;
+  transition: color .18s ease, transform .18s ease;
+}
+.contact-item a:hover{
+  color: #3f7a3a;
+  transform: translateX(4px);
+}
+@media (min-width: 900px){
+  /* Ensure contact block sits above the form on wide screens */
+  .company-content{
+    display: flex;
+    flex-direction: column;
+  }
+  #contactDirect{ order: 0; }
+  .form-wrap{ order: 1; }
+}
 .footer-bottom-menu li:not(:last-child)
 {
     padding-right:.5rem;

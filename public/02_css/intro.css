@@ -403,6 +403,7 @@ html:not([lang="vi"]) .brands__content li
     left: 2rem;
     padding-right: 4rem;
     top: 2rem;
+    z-index: 3;
 }
 .value-item:nth-child(2n+1) .value-item__title
 {

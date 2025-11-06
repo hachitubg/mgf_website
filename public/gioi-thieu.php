@@ -98,18 +98,7 @@
     </div>
    </div>
 
-    <!-- TAB -->
-   <!-- <div class="page-nav page-nav-4644">
-    <div class="container">
-     <a class="active" href="gioi-thieu">
-      Về MGF
-     </a>
-     <a class="" href="ccos">
-      Hành trình lớn mạnh
-     </a>
-    </div>
-   </div> -->
-
+   <!-- MGF LÀ AI? -->
    <section class="philosophy-section" id="philosophy">
     <div class="container">
      <div class="philosophy-inner">
@@ -164,8 +153,9 @@
       </div>
      </div>
     </div>
-
    </section>
+
+   <!-- Hành trình phát triển -->
    <section class="brands brands-section" id="brands">
     <div class="container">
      <div class="brands-inner">
@@ -626,6 +616,8 @@
     </div>
 
    </section>
+
+   <!-- ĐịNH HƯỚNG -->
    <section class="mision-section" id="mision">
     <div class="container">
      <div class="mision-inner">
@@ -641,7 +633,7 @@
        </div>
        <div class="content">
         <p>
-         Đóng vai trò quan trọng trong việc nuôi dưỡng dân số thế giới bằng phương thức phù hợp với con người, động vật và môi trường.
+         MGF ngày càng đóng một vai trò quan trọng trong việc nuôi dưỡng dân số ngày càng tăng trên thế giới bằng một cách thích hợp, phù hợp với động vật, con người, và môi trường
         </p>
        </div>
       </div>
@@ -652,7 +644,7 @@
        </div>
        <div class="content">
         <p>
-         Cung cấp thức ăn chăn nuôi chất lượng cao, thực phẩm an toàn, giải pháp bền vững – tạo chuỗi giá trị tốt nhất cho cộng đồng.
+         Chúng tôi mang đến cho khách hàng những sản phẩm thức ăn chăn nuôi chất lượng cao, thực phẩm an toàn, cùng giải pháp chăn nuôi bền vững, tạo ra chuỗi giá trị tốt nhất cho sức khỏe cộng đồng và thân thiện với môi trường.
         </p>
        </div>
       </div>
@@ -663,64 +655,84 @@
        </div>
        <div class="content">
         <p>
-         Giữ vững vị thế dẫn đầu, tối ưu hóa giá trị gia tăng thông qua kiến thức dinh dưỡng, sản xuất và con giống.
+         Chiến lược của chúng tôi là tiếp tục giữ vững vị trí hàng đầu, xây dựng vị trí dẫn đầu tại những thị trường chúng tôi có mặt, dựa trên nền tảng năng lực hạt nhân của chúng tôi. Mặt khác, chúng tôi tập trung nâng cao hiệu quả kinh tế chăn nuôi và tối ưu hóa tiềm năng giá trị gia tăng mà chúng tôi mang lại cho khách hàng thông qua kiến thức về dinh dưỡng, sản xuất và con giống. 
         </p>
        </div>
       </div>
 
       <div class="mision-row value">
-       <div class="title">
-        Giá trị
-        <br/>
-        cốt lõi
-       </div>
-       <div class="values-list">
-        <div class="value-item">
-         <div class="value-item__title">
-          Tăng trưởng
-          <br/>
-          bền vững
+         <div class="title">
+            Giá trị
+            <br/>
+            cốt lõi
          </div>
-         <div class="value-item__image">
-          <img alt="" class="attachment-full size-full" decoding="async" height="500" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/02-27.png" width="500"/>
+
+         <div class="values-list">
+
+            <div class="value-item">
+               <div class="value-item__title">
+               Nhân sự giàu
+               <br/>
+               kinh nghiệm
+               </div>
+               <div class="value-item__image">
+               <img alt="" class="attachment-full size-full" decoding="async"
+                  src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/02-29.png" />
+               </div>
+            </div>
+
+            <div class="value-item">
+               <div class="value-item__title">
+               Sản phẩm chất lượng
+               <br/>
+               cao & ổn định
+               </div>
+               <div class="value-item__image">
+               <img alt="" class="attachment-full size-full" decoding="async"
+                  src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/02-28.png" />
+               </div>
+            </div>
+
+            <div class="value-item">
+               <div class="value-item__title">
+               Chiến lược bán hàng
+               <br/>
+               linh động & cạnh tranh
+               </div>
+               <div class="value-item__image">
+               <img alt="" class="attachment-full size-full" decoding="async"
+                  src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/02-27.png" />
+               </div>
+            </div>
+
+            <div class="value-item">
+               <div class="value-item__title">
+               Dịch vụ sau bán hàng
+               <br/>
+               tận tâm
+               </div>
+               <div class="value-item__image">
+               <img alt="" class="attachment-full size-full" decoding="async"
+                  src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/02-31.png" />
+               </div>
+            </div>
+
+            <div class="value-item">
+               <div class="value-item__title">
+               Chăm sóc khách hàng
+               <br/>
+               chu đáo
+               </div>
+               <div class="value-item__image">
+               <img alt="" class="attachment-full size-full" decoding="async"
+                  src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/02-30.png" />
+               </div>
+            </div>
+
          </div>
-        </div>
-        <div class="value-item">
-         <div class="value-item__title">
-          Tin cậy
-         </div>
-         <div class="value-item__image">
-          <img alt="" class="attachment-full size-full" decoding="async" height="484" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/02-28.png" width="500"/>
-         </div>
-        </div>
-        <div class="value-item">
-         <div class="value-item__title">
-          Trách nhiệm
-         </div>
-         <div class="value-item__image">
-          <img alt="" class="attachment-full size-full" decoding="async" height="500" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/02-29.png" width="500"/>
-         </div>
-        </div>
-        <div class="value-item">
-         <div class="value-item__title">
-          Nhân văn
-         </div>
-         <div class="value-item__image">
-          <img alt="" class="attachment-full size-full" decoding="async" height="526" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/02-31.png" width="500"/>
-         </div>
-        </div>
-        <div class="value-item">
-         <div class="value-item__title">
-          Tư duy
-          <br/>
-          cùng thắng
-         </div>
-         <div class="value-item__image">
-          <img alt="" class="attachment-full size-full" decoding="async" height="500" src="https://www.greenfeed.com.vn/wp-content/uploads/2025/01/02-30.png" width="500"/>
-         </div>
-        </div>
-       </div>
       </div>
+
+
       <div class="abs-icon light-1">
        <img alt="light" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/02-26.png" width="60"/>
       </div>
@@ -734,6 +746,8 @@
     </div>
 
    </section>
+
+   <!-- DỰ ÁN TRỌNG ĐIỂM -->
    <section class="culture-section" id="culture">
     <div class="container">
       <div class="culture-inner">
@@ -800,21 +814,36 @@
 
    </section>
 
-   <!-- <section class="program" id="program">
+   <!-- Company culture section (added) -->
+   <section class="culture-section company-culture" id="company-culture">
     <div class="container">
-     <div class="program-inner">
-      <div class="program-viewmore">
-       <span>
-        Xem thêm
-       </span>
-       <a class="btn btn--primary" href="ccos">
-        Hành trình lớn mạnh
-        <img alt="filter" height="60" src="https://www.greenfeed.com.vn/wp-content/themes/greenfeed/assets/images/long-arr-next.svg" width="60"/>
-       </a>
+     <div class="culture-inner">
+      <div class="culture__contents">
+       <div class="section-title-wrapper">
+        <div class="section-subtitle">
+         Văn hóa doanh nghiệp
+        </div>
+        <h2 class="section-title">
+         Văn hóa doanh nghiệp của MGF
+        </h2>
+       </div>
+       <div class="culture__content">
+        <p>
+         MGF xây dựng văn hóa doanh nghiệp dựa trên chất lượng, trách nhiệm và hợp tác. Chúng tôi triển khai một chuỗi quy trình khép kín đảm bảo an toàn thực phẩm từ thức ăn chăn nuôi đến giai đoạn nuôi trồng và chế biến.
+        </p>
+        <ul>
+         <li>Đào tạo nhân sự mới — đảm bảo mọi nhân viên nắm vững quy trình vận hành và tiêu chuẩn an toàn.</li>
+         <li>Xây dựng quy trình sử dụng thức ăn chăn nuôi chất lượng cao và cam kết các chỉ số kỹ thuật để bảo đảm đầu vào an toàn và ổn định.</li>
+         <li>Mở rộng tìm kiếm các đối tác uy tín thực hiện chuỗi 3F (Feed – Farm – Food) nhằm kiểm soát chất lượng xuyên suốt chuỗi cung ứng.</li>
+        </ul>
+        <p>
+         Quy trình sản xuất thực phẩm an toàn của chúng tôi bắt đầu từ việc lựa chọn nguyên liệu và thức ăn chăn nuôi đạt chuẩn, áp dụng quy trình chăn nuôi an toàn tại trang trại, và tiếp tục qua các bước chế biến, kiểm nghiệm và đóng gói — tất cả để mang đến sản phẩm an toàn và đáng tin cậy cho người tiêu dùng.
+        </p>
+       </div>
       </div>
      </div>
     </div>
-   </section> -->
+   </section>
    
   </main>
 
