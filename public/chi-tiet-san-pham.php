@@ -300,6 +300,7 @@ $related_products = $stmt->fetchAll();
             thumbnail.classList.add('active');
         }
     </script>
+    <script id="trangchu-js" src="03_js/trangchu.js" type="text/javascript"></script>
     <script id="sanpham-js" src="03_js/sanpham.js" type="text/javascript"></script>
 
     <div class="loading">

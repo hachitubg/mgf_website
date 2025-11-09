@@ -3,37 +3,6 @@
 // Detect current page
 $current_page = basename($_SERVER['PHP_SELF'], '.php');
 ?>
-   <div class="top-bar">
-    <div class="container-wide">
-     <div class="top-bar-menu">
-      <div class="menu-top-bar-container">
-       <ul class="dt-secondary-menu header-menu" id="secondary">
-        <li class="color-primary menu-item menu-item-type-custom menu-item-object-custom menu-item-6382" id="menu-item-6382">
-         <a href="coming-soon">
-          <span>
-           FEED
-          </span>
-         </a>
-        </li>
-        <li class="color-primary menu-item menu-item-type-post_type menu-item-object-page menu-item-5546" id="menu-item-5546">
-         <a href="coming-soon">
-          <span>
-           FARM
-          </span>
-         </a>
-        </li>
-        <li class="color-primary menu-item menu-item-type-post_type menu-item-object-page menu-item-5544" id="menu-item-5544">
-         <a href="coming-soon">
-          <span>
-           FOOD
-          </span>
-         </a>
-        </li>
-       </ul>
-      </div>
-     </div>
-    </div>
-   </div>
    <div class="dt-header-wrapper">
     <div class="container-wide">
      <div class="header-main">
