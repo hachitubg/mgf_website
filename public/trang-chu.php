@@ -21,7 +21,7 @@
  <body class="home wp-singular page-template page-template-page-templates page-template-trang-chu-2024 page-template-page-templatestrang-chu-2024-php page page-id-4564 wp-theme-greenfeed loading-effect fade-in">
 
   <!-- Includes header1.php -->
-  <?php include '01_includes/header_01.php'; ?>
+  <?php include '01_includes/header_02.php'; ?>
 
   <!-- main -->
   <main class="site-main" id="dt-main-content" role="main">
