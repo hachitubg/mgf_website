@@ -1546,7 +1546,7 @@ html[lang=vi] #vertical-navs li:nth-child(4) .nav-label {
    position:relative;
 }
 
-.home .header-main
+/* .home .header-main
 {
     position:absolute;
     top: 1rem;
@@ -1570,7 +1570,7 @@ html[lang=vi] #vertical-navs li:nth-child(4) .nav-label {
     border:thin solid #eee;
     transition:all .3125s;
     z-index:-1;
-}
+} */
 /* Layers */
 .layers
 {
