@@ -458,3 +458,48 @@ if($('.brands').length)
                 
             }
     });
+
+// SVG Animation on Scroll - Copied from trangchu.js
+jQuery(document).ready(function ($) {
+    // Function to check if element is in viewport
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to check if element is partially in viewport
+    function isElementPartiallyInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+        var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+        
+        var vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+        var horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+        
+        return (vertInView && horInView);
+    }
+
+    // Function to handle scroll
+    function handleScroll() {
+        var brandsImages = $('.brands__images');
+        
+        if (brandsImages.length > 0) {
+            brandsImages.each(function() {
+                if (isElementPartiallyInViewport(this) && !$(this).hasClass('animate-in')) {
+                    $(this).addClass('animate-in');
+                }
+            });
+        }
+    }
+
+    // Run on scroll
+    $(window).on('scroll', handleScroll);
+    
+    // Run on page load
+    handleScroll();
+});

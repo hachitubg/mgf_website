@@ -592,6 +592,7 @@ html[lang=vi] .banner__content-arrow:nth-child(3) .banner__content-arrow-info {
      line-height:1.6;
      margin: .5rem 0 0;
      text-align: justify;
+     padding-right: 20px;
 }
 .brands__content ul
 {
@@ -2445,9 +2446,6 @@ body.home .header-transparent .dt-search-form,
   }
   .certificate-item {
     max-width: 100%;
-  }
-  .certificates .container {
-    /* max-width: 100%; */
   }
   .certificates .owl-theme .owl-nav.disabled + .owl-dots {
     margin-top: 1.57rem;

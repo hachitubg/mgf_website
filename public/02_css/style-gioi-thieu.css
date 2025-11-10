@@ -3283,6 +3283,10 @@ text-decoration:underline;
     height: 2.1428rem;
     z-index: 10;
   }
+  .feed_farm_food_mgf_svg {
+    width: 330px;
+    height: 300px;
+  }
   .dt-secondary-menu.header-menu > li > a b.caret {
     right: 0;
   }
@@ -4576,4 +4580,57 @@ text-decoration:underline;
 @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape)
 {
     
+}
+
+/* SVG Animation Styles - Copied from home.css */
+.brands__images {
+    overflow: hidden;
+}
+.brands__images svg {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.brands__images svg path {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+/* Animate when in view */
+.brands__images.animate-in svg {
+    opacity: 1;
+    transform: translateY(0);
+}
+.brands__images.animate-in svg path:nth-child(1),
+.brands__images.animate-in svg path:nth-child(2),
+.brands__images.animate-in svg path:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+.brands__images.animate-in svg path:nth-child(4),
+.brands__images.animate-in svg path:nth-child(5),
+.brands__images.animate-in svg path:nth-child(6) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+.brands__images.animate-in svg path:nth-child(7),
+.brands__images.animate-in svg path:nth-child(8),
+.brands__images.animate-in svg path:nth-child(9) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+.brands__images.animate-in svg path:nth-child(10),
+.brands__images.animate-in svg path:nth-child(11),
+.brands__images.animate-in svg path:nth-child(12) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}
+.brands__images.animate-in svg path:nth-child(n+13) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
 }

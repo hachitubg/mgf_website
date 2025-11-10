@@ -325,31 +325,26 @@
         </h3>
        </div>
        <div class="brands__content">
-        <h4>
-         <strong>
-          Giải pháp chăn nuôi xanh trong chuỗi thực phẩm sạch 3F Plus (Feed – Farm – Food) của MGF nuôi dưỡng những giá trị tốt lành nhất từ trang trại đến bữa cơm gia đình.
-         </strong>
-        </h4>
         <p>
-         Trong suốt chặng đường phát triển, MGF luôn tâm huyết mang lại những giải pháp đổi mới, sáng tạo nhằm xây dựng hệ sinh thái thực phẩm sạch bền vững. Chúng tôi tin rằng những giá trị tốt sẽ mang lại những thành quả lành, xuất phát từ giải pháp chăn nuôi bền vững. Nguồn cám sạch, con giống tốt là tiền đề cho vụ nuôi thành công, mang lại bữa ăn lành, ngon, tốt cho sức khỏe của hàng triệu người tiêu dùng.
+          <span>
+          MGF khởi nguồn là một doanh nghiệp tư nhân với khát vọng tạo ra giá trị bền vững cho ngành nông nghiệp Việt Nam. Với tầm nhìn dài hạn, MGF từng bước xây dựng hệ thống nhà máy sản xuất theo chuyên ngành, hình thành nền tảng vững chắc cho chiến lược phát triển toàn diện.
+          </span>
         </p>
+
         <p>
-         MGF tự hào góp phần tạo nên một hệ sinh thái thực phẩm sạch thịnh vượng, hướng đến sự phát triển bền vững của môi trường, kinh tế và cộng đồng.
+          <span>
+          Đến nay, MGF đã vận hành chuỗi nhà máy trên toàn quốc gồm: Nhà máy sản xuất thức ăn chăn nuôi tại Hải Dương (2025), Nhà máy sản xuất thuốc thú y tại Bắc Giang (2023), Nhà máy sản xuất thuốc bảo vệ thực vật tại Thanh Hóa, Nhà máy sản xuất phân bón tại Nam Định, và Nhà máy sản xuất nhựa polime tại Hưng Yên. Năng lực sản xuất quy mô lớn, hiệu quả cao là nền tảng để MGF mở rộng và phát triển mạnh mẽ trong tương lai.
+          </span>
         </p>
+
         <ul>
-         <li>
-          Giải pháp chăn nuôi hiệu quả
-         </li>
-         <li>
-          Con giống chuẩn quốc tế
-         </li>
-         <li>
-          Dinh dưỡng vật nuôi tối ưu
-         </li>
-         <li>
-          Mô hình trại tiên tiến
-         </li>
+          <li>Thức ăn chăn nuôi cho heo: heo con, heo thịt, nái chửa, nái nuôi con</li>
+          <li>Thức ăn chăn nuôi cho gia cầm: gà thịt, gà đẻ, vịt thịt, vịt đẻ, cút…</li>
+          <li>Thức ăn thủy sản: cá da trơn, cá có vảy, ếch…</li>
+          <li>Thức ăn cho chim bồ câu</li>
+          <li>Thức ăn cho bò: bò sữa, bò thịt</li>
         </ul>
+
         <p>
          <a class="btn btn--primary" href="gioi-thieu">
           Tìm hiểu thêm
