@@ -55,7 +55,7 @@
    <div class="container">
     <div class="company-introduce flex">
      <div class="company-image">
-      <img alt="" class="attachment-full size-full" decoding="async" fetchpriority="high" height="629" src="05_images/banner3.png" width="1200">
+      <img alt="" class="attachment-full size-full" decoding="async" fetchpriority="high" height="629" src="05_images/banner1.jpg" width="1200">
       </img>
      </div>
      <div class="company-content">
