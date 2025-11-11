@@ -167,7 +167,7 @@ $products = $stmt->fetchAll();
 
   <table>
     <thead>
-      <tr><th style="width:40px">Sắp xếp</th><th></th><th>Hình ảnh</th><th>Tên Sản Phẩm</th><th>Danh Mục</th><th>Giá</th><th>Khuyến Mãi</th><th>Số hình</th><th>Ngày Tạo</th><th>Hành Động</th></tr>
+      <tr><th style="width:40px">Sắp xếp</th><th></th><th>Hình ảnh</th><th>Tên Sản Phẩm</th><th>Danh Mục</th><th>Số hình</th><th>Ngày Tạo</th><th>Hành Động</th></tr>
     </thead>
     <tbody id="products-tbody">
     <?php foreach ($products as $index => $p): ?>
@@ -191,8 +191,6 @@ $products = $stmt->fetchAll();
         </td>
         <td><?php echo htmlspecialchars($p['title'] ?: '(Chưa có tên)'); ?></td>
         <td><?php echo $p['category_name'] ? htmlspecialchars($p['category_name']) : '<span class="muted">Chưa phân loại</span>'; ?></td>
-        <td><?php echo number_format($p['price'], 0, ',', '.') . ' VNĐ'; ?></td>
-        <td><?php echo isset($p['promo_price']) && $p['promo_price']!==null ? number_format($p['promo_price'], 0, ',', '.') . ' VNĐ' : '-'; ?></td>
         <td><?php echo $p['images_count']; ?></td>
         <td><?php echo date('d/m/Y H:i', strtotime($p['created_at'])); ?></td>
         <td>
